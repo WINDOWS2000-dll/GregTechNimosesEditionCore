@@ -9,6 +9,6 @@
     "authorList": [
         "Discord windows2000.EXE # 2700"
     ],
-    "logoFile": "assets/gregtech/textures/gui/icon/gtexpert_core_logo_high_resolution.png",
+    "logoFile": "",
     "dependencies": []
 }]
