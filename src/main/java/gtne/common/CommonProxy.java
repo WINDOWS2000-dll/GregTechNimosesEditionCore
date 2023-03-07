@@ -4,6 +4,7 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.common.metatileentities.multi.MetaTileEntityAdvancedPrecisionAssemblyLine;
+import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -54,5 +55,10 @@ public class CommonProxy {
     public static void registerMaterial(GregTechAPI.MaterialEvent event) {
         GTNELog.logger.info("Registering Materials...");
         GTNEMaterials.init();
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        Advanced_Precision_Assembly_Line.init();
     }
 }
