@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'Windows2000'
-version = '1.1.8-GUI4'
+version = '1.1.8-GUI5'
 
 java {
     archivesBaseName = 'GregTechNimosesEditionCore'
