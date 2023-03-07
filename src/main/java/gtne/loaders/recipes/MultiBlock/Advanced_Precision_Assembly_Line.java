@@ -47,8 +47,9 @@ public class Advanced_Precision_Assembly_Line {
     public static void init() {
         //Fusion Reactor Mk.3 Test Recipe
         GTNERecipeMaps.ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.HULL[UIV])
+                .input(MetaTileEntities.HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.UHV, 64)
+                .fluidInputs(SolderingAlloy.getFluid(18432))
                 .outputs(MetaTileEntities.FUSION_REACTOR[2].getStackForm())
                 .duration(600).EUt(VA[UHV])
                 .buildAndRegister();
