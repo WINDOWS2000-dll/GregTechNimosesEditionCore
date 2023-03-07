@@ -1,0 +1,30 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all"
+  },
+  "variants": {
+    "variant": {
+      "advanced_precision_assembly_line_casing": {
+        "textures": {
+          "all": "gregtech:blocks/advanced_precision_assembly_line"
+        }
+      },
+      "advanced_precision_assembly_line_filter": {
+        "textures": {
+          "all": "gregtech:blocks/advanced_precision_assembly_line_filter"
+        }
+      },
+      "advanced_precision_assembly_line_control": {
+        "textures": {
+          "all": "gregtech:blocks/advanced_precision_assembly_line_control"
+        }
+      },
+      "advanced_precision_assembly_line": {
+        "textures": {
+          "all": "gregtech:blocks/advanced_precision_assembly_line"
+        }
+      }
+    }
+  }
+}

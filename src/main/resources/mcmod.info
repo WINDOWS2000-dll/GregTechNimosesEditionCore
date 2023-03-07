@@ -1,0 +1,14 @@
+[{
+    "modid": "GregTechNimosesEditionCore",
+    "name": "GregTechNimosesEditionCore",
+    "description": "a coremod for the GregTechNimosesEdition modpack",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+        "Discord windows2000.EXE # 2700"
+    ],
+    "logoFile": "assets/gregtech/textures/gui/icon/gtexpert_core_logo_high_resolution.png",
+    "dependencies": []
+}]
