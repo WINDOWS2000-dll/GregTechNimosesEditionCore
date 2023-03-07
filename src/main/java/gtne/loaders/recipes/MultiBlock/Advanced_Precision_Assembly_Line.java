@@ -50,6 +50,7 @@ public class Advanced_Precision_Assembly_Line {
                 .input(MetaTileEntities.HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.UHV, 64)
                 .fluidInputs(SolderingAlloy.getFluid(18432))
+                .fluidInputs(NaquadahAlloy.getFluid(114514))
                 .outputs(MetaTileEntities.FUSION_REACTOR[2].getStackForm())
                 .duration(600).EUt(VA[UHV])
                 .buildAndRegister();

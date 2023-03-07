@@ -53,8 +53,8 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         if(!isOutputs) {
             for (int i = 0; i < itemSlotsToDown; i++) {
                 for (int j = 0; j < itemSlotsToLeft; j++) {
-                    int slotIndex = i * itemSlotsToLeft - 1 + j ;
-                    addSlot(builder, startInputsX + 18 * j, startInputsY + 18 * i, slotIndex, itemHandler, fluidHandler, invertFluids, false);
+                    int slotIndex = i * itemSlotsToLeft + j ;
+                    addSlot(builder, startInputsX + 18 * j, startInputsY + 18 * i, slotIndex * 1, itemHandler, fluidHandler, invertFluids, false);
                 }
             }
             if (fluidInputsCount > 0 || invertFluids) {
