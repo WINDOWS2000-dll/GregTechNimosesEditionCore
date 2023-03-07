@@ -7,7 +7,7 @@
     "variant": {
       "advanced_precision_assembly_line_casing": {
         "textures": {
-          "all": "gregtech:blocks/advanced_precision_assembly_line"
+          "all": "gregtech:blocks/advanced_precision_assembly_line_casing"
         }
       },
       "advanced_precision_assembly_line_filter": {
