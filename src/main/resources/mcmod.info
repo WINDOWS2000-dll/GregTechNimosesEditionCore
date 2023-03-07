@@ -1,7 +1,7 @@
 [{
     "modid": "GregTechNimosesEditionCore",
     "name": "GregTechNimosesEditionCore",
-    "description": "a coremod for the GregTechNimosesEdition modpack",
+    "description": "GregTechNimosesEdition MODpack CoreMOD",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
