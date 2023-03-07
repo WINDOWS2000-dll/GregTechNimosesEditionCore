@@ -26,7 +26,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
     @Nonnull
     public ModularUI.Builder createJeiUITemplate(IItemHandlerModifiable importItems, IItemHandlerModifiable exportItems, FluidTankList importFluids, FluidTankList exportFluids, int yOffset) {
         ModularUI.Builder builder = ModularUI.builder(GuiTextures.BACKGROUND, 200, 200)
-                .widget(new ProgressWidget(200, 80, 1, 72, 90, GTNEGuiTextures.PROGRESSBAR_ADVANDED_PRECISION_ASSEMBLY_LINE, ProgressWidget.MoveType.HORIZONTAL));
+                .widget(new ProgressWidget(200, 100, 1, 72, 90, GTNEGuiTextures.PROGRESSBAR_ADVANDED_PRECISION_ASSEMBLY_LINE, ProgressWidget.MoveType.HORIZONTAL));
         this.addInventorySlotGroup(builder, importItems, importFluids, false, yOffset);
         this.addInventorySlotGroup(builder, exportItems, exportFluids, true, yOffset);
         return builder;
@@ -46,26 +46,26 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         int[] inputSlotGrid = determineSlotsGrid(itemInputsCount);
         int itemSlotsToLeft = inputSlotGrid[0];
         int itemSlotsToDown = inputSlotGrid[1];
-        int startInputsX = 80 - itemSlotsToLeft * 21;
+        int startInputsX = 100 - itemSlotsToLeft * 21;
         int startInputsY = 37 - (int) (itemSlotsToDown / 2.0 * 21);
 
         if(!isOutputs) {
             for (int i = 0; i < itemSlotsToDown; i++) {
                 for (int j = 0; j < itemSlotsToLeft; j++) {
                     int slotIndex = i * itemSlotsToLeft + j;
-                    addSlot(builder, startInputsX + 22 * j, startInputsY + 22 * i, slotIndex, itemHandler, fluidHandler, invertFluids, false);
+                    addSlot(builder, startInputsX + 18 * j, startInputsY + 18 * i, slotIndex, itemHandler, fluidHandler, invertFluids, false);
                 }
             }
             if (fluidInputsCount > 0 || invertFluids) {
                 if (itemSlotsToDown >= fluidInputsCount) {
                     int startSpecX = startInputsX + 18 * 5;
                     for (int i = 0; i < fluidInputsCount; i++) {
-                        addSlot(builder, startSpecX, startInputsY + 22 * i, i, itemHandler, fluidHandler, true, false);
+                        addSlot(builder, startSpecX, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
                     }
                 }
             }
         } else {
-            addSlot(builder,startInputsX + 22 * 4, 1, 0, itemHandler, fluidHandler, invertFluids, true);
+            addSlot(builder,startInputsX + 18 * 4, 1, 0, itemHandler, fluidHandler, invertFluids, true);
         }
     }
 }
