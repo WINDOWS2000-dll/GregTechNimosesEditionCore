@@ -46,8 +46,8 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         int[] inputSlotGrid = determineSlotsGrid(itemInputsCount);
         int itemSlotsToLeft = inputSlotGrid[0];
         int itemSlotsToDown = inputSlotGrid[1];
-        int startInputsX = 100 - itemSlotsToLeft * 21;
-        int startInputsY = 37 - (int) (itemSlotsToDown / 2.0 * 21);
+        int startInputsX = 120 - itemSlotsToLeft * 21;
+        int startInputsY = 30 - (int) (itemSlotsToDown / 2.0 * 21);
 
         if(!isOutputs) {
             for (int i = 0; i < itemSlotsToDown; i++) {
