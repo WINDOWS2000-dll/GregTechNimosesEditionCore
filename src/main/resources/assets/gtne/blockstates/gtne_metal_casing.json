@@ -6,21 +6,25 @@
   "variants": {
     "variant": {
       "advanced_precision_assembly_line_casing": {
+        "model": "minecraft:cube_all",
         "textures": {
           "all": "gregtech:blocks/advanced_precision_assembly_line_casing"
         }
       },
       "advanced_precision_assembly_line_filter": {
+        "model": "minecraft:cube_all",
         "textures": {
           "all": "gregtech:blocks/advanced_precision_assembly_line_filter"
         }
       },
       "advanced_precision_assembly_line_control": {
+        "model": "minecraft:cube_all",
         "textures": {
           "all": "gregtech:blocks/advanced_precision_assembly_line_control"
         }
       },
       "advanced_precision_assembly_line": {
+        "model": "minecraft:cube_all",
         "textures": {
           "all": "gregtech:blocks/advanced_precision_assembly_line"
         }
