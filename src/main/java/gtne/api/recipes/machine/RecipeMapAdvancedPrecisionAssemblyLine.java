@@ -26,7 +26,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
     @Override
     @Nonnull
     public ModularUI.Builder createJeiUITemplate(IItemHandlerModifiable importItems, IItemHandlerModifiable exportItems, FluidTankList importFluids, FluidTankList exportFluids, int yOffset) {
-        ModularUI.Builder builder = ModularUI.builder(GuiTextures.BACKGROUND, 200, 200)
+        ModularUI.Builder builder = ModularUI.builder(GuiTextures.BACKGROUND, 176, 200)
                 .widget(new ProgressWidget(200, 100, 3, 72, 90, GTNEGuiTextures.PROGRESSBAR_ADVANDED_PRECISION_ASSEMBLY_LINE, ProgressWidget.MoveType.HORIZONTAL));
         this.addInventorySlotGroup(builder, importItems, importFluids, false, yOffset);
         this.addInventorySlotGroup(builder, exportItems, exportFluids, true, yOffset);
@@ -61,10 +61,10 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
                 if (itemSlotsToDown <= fluidInputsCount) {
                     for (int i = 0; i < fluidInputsCount; i++) {
                             if (i <=4) {
-                                addSlot(builder, (startInputsX + 21 * 5) - 8, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
+                                addSlot(builder, (startInputsX + 21 * 5) + 5, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
                             }
                             if (i >= 5) {
-                                addSlot(builder, (startInputsX + 21 * 8) - 42, (startInputsY + 18 * i) - 90, i, itemHandler, fluidHandler, true, false);
+                                addSlot(builder, (startInputsX + 21 * 8) - 45, (startInputsY + 18 * i) - 90, i, itemHandler, fluidHandler, true, false);
                             }
                     }
                 }
