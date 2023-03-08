@@ -27,7 +27,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
     @Nonnull
     public ModularUI.Builder createJeiUITemplate(IItemHandlerModifiable importItems, IItemHandlerModifiable exportItems, FluidTankList importFluids, FluidTankList exportFluids, int yOffset) {
         ModularUI.Builder builder = ModularUI.builder(GuiTextures.BACKGROUND, 176, 200)
-                .widget(new ProgressWidget(200, 95, 3, 72, 90, GTNEGuiTextures.PROGRESSBAR_ADVANDED_PRECISION_ASSEMBLY_LINE, ProgressWidget.MoveType.HORIZONTAL));
+                .widget(new ProgressWidget(200, 90, 3, 72, 90, GTNEGuiTextures.PROGRESSBAR_ADVANDED_PRECISION_ASSEMBLY_LINE, ProgressWidget.MoveType.HORIZONTAL));
         this.addInventorySlotGroup(builder, importItems, importFluids, false, yOffset);
         this.addInventorySlotGroup(builder, exportItems, exportFluids, true, yOffset);
         return builder;
@@ -47,7 +47,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         int[] inputSlotGrid = determineSlotsGrid(itemInputsCount);
         int itemSlotsToLeft = inputSlotGrid[0];
         int itemSlotsToDown = inputSlotGrid[1];
-        int startInputsX = 110 - itemSlotsToLeft * 21;
+        int startInputsX = 105 - itemSlotsToLeft * 21;
         int startInputsY = 45 - (int) (itemSlotsToDown / 2.0 * 21);
 
         if(!isOutputs) {
