@@ -63,8 +63,8 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
                             if (i <=5) {
                                 addSlot(builder, startInputsX + 21 * 5, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
                             }
-                            if (i >= 6) {
-                                addSlot(builder, startInputsX + 21 * 8, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
+                            if (i >= 5) {
+                                addSlot(builder, startInputsX + 18 * 5, startInputsY + 18, i, itemHandler, fluidHandler, true, false);
                             }
                     }
                 }
