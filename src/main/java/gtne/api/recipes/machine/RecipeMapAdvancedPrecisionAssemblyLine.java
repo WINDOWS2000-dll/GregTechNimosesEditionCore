@@ -38,7 +38,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         int itemInputsCount = itemHandler.getSlots();
         int fluidInputsCount = fluidHandler.getTanks();
         boolean invertFluids = false;
-        if(itemInputsCount == 0) {
+        if (itemInputsCount == 0) {
             int tmp = itemInputsCount;
             itemInputsCount = fluidInputsCount;
             fluidInputsCount = tmp;
@@ -50,27 +50,27 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         int startInputsX = 105 - itemSlotsToLeft * 21;
         int startInputsY = 45 - (int) (itemSlotsToDown / 2.0 * 21);
 
-        if(!isOutputs) {
+        if (!isOutputs) {
             for (int i = 0; i < itemSlotsToDown; i++) {
                 for (int j = 0; j < itemSlotsToLeft; j++) {
-                    int slotIndex = i * itemSlotsToLeft + j ;
+                    int slotIndex = i * itemSlotsToLeft + j;
                     addSlot(builder, startInputsX + 18 * j, startInputsY + 18 * i, slotIndex, itemHandler, fluidHandler, invertFluids, false);
                 }
             }
             if (fluidInputsCount > 0 || invertFluids) {
                 if (itemSlotsToDown <= fluidInputsCount) {
                     for (int i = 0; i < fluidInputsCount; i++) {
-                            if (i <= 4) {
-                                addSlot(builder, (startInputsX + 21 * 5) + 3, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
-                            }
-                            if (i >= 5) {
-                                addSlot(builder, (startInputsX + 21 * 8) - 42, (startInputsY + 18 * i) - 90, i, itemHandler, fluidHandler, true, false);
-                            }
+                        if (i <= 4) {
+                            addSlot(builder, (startInputsX + 21 * 5) + 3, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
+                        }
+                        if (i >= 5) {
+                            addSlot(builder, (startInputsX + 21 * 8) - 42, (startInputsY + 18 * i) - 90, i, itemHandler, fluidHandler, true, false);
+                        }
                     }
                 }
             }
         } else {
-            addSlot(builder,startInputsX + 18 * 4, 3, 0, itemHandler, fluidHandler, invertFluids, true);
+            addSlot(builder, startInputsX + 18 * 4, 3, 0, itemHandler, fluidHandler, invertFluids, true);
         }
     }
 }
