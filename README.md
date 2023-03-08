@@ -1,4 +1,0 @@
-# GregTechNimosesEditionCore
-GregtechNImosesEdition
-
-ぼすを鯖MODマルチ用MOPACK GregTechNimosesEditionのCoreMOD
