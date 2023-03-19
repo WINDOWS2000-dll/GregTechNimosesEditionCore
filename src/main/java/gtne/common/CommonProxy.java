@@ -17,8 +17,11 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
 import java.util.function.Function;
+
 import gtne.api.unification.material.GTNEMaterials;
+
 import static gtne.common.GTNEMetaBlock.*;
 
 @Mod.EventBusSubscriber(modid = "gtnecore")

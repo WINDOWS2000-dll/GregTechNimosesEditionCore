@@ -50,7 +50,7 @@ public class MetaTileEntityAdvancedPrecisionAssemblyLine extends RecipeMapMultib
     }
 
     @Override
-    protected  BlockPattern createStructurePattern() {
+    protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
                 .aisle("FFFFFFFFF", "F  R R  F", "F  R R  F", "F  FOF  F", "F       F", "F       F", "FF     FF", " FFFFFFF ", "   FFF   ", "         ")
                 .aisle("FFFFFFFFF", "G       G", "G  FFF  G", "G       G", "G       G", "G       G", "G       G", "L       L", " LFFFFFL ", "         ")

@@ -16,7 +16,7 @@ public class GTNEMetaBlock {
     public static final GTNEBlockMetalCasing GTNE_BLOCK_METAL_CASING = new GTNEBlockMetalCasing();
 
     @SideOnly(Side.CLIENT)
-    public static void  registerItemModels() {
+    public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
     }
 

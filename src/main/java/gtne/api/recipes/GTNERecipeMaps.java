@@ -1,24 +1,13 @@
 package gtne.api.recipes;
 
-import crafttweaker.annotations.ZenRegister;
-import gregtech.api.GTValues;
 import gregtech.api.gui.GuiTextures;
-import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.gui.widgets.ProgressWidget.MoveType;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.*;
-import gregtech.api.recipes.ingredients.GTRecipeInput;
-import gregtech.api.recipes.machines.*;
 import gregtech.api.sound.GTSounds;
-import gregtech.api.unification.material.Materials;
 import gtne.api.gui.GTNEGuiTextures;
-import net.minecraft.init.SoundEvents;
-import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenProperty;
 import gtne.api.recipes.machine.RecipeMapAdvancedPrecisionAssemblyLine;
-import gtne.common.metatileentities.single.MetaTileEntityComponentsAssembler;
-
-import static gregtech.api.GTValues.*;
 
 public class GTNERecipeMaps {
 

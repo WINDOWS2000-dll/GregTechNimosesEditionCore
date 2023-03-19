@@ -25,7 +25,6 @@ public class GTNEMaterials {
     public static Material HIGH_PURITY_SILICON;
 
 
-
     public static void init() {
         GTNE_windows_material.init();
     }

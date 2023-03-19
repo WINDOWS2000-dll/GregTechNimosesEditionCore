@@ -12,7 +12,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 
 public class GTNE_windows_material {
-    public static  void init() {
+    public static void init() {
         HIGH_PURITY_SILICON = new Material.Builder(24001, "high_purity_silicon")
                 .dust()
                 .ingot()
