@@ -1,6 +1,10 @@
 package gtne.loaders.recipes.SingleBlocks;
 
+import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
+import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 import gtne.api.recipes.GTNERecipeMaps;
@@ -19,6 +23,8 @@ public class ComponentsAssembler {
 
         //MV Components
         ModHandler.removeRecipeByName("gregtech:electric_motor_mv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Aluminium, 2), OreDictUnifier.get(stick, SteelMagnetic, 1),
+                                                                            OreDictUnifier.get(wireGtDouble, Cupronickel, 4), OreDictUnifier.get(cableGtSingle, Copper, 2));
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
                 .input(stick, Aluminium, 2)
                 .input(stick, SteelMagnetic, 1)
