@@ -2,6 +2,7 @@ package gtne.loaders.recipes.SingleBlocks;
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.ore.OrePrefix;
+import gregtech.common.items.MetaItems;
 import gtne.api.recipes.GTNERecipeMaps;
 
 import javax.annotation.Nonnull;
@@ -25,6 +26,7 @@ public class ComponentsAssembler {
                 .input(cableGtSingle, Copper, 2)
                 .fluidInputs(Lubricant.getFluid(144))
                 .fluidInputs(SolderingAlloy.getFluid(72))
+                .output(ELECTRIC_MOTOR_MV)
                 .duration(120).EUt(VA[LV])
                 .buildAndRegister();
     }
