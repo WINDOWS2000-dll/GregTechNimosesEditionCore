@@ -17,7 +17,7 @@ public class GTNERecipeMaps {
             .setSound(GTSounds.ASSEMBLER);
 
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> COMPONENTS_ASSEMBLER = new RecipeMap<>("components_assembler", 1, 9, 1, 1, 1, 3, 0, 0, new SimpleRecipeBuilder(), false)
+    public static final RecipeMap<SimpleRecipeBuilder> COMPONENTS_ASSEMBLER = new RecipeMap<>("components_assembler", 1, 6, 1, 1, 1, 3, 0, 0, new SimpleRecipeBuilder(), false)
             .setProgressBar(GTNEGuiTextures.PREGRESSBAR_CONPONENTS_ASSEMBLER, MoveType.HORIZONTAL)
             .setSound(GTSounds.ASSEMBLER);
 }

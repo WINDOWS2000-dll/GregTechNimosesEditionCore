@@ -1,8 +1,15 @@
 # English by GTNE Team
-
+#I, II, III, IV, V, VI, VII, VIII, IX, X
+#Advanced Precision Assembly Line
 tile.gtne_metal_casing.advanced_precision_assembly_line_casing.name=Advanced Precision Assembly Line Casing
 tile.gtne_metal_casing.advanced_precision_assembly_line_filter.name=Advanced Precision Assembly Line Filter
 tile.gtne_metal_casing.advanced_precision_assembly_line_control.name=Advanced Precision Assembly Line Control
 tile.gtne_metal_casing.advanced_precision_assembly_line.name=Advanced Precision Assembly Line
-gtne.recipe.qubit=a
-
+gtnecore.machine.advanced_precision_assembly_line.name=Advanced Precision Assembly Line
+recipemap.advanced_precision_assembly_line.name=Advanced Precision Assembly Line
+#Components Assembler's
+gtnecore.machine.components_assembler.lv.name=Basic Components Assembler
+gtnecore.machine.components_assembler.mv.name=Advanced Components Assembler
+gtnecore.machine.components_assembler.hv.name=Advanced Components AssemblerII
+gtnecore.machine.components_assembler.ev.name=Advanced Components AssemblerIII
+recipemap.components_assembler.name=Components Assembler
