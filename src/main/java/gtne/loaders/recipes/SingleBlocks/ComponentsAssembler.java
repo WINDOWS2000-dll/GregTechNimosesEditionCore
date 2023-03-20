@@ -22,6 +22,7 @@ public class ComponentsAssembler {
     public static void init() {
 
         //MV Components
+        //Motor
         ModHandler.removeRecipeByName("gregtech:electric_motor_mv");
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Aluminium, 2), OreDictUnifier.get(stick, SteelMagnetic, 1),
                                                                             OreDictUnifier.get(wireGtDouble, Cupronickel, 4), OreDictUnifier.get(cableGtSingle, Copper, 2));
