@@ -1,17 +1,17 @@
 package gtne.loaders.recipes.SingleBlocks;
 
+import gregtech.api.items.OreDictNames;
 import gregtech.api.items.metaitem.MetaItem;
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.recipes.*;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 import gtne.api.recipes.GTNERecipeMaps;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.common.Mod;
 
 import javax.annotation.Nonnull;
 
@@ -25,6 +25,12 @@ public class ComponentsAssembler {
 
     public static void init() {
 
+        int robotarm_duration = 160;
+        int field_generator_duration = 240;
+        int other_duration = 120;
+        int halfsold = 72;
+        int sold = 144;
+
         //MV Components
         //Motor
         ModHandler.removeRecipeByName("gregtech:electric_motor_mv");
@@ -36,9 +42,9 @@ public class ComponentsAssembler {
                 .input(wireGtDouble, Cupronickel, 4)
                 .input(cableGtSingle, Copper, 2)
                 .fluidInputs(Lubricant.getFluid(160))
-                .fluidInputs(SolderingAlloy.getFluid(72))
+                .fluidInputs(SolderingAlloy.getFluid(halfsold))
                 .output(ELECTRIC_MOTOR_MV)
-                .duration(120).EUt(VA[LV])
+                .duration(other_duration).EUt(VA[LV])
                 .buildAndRegister();
 
         //Pump
@@ -65,9 +71,9 @@ public class ComponentsAssembler {
                 .input(ring, SiliconeRubber, 2)
                 .input(ELECTRIC_MOTOR_MV, 1)
                 .fluidInputs(Lubricant.getFluid(180))
-                .fluidInputs(SolderingAlloy.getFluid(144))
+                .fluidInputs(SolderingAlloy.getFluid(sold))
                 .output(ELECTRIC_PUMP_MV)
-                .duration(120).EUt(VA[LV])
+                .duration(other_duration).EUt(VA[LV])
                 .buildAndRegister();
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
@@ -78,9 +84,9 @@ public class ComponentsAssembler {
                 .input(ring, StyreneButadieneRubber, 2)
                 .input(ELECTRIC_MOTOR_MV, 1)
                 .fluidInputs(Lubricant.getFluid(180))
-                .fluidInputs(SolderingAlloy.getFluid(144))
+                .fluidInputs(SolderingAlloy.getFluid(sold))
                 .output(ELECTRIC_PUMP_MV)
-                .duration(120).EUt(VA[LV])
+                .duration(other_duration).EUt(VA[LV])
                 .buildAndRegister();
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
@@ -91,9 +97,9 @@ public class ComponentsAssembler {
                 .input(ring, Rubber, 4)
                 .input(ELECTRIC_MOTOR_MV, 1)
                 .fluidInputs(Lubricant.getFluid(180))
-                .fluidInputs(SolderingAlloy.getFluid(144))
+                .fluidInputs(SolderingAlloy.getFluid(sold))
                 .output(ELECTRIC_PUMP_MV)
-                .duration(120).EUt(VA[LV])
+                .duration(other_duration).EUt(VA[LV])
                 .buildAndRegister();
 
         //Conveyor
@@ -111,9 +117,9 @@ public class ComponentsAssembler {
                 .input(ring, Bronze, 4)
                 .circuitMeta(1)
                 .fluidInputs(Lubricant.getFluid(160))
-                .fluidInputs(SolderingAlloy.getFluid(72))
+                .fluidInputs(SolderingAlloy.getFluid(halfsold))
                 .output(CONVEYOR_MODULE_MV)
-                .duration(120).EUt(VA[LV])
+                .duration(other_duration).EUt(VA[LV])
                 .buildAndRegister();
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
@@ -123,9 +129,9 @@ public class ComponentsAssembler {
                 .input(ring, Bronze, 4)
                 .circuitMeta(1)
                 .fluidInputs(Lubricant.getFluid(160))
-                .fluidInputs(SolderingAlloy.getFluid(72))
+                .fluidInputs(SolderingAlloy.getFluid(halfsold))
                 .output(CONVEYOR_MODULE_MV)
-                .duration(120).EUt(VA[LV])
+                .duration(other_duration).EUt(VA[LV])
                 .buildAndRegister();
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
@@ -135,10 +141,70 @@ public class ComponentsAssembler {
                 .input(ring, Bronze, 4)
                 .circuitMeta(1)
                 .fluidInputs(Lubricant.getFluid(160))
-                .fluidInputs(SolderingAlloy.getFluid(72))
+                .fluidInputs(SolderingAlloy.getFluid(halfsold))
                 .output(CONVEYOR_MODULE_MV)
-                .duration(120).EUt(VA[LV])
+                .duration(other_duration).EUt(VA[LV])
                 .buildAndRegister();
+
+        //Electric Piston
+        ModHandler.removeRecipeByName("gregtech:electric_piston_mv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Aluminium, 2), OreDictUnifier.get(cableGtSingle, Copper, 2),
+                                                                            OreDictUnifier.get(plate, Aluminium, 3), OreDictUnifier.get(gearSmall, Aluminium, 1),
+                                                                            ELECTRIC_MOTOR_MV.getStackForm(1));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(stick, Aluminium, 3)
+                .input(cableGtSingle, Copper, 2)
+                .input(plate, Aluminium, 3)
+                .input(gear, Aluminium, 1)
+                .input(gearSmall, Aluminium, 2)
+                .input(ELECTRIC_MOTOR_MV, 1)
+                .fluidInputs(Lubricant.getFluid(200))
+                .fluidInputs(SolderingAlloy.getFluid(sold))
+                .output(ELECTRIC_PISTON_MV)
+                .duration(other_duration).EUt(VA[LV])
+                .buildAndRegister();
+
+
+        //Robot Arm
+        ModHandler.removeRecipeByName("gregtech:robot_arm_mv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Copper, 3), OreDictUnifier.get(stick, Aluminium, 2),
+                                                                            ELECTRIC_MOTOR_MV.getStackForm(2), ELECTRIC_PISTON_MV.getStackForm(1),
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.MV));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(cableGtSingle, Copper, 3)
+                .input(stick, Aluminium, 4)
+                .input(ELECTRIC_MOTOR_MV, 2)
+                .input(ELECTRIC_PISTON_MV, 1)
+                .input(gearSmall, Aluminium, 2)
+                .input(circuit, MarkerMaterials.Tier.MV)
+                .fluidInputs(Lubricant.getFluid(240))
+                .fluidInputs(SolderingAlloy.getFluid(sold * 2))
+                .output(ROBOT_ARM_MV)
+                .output(ELECTRIC_PISTON_MV)
+                .duration(robotarm_duration).EUt(VA[LV])
+                .buildAndRegister();
+
+
+        //Field_Generator
+        ModHandler.removeRecipeByName("gregtech:field_generator_mv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(gem, EnderEye, 1), OreDictUnifier.get(plate, Aluminium, 2),
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.MV, 2), OreDictUnifier.get(wireGtQuadruple, MagnesiumDiboride, 4));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(gem, EnderEye, 1)
+                .input(plate, Aluminium, 4)
+                .input(circuit, MarkerMaterials.Tier.MV, 4)
+                .input(wireGtQuadruple, MagnesiumDiboride, 4)
+                .input(SENSOR_MV, 1)
+                .input(EMITTER_MV, 1)
+                .fluidInputs(SolderingAlloy.getFluid(sold * 4))
+                .fluidInputs(Helium3.getFluid(1000))
+                .output(FIELD_GENERATOR_MV)
+                .duration(field_generator_duration).EUt(VA[LV])
+                .buildAndRegister();
+
 
 
     }
