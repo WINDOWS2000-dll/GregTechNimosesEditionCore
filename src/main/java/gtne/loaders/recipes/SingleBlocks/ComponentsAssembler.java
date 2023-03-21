@@ -100,13 +100,13 @@ public class ComponentsAssembler {
         ModHandler.removeRecipeByName("gregtech:conveyor_module_mv_silicone_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_mv_rubber");
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Copper, 1), OreDictUnifier.get(plate, StyreneButadieneRubber, 6),
-                                                                            ELECTRIC_MOTOR_MV.getStackForm(2));
+                                                                            ELECTRIC_MOTOR_MV.getStackForm(2), INTEGRATED_CIRCUIT.getStackForm(1));
 
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Copper, 1), OreDictUnifier.get(plate, SiliconeRubber, 6),
-                                                                            ELECTRIC_MOTOR_MV.getStackForm(2));
+                                                                            ELECTRIC_MOTOR_MV.getStackForm(2), INTEGRATED_CIRCUIT.getStackForm(1));
 
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Copper, 1), OreDictUnifier.get(plate, Rubber, 6),
-                                                                            ELECTRIC_MOTOR_MV.getStackForm(2));
+                                                                            ELECTRIC_MOTOR_MV.getStackForm(2), INTEGRATED_CIRCUIT.getStackForm(1));
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
                 .input(cableGtSingle, Copper, 1)
