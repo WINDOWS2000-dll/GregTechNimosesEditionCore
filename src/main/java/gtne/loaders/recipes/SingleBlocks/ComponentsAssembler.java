@@ -10,8 +10,10 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 import gtne.api.recipes.GTNERecipeMaps;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.common.Mod;
+import cofh.thermalfoundation.init.TFFluids;
 
 import javax.annotation.Nonnull;
 
@@ -182,7 +184,6 @@ public class ComponentsAssembler {
                 .fluidInputs(Lubricant.getFluid(240))
                 .fluidInputs(SolderingAlloy.getFluid(sold * 2))
                 .output(ROBOT_ARM_MV)
-                .output(ELECTRIC_PISTON_MV)
                 .duration(robotarm_duration).EUt(VA[LV])
                 .buildAndRegister();
 
@@ -201,10 +202,47 @@ public class ComponentsAssembler {
                 .input(EMITTER_MV, 1)
                 .fluidInputs(SolderingAlloy.getFluid(sold * 4))
                 .fluidInputs(Helium3.getFluid(1000))
+                .fluidInputs(new FluidStack(TFFluids.fluidEnder, 1000))
                 .output(FIELD_GENERATOR_MV)
                 .duration(field_generator_duration).EUt(VA[LV])
                 .buildAndRegister();
 
+
+        //Emitter
+        ModHandler.removeRecipeByName("gregtech:emitter_mv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Electrum, 4), OreDictUnifier.get(cableGtSingle, Copper, 2),
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.MV, 2), OreDictUnifier.get(gemFlawless, Emerald, 1),
+                                                                            IntCircuitIngredient.getIntegratedCircuit(1));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(stick, Electrum, 6)
+                .input(cableGtSingle, Copper, 2)
+                .input(circuit, MarkerMaterials.Tier.MV, 2)
+                .input(gemFlawless, Emerald, 1)
+                .input(lens, Glass, 2)
+                .circuitMeta(1)
+                .fluidInputs(Glass.getFluid(576))
+                .fluidInputs(SolderingAlloy.getFluid(sold * 3))
+                .output(EMITTER_MV)
+                .duration(other_duration).EUt(VA[LV])
+                .buildAndRegister();
+
+
+        //Sensor
+        ModHandler.removeRecipeByName("gregtech:sensor_mv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Electrum, 1), OreDictUnifier.get(plate, Aluminium, 4),
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.MV), OreDictUnifier.get(gemFlawless, Emerald, 1));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(stick, Electrum, 2)
+                .input(plate, Aluminium, 6)
+                .input(cableGtSingle, Copper, 2)
+                .input(circuit, MarkerMaterials.Tier.MV, 2)
+                .input(gemFlawless, Emerald, 1)
+                .fluidInputs(SolderingAlloy.getFluid(sold * 3))
+                .output(SENSOR_MV)
+                .duration(other_duration).EUt(VA[LV])
+                .buildAndRegister();
 
 
     }
