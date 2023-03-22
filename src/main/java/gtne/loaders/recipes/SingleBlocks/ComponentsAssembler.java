@@ -253,7 +253,7 @@ public class ComponentsAssembler {
         //HV Components
         //Motor
         ModHandler.removeRecipeByName("gregtech:electric_motor_hv");
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtDouble, Silver, 2), OreDictUnifier.get(stick, Silver, 2),
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtDouble, Silver, 2), OreDictUnifier.get(stick, StainlessSteel, 2),
                                                                             OreDictUnifier.get(stick, SteelMagnetic, 1), OreDictUnifier.get(wireGtDouble, Electrum, 4));
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
