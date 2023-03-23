@@ -468,7 +468,7 @@ public class ComponentsAssembler {
                 .input(cableGtDouble, Aluminium, 2)
                 .input(stick, Titanium, 2)
                 .input(stick, NeodymiumMagnetic, 1)
-                .input(cableGtDouble, Kanthal, 4)
+                .input(wireGtDouble, Kanthal, 4)
                 .input(wireFine, Copper, 64)
                 .fluidInputs(Lubricant.getFluid(160))
                 .fluidInputs(SolderingAlloy.getFluid(halfsold))
