@@ -37,6 +37,7 @@ public class ComputerCasing extends VariantBlock<ComputerCasing.ComputerTier> {
         setRegistryName("gtne_computer_casing");
     }
 
+    /*
     @SideOnly(Side.CLIENT)
     public void addInformation(@Nonnull ItemStack itemStack, @Nullable World worldIn, List<String> lines, @Nonnull ITooltipFlag tooltipFlag) {
         super.addInformation(itemStack, worldIn, lines, tooltipFlag);
@@ -51,6 +52,21 @@ public class ComputerCasing extends VariantBlock<ComputerCasing.ComputerTier> {
             lines.add(I18n.format("tile.wire_coil.tooltip_energy_smelter", new Object[]{Math.max(1, 16 / computerTier.energyDiscount)}));
 
         }
+    }
+
+     */
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(@Nonnull ItemStack itemStack, @Nullable World worldIn, List<String> lines, @Nonnull ITooltipFlag tooltipFlag) {
+        super.addInformation(itemStack, worldIn, lines, tooltipFlag);
+
+        // noinspection rawtypes, unchecked
+        VariantItemBlock itemBlock = (VariantItemBlock<ComputerCasing.ComputerTier, ComputerCasing>) itemStack.getItem();
+        IBlockState stackState = itemBlock.getBlockState(itemStack);
+        ComputerTier computerTier = getState(stackState);
+
+        lines.add(I18n.format("tile.wire_coil.tooltip_heat", computerTier.OperationSpeed));
     }
 
     public boolean canCreatureSpawn(@Nonnull IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EntityLiving.SpawnPlacementType type) {
