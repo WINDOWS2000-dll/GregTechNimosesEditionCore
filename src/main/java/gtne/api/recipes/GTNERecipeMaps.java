@@ -24,7 +24,7 @@ public class GTNERecipeMaps {
             .setSound(GTSounds.ASSEMBLER);
 
     @ZenProperty
-    public static final RecipeMapProtTypeSuperComputer<ComputerRecipeBuilder> ProtTypeSuperComputer = (RecipeMapProtTypeSuperComputer<ComputerRecipeBuilder>) new RecipeMapProtTypeSuperComputer<>("prottype_supercomputer", 1 ,8, 1, 1, 1, 2, 0, 0, new ComputerRecipeBuilder(), false)
+    public static final RecipeMapProtTypeSuperComputer<ComputerRecipeBuilder> ProtTypeSuperComputer = (RecipeMapProtTypeSuperComputer<ComputerRecipeBuilder>) new RecipeMapProtTypeSuperComputer<>("prottype_supercomputer", 1 ,8, 1, 1, 0, 2, 0, 2, new ComputerRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
             .setSound(GTSounds.REPLICATOR);
 
