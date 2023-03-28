@@ -71,7 +71,7 @@ public class RecipeMapProtTypeSuperComputer <R extends RecipeBuilder<R>> extends
                     }
                 }
             }
-            if (fluidInputsCount > 0 || invertFluids) {
+            if (fluidInputsCount >= 0 || invertFluids) {
                 if (itemSlotsToDown >= fluidInputsCount) {
                     for (int i = 0; i < fluidInputsCount; i++) {
                         addSlot(builder, startInputsX - (i * 18), 90, i, itemHandler, fluidHandler, true, false);
@@ -80,8 +80,6 @@ public class RecipeMapProtTypeSuperComputer <R extends RecipeBuilder<R>> extends
             }
         } else {
             addSlot(builder, 131, 45, 0, itemHandler, fluidHandler, invertFluids, true);
-            addSlot(builder, 131, 90, 0, itemHandler, fluidHandler, true, true);
-            addSlot(builder, 149, 90, 0, itemHandler, fluidHandler, true, true);
         }
     }
 }
