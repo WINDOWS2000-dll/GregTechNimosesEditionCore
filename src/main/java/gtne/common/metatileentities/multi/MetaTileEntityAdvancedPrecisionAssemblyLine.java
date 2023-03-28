@@ -1,8 +1,5 @@
 package gtne.common.metatileentities.multi;
 
-import codechicken.lib.vec.Vector3;
-import gregtech.api.GTValues;
-import gregtech.api.capability.GregtechDataCodes;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -10,33 +7,16 @@ import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
-import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.material.Materials;
-import gregtech.api.util.GTUtility;
-import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.client.particle.GTLaserBeamParticle;
-import gregtech.client.particle.GTParticleManager;
 import gregtech.client.renderer.ICubeRenderer;
-import gregtech.client.renderer.texture.Textures;
-import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.*;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gtne.api.recipes.GTNERecipeMaps;
-import gtne.common.GTNEBlockMetalCasing;
+import gtne.common.Block.GTNEBlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import gtne.api.recipes.machine.RecipeMapAdvancedPrecisionAssemblyLine;
 import gtne.common.GTNEMetaBlock;
 import gtne.client.GTNETextures;
-import gregtech.api.unification.material.Material;
-import gtne.api.recipes.*;
-
-import static gregtech.api.util.RelativeDirection.*;
 
 public class MetaTileEntityAdvancedPrecisionAssemblyLine extends RecipeMapMultiblockController {
 

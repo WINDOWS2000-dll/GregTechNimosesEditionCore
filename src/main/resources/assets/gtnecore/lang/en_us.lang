@@ -13,3 +13,10 @@ gtnecore.machine.components_assembler.mv.name=Advanced Components Assembler
 gtnecore.machine.components_assembler.hv.name=Advanced Components AssemblerII
 gtnecore.machine.components_assembler.ev.name=Advanced Components AssemblerIII
 recipemap.components_assembler.name=Components Assembler
+
+#Shift
+gtnecore.tooltip.hold_shift=Hold §aShift§7 for more info
+
+#Computer Casing Tooltip
+tile.compution_casing.tooltip.operation_speed=Base Operation Speed : §e%,d/s
+gtne.recipe.operation_speed=Operation Speed: %,d/s (%s)

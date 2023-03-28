@@ -1,5 +1,6 @@
 package gtne.loaders.recipes.SingleBlocks;
 
+import com.google.common.graph.Graph;
 import gregtech.api.items.OreDictNames;
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.recipes.*;
@@ -667,6 +668,170 @@ public class ComponentsAssembler {
                 .output(SENSOR_EV)
                 .duration(other_duration).EUt(VA[HV])
                 .buildAndRegister();
+
+
+        //IV Components
+        //Motor
+        ModHandler.removeRecipeByName("gregtech:motor_iv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtDouble, Tungsten, 2), OreDictUnifier.get(stick, TungstenSteel, 2),
+                                                                            OreDictUnifier.get(stick, NeodymiumMagnetic, 1), OreDictUnifier.get(wireGtDouble, Graphene, 4));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(cableGtDouble, Tungsten, 2)
+                .input(stick, TungstenSteel, 2)
+                .input(stick, NeodymiumMagnetic, 1)
+                .input(wireGtDouble, Graphene, 4)
+                .input(wireFine, Copper, 64)
+                .input(wireFine, Copper, 64)
+                .fluidInputs(Lubricant.getFluid(160))
+                .fluidInputs(SolderingAlloy.getFluid(halfsold))
+                .duration(other_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+
+        //Pump
+        ModHandler.removeRecipeByName("gregtech:electric_pump_iv_silicone_rubber");
+        ModHandler.removeRecipeByName("gregtech:electric_pump_iv_styrene_butadiene_rubber");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Tungsten, 1), OreDictUnifier.get(pipeNormalFluid, TungstenSteel, 1), OreDictUnifier.get(screw, TungstenSteel, 1), OreDictUnifier.get(rotor, TungstenSteel, 1), OreDictUnifier.get(ring, SiliconeRubber, 2), ELECTRIC_MOTOR_IV.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Tungsten, 1), OreDictUnifier.get(pipeNormalFluid, TungstenSteel, 1), OreDictUnifier.get(screw, TungstenSteel, 1), OreDictUnifier.get(rotor, TungstenSteel, 1), OreDictUnifier.get(ring, StyreneButadieneRubber, 2), ELECTRIC_MOTOR_IV.getStackForm(1));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(cableGtSingle, Tungsten, 2)
+                .input(pipeNormalFluid, TungstenSteel, 1)
+                .input(screw, TungstenSteel, 2)
+                .input(rotor, TungstenSteel, 1)
+                .input(ring, SiliconeRubber, 4)
+                .input(ELECTRIC_MOTOR_IV, 1)
+                .fluidInputs(Lubricant.getFluid(180))
+                .fluidInputs(SolderingAlloy.getFluid(sold))
+                .output(ELECTRIC_PUMP_IV)
+                .duration(other_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(cableGtSingle, Tungsten, 2)
+                .input(pipeNormalFluid, TungstenSteel, 1)
+                .input(screw, TungstenSteel, 2)
+                .input(rotor, TungstenSteel, 1)
+                .input(ring, StyreneButadieneRubber, 4)
+                .input(ELECTRIC_MOTOR_IV, 1)
+                .fluidInputs(Lubricant.getFluid(180))
+                .fluidInputs(SolderingAlloy.getFluid(sold))
+                .output(ELECTRIC_PUMP_IV)
+                .duration(other_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+
+        //Conveyor
+        ModHandler.removeRecipeByName("gregtech:conveyor_module_iv_silicone_rubber");
+        ModHandler.removeRecipeByName("gregtech:conveyor_module_iv_styrene_butadiene_rubber");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Tungsten, 1), OreDictUnifier.get(plate, StyreneButadieneRubber, 6), ELECTRIC_MOTOR_IV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Tungsten, 1), OreDictUnifier.get(plate, SiliconeRubber, 6), ELECTRIC_MOTOR_IV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(cableGtSingle, Tungsten, 1)
+                .input(plate, SiliconeRubber, 8)
+                .input(ELECTRIC_MOTOR_IV, 2)
+                .input(ring, TungstenSteel, 4)
+                .circuitMeta(1)
+                .fluidInputs(Lubricant.getFluid(160))
+                .fluidInputs(SolderingAlloy.getFluid(halfsold))
+                .output(CONVEYOR_MODULE_IV)
+                .duration(other_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(cableGtSingle, Tungsten, 1)
+                .input(plate, StyreneButadieneRubber, 8)
+                .input(ELECTRIC_MOTOR_IV, 2)
+                .input(ring, TungstenSteel, 4)
+                .circuitMeta(1)
+                .fluidInputs(Lubricant.getFluid(160))
+                .fluidInputs(SolderingAlloy.getFluid(halfsold))
+                .output(CONVEYOR_MODULE_IV)
+                .duration(other_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+
+        //Electric Piston
+        ModHandler.removeRecipeByName("gregtech:electric_piston_iv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, TungstenSteel, 2), OreDictUnifier.get(cableGtSingle, Tungsten, 2),
+                OreDictUnifier.get(plate, TungstenSteel, 3), OreDictUnifier.get(gearSmall, TungstenSteel, 1),
+                ELECTRIC_MOTOR_IV.getStackForm(1));
+
+        GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
+                .input(stick, TungstenSteel, 3)
+                .input(cableGtSingle, Tungsten, 2)
+                .input(plate, TungstenSteel, 3)
+                .input(gear, TungstenSteel, 1)
+                .input(gearSmall, TungstenSteel, 2)
+                .input(ELECTRIC_MOTOR_IV, 1)
+                .fluidInputs(Lubricant.getFluid(200))
+                .fluidInputs(SolderingAlloy.getFluid(sold))
+                .output(ELECTRIC_PISTON_IV)
+                .duration(other_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+        //Robot Arm
+        ModHandler.removeRecipeByName("gregtech:robot_arm_iv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Tungsten, 3), OreDictUnifier.get(stick, TungstenSteel, 2),
+                ELECTRIC_MOTOR_IV.getStackForm(2), ELECTRIC_PISTON_IV.getStackForm(1),
+                OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV));
+
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
+                .input(stickLong, TungstenSteel, 2)
+                .input(gear, TungstenSteel, 1)
+                .input(gearSmall, TungstenSteel, 3)
+                .input(ELECTRIC_MOTOR_IV, 2)
+                .input(ELECTRIC_PISTON_IV, 1)
+                .input(circuit, MarkerMaterials.Tier.IV)
+                .input(circuit, MarkerMaterials.Tier.EV, 2)
+                .input(circuit, MarkerMaterials.Tier.HV, 4)
+                .input(cableGtSingle, Tungsten, 4)
+                .fluidInputs(Lubricant.getFluid(240))
+                .duration(robotarm_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+
+        //Field Generator
+        ModHandler.removeRecipeByName("gregtech:field_generator_iv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, QUANTUM_STAR.getStackForm(1), OreDictUnifier.get(plateDouble, TungstenSteel, 2),
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV, 2), OreDictUnifier.get(cableGtQuadruple, SamariumIronArsenicOxide, 4));
+
+        /*
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
+                .input()
+                .buildAndRegister();
+
+         */
+
+
+        //Emitter
+        ModHandler.removeRecipeByName("gregtech:emitter_iv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Iridium, 4), OreDictUnifier.get(cableGtSingle, Tungsten, 2),
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV, 2), QUANTUM_STAR.getStackForm(1),
+                                                                            IntCircuitIngredient.getIntegratedCircuit(1));
+
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, TungstenSteel, 1)
+                .input(stick, Iridium, 4)
+                .input(QUANTUM_STAR, 1)
+                .input(circuit, MarkerMaterials.Tier.IV, 2)
+                .input(EMITTER_EV, 2)
+                .input(EMITTER_HV, 4)
+                .input(EMITTER_MV, 8)
+                .input(foil, Platinum, 32)
+                .input(cableGtSingle, Tungsten, 4)
+                .fluidInputs(SolderingAlloy.getFluid(sold * 8))
+                .output(EMITTER_IV)
+                .duration(other_duration * 2).EUt(VA[EV])
+                .buildAndRegister();
+
+
+        //Sensor
+        ModHandler.removeRecipeByName("gregtech:sensor_iv");
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Iridium, 1), OreDictUnifier.get(plate ,TungstenSteel, 4),
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV), QUANTUM_STAR.getStackForm(1));
 
     }
 }

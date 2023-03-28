@@ -1,4 +1,4 @@
-package gtne.common;
+package gtne.common.Block;
 
 import gregtech.api.block.VariantBlock;
 import net.minecraft.block.SoundType;
@@ -35,6 +35,7 @@ public class GTNEBlockMetalCasing extends VariantBlock<GTNEBlockMetalCasing.Meta
         ADVANCEDPRECISIONASSEMBLYLINEFILTER("advanced_precision_assembly_line_filter"),
         ADVANCEDPRECISIONASSEMBLYLINECONTROL("advanced_precision_assembly_line_control"),
         ADVANCEDPRECISIONASSEMBLYLINE("advanced_precision_assembly_line");
+
 
         private final String name;
 

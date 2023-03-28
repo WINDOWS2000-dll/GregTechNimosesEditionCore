@@ -102,6 +102,7 @@ dependencies {
     implementation fg.deobf("curse.maven:cofh-core-69162:2920433")
     implementation fg.deobf("curse.maven:gregtech-557242:4248309")
     implementation fg.deobf("curse.maven:thermal-foundation-222880:2926428")
+    implementation fg.deobf("curse.maven:gregicality-multiblocks-564858:4051163")
     // Medium Dependencies
     implementation "curse.maven:crafttweaker-239197:4403410"
     implementation fg.deobf("curse.maven:jei-238222:3040523")

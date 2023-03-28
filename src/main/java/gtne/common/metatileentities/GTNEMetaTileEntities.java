@@ -7,6 +7,7 @@ import gregtech.client.renderer.texture.Textures;
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.client.GTNETextures;
 import gtne.common.metatileentities.multi.MetaTileEntityAdvancedPrecisionAssemblyLine;
+import gtne.common.metatileentities.multi.MetaTileEntityProtoTypeSuperComputer;
 import net.minecraft.util.ResourceLocation;
 import gtne.common.metatileentities.single.MetaTileEntityComponentsAssembler;
 
@@ -21,6 +22,7 @@ import static gtne.common.metatileentities.single.MetaTileEntityComponentsAssemb
 public class GTNEMetaTileEntities {
 
     public static MetaTileEntityAdvancedPrecisionAssemblyLine AdvancedPrecisionAssemblyLine;
+    public static MetaTileEntityProtoTypeSuperComputer ProtoTypeSuperComputer;
 
     public static void init() {
         /*
@@ -47,8 +49,9 @@ public class GTNEMetaTileEntities {
 
         //blocks :11000~
         registerSimpleMetaTileEntity(COMPONENTS_ASSEMBLER, 11000, "components_assembler", GTNERecipeMaps.COMPONENTS_ASSEMBLER, Textures.ASSEMBLER_OVERLAY, true, GTNEMetaTileEntities::gtneId, GTUtility.hvCappedTankSizeFunction);
-        //MultiBlockMachines
+        //MultiBlockMachines 12000~
         AdvancedPrecisionAssemblyLine = registerMetaTileEntity(12001, new MetaTileEntityAdvancedPrecisionAssemblyLine(gtneId("advanced_precision_assembly_line")));
+        ProtoTypeSuperComputer = registerMetaTileEntity(12000, new MetaTileEntityProtoTypeSuperComputer(gtneId("prototype_supercomputer")));
     }
 
     @Nonnull
