@@ -796,7 +796,7 @@ public class ComponentsAssembler {
         //Field Generator
         ModHandler.removeRecipeByName("gregtech:field_generator_iv");
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, QUANTUM_STAR.getStackForm(1), OreDictUnifier.get(plateDouble, TungstenSteel, 2),
-                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV, 2), OreDictUnifier.get(cableGtQuadruple, SamariumIronArsenicOxide, 4));
+                                                                            OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV, 2), OreDictUnifier.get(wireGtQuadruple, SamariumIronArsenicOxide, 4));
 
         /*
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
