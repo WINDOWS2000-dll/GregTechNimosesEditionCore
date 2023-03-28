@@ -31,11 +31,12 @@ import java.util.Comparator;
 import java.util.List;
 
 import static gtne.api.metatileentities.multiblocks.GTNEMultiBlockControllerBase.computercasing;
+import static gtne.api.recipes.GTNERecipeMaps.ProtTypeSuperComputer;
 
 public class MetaTileEntityProtoTypeSuperComputer extends RecipeMapMultiblockController {
 
     public MetaTileEntityProtoTypeSuperComputer(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTNERecipeMaps.ProtTypeSuperComputer);
+        super(metaTileEntityId, ProtTypeSuperComputer);
     }
 
     @Override
