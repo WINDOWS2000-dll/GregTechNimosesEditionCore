@@ -23,6 +23,7 @@ public class GTNEMetaBlock {
     public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
         registerItemModel(COMPUTER_CASING);
+        registerItemModel(COMPUTER_MACHINE_CASING);
     }
 
 

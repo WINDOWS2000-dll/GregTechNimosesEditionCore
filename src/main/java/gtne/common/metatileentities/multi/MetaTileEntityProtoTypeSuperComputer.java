@@ -68,7 +68,6 @@ public class MetaTileEntityProtoTypeSuperComputer extends RecipeMapMultiblockCon
                 .build();
 
     }
-    /*
 
     @Override
     public List<MultiblockShapeInfo> getMatchingShapes() {
@@ -97,8 +96,6 @@ public class MetaTileEntityProtoTypeSuperComputer extends RecipeMapMultiblockCon
                 .forEach(entry -> shapeInfo.add(builder.where('E', entry.getKey()).build()));
         return shapeInfo;
     }
-
-     */
 
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
