@@ -12,10 +12,8 @@ import static gregtech.client.renderer.texture.cube.OrientedOverlayRenderer.Over
 public class GTNETextures {
 
     public static SimpleOverlayRenderer ADVANCEDPRECISIONASSEMBLYLINECASING;
-    public static SimpleOverlayRenderer PROTOTYPESUPERCOMPUTERMACHINECASING;
 
     public static void preInit() {
         ADVANCEDPRECISIONASSEMBLYLINECASING = new SimpleOverlayRenderer("advanced_precision_assembly_line_casing");
-        PROTOTYPESUPERCOMPUTERMACHINECASING = new SimpleOverlayRenderer("prototype_supercomputer_casing");
     }
 }

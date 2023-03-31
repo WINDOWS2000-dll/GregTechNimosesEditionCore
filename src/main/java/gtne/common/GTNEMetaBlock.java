@@ -1,7 +1,5 @@
 package gtne.common;
 
-import gtne.common.Block.ComputerCasing;
-import gtne.common.Block.ComputerMachineCasing;
 import gtne.common.Block.GTNEBlockMetalCasing;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -16,14 +14,11 @@ import static gregtech.common.blocks.MetaBlocks.statePropertiesToString;
 public class GTNEMetaBlock {
 
     public static final GTNEBlockMetalCasing GTNE_BLOCK_METAL_CASING = new GTNEBlockMetalCasing();
-    public static final ComputerCasing COMPUTER_CASING = new ComputerCasing();
-    public static final ComputerMachineCasing COMPUTER_MACHINE_CASING = new ComputerMachineCasing();
+
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
-        registerItemModel(COMPUTER_CASING);
-        registerItemModel(COMPUTER_MACHINE_CASING);
     }
 
 

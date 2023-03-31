@@ -42,15 +42,11 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlock(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(GTNE_BLOCK_METAL_CASING);
-        event.getRegistry().register(COMPUTER_CASING);
-        event.getRegistry().register(COMPUTER_MACHINE_CASING);
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(createItemBlock(GTNE_BLOCK_METAL_CASING, VariantItemBlock::new));
-        event.getRegistry().register(createItemBlock(COMPUTER_CASING, VariantItemBlock::new));
-        event.getRegistry().register(createItemBlock(COMPUTER_MACHINE_CASING, VariantItemBlock::new));
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
