@@ -14,27 +14,6 @@ import static gtne.api.unification.material.GTNEMaterials.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 
-/**
- * Material Registration.
- * <p>
- * All Material Builders should follow this general formatting:
- * <p>
- * material = new MaterialBuilder(id, name)
- * .ingot().fluid().ore()                <--- types
- * .color().iconSet()                    <--- appearance
- * .flags()                              <--- special generation
- * .element() / .components()            <--- composition
- * .toolStats()                          <---
- * .oreByProducts()                         | additional properties
- * ...                                   <---
- * .blastTemp()                          <--- blast temperature
- * .build();
- * <p>
- * Use defaults to your advantage! Some defaults:
- * - iconSet: DULL
- * - color: 0xFFFFFF
- */
-
 public class GTNE_windows_material {
     public static void init() {
 
@@ -53,6 +32,7 @@ public class GTNE_windows_material {
                 .dust()
                 .ingot()
                 .plasma()
+                .fluid()
                 .color(0x9b00ff)
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_RING, GENERATE_SPRING, GENERATE_SPRING_SMALL, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME)
@@ -62,10 +42,11 @@ public class GTNE_windows_material {
                 .element(Dc)
                 .build();
 
-        Awakened_Draconium = new Material.Builder(24003, "draconium_awakned")
+        Awakened_Draconium = new Material.Builder(24003, "draconium_awakened")
                 .dust()
                 .ingot()
                 .plasma()
+                .fluid()
                 .color(0xff5100)
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_RING, GENERATE_SPRING, GENERATE_SPRING_SMALL, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME)
@@ -78,19 +59,4 @@ public class GTNE_windows_material {
 
 
     }
-    /*
-
-var draconiumawakened = MaterialBuilder(32008, "draconiumawakened")
-    .fluid()
-    .ingot()
-    .plasma()
-    .iconSet("SHINY")
-    .flags(["generate_rod", "generate_gear", "generate_long_rod", "generate_bolt_screw", "generate_ring", "generate_spring", "generate_spring_small", "generate_small_gear", "generate_rotor", "generate_frame"])
-    .color(0xff5100)
-    .toolStats(700,200,81920,500)
-    .blastTemp(9999)
-    .cableProperties(524288,32,0,false)
-    .element("DraconiumAwakened")
-    .build();
-     */
 }
