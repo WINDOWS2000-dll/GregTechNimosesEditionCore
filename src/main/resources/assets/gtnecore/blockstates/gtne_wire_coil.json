@@ -1,0 +1,18 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "active=false,variant=machine_coil_draconium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/Coil/machine_coil_draconium"
+      }
+    },
+    "active=true,variant=machine_coil_draconium": {
+      "model": "gregtech:cube_2_layer_all",
+      "textures": {
+        "bot_all": "gregtech:blocks/Coil/machine_coil_draconium",
+        "top_all": "gregtech:blocks/Coil/machine_coil_draconium_bloom"
+      }
+    }
+  }
+}
