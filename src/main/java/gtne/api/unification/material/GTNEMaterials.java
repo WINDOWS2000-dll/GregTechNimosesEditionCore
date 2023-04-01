@@ -23,6 +23,8 @@ public class GTNEMaterials {
      * - Reserved for CraftTweaker: 32000-32767
      */
     public static Material HIGH_PURITY_SILICON;
+    public static Material Draconium;
+    public static Material Awakened_Draconium;
 
 
     public static void init() {

@@ -1,5 +1,6 @@
 package gtne.common;
 
+import gtne.common.Block.BlockGTNEWireCoil;
 import gtne.common.Block.GTNEBlockMetalCasing;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -14,11 +15,13 @@ import static gregtech.common.blocks.MetaBlocks.statePropertiesToString;
 public class GTNEMetaBlock {
 
     public static final GTNEBlockMetalCasing GTNE_BLOCK_METAL_CASING = new GTNEBlockMetalCasing();
+    public static final BlockGTNEWireCoil BLOCK_GTNE_WIRE_COIL = new BlockGTNEWireCoil();
 
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
+        registerItemModel(BLOCK_GTNE_WIRE_COIL);
     }
 
 

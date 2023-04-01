@@ -41,12 +41,16 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBlock(RegistryEvent.Register<Block> event) {
+        GTNELog.logger.info("Registering Blocks...");
         event.getRegistry().register(GTNE_BLOCK_METAL_CASING);
+        event.getRegistry().register(BLOCK_GTNE_WIRE_COIL);
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
+        GTNELog.logger.info("Registering BlockItem....");
         event.getRegistry().register(createItemBlock(GTNE_BLOCK_METAL_CASING, VariantItemBlock::new));
+        event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
@@ -63,6 +67,7 @@ public class CommonProxy {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        GTNELog.logger.info("Registering Recipes...");
         Advanced_Precision_Assembly_Line.init();
         ComponentsAssembler.init();
     }
