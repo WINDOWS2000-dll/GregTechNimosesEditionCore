@@ -49,7 +49,7 @@ public class GTNE_windows_material {
                 .blastTemp(2400, GasTier.LOW)
                 .build();
 
-        Draconium = new Material.Builder(24002, "Draconium")
+        Draconium = new Material.Builder(24002, "draconium")
                 .dust()
                 .ingot()
                 .plasma()
@@ -62,7 +62,7 @@ public class GTNE_windows_material {
                 .element(Dc)
                 .build();
 
-        Awakened_Draconium = new Material.Builder(24003, "DraconiumAwakned")
+        Awakened_Draconium = new Material.Builder(24003, "draconium_awakned")
                 .dust()
                 .ingot()
                 .plasma()
