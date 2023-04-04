@@ -21,6 +21,7 @@ public class GTNEBlockMetalCasing extends VariantBlock<GTNEBlockMetalCasing.Meta
         setSoundType(SoundType.METAL);
         setHarvestLevel("wrench", 4);
         setDefaultState(getState(MetalCasingType.ADVANCEDPRECISIONASSEMBLYLINECASING));
+        setRegistryName("gtne_metal_casing");
     }
 
     @Override
