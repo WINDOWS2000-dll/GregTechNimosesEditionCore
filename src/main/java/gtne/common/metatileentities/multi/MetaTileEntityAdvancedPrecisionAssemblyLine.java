@@ -15,7 +15,7 @@ import gtne.api.recipes.GTNERecipeMaps;
 import gtne.common.Block.GTNEBlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
-import gtne.common.GTNEMetaBlock;
+import gtne.common.Block.GTNEMetaBlock;
 import gtne.client.GTNETextures;
 
 public class MetaTileEntityAdvancedPrecisionAssemblyLine extends RecipeMapMultiblockController {

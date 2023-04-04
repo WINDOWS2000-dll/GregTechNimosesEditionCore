@@ -3,7 +3,6 @@ package gtne.common;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
-import gtne.common.metatileentities.multi.MetaTileEntityAdvancedPrecisionAssemblyLine;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
@@ -23,7 +22,7 @@ import java.util.function.Function;
 
 import gtne.api.unification.material.GTNEMaterials;
 
-import static gtne.common.GTNEMetaBlock.*;
+import static gtne.common.Block.GTNEMetaBlock.*;
 
 @Mod.EventBusSubscriber(modid = "gtnecore")
 public class CommonProxy {

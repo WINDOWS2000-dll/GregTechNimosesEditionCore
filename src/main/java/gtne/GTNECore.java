@@ -1,15 +1,10 @@
 package gtne;
 
 import gregtech.api.GTValues;
-import gregtech.common.blocks.BlockWireCoil;
-import gregtech.common.blocks.MetaBlocks;
-import gtne.api.unification.material.GTNEMaterials;
 import gtne.common.Block.BlockGTNEWireCoil;
 import gtne.common.CommonProxy;
-import gtne.common.GTNEMetaBlock;
-import net.minecraft.block.Block;
+import gtne.common.Block.GTNEMetaBlock;
 import net.minecraftforge.fml.common.Mod;
-import codechicken.lib.CodeChickenLib;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
