@@ -65,9 +65,9 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
     }
 
     public static enum CoilType implements IStringSerializable, IHeatingCoilBlockStats {
-        DRACONIUM("machine_coil_draconium", 18000, 16, 10, GTNEMaterials.Draconium),
-        AWAKENEDDRACONIUM("machine_coil_awakeneddraconium", 24000, 20, 12, GTNEMaterials.Awakened_Draconium),
-        NEUTRONIUM("machine_coil_neutronium", 28000, 24, 14, Materials.Neutronium);
+        DRACONIUM("draconium", 18000, 16, 10, GTNEMaterials.Draconium),
+        AWAKENEDDRACONIUM("awakeneddraconium", 24000, 20, 12, GTNEMaterials.Awakened_Draconium),
+        NEUTRONIUM("neutronium", 28000, 24, 14, Materials.Neutronium);
 
 
 

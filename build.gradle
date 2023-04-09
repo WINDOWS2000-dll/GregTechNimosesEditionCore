@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'Windows2000'
-version = '1.1.14'
+version = '1.1.15'
 
 java {
     archivesBaseName = 'GregTechNimosesEditionCore'
@@ -100,7 +100,7 @@ dependencies {
     implementation fg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
     implementation fg.deobf("curse.maven:cofh-world-271384:2920434")
     implementation fg.deobf("curse.maven:cofh-core-69162:2920433")
-    implementation fg.deobf("curse.maven:gregtech-557242:4248309")
+    implementation fg.deobf("curse.maven:gregtech-557242:4480237")
     implementation fg.deobf("curse.maven:thermal-foundation-222880:2926428")
     implementation fg.deobf("curse.maven:gregicality-multiblocks-564858:4051163")
     // Medium Dependencies

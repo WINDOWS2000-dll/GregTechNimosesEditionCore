@@ -7,6 +7,7 @@ import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import gregtech.api.unification.material.properties.FluidProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
+import gregtech.api.unification.material.properties.ToolProperty;
 
 import static gregtech.api.GTValues.*;
 import static gtne.api.unification.material.GTNEElements.*;
@@ -37,7 +38,7 @@ public class GTNE_windows_material {
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_RING, GENERATE_SPRING, GENERATE_SPRING_SMALL, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME)
                 .blastTemp(4700, GasTier.HIGH, 42000, 160)
-                .toolStats(400F, 100F, 42000, 160)
+                .toolStats(new ToolProperty(400F, 100F, 42000, 160))
                 .cableProperties(8192L, 16, 16, false)
                 .element(Dc)
                 .build();
@@ -51,7 +52,7 @@ public class GTNE_windows_material {
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_RING, GENERATE_SPRING, GENERATE_SPRING_SMALL, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME)
                 .blastTemp(9999, GasTier.HIGHEST, 3200000, 4000)
-                .toolStats(700F, 200F, 81920, 500)
+                .toolStats(new ToolProperty(700F, 200F, 81920, 500))
                 .cableProperties(GTValues.V[9], 32, 16, false)
                 .element(DcX)
                 .build();
