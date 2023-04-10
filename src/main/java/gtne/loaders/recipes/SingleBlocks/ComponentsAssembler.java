@@ -7,6 +7,7 @@ import gregtech.api.recipes.*;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
+import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 import gtne.api.recipes.GTNERecipeMaps;
@@ -113,9 +114,9 @@ public class ComponentsAssembler {
         ModHandler.removeRecipeByName("gregtech:conveyor_module_mv_styrene_butadiene_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_mv_silicone_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_mv_rubber");
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Copper, 1), OreDictUnifier.get(plate, StyreneButadieneRubber, 6), ELECTRIC_MOTOR_MV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Copper, 1), OreDictUnifier.get(plate, SiliconeRubber, 6), ELECTRIC_MOTOR_MV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Copper, 1), OreDictUnifier.get(plate, Rubber, 6), ELECTRIC_MOTOR_MV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Copper, 1), ELECTRIC_MOTOR_MV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{StyreneButadieneRubber.getFluid(L * 6)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Copper, 1), ELECTRIC_MOTOR_MV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{SiliconeRubber.getFluid(L * 6)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Copper, 1), ELECTRIC_MOTOR_MV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{Rubber.getFluid(L * 6)});
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
                 .input(cableGtSingle, Copper, 1)
@@ -321,9 +322,9 @@ public class ComponentsAssembler {
         ModHandler.removeRecipeByName("gregtech:conveyor_module_hv_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_hv_silicone_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_hv_styrene_butadiene_rubber");
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Gold, 1), OreDictUnifier.get(plate, StyreneButadieneRubber, 6), ELECTRIC_MOTOR_HV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Gold, 1), OreDictUnifier.get(plate, SiliconeRubber, 6), ELECTRIC_MOTOR_HV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Gold, 1), OreDictUnifier.get(plate, Rubber, 6), ELECTRIC_MOTOR_HV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Gold, 1), ELECTRIC_MOTOR_HV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{StyreneButadieneRubber.getFluid(L * 6)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Gold, 1), ELECTRIC_MOTOR_HV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{SiliconeRubber.getFluid(L * 6)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Gold, 1), ELECTRIC_MOTOR_HV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{Rubber.getFluid(L * 6)});
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
                 .input(cableGtSingle, Gold, 1)
@@ -530,9 +531,9 @@ public class ComponentsAssembler {
         ModHandler.removeRecipeByName("gregtech:conveyor_module_ev_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_ev_silicone_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_ev_styrene_butadiene_rubber");
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Aluminium, 1), OreDictUnifier.get(plate, StyreneButadieneRubber, 6), ELECTRIC_MOTOR_EV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Aluminium, 1), OreDictUnifier.get(plate, SiliconeRubber, 6), ELECTRIC_MOTOR_EV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Aluminium, 1), OreDictUnifier.get(plate, Rubber, 6), ELECTRIC_MOTOR_EV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Aluminium, 1), ELECTRIC_MOTOR_EV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{StyreneButadieneRubber.getFluid(L * 6)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Aluminium, 1), ELECTRIC_MOTOR_EV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{SiliconeRubber.getFluid(L * 6)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Aluminium, 1), ELECTRIC_MOTOR_EV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{Rubber.getFluid(L * 6)});
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
                 .input(cableGtSingle, Aluminium, 1)
@@ -725,8 +726,8 @@ public class ComponentsAssembler {
         //Conveyor
         ModHandler.removeRecipeByName("gregtech:conveyor_module_iv_silicone_rubber");
         ModHandler.removeRecipeByName("gregtech:conveyor_module_iv_styrene_butadiene_rubber");
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Tungsten, 1), OreDictUnifier.get(plate, StyreneButadieneRubber, 6), ELECTRIC_MOTOR_IV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtSingle, Tungsten, 1), OreDictUnifier.get(plate, SiliconeRubber, 6), ELECTRIC_MOTOR_IV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1));
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Tungsten, 1), ELECTRIC_MOTOR_IV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{StyreneButadieneRubber.getFluid(L * 6)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, new ItemStack[]{OreDictUnifier.get(cableGtSingle, Tungsten, 1), ELECTRIC_MOTOR_IV.getStackForm(2), IntCircuitIngredient.getIntegratedCircuit(1)}, new FluidStack[]{SiliconeRubber.getFluid(L * 6)});
 
         GTNERecipeMaps.COMPONENTS_ASSEMBLER.recipeBuilder()
                 .input(cableGtSingle, Tungsten, 1)
