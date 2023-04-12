@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import static gregtech.api.GregTechAPI.HEATING_COILS;
 
 @Mod(
-        modid = "gtnecore",
+        modid = GTNEValues.MODID,
         acceptedMinecraftVersions = "[1.12,1.13)",
         dependencies = GTValues.MOD_VERSION_DEP)
 

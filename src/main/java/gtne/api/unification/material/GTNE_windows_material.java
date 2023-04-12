@@ -19,6 +19,7 @@ public class GTNE_windows_material {
     public static void init() {
 
 
+        //24001 ~ 24500
 
         HIGH_PURITY_SILICON = new Material.Builder(24001, "high_purity_silicon")
                 .dust()

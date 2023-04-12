@@ -22,13 +22,26 @@ public class GTNEMaterials {
      * - FREE RANGE 24000-31999
      * - Reserved for CraftTweaker: 32000-32767
      */
+    //Windows Material
     public static Material HIGH_PURITY_SILICON;
     public static Material Draconium;
     public static Material Awakened_Draconium;
+    //PlatLine
+    public static Material PLATINUM_METALLIC_POWDER;
+    public static Material PLATINUM_CONCENTRATE;
+    public static Material PLATINUM_SALT;
+    public static Material REPRECIPITATED_PLATINUM;
+    public static Material REFINED_PLATINUM_SALT;
+    public static Material PLATINUM_RESIDUE;
+    public static Material PALLADIUM_ENRICHED_AMMONIA;
+    //Chemical
+    public static Material AMMONIUM_CHLORIDE;
 
 
     public static void init() {
         GTNE_windows_material.init();
+        GTNEPlatLineMaterial.init();
+        GTNEChemical.init();
     }
 
 }

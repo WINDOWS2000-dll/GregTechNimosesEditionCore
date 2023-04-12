@@ -24,4 +24,6 @@ public class GTNEValues {
             "High Voltage", "Extreme Voltage", "Insane Voltage", "Ludicrous Voltage", "ZPM Voltage", "Ultimate Voltage",
             "Highly Ultimate Voltage", "Extremely Ultimate Voltage", "Insanely Ultimate Voltage", "Extended Mega Ultimate Voltage",
             "Over Powered Voltage", "Maximum Voltage"};
+
+    public static final String MODID = "gtnecore";
 }

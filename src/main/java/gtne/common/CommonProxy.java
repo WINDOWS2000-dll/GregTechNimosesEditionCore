@@ -2,6 +2,7 @@ package gtne.common;
 
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
+import gtne.GTNEValues;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
@@ -24,7 +25,7 @@ import gtne.api.unification.material.GTNEMaterials;
 
 import static gtne.common.Block.GTNEMetaBlock.*;
 
-@Mod.EventBusSubscriber(modid = "gtnecore")
+@Mod.EventBusSubscriber(modid = GTNEValues.MODID)
 public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {

@@ -1,6 +1,7 @@
 package gtne.loaders.recipes.SingleBlocks;
 
 import com.google.common.graph.Graph;
+import gregtech.api.GTValues;
 import gregtech.api.items.OreDictNames;
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.recipes.*;
@@ -11,6 +12,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 import gtne.api.recipes.GTNERecipeMaps;
+import gtne.common.ConfigHolder;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -30,6 +32,23 @@ import static gregtech.api.unification.material.Materials.*;
 public class ComponentsAssembler {
 
     public static void init() {
+        if (ConfigHolder.recipeoption.Components_Assembler) {
+            Components();
+        } else {
+            DummyRecipe();
+        }
+    }
+
+    private static void DummyRecipe() {
+        //Fuckin Recipe
+        RecipeMaps.WIREMILL_RECIPES.recipeBuilder()
+                .input(ingot, Aluminium, 1)
+                .output(ingot, Aluminium, 1)
+                .EUt(GTValues.MAX).duration(2147483647)
+                .buildAndRegister();
+    }
+
+    private static void Components() {
 
         int robotarm_duration = 160;
         int field_generator_duration = 240;
