@@ -34,8 +34,39 @@ public class GTNEMaterials {
     public static Material REFINED_PLATINUM_SALT;
     public static Material PLATINUM_RESIDUE;
     public static Material PALLADIUM_ENRICHED_AMMONIA;
+    public static Material LEACH_RESIDUE;
+    public static Material RHODIUM_SULFATE;
+    public static Material SODIUM_RUTHENATE;
+    public static Material RAREST_METAL_RESIDUE;
+    public static Material IRIDIUM_METAL_RESIDUE;
+    public static Material ACIDIC_OSMIUM_SOLUTION;
+    public static Material SLUDGE_DUST_RESIDUE;
+    public static Material IRIDIUM_DIOXIDE;
+    public static Material ACIDIC_IRIDIUM_SOLUTION;
+    public static Material IRIDIUM_CHLORIDE;
+    public static Material METALLIC_SLUDGE_DUST_RESIDUE;
+    public static Material OSMIUM_SOLUTION;
+    public static Material RHODIUM_SULFATE_SOLUTION;
+    public static Material ZINC_SULFATE;
+    public static Material CRUDE_RHODIUM_METAL;
+    public static Material RHODIUM_SALT;
+    public static Material RHODIUM_SALT_SOLUTION;
+    public static Material RHODIUM_NITRATE;
+    public static Material RHODIUM_FILTER_CAKE;
+    public static Material RHODIUM_FILTER_CAKE_SOLUTION;
+    public static Material REPRECIPITATED_RHODIUM;
+    public static Material RUTHENIUM_TETROXIDE_SOLUTION;
+    public static Material HOT_RUTHENIUM_TETROXIDE_SOLUTION;
+    public static Material RUTHENIUM_TETROXIDE;
+    public static Material PALLADIUM_METALLIC_POWDER;
+    public static Material PALLADIUM_SALT;
+    public static Material REPRECIPITATED_PALLADIUM;
     //Chemical
     public static Material AMMONIUM_CHLORIDE;
+    public static Material POTASSIUM_DISULFATE;
+    public static Material SODIUM_NITRATE;
+    public static Material FORMIC_ACID;
+    public static Material SODIUM_FORMATE;
 
 
     public static void init() {

@@ -26,6 +26,7 @@ import static gregtech.loaders.recipe.MetaTileEntityLoader.registerMachineRecipe
 import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
+import static gregtechfoodoption.GTFOMaterialHandler.*;
 import static gtne.api.unification.material.GTNEMaterials.*;
 
 import gtne.api.unification.material.GTNEChemical.*;
@@ -48,6 +49,30 @@ public class Chemical {
                 .circuitMeta(9)
                 .circuitMeta(1)
                 .EUt(VA[HV]).duration(60)
+                .buildAndRegister();
+
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Potassium, 2)
+                .input(dust, Sulfur, 2)
+                .fluidInputs(Oxygen.getFluid(7000))
+                .output(dust, POTASSIUM_DISULFATE, 11)
+                .EUt(90).duration(42)
+                .buildAndRegister();
+
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, SodiumHydroxide, 3)
+                .fluidInputs(CarbonMonoxide.getFluid(1000))
+                .fluidOutputs(SODIUM_FORMATE.getFluid(1000))
+                .EUt(VA[LV]).duration(15)
+                .buildAndRegister();
+
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .circuitMeta(1)
+                .fluidInputs(SODIUM_FORMATE.getFluid(2000))
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .output(dust, SodiumSulfate, 7)
+                .fluidOutputs(FORMIC_ACID.getFluid(2000))
+                .EUt(VA[LV]).duration(15)
                 .buildAndRegister();
     }
 }

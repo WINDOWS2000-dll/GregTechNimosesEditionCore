@@ -4,6 +4,8 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
 import gtne.GTNEValues;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
+import gtne.loaders.recipes.ChemicalChains.Chemical;
+import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
@@ -70,5 +72,7 @@ public class CommonProxy {
         GTNELog.logger.info("Registering Recipes...");
         Advanced_Precision_Assembly_Line.init();
         ComponentsAssembler.init();
+        PlatLines.init();
+        Chemical.init();
     }
 }

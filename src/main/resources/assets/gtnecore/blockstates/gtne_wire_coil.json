@@ -4,14 +4,14 @@
     "active=false,variant=draconium": {
       "model": "minecraft:cube_all",
       "textures": {
-        "all": "gregtech:blocks/Coil/machine_coil_draconium"
+        "all": "gregtech:blocks/coil/machine_coil_draconium"
       }
     },
     "active=true,variant=draconium": {
       "model": "gregtech:cube_2_layer_all",
       "textures": {
-        "bot_all": "gregtech:blocks/Coil/machine_coil_draconium",
-        "top_all": "gregtech:blocks/Coil/machine_coil_draconium_bloom"
+        "bot_all": "gregtech:blocks/coil/machine_coil_draconium",
+        "top_all": "gregtech:blocks/coil/machine_coil_draconium_bloom"
       }
     }
   }

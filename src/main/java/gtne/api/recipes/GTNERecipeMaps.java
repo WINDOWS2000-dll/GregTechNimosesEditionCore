@@ -22,4 +22,11 @@ public class GTNERecipeMaps {
             .setProgressBar(GTNEGuiTextures.PREGRESSBAR_CONPONENTS_ASSEMBLER, MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ASSEMBLER);
 
+    //Todo Quantum Computer
+    /*
+    @ZenProperty
+    public static final
+
+     */
+
 }

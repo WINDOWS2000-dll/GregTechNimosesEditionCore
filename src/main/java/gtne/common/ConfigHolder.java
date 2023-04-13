@@ -20,5 +20,6 @@ public class ConfigHolder {
         @Config.Comment("Higher difficulty for various low-level component recipes Default = true")
         @Config.Name("Components Assembler")
         public boolean Components_Assembler = true;
+
     }
 }

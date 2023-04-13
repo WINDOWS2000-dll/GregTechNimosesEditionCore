@@ -7,6 +7,7 @@ import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnerg
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.common.metatileentities.multi.MetaTileEntityAdvancedPrecisionAssemblyLine;
 import net.minecraft.util.ResourceLocation;
+import scala.tools.cmd.Meta;
 
 
 import javax.annotation.Nonnull;
@@ -27,6 +28,8 @@ public class GTNEMetaTileEntities {
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_OUTPUT_HATCH = new MetaTileEntityEnergyHatch[1];
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_OUTPUT_HATCH_4A = new MetaTileEntityEnergyHatch[5]; // EV, IV, LuV, ZPM, UV, UHV
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_OUTPUT_HATCH_16A = new MetaTileEntityEnergyHatch[5];
+    public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH_32A = new MetaTileEntityEnergyHatch[5];
+    public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_OUTPUT_HATCH_32A = new MetaTileEntityEnergyHatch[5];
 
     public static void init() {
         /*
@@ -78,6 +81,16 @@ public class GTNEMetaTileEntities {
         GTNE_ENERGY_OUTPUT_HATCH_16A[2] = registerMetaTileEntity(13019, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_16a." + GTValues.VN[UXV]), 12, 16, true));
         GTNE_ENERGY_OUTPUT_HATCH_16A[3] = registerMetaTileEntity(13020, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_16a." + GTValues.VN[OpV]), 13, 16, true));
         GTNE_ENERGY_OUTPUT_HATCH_16A[4] = registerMetaTileEntity(13021, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_16a." + GTValues.VN[MAX]), 14, 16, true));
+        GTNE_ENERGY_INPUT_HATCH_32A[0] = registerMetaTileEntity(13022, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.input_32a." + GTValues.VN[UEV]), 10, 32, false));
+        GTNE_ENERGY_INPUT_HATCH_32A[1] = registerMetaTileEntity(13023, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.input_32a." + GTValues.VN[UIV]), 11, 32, false));
+        GTNE_ENERGY_INPUT_HATCH_32A[2] = registerMetaTileEntity(13024, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.input_32a." + GTValues.VN[UXV]), 12, 32, false));
+        GTNE_ENERGY_INPUT_HATCH_32A[3] = registerMetaTileEntity(13025, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.input_32a." + GTValues.VN[OpV]), 13, 32, false));
+        GTNE_ENERGY_INPUT_HATCH_32A[4] = registerMetaTileEntity(13026, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.input_32a." + GTValues.VN[MAX]), 14, 32, false));
+        GTNE_ENERGY_OUTPUT_HATCH_32A[0] = registerMetaTileEntity(13027, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_32a." + GTValues.VN[UEV]), 10, 32, true));
+        GTNE_ENERGY_OUTPUT_HATCH_32A[1] = registerMetaTileEntity(13028, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_32a." + GTValues.VN[UIV]), 11, 32, true));
+        GTNE_ENERGY_OUTPUT_HATCH_32A[2] = registerMetaTileEntity(13029, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_32a." + GTValues.VN[UXV]), 12, 32, true));
+        GTNE_ENERGY_OUTPUT_HATCH_32A[3] = registerMetaTileEntity(13030, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_32a." + GTValues.VN[OpV]), 13, 32, true));
+        GTNE_ENERGY_OUTPUT_HATCH_32A[4] = registerMetaTileEntity(13031, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_32a." + GTValues.VN[MAX]), 14, 32, true));
     }
 
     @Nonnull
