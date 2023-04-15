@@ -11,7 +11,3 @@ Advanced_Precision_Assembly_Line
 
 各種コンポーネント
 
-スペシャルサンクス
-
-MrKo_no
-
