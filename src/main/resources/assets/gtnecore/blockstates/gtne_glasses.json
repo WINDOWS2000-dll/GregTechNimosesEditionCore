@@ -1,0 +1,103 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "active=false,variant=BorosilicateGlassHV": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "gregtech:blocks/casing/glass/boronsilicateglass_hv"
+      }
+    },
+    "active=true,variant=BorosilicateGlassHV": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "gregtech:blocks/casing/glass/boronsilicateglass_hv"
+      },
+      "active=false,variant=BorosilicateGlassEV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
+        }
+      },
+      "active=true,variant=BorosilicateGlassEV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
+        }
+      },
+      "active=false,variant=BorosilicateGlassIV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_iv"
+        }
+      },
+      "active=true,variant=BorosilicateGlassIV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_iv"
+        }
+      },
+      "active=false,variant=BorosilicateGlassLuV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
+        }
+      },
+      "active=true,variant=BorosilicateGlassLuV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
+        }
+      },
+      "active=false,variant=BorosilicateGlassZPM": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_zpm"
+        }
+      },
+      "active=true,variant=BorosilicateGlassZPM": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_zpm"
+        }
+      },
+      "active=false,variant=BorosilicateGlassUV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_uv"
+        }
+      },
+      "active=true,variant=BorosilicateGlassUV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_uv"
+        }
+      },
+      "active=false,variant=BorosilicateGlassUHV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_uhv"
+        }
+      },
+      "active=true,variant=BorosilicateGlassUHV": {
+        "model": "minecraft:cube_all",
+        "ambientocclusion": false,
+        "textures": {
+          "all": "gregtech:blocks/casing/glass/boronsilicateglass_uhv"
+        }
+      }
+    }
+  }
+}

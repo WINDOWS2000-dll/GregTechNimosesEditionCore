@@ -16,11 +16,13 @@ public class GTNEMetaBlock {
 
     public static final GTNEBlockMetalCasing GTNE_BLOCK_METAL_CASING = new GTNEBlockMetalCasing();
     public static final BlockGTNEWireCoil BLOCK_GTNE_WIRE_COIL = new BlockGTNEWireCoil();
+    public static final GTNEGlasses GTNE_GLASSES = new GTNEGlasses();
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
         BLOCK_GTNE_WIRE_COIL.onModelRegister();
+        GTNE_GLASSES.onModelRegister();
     }
 
 

@@ -8,7 +8,7 @@
       }
     },
     "active=true,variant=draconium": {
-      "model": "gregtech:cube_2_layer",
+      "model": "gregtech:cube_2_layer_all",
       "textures": {
         "bot_all": "gregtech:blocks/casing/coil/machine_coil_draconium",
         "top_all": "gregtech:blocks/casing/coil/machine_coil_draconium_bloom"

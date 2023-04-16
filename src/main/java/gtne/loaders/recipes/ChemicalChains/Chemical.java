@@ -34,6 +34,8 @@ import gtne.api.unification.material.GTNEChemical.*;
 public class Chemical {
 
     public static void init() {
+
+        //Ammonium Chloride Fluid Recipe
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Ammonia.getFluid(1000))
                 .fluidInputs(HydrochloricAcid.getFluid(1000))
@@ -42,6 +44,7 @@ public class Chemical {
                 .EUt(VA[LV]).duration(15)
                 .buildAndRegister();
 
+        //Another Ammonium Chloride Recipe
         RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Ammonia.getFluid(64000))
                 .fluidInputs(HydrochloricAcid.getFluid(64000))
@@ -51,6 +54,7 @@ public class Chemical {
                 .EUt(VA[HV]).duration(60)
                 .buildAndRegister();
 
+        //Potassium Disulfate Recipe
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, Potassium, 2)
                 .input(dust, Sulfur, 2)
@@ -59,6 +63,7 @@ public class Chemical {
                 .EUt(90).duration(42)
                 .buildAndRegister();
 
+        //Sodium Formate Recipe
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, SodiumHydroxide, 3)
                 .fluidInputs(CarbonMonoxide.getFluid(1000))
@@ -66,6 +71,7 @@ public class Chemical {
                 .EUt(VA[LV]).duration(15)
                 .buildAndRegister();
 
+        //Formic Acid Recipe
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(1)
                 .fluidInputs(SODIUM_FORMATE.getFluid(2000))

@@ -46,6 +46,7 @@ public class CommonProxy {
         GTNELog.logger.info("Registering Blocks...");
         event.getRegistry().register(GTNE_BLOCK_METAL_CASING);
         event.getRegistry().register(BLOCK_GTNE_WIRE_COIL);
+        event.getRegistry().register(GTNE_GLASSES);
     }
 
     @SubscribeEvent
@@ -53,6 +54,7 @@ public class CommonProxy {
         GTNELog.logger.info("Registering BlockItem....");
         event.getRegistry().register(createItemBlock(GTNE_BLOCK_METAL_CASING, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
+        event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

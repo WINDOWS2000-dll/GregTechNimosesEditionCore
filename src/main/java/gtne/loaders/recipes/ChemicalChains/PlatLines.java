@@ -42,7 +42,7 @@ public class PlatLines {
     }
 
     private static void PlatLine_Platinum() {
-        //GregTechCE: UnofficialPlatinum_PlatLine
+        // Remove GregTechCE: UnofficialPlatinum_PlatLine
         //Platinum Grope Sludge
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.CENTRIFUGE_RECIPES, new ItemStack[]{OreDictUnifier.get(dust, PlatinumGroupSludge, 6)}, new FluidStack[]{Materials.AquaRegia.getFluid(1200)});
         //Platinum Dust
@@ -50,6 +50,8 @@ public class PlatLines {
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, Cooperite, 6));
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.CHEMICAL_BATH_RECIPES, new ItemStack[]{OreDictUnifier.get(crushed, Nickel, 1)}, new FluidStack[]{Materials.Mercury.getFluid(100)});
 
+
+        //New Horizons PlatLine Recipes
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .input(crushedPurified, Cooperite, 1)
                 .fluidInputs(AquaRegia.getFluid(150))

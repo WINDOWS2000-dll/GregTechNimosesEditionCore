@@ -4,7 +4,7 @@ import gregtech.api.block.IHeatingCoilBlockStats;
 import gregtech.api.block.VariantActiveBlock;
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.unification.material.Materials;
-import gregtech.common.blocks.BlockWireCoil;
+import gregtech.common.ConfigHolder;
 import gtne.api.unification.material.GTNEMaterials;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -47,8 +47,8 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
         super.addInformation(itemStack, worldIn, lines, tooltipFlag);
         VariantItemBlock itemBlock = (VariantItemBlock)itemStack.getItem();
         IBlockState stackState = itemBlock.getBlockState(itemStack);
-        BlockGTNEWireCoil.CoilType coilType = (BlockGTNEWireCoil.CoilType)this.getState(stackState);
-        lines.add(I18n.format("tile.wire_coil.tooltip_heat", new Object[]{coilType.coilTemperature}));
+        BlockGTNEWireCoil.CoilType coilType = this.getState(stackState);
+        lines.add(I18n.format("tile.wire_coil.tooltip_heat", coilType.coilTemperature));
         if (!Keyboard.isKeyDown(42) && !Keyboard.isKeyDown(54)) {
             lines.add(I18n.format("gregtech.tooltip.hold_shift"));
         } else {
@@ -64,7 +64,12 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
 
     }
 
-    public static enum CoilType implements IStringSerializable, IHeatingCoilBlockStats {
+    @Override
+    protected boolean isBloomEnabled(BlockGTNEWireCoil.CoilType value) {
+        return ConfigHolder.client.coilsActiveEmissiveTextures;
+    }
+
+    public enum CoilType implements IStringSerializable, IHeatingCoilBlockStats {
         DRACONIUM("draconium", 18000, 16, 10, GTNEMaterials.Draconium),
         AWAKENEDDRACONIUM("awakeneddraconium", 24000, 20, 12, GTNEMaterials.Awakened_Draconium),
         NEUTRONIUM("neutronium", 28000, 24, 14, Materials.Neutronium);
@@ -77,7 +82,7 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
         private final int energyDiscount;
         private final gregtech.api.unification.material.Material material;
 
-        private CoilType(String name, int coilTemperature, int level, int energyDiscount, gregtech.api.unification.material.Material material) {
+        CoilType(String name, int coilTemperature, int level, int energyDiscount, gregtech.api.unification.material.Material material) {
             this.name = name;
             this.coilTemperature = coilTemperature;
             this.level = level;

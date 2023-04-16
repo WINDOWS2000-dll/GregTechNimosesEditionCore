@@ -1,0 +1,13 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "CTM",
+        "layer": "TRANSLUCENT",
+        "textures": [
+            "gregtech:blocks/casing/glass/boronsilicateglass_luv_ctm"
+        ],
+        "extra": {
+            "connect_inside": true
+        }
+    }
+}
