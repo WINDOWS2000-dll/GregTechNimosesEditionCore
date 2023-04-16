@@ -53,6 +53,21 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
         return false;
     }
 
+    @SideOnly(Side.CLIENT)
+    public void addInformation(@Nonnull ItemStack itemStack, @Nullable World worldIn, List<String> lines, @Nonnull ITooltipFlag tooltipFlag) {
+        super.addInformation(itemStack, worldIn, lines, tooltipFlag);
+
+        VariantItemBlock itemBlock = (VariantItemBlock<GTNEGlasses.GTNEGlassType, GTNEGlasses>) itemStack.getItem();
+        IBlockState stackState = itemBlock.getBlockState(itemStack);
+        GTNEGlasses.GTNEGlassType glassType = getState(stackState);
+
+        lines.add(I18n.format("tile.borosilicateglass.tooltip_glasstier", glassType.GlassTier));
+
+        if (TooltipHelper.isShiftDown()) {
+            lines.add(I18n.format("tile.borosilicateglass.joke"));
+        }
+    }
+
     @Override
     @Nonnull
     public BlockRenderLayer getRenderLayer() {
@@ -89,22 +104,31 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
 
     public enum GTNEGlassType implements IStringSerializable {
 
-        BorosilicateGlassHV("BorosilicateGlass"),
-        BorosilicateGlassEV("Titanium_Reinforced_BorosilicateGlass"),
-        BorosilicateGlassIV("TungstenSteel_Reinforced_BorosilicateGlass"),
-        BorosilicateGlassLuV("Rhodium_Plated_Palladium_Reinforced_BorosilicateGlass"),
-        BorosilicateGlassZPM("Iridium_Reinforced_BorosilicateGlass"),
-        BorosilicateGlassUV("Osmium_Reinforced_BorosilicateGlass"),
-        BorosilicateGlassUHV("Neutronium_Reinforced_BorosilicateGlass");
+        BorosilicateGlassHV("borosilicateglass", GTValues.VN[HV]),
+        BorosilicateGlassEV("titanium_reinforced_borosilicateglass", GTValues.VN[EV]),
+        BorosilicateGlassIV("tungstensteel_reinforced_borosilicateglass", GTValues.VN[IV]),
+        BorosilicateGlassLuV("rhodium_plated_palladium_reinforced_borosilicateglass", GTValues.VN[LuV]),
+        BorosilicateGlassZPM("iridium_reinforced_borosilicateglass", GTValues.VN[ZPM]),
+        BorosilicateGlassUV("osmium_reinforced_borosilicateglass", GTValues.VN[UV]),
+        BorosilicateGlassUHV("neutronium_reinforced_borosilicateglass", GTValues.VN[UHV]);
+
         //Todo UEV+ BorosilicateGlasses
         //BorosilicateGlassUHV("MITEI_Reinforced_BorosilicateGlass", GTValues.VN[UEV]),
         //...
 
         private final String name;
+        private final String  GlassTier;
 
-        GTNEGlassType(String name) {
+        GTNEGlassType(String name, String GlassTier) {
             this.name = name;
+            this.GlassTier = GlassTier;
         }
+
+        @Nonnull
+        public String  getGlassTier() {
+            return this.GlassTier;
+        }
+
 
         @Override
         @Nonnull
