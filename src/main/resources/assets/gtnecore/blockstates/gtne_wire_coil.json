@@ -13,6 +13,19 @@
         "bot_all": "gregtech:blocks/casing/coil/machine_coil_draconium",
         "top_all": "gregtech:blocks/casing/coil/machine_coil_draconium_bloom"
       }
+    },
+    "active=false,variant=awakeneddraconium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/casing/coil/machine_coil_awakened_draconium"
+      }
+    },
+    "active=true,variant=awakeneddraconium": {
+      "model": "gregtech:cube_2_layer_all",
+      "textures": {
+        "bot_all": "gregtech:blocks/casing/coil/machine_coil_awakened_draconium",
+        "top_all": "gregtech:blocks/casing/coil/machine_coil_awakened_draconium_bloom"
+      }
     }
   }
 }

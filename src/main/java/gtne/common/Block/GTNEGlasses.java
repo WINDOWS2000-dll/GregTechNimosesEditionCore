@@ -69,14 +69,8 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
     }
 
     @Override
-    @Nonnull
-    public BlockRenderLayer getRenderLayer() {
-        return BlockRenderLayer.CUTOUT;
-    }
-
-    @Override
     public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer) {
-        return getState(state) == GTNEGlassType.BorosilicateGlassHV ? layer == BlockRenderLayer.TRANSLUCENT : super.canRenderInLayer(state, layer);
+        return getState(state)  != GTNEGlassType.BorosilicateGlassHV && getState(state) == GTNEGlassType.BorosilicateGlassHV ? layer == BlockRenderLayer.TRANSLUCENT : super.canRenderInLayer(state, layer);
     }
 
     @Override
