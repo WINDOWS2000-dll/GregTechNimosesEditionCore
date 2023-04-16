@@ -15,6 +15,6 @@ public class GTNETextures {
     public static SimpleOverlayRenderer ADVANCEDPRECISIONASSEMBLYLINECASING;
 
     public static void preInit() {
-        ADVANCEDPRECISIONASSEMBLYLINECASING = new SimpleOverlayRenderer("advanced_precision_assembly_line_casing");
+        ADVANCEDPRECISIONASSEMBLYLINECASING = new SimpleOverlayRenderer("casing/multiblockcasing/advancedprecisionassemblyline/advanced_precision_assembly_line_casing");
     }
 }
