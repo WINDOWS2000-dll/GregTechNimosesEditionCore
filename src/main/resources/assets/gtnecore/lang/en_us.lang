@@ -22,6 +22,6 @@ tile.compution_casing.tooltip.operation_speed=Base Operation Speed : §e%,d/s
 gtne.recipe.operation_speed=Operation Speed: %,d/s (%s)
 
 #Coils
-tile.gtne_wire_coil.draconium.name=Draconium Coil
+tile.gtne_wire_coil.draconium.name=Draconium Coil Block
 #Glass Tooltip
 tile.borosilicateglass.tooltip_glasstier=Glass Tier %s

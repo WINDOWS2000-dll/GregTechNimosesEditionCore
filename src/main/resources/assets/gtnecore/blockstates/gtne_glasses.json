@@ -1,97 +1,97 @@
 {
   "forge_marker": 1,
   "variants": {
-    "active=false,variant=BorosilicateGlassHV": {
+    "active=false,variant=borosilicateglass": {
       "model": "minecraft:cube_all",
       "ambientocclusion": false,
       "textures": {
         "all": "gregtech:blocks/casing/glass/boronsilicateglass_hv"
       }
     },
-    "active=true,variant=BorosilicateGlassHV": {
+    "active=true,variant=borosilicateglass": {
       "model": "minecraft:cube_all",
       "ambientocclusion": false,
       "textures": {
         "all": "gregtech:blocks/casing/glass/boronsilicateglass_hv"
       },
-      "active=false,variant=BorosilicateGlassEV": {
+      "active=false,variant=titanium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
         }
       },
-      "active=true,variant=BorosilicateGlassEV": {
+      "active=true,variant=titanium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
         }
       },
-      "active=false,variant=BorosilicateGlassIV": {
+      "active=false,variant=tungstensteel_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_iv"
         }
       },
-      "active=true,variant=BorosilicateGlassIV": {
+      "active=true,variant=tungstensteel_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_iv"
         }
       },
-      "active=false,variant=BorosilicateGlassLuV": {
+      "active=false,variant=rhodium_plated_palladium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
         }
       },
-      "active=true,variant=BorosilicateGlassLuV": {
+      "active=true,variant=rhodium_plated_palladium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
         }
       },
-      "active=false,variant=BorosilicateGlassZPM": {
+      "active=false,variant=iridium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_zpm"
         }
       },
-      "active=true,variant=BorosilicateGlassZPM": {
+      "active=true,variant=iridium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_zpm"
         }
       },
-      "active=false,variant=BorosilicateGlassUV": {
+      "active=false,variant=osmium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_uv"
         }
       },
-      "active=true,variant=BorosilicateGlassUV": {
+      "active=true,variant=osmium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_uv"
         }
       },
-      "active=false,variant=BorosilicateGlassUHV": {
+      "active=false,variant=neutronium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_uhv"
         }
       },
-      "active=true,variant=BorosilicateGlassUHV": {
+      "active=true,variant=neutronium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
         "ambientocclusion": false,
         "textures": {

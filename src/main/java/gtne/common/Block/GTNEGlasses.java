@@ -38,7 +38,7 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
 
     public GTNEGlasses() {
         super(Material.IRON);
-        setTranslationKey("gtne_transparent_casing");
+        setTranslationKey("gtne_glasses");
         setHardness(5.0F);
         setResistance(5.0F);
         setSoundType(SoundType.GLASS);
