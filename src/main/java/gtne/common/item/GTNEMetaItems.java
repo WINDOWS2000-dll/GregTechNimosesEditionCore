@@ -3,7 +3,7 @@ package gtne.common.item;
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.items.metaitem.StandardMetaItem;
 
-public class GTNEMetaItems {
+public final class GTNEMetaItems {
 
     private GTNEMetaItems() {
     }

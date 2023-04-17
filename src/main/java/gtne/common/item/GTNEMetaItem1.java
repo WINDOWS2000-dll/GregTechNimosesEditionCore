@@ -1,7 +1,5 @@
 package gtne.common.item;
 
-import gregtech.api.items.metaitem.MetaItem;
-import gregtech.common.items.MetaItems;
 import gregtech.api.items.metaitem.StandardMetaItem;
 
 import static gtne.common.item.GTNEMetaItems.*;

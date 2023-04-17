@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'Windows2000'
-version = '1.1.20'
+version = '1.1.21'
 
 java {
     archivesBaseName = 'GregTechNimosesEditionCore'
@@ -103,6 +103,8 @@ dependencies {
     implementation fg.deobf("curse.maven:gregtech-557242:4483462")
     implementation fg.deobf("curse.maven:thermal-foundation-222880:2926428")
     implementation fg.deobf("curse.maven:gregicality-multiblocks-564858:4483468")
+    implementation fg.deobf("curse.maven:enderio-${eio_pid}:${eio_fid}")
+    implementation fg.deobf("curse.maven:endercore-${eco_pid}:${eco_fid}")
     // Medium Dependencies
     implementation "curse.maven:crafttweaker-239197:4403410"
     implementation fg.deobf("curse.maven:jei-238222:3040523")
