@@ -6,6 +6,7 @@ import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.*;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.gui.GTNEGuiTextures;
+import net.minecraft.init.SoundEvents;
 import stanhebben.zenscript.annotations.ZenProperty;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedPrecisionAssemblyLine;
 
@@ -28,5 +29,11 @@ public class GTNERecipeMaps {
     public static final
 
      */
+
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> HighEnergyElectromagneticImplosionMachine =
+            new RecipeMap<>("high_energy_electromagnetic_implosion_machine", 6, 3, 3, 3, new SimpleRecipeBuilder(), false)
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
+                    .setSound(SoundEvents.ENTITY_GENERIC_EXPLODE);
 
 }

@@ -6,6 +6,7 @@ import gregtech.client.renderer.texture.Textures;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnergyHatch;
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.common.metatileentities.multi.MetaTileEntityAdvancedPrecisionAssemblyLine;
+import gtne.common.metatileentities.multi.MetaTileEntityHighEnergyElectromagneticImplosionMachine;
 import net.minecraft.util.ResourceLocation;
 import scala.tools.cmd.Meta;
 
@@ -21,6 +22,7 @@ import static gtne.common.metatileentities.single.MetaTileEntityComponentsAssemb
 public class GTNEMetaTileEntities {
 
     public static MetaTileEntityAdvancedPrecisionAssemblyLine AdvancedPrecisionAssemblyLine;
+    public static MetaTileEntityHighEnergyElectromagneticImplosionMachine HighEnergyElectromagneticImplosionMachine;
 
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH = new MetaTileEntityEnergyHatch[1];
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH_4A = new MetaTileEntityEnergyHatch[5]; // EV, IV, LuV, ZPM, UV, UHV
@@ -57,6 +59,7 @@ public class GTNEMetaTileEntities {
         //blocks :11000~11999
         registerSimpleMetaTileEntity(COMPONENTS_ASSEMBLER, 11000, "components_assembler", GTNERecipeMaps.COMPONENTS_ASSEMBLER, Textures.ASSEMBLER_OVERLAY, true, GTNEMetaTileEntities::gtneId, GTUtility.hvCappedTankSizeFunction);
         //MultiBlockMachines 12000~12999
+        HighEnergyElectromagneticImplosionMachine = registerMetaTileEntity(12000, new MetaTileEntityHighEnergyElectromagneticImplosionMachine(gtneId("high_energy_electromagnetic_implosion_compressor")));
         AdvancedPrecisionAssemblyLine = registerMetaTileEntity(12001, new MetaTileEntityAdvancedPrecisionAssemblyLine(gtneId("advanced_precision_assembly_line")));
         //HighTierEnergyHatch 13000~13500
         GTNE_ENERGY_INPUT_HATCH[0] = registerMetaTileEntity(13000, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.input." + GTValues.VN[MAX]), 14, 2, false));

@@ -28,6 +28,12 @@
         "textures": {
           "all": "gregtech:blocks/casing/multiblockcasings/advancedprecisionassemblyline/advanced_precision_assembly_line"
         }
+      },
+      "electromagnetic_implosion_coil": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/ElectroMagneticImprosionComplessor/electromagnetic_implosion_coil"
+        }
       }
     }
   }

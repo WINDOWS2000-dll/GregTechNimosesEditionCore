@@ -3,6 +3,7 @@ package gtne.common;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
 import gtne.GTNEValues;
+import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
@@ -31,6 +32,8 @@ import static gtne.common.Block.GTNEMetaBlock.*;
 public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {
+        GTNELog.logger.info("Registering Items...");
+        GTNEMetaItems.init();
         GTNELog.logger.info("Registering MetaTileEntities...");
         GTNEMetaTileEntities.init();
     }

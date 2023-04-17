@@ -34,7 +34,8 @@ public class GTNEBlockMetalCasing extends VariantBlock<GTNEBlockMetalCasing.Meta
         ADVANCEDPRECISIONASSEMBLYLINECASING("advanced_precision_assembly_line_casing"),
         ADVANCEDPRECISIONASSEMBLYLINEFILTER("advanced_precision_assembly_line_filter"),
         ADVANCEDPRECISIONASSEMBLYLINECONTROL("advanced_precision_assembly_line_control"),
-        ADVANCEDPRECISIONASSEMBLYLINE("advanced_precision_assembly_line");
+        ADVANCEDPRECISIONASSEMBLYLINE("advanced_precision_assembly_line"),
+        ELECTRO_MAGNETIC_IMPLOSION_COIL("electromagnetic_implosion_coil");
 
 
         private final String name;

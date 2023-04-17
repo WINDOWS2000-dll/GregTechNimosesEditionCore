@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtnecore:items/metaitems/anti_space_radioation_alloy_plate"
+  }
+}
