@@ -32,7 +32,7 @@
       "electromagnetic_implosion_coil": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "gregtech:blocks/casing/multiblockcasings/ElectroMagneticImprosionComplessor/electromagnetic_implosion_coil"
+          "all": "gregtech:blocks/casing/multiblockcasings/electromagneticimprosionvomplessor/electromagnetic_implosion_coil"
         }
       }
     }
