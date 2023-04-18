@@ -55,8 +55,9 @@ public class Assembly_Line_Recipe {
                 .buildAndRegister();
 
         //APAL Filter Casing
-        //RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-        //        .input()
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                //.input()
+                .buildAndRegister();
 
     }
 }
