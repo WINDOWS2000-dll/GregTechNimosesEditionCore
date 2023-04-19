@@ -13,13 +13,17 @@ public class ConfigHolder {
 
     public static class RecipeOption {
 
-        @Config.Comment({"GregTech : New Horizons PlatLine Recipe Default = true"})
+        @Config.Comment({"GregTech : New Horizons PlatLine Recipe [Default = true]"})
         @Config.Name("GTNH PlatLine")
         public boolean GTNHPlatLine = true;
 
-        @Config.Comment("Higher difficulty for various low-level component recipes Default = true")
+        @Config.Comment("Higher difficulty for various low-level component recipes [Default = true]")
         @Config.Name("Components Assembler")
         public boolean Components_Assembler = true;
+
+        @Config.Comment("GregTech : New Horizons Wire Coil Recipes [Default = true]")
+        @Config.Name("GTNE Wire Coil Recipe")
+        public boolean Harder_Wire_Coil_Recipe = true;
 
     }
 }

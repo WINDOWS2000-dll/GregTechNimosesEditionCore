@@ -27,18 +27,7 @@ public class PlatLines {
             PlatLine_Rhodium();
             PlatLine_Ruthenium();
             PlatLine_Palladium();
-        } else {
-            DummyRecipe();
         }
-    }
-
-    private static void DummyRecipe() {
-        //Fuckin Recipe
-        RecipeMaps.WIREMILL_RECIPES.recipeBuilder()
-                .input(ingot, Iron, 1)
-                .output(ingot, Iron, 1)
-                .EUt(GTValues.MAX).duration(2147483647)
-                .buildAndRegister();
     }
 
     private static void PlatLine_Platinum() {

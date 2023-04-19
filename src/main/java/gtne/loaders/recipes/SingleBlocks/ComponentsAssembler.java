@@ -34,18 +34,7 @@ public class ComponentsAssembler {
     public static void init() {
         if (ConfigHolder.recipeoption.Components_Assembler) {
             Components();
-        } else {
-            DummyRecipe();
         }
-    }
-
-    private static void DummyRecipe() {
-        //Fuckin Recipe
-        RecipeMaps.WIREMILL_RECIPES.recipeBuilder()
-                .input(ingot, Aluminium, 1)
-                .output(ingot, Aluminium, 1)
-                .EUt(GTValues.MAX).duration(2147483647)
-                .buildAndRegister();
     }
 
     private static void Components() {
