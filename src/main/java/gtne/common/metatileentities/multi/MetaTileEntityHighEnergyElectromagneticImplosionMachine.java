@@ -37,7 +37,7 @@ public class MetaTileEntityHighEnergyElectromagneticImplosionMachine extends Rec
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
                 .aisle("EEE", "CCC", "CCC", "BBB", "BBB", "BBB", "CCC", "CCC", "DFG")
-                .aisle("FFF", "CMC", "CMC", "BBB", "BBB", "BBB", "CMC", "CMC", "DFG")
+                .aisle("FFF", "CMC", "CMC", "BBB", "BBB", "BBB", "CMC", "CMC", "DLG")
                 .aisle("AZV", "CCC", "CSC", "BBB", "BBB", "BBB", "CCC", "CCC", "DFG")
                 .where('S', selfPredicate())
                 .where('F', states(getCasingState()))
@@ -50,6 +50,7 @@ public class MetaTileEntityHighEnergyElectromagneticImplosionMachine extends Rec
                 .where('G', abilities(MultiblockAbility.EXPORT_FLUIDS))
                 .where('B', states(materialBlockState(Materials.Tritanium)))
                 .where('C', states(GTNEMetaBlock.GTNE_BLOCK_METAL_CASING.getState(GTNEBlockMetalCasing.MetalCasingType.ELECTRO_MAGNETIC_IMPLOSION_COIL)))
+                .where('L', abilities(MultiblockAbility.MUFFLER_HATCH))
                 .build();
 
     }
@@ -68,6 +69,11 @@ public class MetaTileEntityHighEnergyElectromagneticImplosionMachine extends Rec
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return Textures.SOLID_STEEL_CASING;
+    }
+
+    @Override
+    public boolean hasMufflerMechanics() {
+        return true;
     }
 
 }
