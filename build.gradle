@@ -91,7 +91,23 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
-        url "https://cursemaven.com"
+        name = 'Cleanroom Maven'
+        url = 'https://maven.cleanroommc.com'
+    }
+    maven {
+        name = 'Sponge Powered'
+        url = 'https://repo.spongepowered.org/maven'
+    }
+    maven {
+        name = 'Mod Maven'
+        url = 'https://modmaven.dev'
+    }
+    maven {
+        name = 'Curse Maven'
+        url = 'https://www.cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
     }
 }
 
@@ -105,6 +121,7 @@ dependencies {
     implementation fg.deobf("curse.maven:gregicality-multiblocks-564858:4483468")
     implementation fg.deobf("curse.maven:enderio-${eio_pid}:${eio_fid}")
     implementation fg.deobf("curse.maven:endercore-${eco_pid}:${eco_fid}")
+    implementation files("libs/groovyscript-0.4.0.jar")
     // Medium Dependencies
     implementation "curse.maven:crafttweaker-239197:4403410"
     implementation fg.deobf("curse.maven:jei-238222:3040523")
@@ -114,6 +131,13 @@ dependencies {
     implementation fg.deobf("curse.maven:brandons-core-231382:3408276")
     implementation fg.deobf("curse.maven:draconicadditions-314515:3514704")
     implementation fg.deobf("curse.maven:avaritia-1-10-261348:3143349")
+    // Tests
+    testImplementation("org.junit.jupiter:junit-jupiter:${junit_version}")
+    testImplementation("org.hamcrest:hamcrest:${hamcrest_version}")
+
+    // Compile-Time Dependencies
+    compileOnly "org.projectlombok:lombok:${lombok_version}"
+    annotationProcessor "org.projectlombok:lombok:${lombok_version}"
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
