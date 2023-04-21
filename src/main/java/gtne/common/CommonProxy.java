@@ -8,6 +8,8 @@ import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
+import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
+import gtne.loaders.recipes.MultiBlock.EBFCoils;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -60,7 +62,7 @@ public class CommonProxy {
         event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
     }
 
-    private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
+    private static <T extends Block>  ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
         ItemBlock itemBlock = producer.apply(block);
         itemBlock.setRegistryName(block.getRegistryName());
         return itemBlock;
@@ -75,8 +77,10 @@ public class CommonProxy {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         GTNELog.logger.info("Registering Recipes...");
+        Assembly_Line_Recipe.init();
         Advanced_Precision_Assembly_Line.init();
         ComponentsAssembler.init();
+        EBFCoils.init();
         PlatLines.init();
         Chemical.init();
     }

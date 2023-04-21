@@ -15,6 +15,7 @@ import static gregtech.api.GregTechAPI.HEATING_COILS;
 
 @Mod(
         modid = GTNEValues.MODID,
+        name = "GregTechNimosesEdition-Core",
         acceptedMinecraftVersions = "[1.12,1.13)",
         dependencies = GTValues.MOD_VERSION_DEP)
 

@@ -21,7 +21,7 @@ public class ConfigHolder {
         @Config.Name("Components Assembler")
         public boolean Components_Assembler = true;
 
-        @Config.Comment("GregTech : New Horizons Wire Coil Recipes [Default = true]")
+        @Config.Comment("Harder Wire Coil Recipes [Default = true]")
         @Config.Name("GTNE Wire Coil Recipe")
         public boolean Harder_Wire_Coil_Recipe = true;
 
