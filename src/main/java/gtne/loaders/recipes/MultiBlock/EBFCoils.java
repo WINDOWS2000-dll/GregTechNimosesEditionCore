@@ -11,6 +11,8 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.blocks.BlockWireCoil;
 import gregtech.common.blocks.MetaBlocks;
+import gtne.common.Block.BlockGTNEWireCoil;
+import gtne.common.Block.GTNEMetaBlock;
 import gtne.common.ConfigHolder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -152,6 +154,7 @@ public class EBFCoils {
                 .input(foil, EnrichedNaquadahTriniumEuropiumDuranide, 16)
                 .fluidInputs(Tritanium.getFluid(HighTierCoilFluidValues))
                 .fluidInputs(SolderingAlloy.getFluid(9126))
+                .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM, 1))
                 .EUt(VA[UHV]).duration(3300)
                 .buildAndRegister();
 
