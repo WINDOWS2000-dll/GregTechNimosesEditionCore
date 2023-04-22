@@ -68,9 +68,9 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
         }
     }
 
-    @Override
-    public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer) {
-        return getState(state)  != GTNEGlassType.BorosilicateGlassHV && getState(state) == GTNEGlassType.BorosilicateGlassHV ? layer == BlockRenderLayer.TRANSLUCENT : super.canRenderInLayer(state, layer);
+    @Nonnull
+    public BlockRenderLayer getRenderLayer() {
+        return BlockRenderLayer.TRANSLUCENT;
     }
 
     @Override
@@ -85,15 +85,10 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
         return false;
     }
 
-    @Override
     @SideOnly(Side.CLIENT)
-    @SuppressWarnings("deprecation")
     public boolean shouldSideBeRendered(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
         IBlockState sideState = world.getBlockState(pos.offset(side));
-
-        return sideState.getBlock() == this ?
-                getState(sideState) != getState(state) :
-                super.shouldSideBeRendered(state, world, pos, side);
+        return sideState.getBlock() == this ? this.getState(sideState) != this.getState(state) : super.shouldSideBeRendered(state, world, pos, side);
     }
 
     public enum GTNEGlassType implements IStringSerializable {

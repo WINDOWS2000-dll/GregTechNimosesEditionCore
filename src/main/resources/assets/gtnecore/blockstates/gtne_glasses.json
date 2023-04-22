@@ -3,27 +3,27 @@
   "variants": {
     "active=false,variant=borosilicateglass": {
       "model": "minecraft:cube_all",
-      "ambientocclusion": true,
+      "ambientocclusion": false,
       "textures": {
         "all": "gregtech:blocks/casing/glass/boronsilicateglass_hv"
       }
     },
     "active=true,variant=borosilicateglass": {
       "model": "minecraft:cube_all",
-      "ambientocclusion": true,
+      "ambientocclusion": false,
       "textures": {
         "all": "gregtech:blocks/casing/glass/boronsilicateglass_hv"
       },
       "active=false,variant=titanium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
-        "ambientocclusion": true,
+        "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
         }
       },
       "active=true,variant=titanium_reinforced_borosilicateglass": {
         "model": "minecraft:cube_all",
-        "ambientocclusion": true,
+        "ambientocclusion": false,
         "textures": {
           "all": "gregtech:blocks/casing/glass/boronsilicateglass_ev"
         }
