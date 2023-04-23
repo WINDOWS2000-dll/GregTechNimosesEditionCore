@@ -20,6 +20,9 @@ public class GTNEChemical {
     //24601 ~ 24700
 
     public static void init() {
+
+        //₀₁₂₃₄₅₆₇₈₉
+
         //Ammonium Chloride
         AMMONIUM_CHLORIDE = new Material.Builder(24601, "ammonium_chloride")
                 .fluid()
@@ -34,26 +37,32 @@ public class GTNEChemical {
                 .color(0x787446)
                 .fluidTemp(1123)
                 .build();
-        POTASSIUM_DISULFATE.setFormula("K2S2O7");
+        POTASSIUM_DISULFATE.setFormula("K₂S₂O₇");
         //Sodium Nitrate
         SODIUM_NITRATE = new Material.Builder(24603, "sodium_nitrate")
                 .dust()
                 .color(0x4c577d)
                 .iconSet(MaterialIconSet.METALLIC)
                 .build();
-        SODIUM_NITRATE.setFormula("NaNO3");
+        SODIUM_NITRATE.setFormula("NaNO₃");
         //Formic Acid
         FORMIC_ACID = new Material.Builder(24604, "formic_acid")
                 .fluid()
                 .color(0xbf9341)
                 .fluidTemp(300)
                 .build();
-        FORMIC_ACID.setFormula("CH2O2");
+        FORMIC_ACID.setFormula("CH₂O₂");
         //Sodium Formate
         SODIUM_FORMATE = new Material.Builder(24605, "sodium_formate")
                 .fluid()
                 .color(0xbf9341)
                 .fluidTemp(300)
+                .build();
+        //Silicon tetrachloride
+        SILICON_TETRACHLORIDE = new Material.Builder(24606, "silicon_tetrachloride")
+                .fluid()
+                .color(0xffffff)
+                .fluidTemp(204)
                 .build();
 
     }

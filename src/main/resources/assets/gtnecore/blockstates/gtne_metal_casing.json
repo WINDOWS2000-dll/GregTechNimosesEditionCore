@@ -34,6 +34,12 @@
         "textures": {
           "all": "gregtech:blocks/casing/multiblockcasings/electromagneticimprosionvomplessor/electromagnetic_implosion_coil"
         }
+      },
+      "fusion_machine_casing_mk_iv": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/fusioncasings/fusion_machine_casing_mk_iv"
+        }
       }
     }
   }

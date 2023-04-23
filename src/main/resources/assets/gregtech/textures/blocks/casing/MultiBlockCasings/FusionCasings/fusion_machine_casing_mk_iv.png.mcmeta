@@ -1,0 +1,13 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "CTM",
+        "layer": "CUTOUT",
+        "textures": [
+            "gregtech:blocks/casing/multiblockcasings/fusioncasings/fusion_machine_casing_mk_iv_ctm"
+        ],
+        "extra": {
+            "connect_inside": true
+        }
+    }
+}

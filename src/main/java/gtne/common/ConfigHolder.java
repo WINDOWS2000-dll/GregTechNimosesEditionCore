@@ -25,5 +25,9 @@ public class ConfigHolder {
         @Config.Name("GTNE Wire Coil Recipe")
         public boolean Harder_Wire_Coil_Recipe = true;
 
+        @Config.Comment("GregTech : New Horizons like Silicon Line [Default = true]")
+        @Config.Name("GTNH Silicon Line")
+        public boolean GTNHSiliconLine = true;
+
     }
 }

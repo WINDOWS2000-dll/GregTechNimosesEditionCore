@@ -67,6 +67,7 @@ public class GTNEMaterials {
     public static Material SODIUM_NITRATE;
     public static Material FORMIC_ACID;
     public static Material SODIUM_FORMATE;
+    public static Material SILICON_TETRACHLORIDE;
 
 
     public static void init() {

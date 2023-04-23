@@ -15,5 +15,7 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         STAINLESS_STEEL_BARS = addItem(0, "stainless_steel_bars");
         ANTI_SPACE_RADIATION_ALLOY = addItem(1, "anti_space_radioation_alloy");
         ANTI_SPACE_RADIATION_ALLOY_PLATE = addItem(2, "anti_space_radioation_alloy_plate");
+        EUROPIUM_BOULE = addItem(3, "europium_boule");
+        EUROPIUM_DOPED_WAFER = addItem(4, "europium_doped_wafer");
     }
 }

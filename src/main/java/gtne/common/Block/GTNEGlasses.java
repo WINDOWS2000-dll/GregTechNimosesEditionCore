@@ -43,8 +43,7 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
         setResistance(5.0F);
         setSoundType(SoundType.GLASS);
         setHarvestLevel(ToolClasses.PICKAXE, 1);
-        setDefaultState(getState(GTNEGlassType.BorosilicateGlassHV));
-        this.useNeighborBrightness = true;
+        setDefaultState(this.getState(GTNEGlassType.BorosilicateGlassHV));
         setRegistryName("gtne_glasses");
     }
 
