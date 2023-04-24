@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'Windows2000'
-version = '1.1.30-ArrayIndexOutOfBoundsException-Fix'
+version = '1.1.30-ArrayIndexOutOfBoundsException-Fix-3'
 
 java {
     archivesBaseName = 'GregTechNimosesEditionCore'

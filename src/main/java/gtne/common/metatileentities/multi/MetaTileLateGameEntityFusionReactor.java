@@ -62,6 +62,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+import static gregtech.api.GTValues.UHV;
+
 public class MetaTileLateGameEntityFusionReactor extends RecipeMapMultiblockController implements IFastRenderMetaTileEntity{
 
     private final int tier;
@@ -140,21 +142,21 @@ public class MetaTileLateGameEntityFusionReactor extends RecipeMapMultiblockCont
                 .aisle("####CC###CC####", "###w##WGW##s###", "####CC###CC####")
                 .aisle("######DCD######", "####GGKKKGG####", "######UCU######")
                 .aisle("###############", "######EME######", "###############")
-                .where('M', MetaTileEntities.FUSION_REACTOR[tier - GTValues.UHV], EnumFacing.SOUTH)
+                .where('M', MetaTileEntities.FUSION_REACTOR[tier - UHV], EnumFacing.SOUTH)
                 .where('C', getCasingState())
                 .where('G', MetaBlocks.TRANSPARENT_CASING.getState(
                         BlockGlassCasing.CasingType.FUSION_GLASS))
                 .where('K', getCoilState())
-                .where('W', MetaTileEntities.FLUID_EXPORT_HATCH[tier], EnumFacing.NORTH)
-                .where('E', MetaTileEntities.FLUID_EXPORT_HATCH[tier], EnumFacing.SOUTH)
-                .where('S', MetaTileEntities.FLUID_EXPORT_HATCH[tier], EnumFacing.EAST)
-                .where('N', MetaTileEntities.FLUID_EXPORT_HATCH[tier], EnumFacing.WEST)
+                .where('W', MetaTileEntities.FLUID_EXPORT_HATCH[UHV], EnumFacing.NORTH)
+                .where('E', MetaTileEntities.FLUID_EXPORT_HATCH[UHV], EnumFacing.SOUTH)
+                .where('S', MetaTileEntities.FLUID_EXPORT_HATCH[UHV], EnumFacing.EAST)
+                .where('N', MetaTileEntities.FLUID_EXPORT_HATCH[UHV], EnumFacing.WEST)
                 .where('w', MetaTileEntities.ENERGY_INPUT_HATCH[tier], EnumFacing.WEST)
                 .where('e', MetaTileEntities.ENERGY_INPUT_HATCH[tier], EnumFacing.SOUTH)
                 .where('s', MetaTileEntities.ENERGY_INPUT_HATCH[tier], EnumFacing.EAST)
                 .where('n', MetaTileEntities.ENERGY_INPUT_HATCH[tier], EnumFacing.NORTH)
-                .where('U', MetaTileEntities.FLUID_IMPORT_HATCH[tier], EnumFacing.UP)
-                .where('D', MetaTileEntities.FLUID_IMPORT_HATCH[tier], EnumFacing.DOWN)
+                .where('U', MetaTileEntities.FLUID_IMPORT_HATCH[UHV], EnumFacing.UP)
+                .where('D', MetaTileEntities.FLUID_IMPORT_HATCH[UHV], EnumFacing.DOWN)
                 .where('#', Blocks.AIR.getDefaultState());
 
         shapeInfos.add(baseBuilder.shallowCopy()
@@ -175,16 +177,15 @@ public class MetaTileLateGameEntityFusionReactor extends RecipeMapMultiblockCont
     }
 
     private IBlockState getCasingState() {
-        if (tier == GTValues.UHV)
+        if (tier == UHV)
             return GTNEMetaBlock.GTNE_BLOCK_METAL_CASING.getState(GTNEBlockMetalCasing.MetalCasingType.FUSION_MACHINE_CASING_MKIV);
 
         return GTNEMetaBlock.GTNE_BLOCK_METAL_CASING.getState(GTNEBlockMetalCasing.MetalCasingType.FUSION_MACHINE_CASING_MKV);
     }
 
     private IBlockState getCoilState() {
-        if (tier == GTValues.UHV) {
+        if (tier == UHV)
             return MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL);
-        }
 
         return GTNEMetaBlock.GTNE_BLOCK_METAL_CASING.getState(GTNEBlockMetalCasing.MetalCasingType.ADVANCED_FUSION_COIL);
     }
