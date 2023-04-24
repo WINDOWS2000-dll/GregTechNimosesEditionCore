@@ -140,7 +140,7 @@ public class MetaTileLateGameEntityFusionReactor extends RecipeMapMultiblockCont
                 .aisle("####CC###CC####", "###w##WGW##s###", "####CC###CC####")
                 .aisle("######DCD######", "####GGKKKGG####", "######UCU######")
                 .aisle("###############", "######EME######", "###############")
-                .where('M', MetaTileEntities.FUSION_REACTOR[tier - GTValues.LuV], EnumFacing.SOUTH)
+                .where('M', MetaTileEntities.FUSION_REACTOR[tier - GTValues.UHV], EnumFacing.SOUTH)
                 .where('C', getCasingState())
                 .where('G', MetaBlocks.TRANSPARENT_CASING.getState(
                         BlockGlassCasing.CasingType.FUSION_GLASS))
