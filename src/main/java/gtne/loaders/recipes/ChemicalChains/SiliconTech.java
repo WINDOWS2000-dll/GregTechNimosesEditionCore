@@ -22,6 +22,7 @@ public class SiliconTech {
         if (ConfigHolder.recipeoption.GTNHSiliconLine) {
             Remove_GregTechCEu_Silicon_Line();
             Add_GregTech_New_Horizons_Silicone_Line();
+            GTNESiliconTech();
         }
     }
 

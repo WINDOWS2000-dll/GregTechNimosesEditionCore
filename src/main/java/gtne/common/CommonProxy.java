@@ -7,6 +7,7 @@ import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
+import gtne.loaders.recipes.ChemicalChains.SiliconTech;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
 import gtne.loaders.recipes.MultiBlock.EBFCoils;
@@ -77,11 +78,22 @@ public class CommonProxy {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         GTNELog.logger.info("Registering Recipes...");
+        //Normal Init
         Assembly_Line_Recipe.init();
         Advanced_Precision_Assembly_Line.init();
-        ComponentsAssembler.init();
-        EBFCoils.init();
-        PlatLines.init();
         Chemical.init();
+        //Config Init
+        if (ConfigHolder.recipeoption.Components_Assembler) {
+            ComponentsAssembler.init();
+        }
+        if (ConfigHolder.recipeoption.Harder_Wire_Coil_Recipe) {
+            EBFCoils.init();
+        }
+        if (ConfigHolder.recipeoption.GTNHPlatLine) {
+            PlatLines.init();
+        }
+        if (ConfigHolder.recipeoption.GTNHSiliconLine) {
+            SiliconTech.init();
+        }
     }
 }
