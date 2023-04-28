@@ -85,6 +85,7 @@ public class GTNEMaterials {
         GTNE_windows_material.init();
         GTNEPlatLineMaterial.init();
         GTNEChemical.init();
+        Water.init();
     }
 
 }
