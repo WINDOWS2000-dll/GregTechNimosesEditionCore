@@ -58,7 +58,7 @@ public class WaterLine {
                 .buildAndRegister();
 
         //Grade6 F
-        RecipeMaps.DISTILLERY_RECIPES.recipeBuilder()
+        RecipeMaps.DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(Purified_Water_Grade_G.getFluid(8000))
                 .output(dustSmall, MetalMixture, 2)
                 .fluidOutputs(Purified_Water_Grade_F.getFluid(7000))
@@ -74,7 +74,6 @@ public class WaterLine {
         RecipeMaps.AUTOCLAVE_RECIPES.recipeBuilder()
                 .fluidInputs(Purified_Water_Grade_F.getFluid(14000))
                 .output(dustSmall, Meat, 2)
-                .fluidOutputs(BacterialSludge.getFluid(100))
                 .fluidOutputs(Purified_Water_Grade_E.getFluid(10000))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .EUt(32000).duration(6400)
@@ -83,7 +82,7 @@ public class WaterLine {
         //Grade4 D
         RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .notConsumable(dust, Zeolite)
-                .circuitMeta(32)
+                .circuitMeta(24)
                 .fluidInputs(Purified_Water_Grade_E.getFluid(10000))
                 .fluidOutputs(Purified_Water_Grade_D.getFluid(8000))
                 .cleanroom(CleanroomType.STERILE_CLEANROOM)
@@ -102,7 +101,7 @@ public class WaterLine {
                 .buildAndRegister();
 
         //Grade2 B
-        RecipeMaps.DISTILLERY_RECIPES.recipeBuilder()
+        RecipeMaps.DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(Purified_Water_Grade_C.getFluid(6000))
                 .fluidOutputs(Purified_Water_Grade_B.getFluid(4000))
                 .fluidOutputs(Purified_Water_Grade_D.getFluid(500))
