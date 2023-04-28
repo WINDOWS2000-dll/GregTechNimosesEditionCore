@@ -17,9 +17,16 @@ recipemap.components_assembler.name=Components Assembler
 #High Energy ElectronMagnetic Implosion Compressor
 gtnecore.machine.high_energy_electromagnetic_implosion_compressor.name=High Energy ElectronMagnetic Implosion Compressor
 recipemap.machine.high_energy_electromagnetic_implosion_compressor.name=High Energy ElectronMagnetic Implosion Compressor
+#High Tier Fusion Reactors
+gtnecore.machine.fusion_reactor.uhv.name=Fusion Reactor Computer Mark4
+gtnecore.machine.fusion_reactor.uev.name=Fusion Reactor Computer Mark5
 
 #Shift
 gtnecore.tooltip.hold_shift=Hold §aShift§7 for more info
+
+#Machine Casing
+#Fusion Reactor
+tile.gtne_metal_casing.fusion_machine_casing_mk_iv.name=Fusion Machine Casing MK IV
 
 #Computer Casing Tooltip
 tile.compution_casing.tooltip.operation_speed=Base Operation Speed : §e%,d/s
@@ -35,3 +42,5 @@ tile.borosilicateglass.tooltip_glasstier=Glass Tier %s
 metaitem.stainless_steel_bars.name=Stainless Steel Bars
 metaitem.anti_space_radioation_alloy.name=Anti-Space Radioation Alloy
 metaitem.anti_space_radioation_alloy_plate.name=Anti-Space Radioation Alloy Plate
+metaitem.europium_boule.name=Europium-doped Monocrystalline Silicon Boule
+metaitem.europium_doped_wafer.name=Europium-doped Wafer

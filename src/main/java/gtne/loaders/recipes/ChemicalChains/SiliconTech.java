@@ -1,5 +1,6 @@
 package gtne.loaders.recipes.ChemicalChains;
 
+import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.OreDictUnifier;

@@ -39,6 +39,12 @@ public class ConfigHolder {
         @Config.Name("GTNH Silicon Line")
         public boolean GTNHSiliconLine = true;
 
+        @Config.Comment({"GTNE Water System [Default = true]",
+        "If this configuration is enabled, the",
+        "water-related recipes will become much more difficult."})
+        @Config.Name("GTNE Harder Water Recipe")
+        public boolean Harder_Water_Recipe = true;
+
     }
 
     public static class MetaTileEntityOptions {

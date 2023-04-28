@@ -8,6 +8,7 @@ import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.ChemicalChains.SiliconTech;
+import gtne.loaders.recipes.ChemicalChains.WaterLine;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
 import gtne.loaders.recipes.MultiBlock.EBFCoils;
@@ -85,15 +86,23 @@ public class CommonProxy {
         //Config Init
         if (ConfigHolder.recipeoption.Components_Assembler) {
             ComponentsAssembler.init();
+            GTNELog.logger.info("Registering ComponentsAssembler...");
         }
         if (ConfigHolder.recipeoption.Harder_Wire_Coil_Recipe) {
             EBFCoils.init();
+            GTNELog.logger.info("Registering EBFCoils...");
         }
         if (ConfigHolder.recipeoption.GTNHPlatLine) {
             PlatLines.init();
+            GTNELog.logger.info("Registering PlatLines...");
         }
         if (ConfigHolder.recipeoption.GTNHSiliconLine) {
             SiliconTech.init();
+            GTNELog.logger.info("Registering SiliconTech...");
+        }
+        if (ConfigHolder.recipeoption.Harder_Water_Recipe) {
+            WaterLine.init();
+            GTNELog.logger.info("Registering WaterLine...");
         }
     }
 }

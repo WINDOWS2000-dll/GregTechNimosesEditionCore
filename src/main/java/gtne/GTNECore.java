@@ -1,6 +1,7 @@
 package gtne;
 
 import gregtech.api.GTValues;
+import gtne.api.util.GTNELog;
 import gtne.common.Block.BlockGTNEWireCoil;
 import gtne.common.CommonProxy;
 import gtne.common.Block.GTNEMetaBlock;
@@ -35,10 +36,13 @@ public class GTNECore {
         logger = event.getModLog();
         proxy.preInit(event);
 
+        GTNELog.logger.info("Loading GregTechNimosesEdition-Core Version" + GTNEVersion.DEP_VERSION);
+
         /* Start Heating Coil Registration */
         for (BlockGTNEWireCoil.CoilType type : BlockGTNEWireCoil.CoilType.values()) {
             HEATING_COILS.put(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getState(type), type);
         }
+        GTNELog.logger.info("Successful Heating Coil Registration!!!!");
         /* End Heating Coil Registration */
 
     }

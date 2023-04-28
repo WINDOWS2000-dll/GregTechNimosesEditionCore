@@ -68,6 +68,17 @@ public class GTNEMaterials {
     public static Material FORMIC_ACID;
     public static Material SODIUM_FORMATE;
     public static Material SILICON_TETRACHLORIDE;
+    //Water
+    public static Material Purified_Water_Grade_H;
+    public static Material Purified_Water_Grade_G;
+    public static Material Purified_Water_Grade_F;
+    public static Material Purified_Water_Grade_E;
+    public static Material Purified_Water_Grade_D;
+    public static Material Purified_Water_Grade_C;
+    public static Material Purified_Water_Grade_B;
+    public static Material Purified_Water_Grade_A;
+
+
 
 
     public static void init() {

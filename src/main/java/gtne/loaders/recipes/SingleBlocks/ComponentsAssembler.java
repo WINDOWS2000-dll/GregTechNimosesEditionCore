@@ -26,6 +26,7 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gregtech.loaders.recipe.MetaTileEntityLoader.registerMachineRecipe;
 import static gregtech.loaders.recipe.CraftingComponent.*;
+import static gregtech.api.metatileentity.multiblock.CleanroomType.CLEANROOM;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 
@@ -681,7 +682,7 @@ public class ComponentsAssembler {
 
         //IV Components
         //Motor
-        ModHandler.removeRecipeByName("gregtech:motor_iv");
+        ModHandler.removeRecipeByName("gregtech:electric_motor_iv");
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(cableGtDouble, Tungsten, 2), OreDictUnifier.get(stick, TungstenSteel, 2),
                                                                             OreDictUnifier.get(stick, NeodymiumMagnetic, 1), OreDictUnifier.get(wireGtDouble, Graphene, 4));
 
@@ -694,6 +695,8 @@ public class ComponentsAssembler {
                 .input(wireFine, Copper, 64)
                 .fluidInputs(Lubricant.getFluid(160))
                 .fluidInputs(SolderingAlloy.getFluid(halfsold))
+                .output(ELECTRIC_MOTOR_IV)
+                .cleanroom(CLEANROOM)
                 .duration(other_duration).EUt(VA[EV])
                 .buildAndRegister();
 
@@ -714,6 +717,7 @@ public class ComponentsAssembler {
                 .fluidInputs(Lubricant.getFluid(180))
                 .fluidInputs(SolderingAlloy.getFluid(sold))
                 .output(ELECTRIC_PUMP_IV)
+                .cleanroom(CLEANROOM)
                 .duration(other_duration).EUt(VA[EV])
                 .buildAndRegister();
 
@@ -727,6 +731,7 @@ public class ComponentsAssembler {
                 .fluidInputs(Lubricant.getFluid(180))
                 .fluidInputs(SolderingAlloy.getFluid(sold))
                 .output(ELECTRIC_PUMP_IV)
+                .cleanroom(CLEANROOM)
                 .duration(other_duration).EUt(VA[EV])
                 .buildAndRegister();
 
@@ -746,6 +751,7 @@ public class ComponentsAssembler {
                 .fluidInputs(Lubricant.getFluid(160))
                 .fluidInputs(SolderingAlloy.getFluid(halfsold))
                 .output(CONVEYOR_MODULE_IV)
+                .cleanroom(CLEANROOM)
                 .duration(other_duration).EUt(VA[EV])
                 .buildAndRegister();
 
@@ -758,6 +764,7 @@ public class ComponentsAssembler {
                 .fluidInputs(Lubricant.getFluid(160))
                 .fluidInputs(SolderingAlloy.getFluid(halfsold))
                 .output(CONVEYOR_MODULE_IV)
+                .cleanroom(CLEANROOM)
                 .duration(other_duration).EUt(VA[EV])
                 .buildAndRegister();
 
@@ -778,6 +785,7 @@ public class ComponentsAssembler {
                 .fluidInputs(Lubricant.getFluid(200))
                 .fluidInputs(SolderingAlloy.getFluid(sold))
                 .output(ELECTRIC_PISTON_IV)
+                .cleanroom(CLEANROOM)
                 .duration(other_duration).EUt(VA[EV])
                 .buildAndRegister();
 
@@ -798,6 +806,8 @@ public class ComponentsAssembler {
                 .input(circuit, MarkerMaterials.Tier.HV, 4)
                 .input(cableGtSingle, Tungsten, 4)
                 .fluidInputs(Lubricant.getFluid(240))
+                .output(ROBOT_ARM_IV)
+                .cleanroom(CLEANROOM)
                 .duration(robotarm_duration).EUt(VA[EV])
                 .buildAndRegister();
 
@@ -824,6 +834,7 @@ public class ComponentsAssembler {
                 .input(cableGtSingle, Tungsten, 4)
                 .fluidInputs(SolderingAlloy.getFluid(sold * 8))
                 .output(EMITTER_IV)
+                .cleanroom(CLEANROOM)
                 .duration(other_duration * 2).EUt(VA[EV])
                 .buildAndRegister();
 
