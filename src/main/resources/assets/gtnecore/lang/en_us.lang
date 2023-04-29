@@ -44,3 +44,59 @@ metaitem.anti_space_radioation_alloy.name=Anti-Space Radioation Alloy
 metaitem.anti_space_radioation_alloy_plate.name=Anti-Space Radioation Alloy Plate
 metaitem.europium_boule.name=Europium-doped Monocrystalline Silicon Boule
 metaitem.europium_doped_wafer.name=Europium-doped Wafer
+#Material
+#PlatLine
+material.platinum_metallic_powder=Platinum Metallic Powder
+material.platinum_concentrate=Platinum Concentrate
+material.platinum_salt=Platinum Salt
+material.reprecipitated_platinum=Reprecipitated Platinum
+material.refined_platinum_dust=Refined Platinum
+material.platinum_residue=Platinum Residue
+material.palladium_enriched_ammonia=Palladium Enriched Ammonia
+material.leach_residue=Leach Residue
+material.rhodium_sulfate=Rhodium Sulfate
+material.sodium_ruthenate=Sodium Ruthenate
+material.rarest_metal_residue=Rarest Metal Residue
+material.iridium_metal_residue=Iridium Metal Residue
+material.acidic_osmium_solution=Acidic Osmium Solution
+material.sludge_dust_residue=Sludge Dust Residue
+material.iridium_dioxide=Iridium Dioxide
+material.acidic_iridium_solution=Acidic Iridium Solution
+material.iridium_chloride=Iridium Chloride
+material.metallic_sludge_dust_residue=Metallic Sludge Dust Residue
+material.osmium_solution=Osmium Solution
+material.rhodium_sulfate_solution=Rhodium Sulfate Solution
+material.zinc_sulfate=Zinc Sulfate
+material.crude_rhodium_metal=Crude Rhodium Metal
+material.rhodium_salt=Rhodium Salt
+material.rhodium_salt_solution=Rhodium Salt Solution
+material.rhodium_nitrate=Rhodium Nitrate
+material.rhodium_filter_cake=Rhodium Filter Cake
+material.rhodium_filter_cake_solution=Rhodium Filter Cake Solution
+material.reprecipitated_rhodium=Reprecipitated Rhodium
+material.ruthenium_tetroxide_solution=Ruthenium Tetroxide Solution
+material.hot_ruthenium_tetroxide_solution=Hot Ruthenium Tetroxide Solution
+material.ruthenium_tetroxide=Ruthenium Tetroxide
+material.palladium_metallic_powder=Palladium Metallic Powder
+material.palladium_salt=Palladium Salt
+material.reprecipitated_palladium=Reprecipitated Palladium
+#Water
+material.purified_water_grade_h=Purified Water Grade 8
+material.purified_water_grade_g=Purified Water Grade 7
+material.purified_water_grade_f=Purified Water Grade 6
+material.purified_water_grade_e=Purified Water Grade 5
+material.purified_water_grade_d=Purified Water Grade 4
+material.purified_water_grade_c=Purified Water Grade 3
+material.purified_water_grade_b=Purified Water Grade 2
+material.purified_water_grade_a=Purified Water Grade 1
+#Chemical
+material.potassium_disulfate=Potassium Disulfate
+material.sodium_nitrate=Sodium Nitrate
+material.formic_acid=Formic Acid
+material.sodium_formate=Sodium Formate
+material.silicon_tetrachloride=Silicon Tetrachloride
+#Windows Material
+material.high_purity_silicon=High Purity Silicon
+material.draconium=Draconium
+material.draconium_awakened=Awakened Draconium
+
