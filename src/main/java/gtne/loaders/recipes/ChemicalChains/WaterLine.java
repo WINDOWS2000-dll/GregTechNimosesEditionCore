@@ -72,8 +72,9 @@ public class WaterLine {
 
         //Grade5 E
         RecipeMaps.AUTOCLAVE_RECIPES.recipeBuilder()
+                .notConsumable(plate, Silver, 1)
                 .fluidInputs(Purified_Water_Grade_F.getFluid(14000))
-                .output(dustSmall, Meat, 2)
+                .output(dustTiny, Meat, 1)
                 .fluidOutputs(Purified_Water_Grade_E.getFluid(10000))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .EUt(32000).duration(6400)
