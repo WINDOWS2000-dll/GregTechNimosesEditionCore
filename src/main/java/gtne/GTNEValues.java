@@ -5,5 +5,5 @@ public class GTNEValues {
 
     public static final String MODID = "gtnecore";
 
-    public static final String MOD_VER = "1.1.31";
+    public static final String MOD_VER = GTNEVersion.DEP_VERSION;
 }
