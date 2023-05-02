@@ -9,6 +9,7 @@ import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.ChemicalChains.SiliconTech;
 import gtne.loaders.recipes.ChemicalChains.WaterLine;
+import gtne.loaders.recipes.DragonForgeRecipeLoader;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
 import gtne.loaders.recipes.MultiBlock.EBFCoils;
@@ -62,6 +63,7 @@ public class CommonProxy {
         event.getRegistry().register(createItemBlock(GTNE_BLOCK_METAL_CASING, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
+        DragonForgeRecipeLoader.preInit();
     }
 
     private static <T extends Block>  ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
@@ -79,11 +81,11 @@ public class CommonProxy {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         GTNELog.logger.info("Registering Recipes...");
-        //Normal Init
+        //常時読みこみ
         Assembly_Line_Recipe.init();
         Advanced_Precision_Assembly_Line.init();
         Chemical.init();
-        //Config Init
+        //コンフィグ有効時のみ読み込み
         if (ConfigHolder.recipeoption.Components_Assembler) {
             ComponentsAssembler.init();
             GTNELog.logger.info("Registering ComponentsAssembler...");
