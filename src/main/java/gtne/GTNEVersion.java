@@ -9,7 +9,7 @@ public final class GTNEVersion {
     //This number is incremented every time the feature is added, or bug is fixed. resets every major version change
     public static final int REVISION = 39;
     //This String is for additional info on the release version if needed (like alpha, beta, rc). Comment out when unused
-    public static final String EXTRA = "beta-HATUNEMIKU";
+    public static final String EXTRA = "hatunemiku";
     //This is the String formatted version, used in builds and dependencies
     public static final String DEP_VERSION = MAJOR + "." + MINOR + "." + REVISION + "-" + EXTRA;
     //This is the String formatted version, minus extra information, used for the @Mod annotation version
