@@ -26,6 +26,8 @@ public class GTNEMaterials {
     public static Material HIGH_PURITY_SILICON;
     public static Material Draconium;
     public static Material Awakened_Draconium;
+    public static Material Highly_Active_Draconium;
+    public static Material Highly_Active_Awakened_Draconium;
     //PlatLine
     public static Material PLATINUM_METALLIC_POWDER;
     public static Material PLATINUM_CONCENTRATE;
