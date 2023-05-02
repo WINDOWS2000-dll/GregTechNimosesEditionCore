@@ -130,6 +130,7 @@ processResources {
 }
 
 dependencies {
+    //implementation fg.deobf("")
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
     implementation fg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
     implementation fg.deobf("curse.maven:cofh-world-271384:2920434")
@@ -139,6 +140,10 @@ dependencies {
     implementation fg.deobf("curse.maven:gregicality-multiblocks-564858:4483468")
     implementation fg.deobf("curse.maven:enderio-${eio_pid}:${eio_fid}")
     implementation fg.deobf("curse.maven:endercore-${eco_pid}:${eco_fid}")
+    implementation fg.deobf("curse.maven:botania-225643:3330934")
+    implementation fg.deobf("curse.maven:patchouli-306770:3162874")
+    implementation fg.deobf("curse.maven:ice-and-fire-dragons-264231:2939529")
+    implementation fg.deobf("curse.maven:llibrary-243298:3116493")
     implementation files("libs/groovyscript-0.4.0.jar")
     // Medium Dependencies
     implementation "curse.maven:crafttweaker-239197:4403410"
