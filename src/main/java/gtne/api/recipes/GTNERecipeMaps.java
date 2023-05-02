@@ -12,6 +12,19 @@ import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedPrecisionAssemblyLin
 
 public class GTNERecipeMaps {
 
+    /**
+     * Example:
+     * <pre>
+     *      RecipeMaps.ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+     *               .inputs(new ItemStack(Items.COAL, 1, GTValues.W))
+     *               .input(OrePrefix.stick, Materials.Wood, 1)
+     *               .fluidInputs(SolderingAlloy.getFluid(1152))
+     *               .outputs(new ItemStack(Blocks.TORCH, 4))
+     *               .duration(100).EUt(1).buildAndRegister();
+     * </pre>
+     * inputs 1 ~ 20 output Only 1 FluidInputs 0 ~ 10
+     */
+
     @ZenProperty
     public static final RecipeMapAdvancedPrecisionAssemblyLine<SimpleRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES = (RecipeMapAdvancedPrecisionAssemblyLine<SimpleRecipeBuilder>) new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line", 1, 20, 1, 1, 0, 10, 0, 0, new SimpleRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
