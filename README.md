@@ -1,15 +1,13 @@
-#GregTechNimosesEditionCore
-#ぼすを鯖MODマルチ用MODPACK GregTechNimosesEditionのCoreMODです
+# GregTechNimosesEditionCore
 
-今のところあるもの
+ぼすを鯖MODマルチ用MODPACK GregTechNimosesEditionのCoreMODです
 
-Advanced_Precision_Assembly_Line
+## 今のところあるもの
 
-GTNH風の化学処理ライン
+- Advanced_Precision_Assembly_Line
+- GTNH風の化学処理ライン
 
-今後追加予定
+## 今後追加予定
 
-さらなるマルチブロック設備
-
-各種コンポーネント
-
+- さらなるマルチブロック設備
+- 各種コンポーネント
