@@ -13,15 +13,19 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
 import static gregtech.api.GregTechAPI.HEATING_COILS;
+import static gtne.GTNEValues.MOD_NAME;
+import static gtne.GTNEValues.MOD_NAME_SHORT;
 
 @Mod(
         modid = GTNEValues.MODID,
-        name = "GregTechNimosesEdition-Core",
+        name = MOD_NAME,
         acceptedMinecraftVersions = "[1.12,1.13)",
         dependencies = GTValues.MOD_VERSION_DEP,
         version = GTNEValues.MOD_VER)
 
 public class GTNECore {
+
+    public static final String LOG_TAG = '[' + MOD_NAME_SHORT + ']';
 
     @SidedProxy(modId = "gtnecore", clientSide = "gtne.client.ClientProxy", serverSide = "gtne.common.CommonProxy")
     public static CommonProxy proxy;

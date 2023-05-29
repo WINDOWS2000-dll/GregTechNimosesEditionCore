@@ -8,6 +8,7 @@ import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import gregtech.api.unification.material.properties.FluidProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.ToolProperty;
+import gtne.api.unification.material.info.GTNEMaterialIconSet;
 
 import static gregtech.api.GTValues.*;
 import static gtne.api.unification.material.GTNEElements.*;
@@ -70,7 +71,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_FINE_WIRE, GENERATE_SPRING_SMALL, GENERATE_SPRING, GENERATE_RING, GENERATE_BOLT_SCREW, GENERATE_LONG_ROD, GENERATE_DENSE, GENERATE_FOIL, GENERATE_PLATE, GENERATE_ROUND)
                 .blastTemp(17500, GasTier.HIGHEST, 2000000, 9600)
                 .toolStats(new ToolProperty(800F, 280F, 96000, 200))
-                .cableProperties(UEV, 32, 32, false)
+                .cableProperties(V[UEV], 32, 32, false)
                 .element(HADc)
                 .build();
 
@@ -79,18 +80,33 @@ public class GTNE_windows_material {
                 .ingot()
                 .fluid()
                 .plasma()
-                .fluid()
                 .fluidTemp(23500)
                 .color(0x943001)
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_FINE_WIRE, GENERATE_SPRING_SMALL, GENERATE_SPRING, GENERATE_RING, GENERATE_BOLT_SCREW, GENERATE_LONG_ROD, GENERATE_DENSE, GENERATE_FOIL, GENERATE_PLATE, GENERATE_ROUND)
                 .blastTemp(23500, GasTier.HIGHEST, 12000000, 4800)
                 .toolStats(new ToolProperty(1000F, 320F, 120000, 600))
-                .cableProperties(UIV, 32, 64, false)
+                .cableProperties(V[UIV], 32, 64, false)
                 .element(HADcX)
                 .build();
 
-
+        Infinity = new Material.Builder(24006, "infinity")
+                .dust()
+                .ingot()
+                .fluid()
+                .plasma()
+                .color(0xFFFFFF)
+                .fluidTemp(2000000000)
+                .iconSet(GTNEMaterialIconSet.INFINITY)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .blastTemp(200_000_000)
+                .toolStats(new ToolProperty(6000F, 1800F, 8192000, 999))
+                .cableProperties(V[UXV], 128, 2, false)
+                .element(If)
+                .build();
 
     }
 }

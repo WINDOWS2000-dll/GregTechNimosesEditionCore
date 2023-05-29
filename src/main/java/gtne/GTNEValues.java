@@ -6,4 +6,8 @@ public class GTNEValues {
     public static final String MODID = "gtnecore";
 
     public static final String MOD_VER = GTNEVersion.DEP_VERSION;
+
+    public static final String MOD_NAME = "GregTechNimosesEdition-Core";
+
+    public static final String MOD_NAME_SHORT = "GTNECore";
 }

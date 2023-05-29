@@ -42,6 +42,17 @@ public class ConfigHolder {
     @Config.RequiresMcRestart
     public static OreDictIntegration oreDictIntegration = new OreDictIntegration();
 
+    /**
+     * その他のコンフィグです。
+     * 基本内部システムに直接関係しません。
+     */
+
+    @Config.Comment({"Other configurations.",
+            "Not directly related to the basic internal system"})
+    @Config.Name("Other")
+    @Config.RequiresMcRestart
+    public static Other other = new Other();
+
     public static class RecipeOption {
 
         /**
@@ -116,5 +127,16 @@ public class ConfigHolder {
                 "[Default = true]"})
         @Config.Name("Ore Dictionary Integration")
         public boolean OreDictIntegration = true;
+    }
+
+    /**
+     * 休日や記念日などに表示されるログインメッセージの有無の設定です
+     */
+
+    public static class Other {
+        @Config.Comment({"This is the setting for whether or not login messages are displayed on holidays, anniversaries, etc.",
+        "[Default = true]"})
+        @Config.Name("Holidays Message")
+        public boolean Holidays_Message = true;
     }
 }

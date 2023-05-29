@@ -9,7 +9,6 @@ import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.ChemicalChains.SiliconTech;
 import gtne.loaders.recipes.ChemicalChains.WaterLine;
-import gtne.loaders.recipes.DragonForgeRecipeLoader;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
 import gtne.loaders.recipes.MultiBlock.EBFCoils;
@@ -63,7 +62,6 @@ public class CommonProxy {
         event.getRegistry().register(createItemBlock(GTNE_BLOCK_METAL_CASING, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
-        DragonForgeRecipeLoader.preInit();
     }
 
     private static <T extends Block>  ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
