@@ -6,6 +6,6 @@ import static gregtech.api.unification.material.info.MaterialIconSet.DULL;
 
 public class GTNEMaterialIconSet {
 
-    public static final MaterialIconSet INFINITY = new MaterialIconSet("infinity", DULL);
+    public static final MaterialIconSet INFINITY = new MaterialIconSet("infinity");
 
 }
