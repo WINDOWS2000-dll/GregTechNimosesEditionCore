@@ -47,6 +47,6 @@ public class GTNERecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> HighEnergyElectromagneticImplosionMachine =
             new RecipeMap<>("high_energy_electromagnetic_implosion_machine", 6, 3, 3, 3, new SimpleRecipeBuilder(), false)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
-                    .setSound(SoundEvents.ENTITY_GENERIC_EXPLODE);
+                    .setSound(GTSoundEvents.COMPRESSOR);
 
 }
