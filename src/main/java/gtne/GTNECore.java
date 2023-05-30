@@ -1,5 +1,6 @@
 package gtne;
 
+import gregtech.GTInternalTags;
 import gregtech.api.GTValues;
 import gtne.api.util.GTNELog;
 import gtne.common.Block.BlockGTNEWireCoil;
@@ -20,7 +21,7 @@ import static gtne.GTNEValues.MOD_NAME_SHORT;
         modid = GTNEValues.MODID,
         name = MOD_NAME,
         acceptedMinecraftVersions = "[1.12,1.13)",
-        dependencies ="1.1.41",
+        dependencies = GTInternalTags.DEP_VERSION_STRING,
         version = GTNEValues.MOD_VER)
 
 public class GTNECore {
