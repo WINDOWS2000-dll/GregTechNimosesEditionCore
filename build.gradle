@@ -1,286 +1,242 @@
-
-import com.gtnewhorizons.retrofuturagradle.mcp.ReobfuscatedJar
-import org.jetbrains.gradle.ext.Gradle
-
-plugins {
-    id('java')
-    id('java-library')
-    id('maven-publish')
-    id('idea')
-    id('org.jetbrains.gradle.plugin.idea-ext') version "$idea_ext_version"
-    id('com.gtnewhorizons.retrofuturagradle') version "$rfg_version"
-    //id('net.darkhax.curseforgegradle') version "$curseforge_gradle_version" apply false
-    //id('com.modrinth.minotaur') version "$minotaur_version" apply false
-}
-
-gradleEnterprise {
-    buildScan {
-        termsOfServiceUrl = "https://gradle.com/terms-of-service"
-        termsOfServiceAgree = "yes"
+buildscript {
+    repositories {
+        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 
-version = project.mod_version
-group = project.maven_group
-archivesBaseName = project.archives_base_name
+apply plugin: 'net.minecraftforge.gradle'
 
-// Set the toolchain version to decouple the Java we run Gradle with from the Java used to compile and run the mod
+group = 'Windows2000'
+version = getGTNEVersionFile(true)
+
 java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(java_version))
-        // Azul covers the most platforms for Java 8 toolchains, crucially including MacOS arm64
-        vendor.set(JvmVendorSpec.AZUL)
-    }
-    // Generate sources and javadocs jars when building and publishing
-    withSourcesJar()
-    // javadoc jar throws errors on incomplete docs
-    // docs are also contained in the sources jar, so omit the javadoc-only jar
-    //withJavadocJar()
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = "UTF-8"
-}
-
-configurations {
-    embed
-    implementation.extendsFrom(embed)
+    archivesBaseName = 'GregTechNimosesEditionCore'
+    toolchain.languageVersion = JavaLanguageVersion.of(8)
 }
 
 minecraft {
-    mcVersion = '1.12.2'
-    def args = ["-ea:${project.group}"]
-    if (project.use_coremod.toBoolean()) {
-        args << '-Dfml.coreMods.load=' + coremod_plugin_class_name
-    }
-    if (project.use_mixins.toBoolean()) {
-        args << '-Dmixin.hotSwap=true'
-        args << '-Dmixin.checks.interfaces=true'
-        args << '-Dmixin.debug.export=true'
-    }
-    extraRunJvmArguments.addAll(args)
+    // The mappings can be changed at any time and must be in the following format.
+    // Channel:   Version:
+    // snapshot   YYYYMMDD   Snapshot are built nightly.
+    // stable     #          Stables are built at the discretion of the MCP team.
+    // official   MCVersion  Official field/method names from Mojang mapping files
+    //
+    // You must be aware of the Mojang license when using the 'official' mappings.
+    // See more information here: https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
+    //
+    // Use non-default mappings at your own risk. They may not always work.
+    // Simply re-run your setup task after changing the mappings to update your workspace.
+    mappings channel: 'stable', version: '39-1.12'
 
-    useDependencyAccessTransformers = true
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
-    injectedTags.put("VERSION", project.version)
+    // Default run configurations.
+    // These can be tweaked, removed, or duplicated as needed.
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            // The markers can be added/removed as needed separated by commas.
+            // "SCAN": For mods scan.
+            // "REGISTRIES": For firing of registry events.
+            // "REGISTRYDUMP": For getting the contents of all registries.
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            // Recommended logging level for the console
+            // You can set various levels here.
+            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
+            property 'forge.logging.console.level', 'debug'
+
+
+            mods {
+                gregtechnimoseseditioncore {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            // The markers can be added/removed as needed separated by commas.
+            // "SCAN": For mods scan.
+            // "REGISTRIES": For firing of registry events.
+            // "REGISTRYDUMP": For getting the contents of all registries.
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            // Recommended logging level for the console
+            // You can set various levels here.
+            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
+            property 'forge.logging.console.level', 'debug'
+
+
+            mods {
+                gregtechnimoseseditioncore {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
 }
 
-// Generate a my.project.Tags class with the version number as a field
-tasks.injectTags.configure {
-    outputClassName.set("${project.group}.Tags")
-}
+// Include resources generated by data generators.
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven { // MixinBooter
+    maven {
         name = 'Cleanroom Maven'
         url = 'https://maven.cleanroommc.com'
     }
-    maven { // Mixin
-        name = 'Sponge Maven'
+    maven {
+        name = 'Sponge Powered'
         url = 'https://repo.spongepowered.org/maven'
     }
-    maven { // CurseForge
+    maven {
+        name = 'Mod Maven'
+        url = 'https://modmaven.dev'
+    }
+    maven {
         name = 'Curse Maven'
         url = 'https://www.cursemaven.com'
         content {
             includeGroup 'curse.maven'
         }
     }
-    maven { // CraftTweaker and JEI Backup
-        name = 'BlameJared Maven'
-        url = 'https://maven.blamejared.com'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java', 'src/api/java']
+        }
+
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+
     }
-    maven {  // Autoconfig and Autosave
-        name = 'Mod Maven'
-        url = 'https://modmaven.dev'
-    }
-    mavenLocal() // Must be last for caching to work
+    main.output.setResourcesDir(main.java.classesDirectory)
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
 
 dependencies {
     //implementation fg.deobf("")
-    implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
-    implementation rfg.deobf("curse.maven:cofh-world-271384:2920434")
-    implementation rfg.deobf("curse.maven:cofh-core-69162:2920433")
-    implementation rfg.deobf("curse.maven:gregtech-557242:4527757")
-    implementation rfg.deobf("curse.maven:thermal-foundation-222880:2926428")
-    implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:4483468")
-    implementation rfg.deobf("curse.maven:enderio-${eio_pid}:${eio_fid}")
-    implementation rfg.deobf("curse.maven:endercore-${eco_pid}:${eco_fid}")
-    implementation rfg.deobf("curse.maven:botania-225643:3330934")
-    implementation rfg.deobf("curse.maven:patchouli-306770:3162874")
-    implementation rfg.deobf("curse.maven:ice-and-fire-dragons-264231:2939529")
-    implementation rfg.deobf("curse.maven:llibrary-243298:3116493")
-    implementation rfg.deobf("curse.maven:groovyscript-687577:4426112")
-
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
+    implementation fg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
+    implementation fg.deobf("curse.maven:cofh-world-271384:2920434")
+    implementation fg.deobf("curse.maven:cofh-core-69162:2920433")
+    implementation fg.deobf("curse.maven:gregtech-ce-unofficial-557242:4527757")
+    implementation fg.deobf("curse.maven:thermal-foundation-222880:2926428")
+    implementation fg.deobf("curse.maven:gregicality-multiblocks-564858:4483468")
+    implementation fg.deobf("curse.maven:enderio-${eio_pid}:${eio_fid}")
+    implementation fg.deobf("curse.maven:endercore-${eco_pid}:${eco_fid}")
+    implementation fg.deobf("curse.maven:botania-225643:3330934")
+    implementation fg.deobf("curse.maven:patchouli-306770:3162874")
+    implementation fg.deobf("curse.maven:ice-and-fire-dragons-264231:2939529")
+    implementation fg.deobf("curse.maven:llibrary-243298:3116493")
+    implementation fg.deobf("curse.maven:groovyscript-687577:4426112")
     // Medium Dependencies
     implementation "curse.maven:crafttweaker-239197:4403410"
-    implementation rfg.deobf("curse.maven:jei-238222:3040523")
-    implementation rfg.deobf("curse.maven:ctm-267602:2915363")
-    implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4480325")
-    implementation rfg.deobf("curse.maven:draconic-evolution-223565:3431261")
-    implementation rfg.deobf("curse.maven:brandons-core-231382:3408276")
-    implementation rfg.deobf("curse.maven:draconicadditions-314515:3514704")
-    implementation rfg.deobf("curse.maven:avaritia-1-10-261348:3143349")
+    implementation fg.deobf("curse.maven:jei-238222:3040523")
+    implementation fg.deobf("curse.maven:ctm-267602:2915363")
+    implementation fg.deobf("curse.maven:gregtech-food-option-477021:4480325")
+    implementation fg.deobf("curse.maven:draconic-evolution-223565:3431261")
+    implementation fg.deobf("curse.maven:brandons-core-231382:3408276")
+    implementation fg.deobf("curse.maven:draconicadditions-314515:3514704")
+    implementation fg.deobf("curse.maven:avaritia-1-10-261348:3143349")
     // Tests
-    testImplementation "org.junit.jupiter:junit-jupiter:${junit_version}"
-    testImplementation "org.hamcrest:hamcrest:${hamcrest_version}"
+    testImplementation("org.junit.jupiter:junit-jupiter:${junit_version}")
+    testImplementation("org.hamcrest:hamcrest:${hamcrest_version}")
 
     // Compile-Time Dependencies
-    compileOnly "org.jetbrains:annotations:${annotations_version}"
-    annotationProcessor "org.jetbrains:annotations:${annotations_version}"
-    if (project.use_assetmover.toBoolean()) {
-        implementation "com.cleanroommc:assetmover:${assetmover_version}"
-    }
-
-    // GroovyScript dependency
-    implementation "zone.rong:mixinbooter:${mixinbooter_version}"
-
-    // Mixin dependencies
-    api("org.spongepowered:mixin:${mixin_version}") { transitive = false }
+    compileOnly "org.projectlombok:lombok:${lombok_version}"
+    annotationProcessor "org.projectlombok:lombok:${lombok_version}"
     annotationProcessor("org.spongepowered:mixin:${mixin_version}") { transitive = false }
 
     annotationProcessor("org.ow2.asm:asm-debug-all:${asm_debug_version}")
     annotationProcessor("com.google.guava:guava:${guava_version}-jre")
     annotationProcessor("com.google.code.gson:gson:${gson_version}")
+    // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft' it is assumed
+    // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
+    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
 
-    // Boot error fix
-    runtimeOnly (files("libs/EnderCore-1.12.2-0.5.76-core.jar"))
-}
-def mixinConfigRefMap = 'mixins.' + project.maven_group + '.refmap.json'
-def mixinTmpDir = buildDir.path + File.separator + 'tmp' + File.separator + 'mixins'
-def refMap = "${mixinTmpDir}" + File.separator + mixinConfigRefMap
-def mixinSrg = "${mixinTmpDir}" + File.separator + "mixins.srg"
+    // Real mod deobf dependency examples - these get remapped to your current mappings
+    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
+    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
+    // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
-if (project.use_mixins.toBoolean()) {
-    tasks.named("reobfJar", ReobfuscatedJar).configure {
-        extraSrgFiles.from(mixinSrg)
-    }
+    // Examples using mod jars from ./libs
+    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 
-    tasks.named("compileJava", JavaCompile).configure {
-        doFirst {
-            new File(mixinTmpDir).mkdirs()
-        }
-        options.compilerArgs += [
-                "-AreobfSrgFile=${tasks.reobfJar.srg.get().asFile}",
-                "-AoutSrgFile=${mixinSrg}",
-                "-AoutRefMapFile=${refMap}",
-        ]
-    }
+    // For more info...
+    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
+    // http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
 
-if (project.use_access_transformer.toBoolean()) {
-    for (File at : sourceSets.getByName("main").resources.files) {
-        if (at.name.toLowerCase().endsWith("_at.cfg")) {
-            tasks.deobfuscateMergedJarToSrg.accessTransformerFiles.from(at)
-            tasks.srgifyBinpatchedJar.accessTransformerFiles.from(at)
+processJarTask jar
+
+private void processJarTask(task) {
+    task.configure {
+        file('src/api/').eachDirRecurse { dir ->
+            exclude dir.name
         }
     }
 }
 
-processResources {
-    // this will ensure that this task is redone when the versions change.
-    inputs.property 'version', project.version
-    inputs.property 'mcversion', minecraft_version
-    // replace stuff in mcmod.info, nothing else
-    filesMatching(['mcmod.info', 'pack.mcmeta']) { fcd ->
-        // replace version and mcversion
-        fcd.expand (
-                'version': project.version,
-                'mcversion': minecraft_version
-        )
-    }
-
-    if (project.use_access_transformer.toBoolean()) {
-        rename '(.+_at.cfg)', 'META-INF/$1' // Access Transformers
-    }
-
-    if (project.use_mixins.toBoolean()) {
-        // Embed mixin refmap
-        from refMap
-        dependsOn("compileJava")
-    }
-}
-
+// Example for how to get properties into the manifest for reading at runtime.
 jar {
     manifest {
-        def attribute_map = [:]
-        if (use_coremod.toBoolean()) {
-            attribute_map['FMLCorePlugin'] = coremod_plugin_class_name
-            if (include_mod.toBoolean()) {
-                attribute_map['FMLCorePluginContainsFMLMod'] = true
-                attribute_map['ForceLoadAsMod'] = project.gradle.startParameter.taskNames[0] == "build"
-            }
-        }
-        if (use_access_transformer.toBoolean()) {
-            attribute_map['FMLAT'] = maven_group + '_at.cfg'
-        }
-        attributes(attribute_map)
-    }
-
-    // Add all embedded dependencies into the jar
-    from provider {
-        configurations.embed.collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
+        attributes([
+                "Specification-Title"     : "gregtechnimoseseditioncore",
+                //"Specification-Vendor": "gregtechnimoseseditioncore authors",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                //"Implementation-Vendor": "gregtechnimoseseditioncore authors",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
     }
 }
 
-idea {
-    module {
-        inheritOutputDirs = true
-        downloadJavadoc = true
-        downloadSources = true
-    }
-    project {
-        settings {
-            runConfigurations {
-                "1. Run Client"(Gradle) {
-                    taskNames = ["runClient"]
-                }
-                "2. Run Server"(Gradle) {
-                    taskNames = ["runServer"]
-                }
-                "3. Run Obfuscated Client"(Gradle) {
-                    taskNames = ["runObfClient"]
-                }
-                "4. Run Obfuscated Server"(Gradle) {
-                    taskNames = ["runObfServer"]
-                }
-            }
-            compiler.javac {
-                afterEvaluate {
-                    javacAdditionalOptions = "-encoding utf8"
-                    moduleJavacAdditionalOptions = [
-                            (project.name + ".main"): tasks.compileJava.options.compilerArgs.collect { '"' + it + '"' }.join(' ')
-                    ]
-                }
-            }
+@SuppressWarnings('GroovyAssignabilityCheck')
+private String getGTNEVersionFile(boolean addExtra) {
+    def major = '0'
+    def minor = '0'
+    def revision = '0'
+    def extra = ''
+
+    file('src/main/java/gtne/GTNEVersion.java').readLines().each { line ->
+        if (line.contains('MAJOR')) {
+            def matcher = line =~ /MAJOR\s*=\s*(\d+)/
+            if (matcher) major = matcher[0][1]
+        } else if (line.contains('MINOR')) {
+            def matcher = line =~ /MINOR\s*=\s*(\d+)/
+            if (matcher) minor = matcher[0][1]
+        } else if (line.contains('REVISION')) {
+            def matcher = line =~ /REVISION\s*=\s*(\d+)/
+            if (matcher) revision = matcher[0][1]
+        } else if (line.contains('EXTRA')) {
+            def matcher = line =~ /EXTRA\s*=\s*"(\w+)"/
+            if (matcher) extra = matcher[0][1]
+            return
         }
     }
-}
 
-// Create API library jar
-tasks.register('apiJar', Jar) {
-    archiveClassifier.set 'api'
-    from(sourceSets.main.java) {
-        include maven_group + '/api/**'
-    }
-
-    from(sourceSets.main.output) {
-        include maven_group + '/api/**'
+    if (addExtra && extra) {
+        return "${major}.${minor}.${revision}-${extra}"
+    }  else {
+        return "${major}.${minor}.${revision}"
     }
 }
 
-sourceSets {
-    test {
-        java {
-            compileClasspath += patchedMc.output + mcLauncher.output
-            runtimeClasspath += patchedMc.output + mcLauncher.output
-        }
-    }
-}
-
-tasks.named("processIdeaSettings").configure {
-    dependsOn("injectTags")
-}
+jar.finalizedBy('reobfJar')
