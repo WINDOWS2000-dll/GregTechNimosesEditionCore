@@ -20,7 +20,7 @@ import static gtne.GTNEValues.MOD_NAME_SHORT;
         modid = GTNEValues.MODID,
         name = MOD_NAME,
         acceptedMinecraftVersions = "[1.12,1.13)",
-        dependencies = GTValues.MOD_VERSION_DEP,
+        dependencies ="1.1.41",
         version = GTNEValues.MOD_VER)
 
 public class GTNECore {
