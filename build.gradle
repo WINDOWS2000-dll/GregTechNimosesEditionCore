@@ -154,6 +154,7 @@ dependencies {
     implementation fg.deobf("curse.maven:brandons-core-231382:3408276")
     implementation fg.deobf("curse.maven:draconicadditions-314515:3514704")
     implementation fg.deobf("curse.maven:avaritia-1-10-261348:3143349")
+    implementation("org.jetbrains:annotations:24.0.0")
     // Tests
     testImplementation("org.junit.jupiter:junit-jupiter:${junit_version}")
     testImplementation("org.hamcrest:hamcrest:${hamcrest_version}")
