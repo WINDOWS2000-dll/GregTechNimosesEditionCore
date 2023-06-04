@@ -32,7 +32,6 @@ public class EnergyContainmentUnit extends VariantActiveBlock<EnergyContainmentU
         setHardness(6.0F);
         setResistance(10.0F);
         setSoundType(SoundType.METAL);
-        setHarvestLevel("wrench", 4);
         setDefaultState(getState(EnergyContainmentUnitType.EnergyContainmentUnitCasing));
         setRegistryName("gtne_energy_containment_unit");
     }
@@ -80,8 +79,9 @@ public class EnergyContainmentUnit extends VariantActiveBlock<EnergyContainmentU
     }
 
     public enum EnergyContainmentUnitType implements IStringSerializable {
+
         EnergyContainmentUnitCasing("energy_containment_unit_casing", 0, 0L),
-        EnergyContainmentUnitEmpty("energy_containment_unit_empty", 0, 0),
+        EnergyContainmentUnitEmpty("energy_containment_unit_empty", 0, 0L),
         EnergyContainmentUnitEV("energy_containment_unit_ev", 1, 100_000_000L),
         EnergyContainmentUnitIV("energy_containment_unit_iv", 16, 1_000_000_000L),
         EnergyContainmentUnitLuV("energy_containment_unit_luv", 256, 10_000_000_000L),
