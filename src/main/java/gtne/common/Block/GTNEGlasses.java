@@ -9,6 +9,7 @@ import gregtech.client.utils.TooltipHelper;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockWireCoil;
+import gtne.api.blocks.ITiredGlasses;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -45,6 +46,7 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
         setHarvestLevel(ToolClasses.PICKAXE, 1);
         setDefaultState(this.getState(GTNEGlassType.BorosilicateGlassHV));
         setRegistryName("gtne_glasses");
+        useNeighborBrightness = true;
     }
 
     @Override
@@ -73,6 +75,10 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
     }
 
     @Override
+    public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer) {
+        return super.canRenderInLayer(state, layer);
+    }
+    @Override
     @SuppressWarnings("deprecation")
     public boolean isOpaqueCube(IBlockState state) {
         return false;
@@ -84,36 +90,41 @@ public class GTNEGlasses extends VariantActiveBlock<GTNEGlasses.GTNEGlassType> {
         return false;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
+    @SuppressWarnings("deprecation")
     public boolean shouldSideBeRendered(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
         IBlockState sideState = world.getBlockState(pos.offset(side));
-        return sideState.getBlock() == this ? this.getState(sideState) != this.getState(state) : super.shouldSideBeRendered(state, world, pos, side);
+
+        return sideState.getBlock() == this ?
+                getState(sideState) != getState(state) :
+                super.shouldSideBeRendered(state, world, pos, side);
     }
 
-    public enum GTNEGlassType implements IStringSerializable {
+    public enum GTNEGlassType implements IStringSerializable, ITiredGlasses {
 
-        BorosilicateGlassHV("borosilicateglass", GTValues.VN[HV]),
-        BorosilicateGlassEV("titanium_reinforced_borosilicateglass", GTValues.VN[EV]),
-        BorosilicateGlassIV("tungstensteel_reinforced_borosilicateglass", GTValues.VN[IV]),
-        BorosilicateGlassLuV("rhodium_plated_palladium_reinforced_borosilicateglass", GTValues.VN[LuV]),
-        BorosilicateGlassZPM("iridium_reinforced_borosilicateglass", GTValues.VN[ZPM]),
-        BorosilicateGlassUV("osmium_reinforced_borosilicateglass", GTValues.VN[UV]),
-        BorosilicateGlassUHV("neutronium_reinforced_borosilicateglass", GTValues.VN[UHV]);
+        BorosilicateGlassHV("borosilicateglass", GTValues.HV),
+        BorosilicateGlassEV("titanium_reinforced_borosilicateglass", GTValues.EV),
+        BorosilicateGlassIV("tungstensteel_reinforced_borosilicateglass", GTValues.IV),
+        BorosilicateGlassLuV("rhodium_plated_palladium_reinforced_borosilicateglass", GTValues.LuV),
+        BorosilicateGlassZPM("iridium_reinforced_borosilicateglass", GTValues.ZPM),
+        BorosilicateGlassUV("osmium_reinforced_borosilicateglass", GTValues.UV),
+        BorosilicateGlassUHV("neutronium_reinforced_borosilicateglass", GTValues.UHV);
 
         //Todo UEV+ BorosilicateGlasses
         //BorosilicateGlassUHV("MITEI_Reinforced_BorosilicateGlass", GTValues.VN[UEV]),
         //...
 
         private final String name;
-        private final String  GlassTier;
+        private final int  GlassTier;
 
-        GTNEGlassType(String name, String GlassTier) {
+        GTNEGlassType(String name, int GlassTier) {
             this.name = name;
             this.GlassTier = GlassTier;
         }
 
         @Nonnull
-        public String  getGlassTier() {
+        public int getGlassTier() {
             return this.GlassTier;
         }
 

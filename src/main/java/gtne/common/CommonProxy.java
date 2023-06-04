@@ -52,6 +52,7 @@ public class CommonProxy {
     public static void registerBlock(RegistryEvent.Register<Block> event) {
         GTNELog.logger.info("Registering Blocks...");
         event.getRegistry().register(GTNE_BLOCK_METAL_CASING);
+        event.getRegistry().register(ENERGY_CONTAINMENT_UNIT);
         event.getRegistry().register(BLOCK_GTNE_WIRE_COIL);
         event.getRegistry().register(GTNE_GLASSES);
     }
@@ -60,6 +61,7 @@ public class CommonProxy {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         GTNELog.logger.info("Registering BlockItem....");
         event.getRegistry().register(createItemBlock(GTNE_BLOCK_METAL_CASING, VariantItemBlock::new));
+        event.getRegistry().register(createItemBlock(ENERGY_CONTAINMENT_UNIT, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
     }
