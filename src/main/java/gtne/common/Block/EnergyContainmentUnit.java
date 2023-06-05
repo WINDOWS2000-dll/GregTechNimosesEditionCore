@@ -87,9 +87,8 @@ public class EnergyContainmentUnit extends VariantActiveBlock<EnergyContainmentU
         EnergyContainmentUnitLuV("energy_containment_unit_luv", 256, 10_000_000_000L),
         EnergyContainmentUnitZPM("energy_containment_unit_zpm", 4096, 100_000_000_000L),
         EnergyContainmentUnitUV("energy_containment_unit_uv", 65536, 1_000_000_000_000L),
-        EnergyContainmentUnitUHV("energy_containment_unit_uhv", 262144, Long.MAX_VALUE / 4),
-        EnergyContainmentUnitUEV("energy_containment_unit_uev", 1048576, Long.MAX_VALUE / 2),
-        EnergyContainmentUnitUIV("energy_containment_unit_uiv", 16677216, Long.MAX_VALUE);
+        EnergyContainmentUnitUHV("energy_containment_unit_uhv", 262144, Long.MAX_VALUE / 2),
+        EnergyContainmentUnitUEV("energy_containment_unit_uev", 1048576, Long.MAX_VALUE);
 
 
         private final String name;
