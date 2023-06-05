@@ -111,7 +111,7 @@ public class MetaTileEntityEnergyContainmentField extends MultiBlockWithUpdatabl
                 .or(states(GTNEMetaBlock.ENERGY_CONTAINMENT_UNIT.getState(EnergyContainmentUnit.EnergyContainmentUnitType.EnergyContainmentUnitZPM)))
                 .or(states(GTNEMetaBlock.ENERGY_CONTAINMENT_UNIT.getState(EnergyContainmentUnit.EnergyContainmentUnitType.EnergyContainmentUnitUV)))
                 .or(states(GTNEMetaBlock.ENERGY_CONTAINMENT_UNIT.getState(EnergyContainmentUnit.EnergyContainmentUnitType.EnergyContainmentUnitUHV)))
-                .or(states(GTNEMetaBlock.ENERGY_CONTAINMENT_UNIT.getState(EnergyContainmentUnit.EnergyContainmentUnitType.EnergyContainmentUnitUEV)))
+                .or(states(GTNEMetaBlock.ENERGY_CONTAINMENT_UNIT.getState(EnergyContainmentUnit.EnergyContainmentUnitType.EnergyContainmentUnitUEV))
                 );
     }
 
