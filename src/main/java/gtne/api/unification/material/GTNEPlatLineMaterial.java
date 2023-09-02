@@ -76,11 +76,13 @@ public class GTNEPlatLineMaterial {
                 .build();
         LEACH_RESIDUE.setFormula("??IrOsRu??");
         //Rhodium Sulfate
+        /*
         RHODIUM_SULFATE = new Material.Builder(24509, gregtechId("rhodium_sulfate"))
                 .fluid(FluidTypes.LIQUID, false)
                 .color(0x66612e)
                 .fluidTemp(300)
                 .build();
+         */
         //Sodium Ruthenate
         SODIUM_RUTHENATE = new Material.Builder(24510, gregtechId("sodium_ruthenate"))
                 .dust()
