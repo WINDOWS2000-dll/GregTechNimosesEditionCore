@@ -42,7 +42,7 @@ public class GTNEMaterials {
     public static Material SODIUM_RUTHENATE;
     public static Material RAREST_METAL_RESIDUE;
     public static Material IRIDIUM_METAL_RESIDUE;
-    public static Material ACIDIC_OSMIUM_SOLUTION;
+    //public static Material ACIDIC_OSMIUM_SOLUTION;
     public static Material SLUDGE_DUST_RESIDUE;
     public static Material IRIDIUM_DIOXIDE;
     public static Material ACIDIC_IRIDIUM_SOLUTION;

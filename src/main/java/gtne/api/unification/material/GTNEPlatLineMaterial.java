@@ -105,12 +105,14 @@ public class GTNEPlatLineMaterial {
                 .build();
         IRIDIUM_METAL_RESIDUE.setFormula("??Ir??");
         //Acidic Osmium Solution
+        /*
         ACIDIC_OSMIUM_SOLUTION = new Material.Builder(24513, gregtechId("acidic_osmium_solution"))
                 .fluid(FluidTypes.LIQUID, false)
                 .color(0x4a4729)
                 .fluidTemp(300)
                 .build();
         ACIDIC_OSMIUM_SOLUTION.setFormula("???");
+         */
         //Sludge Dust Residue
         SLUDGE_DUST_RESIDUE = new Material.Builder(24514, gregtechId("sludge_dust_residue"))
                 .dust()

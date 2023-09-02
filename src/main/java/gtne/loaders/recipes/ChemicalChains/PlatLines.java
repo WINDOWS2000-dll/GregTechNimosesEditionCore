@@ -248,7 +248,7 @@ public class PlatLines {
                 .circuitMeta(11)
                 .fluidInputs(HydrochloricAcid.getFluid(500))
                 .output(dust, IRIDIUM_METAL_RESIDUE, 1)
-                .fluidOutputs(ACIDIC_OSMIUM_SOLUTION.getFluid(1000))
+                .fluidOutputs(AcidicOsmiumSolution.getFluid(1000))
                 .blastFurnaceTemp(775)
                 .EUt(VA[MV]).duration(100)
                 .buildAndRegister();
@@ -298,7 +298,7 @@ public class PlatLines {
 
         //Osmium Solution
         RecipeMaps.DISTILLATION_RECIPES.recipeBuilder()
-                .fluidInputs(ACIDIC_OSMIUM_SOLUTION.getFluid(1000))
+                .fluidInputs(AcidicOsmiumSolution.getFluid(1000))
                 .fluidOutputs(OSMIUM_SOLUTION.getFluid(100))
                 .fluidOutputs(Water.getFluid(900))
                 .EUt(7680).duration(150)
