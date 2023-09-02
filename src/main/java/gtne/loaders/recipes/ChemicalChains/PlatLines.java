@@ -225,7 +225,7 @@ public class PlatLines {
                 .circuitMeta(11)
                 .fluidInputs(POTASSIUM_DISULFATE.getFluid(360))
                 .output(dust, LEACH_RESIDUE, 1)
-                .fluidOutputs(RhodiumSulfate.getFluid(360))
+                .fluidOutputs(RHODIUM_SULFATE.getFluid(360))
                 .blastFurnaceTemp(775)
                 .EUt(VA[MV]).duration(200)
                 .buildAndRegister();
@@ -319,7 +319,7 @@ public class PlatLines {
 
         //Rhodium Sulfate Solution
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(RhodiumSulfate.getFluid(11000))
+                .fluidInputs(RHODIUM_SULFATE.getFluid(11000))
                 .fluidInputs(Water.getFluid(10000))
                 .circuitMeta(1)
                 .output(dustTiny, LEACH_RESIDUE, 10)
@@ -330,7 +330,7 @@ public class PlatLines {
 
         //Another Rhodium Sulfate Solution Recipe
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(RhodiumSulfate.getFluid(39000))
+                .fluidInputs(RHODIUM_SULFATE.getFluid(39000))
                 .fluidInputs(Water.getFluid(36000))
                 .circuitMeta(3)
                 .output(dust, LEACH_RESIDUE, 4)

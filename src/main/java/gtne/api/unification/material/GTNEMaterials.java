@@ -38,7 +38,7 @@ public class GTNEMaterials {
     public static Material PLATINUM_RESIDUE;
     public static Material PALLADIUM_ENRICHED_AMMONIA;
     public static Material LEACH_RESIDUE;
-    //public static Material RHODIUM_SULFATE;
+    public static Material RHODIUM_SULFATE;
     public static Material SODIUM_RUTHENATE;
     public static Material RAREST_METAL_RESIDUE;
     public static Material IRIDIUM_METAL_RESIDUE;
