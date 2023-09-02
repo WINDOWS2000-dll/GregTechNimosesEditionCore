@@ -1,6 +1,7 @@
 package gtne.api.unification.material;
 
 import gregtech.api.GTValues;
+import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.info.MaterialIconSet;
@@ -31,7 +32,7 @@ public class GTNEPlatLineMaterial {
         PLATINUM_METALLIC_POWDER.setFormula("???PtPdIrOsRhRu???");
         //Platinum Concentrate
         PLATINUM_CONCENTRATE = new Material.Builder(24502, gregtechId("platinum_concentrate"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0xb4b582)
                 .fluidTemp(300)
                 .build();
@@ -62,7 +63,7 @@ public class GTNEPlatLineMaterial {
         PLATINUM_RESIDUE.setFormula("??IrOsRhRu??");
         //Palladium Enriched Ammonia
         PALLADIUM_ENRICHED_AMMONIA = new Material.Builder(24507, gregtechId("palladium_enriched_ammonia"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x3d3636)
                 .fluidTemp(300)
                 .build();
@@ -76,7 +77,7 @@ public class GTNEPlatLineMaterial {
         LEACH_RESIDUE.setFormula("??IrOsRu??");
         //Rhodium Sulfate
         RHODIUM_SULFATE = new Material.Builder(24509, gregtechId("rhodium_sulfate"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x66612e)
                 .fluidTemp(300)
                 .build();
@@ -103,7 +104,7 @@ public class GTNEPlatLineMaterial {
         IRIDIUM_METAL_RESIDUE.setFormula("??Ir??");
         //Acidic Osmium Solution
         ACIDIC_OSMIUM_SOLUTION = new Material.Builder(24513, gregtechId("acidic_osmium_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x4a4729)
                 .fluidTemp(300)
                 .build();
@@ -124,7 +125,7 @@ public class GTNEPlatLineMaterial {
         IRIDIUM_DIOXIDE.setFormula("IrO₂");
         //Acidic Iridium Solution
         ACIDIC_IRIDIUM_SOLUTION = new Material.Builder(24516, gregtechId("acidic_iridium_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x4a4729)
                 .build();
         ACIDIC_IRIDIUM_SOLUTION.setFormula("???");
@@ -144,14 +145,14 @@ public class GTNEPlatLineMaterial {
         METALLIC_SLUDGE_DUST_RESIDUE.setFormula("NiCu");
         //Osmium Solution
         OSMIUM_SOLUTION = new Material.Builder(24519, gregtechId("osmium_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x4a4729)
                 .fluidTemp(300)
                 .build();
         OSMIUM_SOLUTION.setFormula("???");
         //Rhodium Sulfate Solution
         RHODIUM_SULFATE_SOLUTION = new Material.Builder(24520, gregtechId("rhodium_sulfate_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x66612e)
                 .fluidTemp(300)
                 .build();
@@ -177,7 +178,7 @@ public class GTNEPlatLineMaterial {
                 .build();
         //Rhodium Salt Solution
         RHODIUM_SALT_SOLUTION = new Material.Builder(24524, gregtechId("rhodium_salt_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x85847f)
                 .fluidTemp(300)
                 .build();
@@ -195,7 +196,7 @@ public class GTNEPlatLineMaterial {
                 .build();
         //Rhodium Filter Cake Solution
         RHODIUM_FILTER_CAKE_SOLUTION = new Material.Builder(24527, gregtechId("rhodium_filter_cake_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x85847f)
                 .fluidTemp(300)
                 .build();
@@ -208,21 +209,21 @@ public class GTNEPlatLineMaterial {
         REPRECIPITATED_RHODIUM.setFormula("Rh₂NH₄");
         //Ruthenium Tetroxide Solution
         RUTHENIUM_TETROXIDE_SOLUTION = new Material.Builder(24529, gregtechId("ruthenium_tetroxide_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0xffffff)
                 .fluidTemp(300)
                 .build();
         RUTHENIUM_TETROXIDE_SOLUTION.setFormula("???");
         //Hot Ruthenium Tetroxide Solution
         HOT_RUTHENIUM_TETROXIDE_SOLUTION = new Material.Builder(24530, gregtechId("hot_ruthenium_tetroxide_solution"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0xffffff)
                 .fluidTemp(300)
                 .build();
         HOT_RUTHENIUM_TETROXIDE_SOLUTION.setFormula("???");
         //Ruthenium Tetroxide
         RUTHENIUM_TETROXIDE = new Material.Builder(24531, gregtechId("ruthenium_tetroxide"))
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .dust()
                 .color(0xffffff)
                 .fluidTemp(300)

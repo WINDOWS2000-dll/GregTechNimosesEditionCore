@@ -1,6 +1,7 @@
 package gtne.api.unification.material;
 
 import gregtech.api.GTValues;
+import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.info.MaterialIconSet;
@@ -36,7 +37,7 @@ public class GTNE_windows_material {
                 .dust()
                 .ingot()
                 .plasma()
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0x9b00ff)
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_RING, GENERATE_SPRING, GENERATE_SPRING_SMALL, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_FINE_WIRE)
@@ -50,7 +51,7 @@ public class GTNE_windows_material {
                 .dust()
                 .ingot()
                 .plasma()
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .color(0xff5100)
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(GENERATE_ROD, GENERATE_GEAR, GENERATE_LONG_ROD, GENERATE_BOLT_SCREW, GENERATE_RING, GENERATE_SPRING, GENERATE_SPRING_SMALL, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_FINE_WIRE)
@@ -63,9 +64,8 @@ public class GTNE_windows_material {
         Highly_Active_Draconium = new Material.Builder(24004, gregtechId("highly_active_draconium"))
                 .dust()
                 .ingot()
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .plasma()
-                .fluid()
                 .fluidTemp(17500)
                 .color(0x32064f)
                 .iconSet(MaterialIconSet.SHINY)
@@ -79,7 +79,7 @@ public class GTNE_windows_material {
         Highly_Active_Awakened_Draconium = new Material.Builder(24005, gregtechId("highly_active_awakened_draconium"))
                 .dust()
                 .ingot()
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .plasma()
                 .fluidTemp(23500)
                 .color(0x943001)
@@ -94,7 +94,7 @@ public class GTNE_windows_material {
         Infinity = new Material.Builder(24006, gregtechId("infinity"))
                 .dust()
                 .ingot()
-                .fluid()
+                .fluid(FluidTypes.LIQUID, false)
                 .plasma()
                 .color(0xFFFFFF)
                 .fluidTemp(2000000000)

@@ -7,7 +7,6 @@ import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnerg
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.common.ConfigHolder;
 import gtne.common.metatileentities.multi.MetaTileEntityAdvancedPrecisionAssemblyLine;
-import gtne.common.metatileentities.multi.MetaTileEntityEnergyContainmentField;
 import gtne.common.metatileentities.multi.MetaTileEntityHighEnergyElectromagneticImplosionMachine;
 import gtne.common.metatileentities.multi.MetaTileLateGameEntityFusionReactor;
 import net.minecraft.util.ResourceLocation;
@@ -27,7 +26,6 @@ public class GTNEMetaTileEntities {
     public static MetaTileEntityAdvancedPrecisionAssemblyLine AdvancedPrecisionAssemblyLine;
     public static MetaTileEntityHighEnergyElectromagneticImplosionMachine HighEnergyElectromagneticImplosionMachine;
     public static final MetaTileLateGameEntityFusionReactor[] LGFUSION_REACTOR = new MetaTileLateGameEntityFusionReactor[2];
-    public static MetaTileEntityEnergyContainmentField EnergyContainmentField;
 
     //Hatches
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH = new MetaTileEntityEnergyHatch[1];
@@ -71,8 +69,6 @@ public class GTNEMetaTileEntities {
         AdvancedPrecisionAssemblyLine = registerMetaTileEntity(12001, new MetaTileEntityAdvancedPrecisionAssemblyLine(gtneId("advanced_precision_assembly_line")));
         LGFUSION_REACTOR[0] = registerMetaTileEntity(12002, new MetaTileLateGameEntityFusionReactor(gtneId("fusion_reactor.uhv"), UHV));
         LGFUSION_REACTOR[1] = registerMetaTileEntity(12003, new MetaTileLateGameEntityFusionReactor(gtneId("fusion_reactor.uev"), UEV));
-        EnergyContainmentField = registerMetaTileEntity(12004, new MetaTileEntityEnergyContainmentField(gtneId("energycontainmentfield")));
-
         //HighTierEnergyHatch 13000~13031
         if (ConfigHolder.metaTileEntityOptions.HigherTierEnergyHatch) {
             GTNE_ENERGY_INPUT_HATCH[0] = registerMetaTileEntity(13000, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.input." + GTValues.VN[MAX]), 14, 2, false));
