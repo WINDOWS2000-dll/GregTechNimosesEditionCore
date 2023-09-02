@@ -69,9 +69,9 @@ public class SiliconTech {
         //Glowstone-doped Monocrystalline Silicon Boule
         RecipeMaps.BLAST_RECIPES.recipeBuilder()
                 .input(dust, HIGH_PURITY_SILICON, 64)
-                .input(dust, Glowstone, 8)
+                .input(dust, Phosphorus, 8)
                 .fluidInputs(Nitrogen.getFluid(16000))
-                .output(GLOWSTONE_BOULE)
+                .output(PHOSPHORUS_BOULE)
                 .EUt(VA[HV]).duration(12000)
                 .buildAndRegister();
     }
