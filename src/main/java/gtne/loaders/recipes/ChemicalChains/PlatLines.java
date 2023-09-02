@@ -1,11 +1,14 @@
 package gtne.loaders.recipes.ChemicalChains;
 
-import gregtech.api.GTValues;
 import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.Recipe;
+import gregtech.api.recipes.ModHandler;
 import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition;
+import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher;
 import gregtech.api.unification.OreDictUnifier;
-import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.material.Material;
+import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.items.MetaItems;
 import gtne.common.ConfigHolder;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
@@ -33,11 +36,11 @@ public class PlatLines {
     private static void PlatLine_Platinum() {
         // Remove GregTechCE: UnofficialPlatinum_PlatLine
         //Platinum Grope Sludge
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.CENTRIFUGE_RECIPES, new ItemStack[]{OreDictUnifier.get(dust, PlatinumGroupSludge, 6)}, new FluidStack[]{Materials.AquaRegia.getFluid(1200)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.CENTRIFUGE_RECIPES, new ItemStack[]{OreDictUnifier.get(dust, PlatinumGroupSludge, 6)}, new FluidStack[]{AquaRegia.getFluid(1200)});
         //Platinum Dust
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, PlatinumRaw, 3));
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, Cooperite, 6));
-        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.CHEMICAL_BATH_RECIPES, new ItemStack[]{OreDictUnifier.get(crushed, Nickel, 1)}, new FluidStack[]{Materials.Mercury.getFluid(100)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.CHEMICAL_BATH_RECIPES, new ItemStack[]{OreDictUnifier.get(crushed, Nickel, 1)}, new FluidStack[]{Mercury.getFluid(100)});
 
 
         //New Horizons PlatLine Recipes
@@ -222,7 +225,7 @@ public class PlatLines {
                 .circuitMeta(11)
                 .fluidInputs(POTASSIUM_DISULFATE.getFluid(360))
                 .output(dust, LEACH_RESIDUE, 1)
-                .fluidOutputs(RHODIUM_SULFATE.getFluid(360))
+                .fluidOutputs(RhodiumSulfate.getFluid(360))
                 .blastFurnaceTemp(775)
                 .EUt(VA[MV]).duration(200)
                 .buildAndRegister();
@@ -316,7 +319,7 @@ public class PlatLines {
 
         //Rhodium Sulfate Solution
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(RHODIUM_SULFATE.getFluid(11000))
+                .fluidInputs(RhodiumSulfate.getFluid(11000))
                 .fluidInputs(Water.getFluid(10000))
                 .circuitMeta(1)
                 .output(dustTiny, LEACH_RESIDUE, 10)
@@ -327,7 +330,7 @@ public class PlatLines {
 
         //Another Rhodium Sulfate Solution Recipe
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(RHODIUM_SULFATE.getFluid(39000))
+                .fluidInputs(RhodiumSulfate.getFluid(39000))
                 .fluidInputs(Water.getFluid(36000))
                 .circuitMeta(3)
                 .output(dust, LEACH_RESIDUE, 4)
