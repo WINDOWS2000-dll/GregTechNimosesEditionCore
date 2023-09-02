@@ -82,9 +82,12 @@ public class GTNEMaterials {
     public static Material Purified_Water_Grade_A;
 
 
+    public static void registerMaterialHigh() {
+        GTNEMaterialFlags.init();
+    }
 
 
-    public static void init() {
+    public static void registerMaterialLow() {
         GTNE_windows_material.init();
         GTNEPlatLineMaterial.init();
         GTNEChemical.init();

@@ -7,6 +7,7 @@ import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import gregtech.api.unification.material.properties.FluidProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
+import static gregtech.api.util.GTUtility.gregtechId;
 import gregtech.api.unification.material.properties.ToolProperty;
 import gtne.api.unification.material.info.GTNEMaterialIconSet;
 
@@ -22,7 +23,7 @@ public class GTNE_windows_material {
 
         //24001 ~ 24500
 
-        HIGH_PURITY_SILICON = new Material.Builder(24001, "high_purity_silicon")
+        HIGH_PURITY_SILICON = new Material.Builder(24001, gregtechId("high_purity_silicon"))
                 .dust()
                 .ingot()
                 .color(0x2a2a2a)
@@ -31,7 +32,7 @@ public class GTNE_windows_material {
                 .blastTemp(2400, GasTier.LOW)
                 .build();
 
-        Draconium = new Material.Builder(24002, "draconium")
+        Draconium = new Material.Builder(24002, gregtechId("draconium"))
                 .dust()
                 .ingot()
                 .plasma()
@@ -45,7 +46,7 @@ public class GTNE_windows_material {
                 .element(Dc)
                 .build();
 
-        Awakened_Draconium = new Material.Builder(24003, "draconium_awakened")
+        Awakened_Draconium = new Material.Builder(24003, gregtechId("draconium_awakened"))
                 .dust()
                 .ingot()
                 .plasma()
@@ -59,7 +60,7 @@ public class GTNE_windows_material {
                 .element(DcX)
                 .build();
 
-        Highly_Active_Draconium = new Material.Builder(24004, "highly_active_draconium")
+        Highly_Active_Draconium = new Material.Builder(24004, gregtechId("highly_active_draconium"))
                 .dust()
                 .ingot()
                 .fluid()
@@ -75,7 +76,7 @@ public class GTNE_windows_material {
                 .element(HADc)
                 .build();
 
-        Highly_Active_Awakened_Draconium = new Material.Builder(24005, "highly_active_awakened_draconium")
+        Highly_Active_Awakened_Draconium = new Material.Builder(24005, gregtechId("highly_active_awakened_draconium"))
                 .dust()
                 .ingot()
                 .fluid()
@@ -90,7 +91,7 @@ public class GTNE_windows_material {
                 .element(HADcX)
                 .build();
 
-        Infinity = new Material.Builder(24006, "infinity")
+        Infinity = new Material.Builder(24006, gregtechId("infinity"))
                 .dust()
                 .ingot()
                 .fluid()

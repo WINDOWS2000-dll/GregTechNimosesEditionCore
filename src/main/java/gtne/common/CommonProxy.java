@@ -70,12 +70,6 @@ public class CommonProxy {
         return itemBlock;
     }
 
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public static void registerMaterial(GregTechAPI.MaterialEvent event) {
-        GTNELog.logger.info("Registering Materials...");
-        GTNEMaterials.init();
-    }
-
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         GTNELog.logger.info("Registering Recipes...");
