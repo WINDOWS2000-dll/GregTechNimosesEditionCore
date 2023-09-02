@@ -14,15 +14,24 @@ import static gregtech.common.blocks.MetaBlocks.statePropertiesToString;
 
 public class GTNEMetaBlock {
 
+    public GTNEMetaBlock(){}
+
     public static final GTNEBlockMetalCasing GTNE_BLOCK_METAL_CASING = new GTNEBlockMetalCasing();
     public static final BlockGTNEWireCoil BLOCK_GTNE_WIRE_COIL = new BlockGTNEWireCoil();
     public static final GTNEGlasses GTNE_GLASSES = new GTNEGlasses();
+    public static final EnergyContainmentUnit ENERGY_CONTAINMENT_UNIT = new EnergyContainmentUnit();
+
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
+        registerItemModel(ENERGY_CONTAINMENT_UNIT);
         BLOCK_GTNE_WIRE_COIL.onModelRegister();
         GTNE_GLASSES.onModelRegister();
+    }
+
+    public static GTNEBlockMetalCasing.MetalCasingType getType(IBlockState state) {
+        return GTNE_BLOCK_METAL_CASING.getState(state);
     }
 
 

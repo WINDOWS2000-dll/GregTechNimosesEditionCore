@@ -21,6 +21,9 @@ recipemap.machine.high_energy_electromagnetic_implosion_compressor.name=High Ene
 gtnecore.machine.fusion_reactor.uhv.name=Fusion Reactor Computer Mark4
 gtnecore.machine.fusion_reactor.uev.name=Fusion Reactor Computer Mark5
 
+#information text
+gtne.multi.data.remind=§cData will not update when the machine is disabled.
+
 #Shift
 gtnecore.tooltip.hold_shift=Hold §aShift§7 for more info
 
@@ -44,6 +47,23 @@ metaitem.anti_space_radioation_alloy.name=Anti-Space Radioation Alloy
 metaitem.anti_space_radioation_alloy_plate.name=Anti-Space Radioation Alloy Plate
 metaitem.europium_boule.name=Europium-doped Monocrystalline Silicon Boule
 metaitem.europium_doped_wafer.name=Europium-doped Wafer
+#EnergyContainmentUnit
+gtne.casing.energycontainmentunit.part=§3Part of the Energy Containment Field.
+gtne.casing.energycontainmentunit.capacity=Capacity: %d eu
+gtne.casing.energycontainmentunit.passive_loss=Caused passive loss in Energy Containment Field: %d eu/t
+#E-C-F
+gtne.multi.e-c-f.tooltip1=§3Hold energy,for a long while.
+gtne.multi.e-c-f.stored=   Stored Energy: %s eu
+gtne.multi.e-c-f.capacity=   Energy Capacity: %s eu
+gtne.multi.e-c-f.passive_loss=   Passive Loss: %d eu/t
+gtne.multi.e-c-f.press_shift=The structure is too complex,press shift for more information.
+gtne.multi.e-c-f.press_shift.tooltip1=Allow all kinds of capacitor to build the structure,but empty capacitor can not more than half.
+gtne.multi.e-c-f.press_shift.tooltip2=Allow all kings of tired glass to build the structure,but the min tier of glasses must not less than the max tier of capacitor - 1.
+gtne.multi.e-c-f.press_shift.tooltip3=The passive loss of energy is only decided on the sum of passive loss of your each capacitor.
+#Active TranceFormer
+gtne.multi.active_transformer.percent=Storage Percentage: %.2f%%
+gtne.multi.active_transformer.current.input=   Current input: %d eu/t
+gtne.multi.active_transformer.current.output=   Current output: %d eu/t
 #Material
 #PlatLine
 material.platinum_metallic_powder=Platinum Metallic Powder
