@@ -102,6 +102,16 @@ public class ConfigHolder {
         @Config.Name("GTNE Harder Water Recipe")
         public boolean Harder_Water_Recipe = true;
 
+        /**
+         * LuV層以上の機械の大幅な高難易度化
+         */
+
+        @Config.Comment({"Super HardMode LateGame[Default = true]",
+        "Activating this config will require an Assembly Line to create a machine above the LuV Age,",
+        "greatly increasing the difficulty of the LateGame."})
+        @Config.Name("Super HardMode LateGame")
+        public boolean Super_HardMode_LateGame = true;
+
     }
 
     public static class MetaTileEntityOptions {

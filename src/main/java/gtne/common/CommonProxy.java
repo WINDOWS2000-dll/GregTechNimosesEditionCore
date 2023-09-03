@@ -9,6 +9,7 @@ import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.ChemicalChains.SiliconTech;
 import gtne.loaders.recipes.ChemicalChains.WaterLine;
+import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
 import gtne.loaders.recipes.MultiBlock.EBFCoils;
@@ -101,6 +102,10 @@ public class CommonProxy {
         if (ConfigHolder.recipeoption.Harder_Water_Recipe) {
             WaterLine.init();
             GTNELog.logger.info("Registering WaterLine...");
+        }
+        if (ConfigHolder.recipeoption.Super_HardMode_LateGame) {
+            LateGameMachines.init();
+            GTNELog.logger.info("Registering LateGameMachineRecipes...");
         }
     }
 }
