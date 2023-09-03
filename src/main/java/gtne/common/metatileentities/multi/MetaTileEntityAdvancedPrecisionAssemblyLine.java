@@ -104,6 +104,7 @@ public class MetaTileEntityAdvancedPrecisionAssemblyLine extends RecipeMapMultib
                 .where('L', states(getGrateState()))
                 .where('I', metaTileEntities(MetaTileEntities.ITEM_IMPORT_BUS[0]))
                 .where('V', fluidInputPredicate())
+                .where('D', dataHatchPredicate())
                 .where('E', abilities(MultiblockAbility.INPUT_ENERGY))
                 .where('O', abilities(MultiblockAbility.EXPORT_ITEMS))
                 .where('M', abilities(MultiblockAbility.MAINTENANCE_HATCH))

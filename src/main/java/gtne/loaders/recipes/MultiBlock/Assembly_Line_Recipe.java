@@ -12,10 +12,7 @@ import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
-import gregtech.common.blocks.BlockCleanroomCasing;
-import gregtech.common.blocks.BlockMachineCasing;
-import gregtech.common.blocks.BlockMultiblockCasing;
-import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.blocks.*;
 import gregtech.common.items.MetaItems;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.common.metatileentities.electric.MetaTileEntityBlockBreaker;
@@ -36,6 +33,7 @@ import javax.annotation.Nonnull;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
+import static gregtech.common.metatileentities.MetaTileEntities.ASSEMBLY_LINE;
 import static gregtech.loaders.recipe.MetaTileEntityLoader.registerMachineRecipe;
 import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.api.GTValues.*;
@@ -68,6 +66,11 @@ public class Assembly_Line_Recipe {
                 .fluidInputs(Lubricant.getFluid(4000))
                 .fluidInputs(Polybenzimidazole.getFluid(1440))
                 .outputs(GTNE_BLOCK_METAL_CASING.getItemVariant(ADVANCEDPRECISIONASSEMBLYLINECASING, 4))
+                .research(b -> b
+                        .researchStack(MetaBlocks.COMPUTER_CASING.getItemVariant(BlockComputerCasing.CasingType.ADVANCED_COMPUTER_CASING))
+                        .duration(72000)
+                        .CWUt(32)
+                        .EUt(VA[ZPM]))
                 .EUt(262144).duration(1600)
                 .buildAndRegister();
 
@@ -142,7 +145,7 @@ public class Assembly_Line_Recipe {
                 .input(frameGt, NaquadahAlloy, 4)
                 .inputs(GTNE_BLOCK_METAL_CASING.getItemVariant(ADVANCEDPRECISIONASSEMBLYLINECONTROL, 4))
                 .inputs(GTNE_BLOCK_METAL_CASING.getItemVariant(ADVANCEDPRECISIONASSEMBLYLINE, 4))
-                .inputs(MetaTileEntities.ASSEMBLY_LINE.getStackForm(4))
+                .inputs(ASSEMBLY_LINE.getStackForm(4))
                 .inputs(MetaTileEntities.ASSEMBLER[UV].getStackForm(4))
                 .input(circuit, MarkerMaterials.Tier.UHV, 4)
                 .input(circuit, MarkerMaterials.Tier.UV, 8)
@@ -159,6 +162,11 @@ public class Assembly_Line_Recipe {
                 .fluidInputs(Polybenzimidazole.getFluid(2880))
                 .fluidInputs(UraniumRhodiumDinaquadide.getFluid(1440))
                 .outputs(GTNEMetaTileEntities.AdvancedPrecisionAssemblyLine.getStackForm(1))
+                .research(b -> b
+                        .researchStack(ASSEMBLY_LINE.getStackForm())
+                        .CWUt(64)
+                        .EUt(524288)
+                        .duration(288000))
                 .EUt(524288).duration(4800)
                 .buildAndRegister();
 
