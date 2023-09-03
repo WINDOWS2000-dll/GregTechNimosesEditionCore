@@ -32,6 +32,9 @@ public class EBFCoils {
             RemoveGEuCoilRecipe();
             ADDGTNECoilRecipes();
             if (gregtech.common.ConfigHolder.machines.highTierContent) {
+                if (!gregtech.common.ConfigHolder.machines.enableResearch) {
+                    HighTierCoils_Not_Research();
+                }
                 HighTierCoils();
             }
         }
@@ -155,10 +158,69 @@ public class EBFCoils {
                 .fluidInputs(Tritanium.getFluid(HighTierCoilFluidValues))
                 .fluidInputs(SolderingAlloy.getFluid(9126))
                 .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM, 1))
+                .research(b -> b
+                        .researchStack(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TRITANIUM))
+                        .EUt(1000000)
+                        .CWUt(32)
+                        .duration(10000))
                 .EUt(VA[UHV]).duration(3300)
                 .buildAndRegister();
 
+        //Awakened Draconium Coil
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(wireGtDouble, Awakened_Draconium, 8)
+                .input(wireFine, Draconium, 32)
+                .input(ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT, 8)
+                .input(circuit, MarkerMaterials.Tier.UHV, 4)
+                .input(foil, RutheniumTriniumAmericiumNeutronate, 16)
+                .fluidInputs(Draconium.getFluid(HighTierCoilFluidValues))
+                .fluidInputs(SolderingAlloy.getFluid(9126))
+                .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.AWAKENEDDRACONIUM, 1))
+                .research(b -> b
+                        .researchStack(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM))
+                        .EUt(4000000)
+                        .CWUt(128)
+                        .duration(20000))
+                .EUt(VA[UEV]).duration(4800)
+                .buildAndRegister();
 
+
+    }
+
+    private static void HighTierCoils_Not_Research() {
+
+        int HighTierCoilFluidValues = L * 4;
+
+        //Draconium Coil
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(wireGtDouble, Draconium, 8)
+                .input(wireFine, Tritanium, 32)
+                .input(ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT, 4)
+                .input(circuit, MarkerMaterials.Tier.UV, 4)
+                .input(foil, EnrichedNaquadahTriniumEuropiumDuranide, 16)
+                .fluidInputs(Tritanium.getFluid(HighTierCoilFluidValues))
+                .fluidInputs(SolderingAlloy.getFluid(9126))
+                .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM, 1))
+                .EUt(VA[UHV]).duration(3300)
+                .buildAndRegister();
+
+        //Awakened Draconium Coil
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(wireGtDouble, Awakened_Draconium, 8)
+                .input(wireFine, Draconium, 32)
+                .input(ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT, 8)
+                .input(circuit, MarkerMaterials.Tier.UHV, 4)
+                .input(foil, RutheniumTriniumAmericiumNeutronate, 16)
+                .fluidInputs(Draconium.getFluid(HighTierCoilFluidValues))
+                .fluidInputs(SolderingAlloy.getFluid(9126))
+                .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.AWAKENEDDRACONIUM, 1))
+                .research(b -> b
+                        .researchStack(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM))
+                        .EUt(4000000)
+                        .CWUt(128)
+                        .duration(20000))
+                .EUt(VA[UEV]).duration(4800)
+                .buildAndRegister();
     }
 
 }
