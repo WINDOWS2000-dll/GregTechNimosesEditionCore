@@ -36,13 +36,6 @@ public class GTNERecipeMaps {
             .setProgressBar(GTNEGuiTextures.PREGRESSBAR_CONPONENTS_ASSEMBLER, MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ASSEMBLER);
 
-    //Todo Quantum Computer
-    /*
-    @ZenProperty
-    public static final
-
-     */
-
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> HighEnergyElectromagneticImplosionMachine =
             new RecipeMap<>("high_energy_electromagnetic_implosion_machine", 6, 3, 3, 3, new SimpleRecipeBuilder(), false)

@@ -9,7 +9,9 @@ import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.ChemicalChains.SiliconTech;
 import gtne.loaders.recipes.ChemicalChains.WaterLine;
+import gtne.loaders.recipes.Components.LateGameComponents;
 import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
+import gtne.loaders.recipes.Material.EBFRecipes;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
 import gtne.loaders.recipes.MultiBlock.EBFCoils;
@@ -54,7 +56,6 @@ public class CommonProxy {
         GTNELog.logger.info("Registering Blocks...");
         event.getRegistry().register(GTNE_BLOCK_METAL_CASING);
         GTNELog.logger.info("Registering Metal Casing");
-        GTNELog.logger.info("Registering E-C-U");
         event.getRegistry().register(BLOCK_GTNE_WIRE_COIL);
         GTNELog.logger.info("Registering Wire Coil");
         event.getRegistry().register(GTNE_GLASSES);
@@ -106,6 +107,14 @@ public class CommonProxy {
         if (ConfigHolder.recipeoption.Super_HardMode_LateGame) {
             LateGameMachines.init();
             GTNELog.logger.info("Registering LateGameMachineRecipes...");
+        }
+        if (ConfigHolder.recipeoption.Harder_EBF_Recipe) {
+            EBFRecipes.init();
+            GTNELog.logger.info("Registering Harder EBF Recipes...");
+        }
+        if (ConfigHolder.recipeoption.Harder_LateGame_Components_Recipe && ConfigHolder.recipeoption.Components_Assembler) {
+            LateGameComponents.init();
+            GTNELog.logger.info("Registering Harder LateGame Components Recipes...");
         }
     }
 }

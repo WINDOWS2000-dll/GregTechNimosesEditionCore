@@ -76,6 +76,10 @@ public class ConfigHolder {
         @Config.Name("Components Assembler")
         public boolean Components_Assembler = true;
 
+        @Config.Comment("Higher difficulty for some recipes in EBF [Default = true]")
+        @Config.Name("Harder EBF Recipes")
+        public boolean Harder_EBF_Recipe = true;
+
         /**
          * 高炉コイルレシピの高難度化
          */
@@ -111,6 +115,11 @@ public class ConfigHolder {
         "greatly increasing the difficulty of the LateGame."})
         @Config.Name("Super HardMode LateGame")
         public boolean Super_HardMode_LateGame = true;
+
+        @Config.Comment({"Higher difficulty in creating various machine parts after LuV [Default = true]",
+        "This configuration is automatically disabled when the Component Assembler configuration is disabled."})
+        @Config.Name("Harder LateGame Components Recipe")
+        public boolean Harder_LateGame_Components_Recipe = true;
 
     }
 

@@ -816,6 +816,23 @@ public class ComponentsAssembler {
         ModHandler.removeRecipeByName("gregtech:field_generator_iv");
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, QUANTUM_STAR.getStackForm(1), OreDictUnifier.get(plateDouble, TungstenSteel, 2),
                                                                             OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV, 2), OreDictUnifier.get(wireGtQuadruple, SamariumIronArsenicOxide, 4));
+
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Ruridit, 1)
+                .input(plateDouble, TungstenCarbide, 4)
+                .input(EMITTER_IV, 2)
+                .input(SENSOR_IV, 2)
+                .input(QUANTUM_STAR, 1)
+                .input(circuit, MarkerMaterials.Tier.IV, 4)
+                .input(cableGtSingle, Tungsten, 4)
+                .fluidInputs(SolderingAlloy.getFluid(sold * 8))
+                .output(FIELD_GENERATOR_IV)
+                .cleanroom(CLEANROOM)
+                .duration(field_generator_duration).EUt(VA[EV])
+                .buildAndRegister();
+
+
+
         //Emitter
         ModHandler.removeRecipeByName("gregtech:emitter_iv");
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Iridium, 4), OreDictUnifier.get(cableGtSingle, Tungsten, 2),
@@ -843,6 +860,22 @@ public class ComponentsAssembler {
         ModHandler.removeRecipeByName("gregtech:sensor_iv");
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLER_RECIPES, OreDictUnifier.get(stick, Iridium, 1), OreDictUnifier.get(plate ,TungstenSteel, 4),
                                                                             OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV), QUANTUM_STAR.getStackForm(1));
+
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, TungstenSteel, 1)
+                .input(plate, TungstenSteel, 4)
+                .input(stick, Iridium, 2)
+                .input(QUANTUM_STAR, 1)
+                .input(circuit, MarkerMaterials.Tier.IV, 2)
+                .input(SENSOR_EV, 2)
+                .input(SENSOR_HV, 4)
+                .input(SENSOR_MV, 8)
+                .input(cableGtSingle, Tungsten, 4)
+                .fluidInputs(SolderingAlloy.getFluid(sold * 8))
+                .output(SENSOR_IV, 1)
+                .cleanroom(CLEANROOM)
+                .duration(other_duration * 2).EUt(VA[EV])
+                .buildAndRegister();
 
     }
 }
