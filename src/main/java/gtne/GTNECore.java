@@ -21,8 +21,9 @@ import static gtne.GTNEValues.MOD_NAME_SHORT;
         modid = GTNEValues.MODID,
         name = MOD_NAME,
         acceptedMinecraftVersions = "[1.12,1.13)",
-        dependencies = GTInternalTags.DEP_VERSION_STRING,
-        version = GTNEValues.MOD_VER)
+        version = GTNEValues.MOD_VER,
+        dependencies = GTInternalTags.DEP_VERSION_STRING + "required-after:" + GTNEValues.MODID_GCYM + ";" +
+                "required-after:" + GTNEValues.MODID_NC + ";")
 
 public class GTNECore {
 

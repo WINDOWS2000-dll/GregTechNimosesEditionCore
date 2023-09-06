@@ -42,6 +42,7 @@ dependencies {
     implementation rfg.deobf("curse.maven:ae2-extended-life-570458:4673868") // AE2UEL 0.55.20
     implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.690" // CrT 4.1.20
     implementation rfg.deobf("curse.maven:groovyscript-687577:4687204") // GrS 0.6.0
+    implementation rfg.deobf("curse.maven:nuclearcraft-mod-226254:3784145")
     //implementation (files("libs/groovyscript-0.6.1-dev.jar")) // GrS 0.6.1
     implementation rfg.deobf("curse.maven:ctm-267602:2915363") // CTM 1.0.2.31
     implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4480325")
