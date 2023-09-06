@@ -27,20 +27,28 @@ public class LateGameComponents {
     private static void RemoveLuVComponentsRecipe() {
         //Motor
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(stickLong, SamariumMagnetic, 1), OreDictUnifier.get(stickLong, HSSS, 2), OreDictUnifier.get(ring, HSSS, 2), OreDictUnifier.get(round, HSSS, 4), OreDictUnifier.get(wireFine, Ruridit, 64), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(144), Lubricant.getFluid(250)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ELECTRIC_MOTOR_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Pump
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{ELECTRIC_MOTOR_LuV.getStackForm(1), OreDictUnifier.get(pipeSmallFluid, NiobiumTitanium, 1), OreDictUnifier.get(plate, HSSS, 2), OreDictUnifier.get(screw, HSSS, 8), OreDictUnifier.get(ring, SiliconeRubber, 4), OreDictUnifier.get(rotor, HSSS, 1), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(144), Lubricant.getFluid(250)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ELECTRIC_PUMP_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Conveyor
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{ELECTRIC_MOTOR_LuV.getStackForm(2), OreDictUnifier.get(plate, HSSS, 2), OreDictUnifier.get(ring, HSSS, 4), OreDictUnifier.get(round, HSSS, 16), OreDictUnifier.get(screw, HSSS, 4), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(144), Lubricant.getFluid(250), StyreneButadieneRubber.getFluid(1152)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, CONVEYOR_MODULE_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Piston
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{ELECTRIC_MOTOR_LuV.getStackForm(1), OreDictUnifier.get(plate, HSSS, 4), OreDictUnifier.get(ring, HSSS, 4), OreDictUnifier.get(round, HSSS, 16), OreDictUnifier.get(stick, HSSS, 4), OreDictUnifier.get(gear, HSSS, 1), OreDictUnifier.get(gearSmall, HSSS, 2), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(144), Lubricant.getFluid(250)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ELECTRIC_PISTON_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Robot Arm
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(stickLong, HSSS, 4), OreDictUnifier.get(gear, HSSS, 1), OreDictUnifier.get(gearSmall, HSSS, 3), ELECTRIC_MOTOR_LuV.getStackForm(2), ELECTRIC_PISTON_LUV.getStackForm(1), OreDictUnifier.get(circuit, MarkerMaterials.Tier.LuV, 1), OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV, 2), OreDictUnifier.get(circuit, MarkerMaterials.Tier.EV, 4), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 4)}, new FluidStack[]{SolderingAlloy.getFluid(576), Lubricant.getFluid(250)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ROBOT_ARM_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Field Generator
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(frameGt, HSSS, 1), OreDictUnifier.get(plate, HSSS, 6), QUANTUM_STAR.getStackForm(1), EMITTER_LuV.getStackForm(2), OreDictUnifier.get(circuit, MarkerMaterials.Tier.LuV, 2), OreDictUnifier.get(wireFine, IndiumTinBariumTitaniumCuprate, 64), OreDictUnifier.get(wireFine, IndiumTinBariumTitaniumCuprate, 64), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 4)}, new FluidStack[]{SolderingAlloy.getFluid(576)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, FIELD_GENERATOR_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Emitter
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(frameGt, HSSS, 1), ELECTRIC_MOTOR_LuV.getStackForm(1), OreDictUnifier.get(stickLong, Ruridit, 4), QUANTUM_STAR.getStackForm(1), OreDictUnifier.get(circuit, MarkerMaterials.Tier.LuV, 2), OreDictUnifier.get(foil, Palladium, 64), OreDictUnifier.get(foil, Palladium, 32), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 4)}, new FluidStack[]{SolderingAlloy.getFluid(288)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, EMITTER_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Sensor
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(frameGt, HSSS, 1), ELECTRIC_MOTOR_LuV.getStackForm(1), OreDictUnifier.get(plate, Ruridit, 4), QUANTUM_STAR.getStackForm(1), OreDictUnifier.get(circuit, MarkerMaterials.Tier.LuV, 2), OreDictUnifier.get(foil, Palladium, 64), OreDictUnifier.get(foil, Palladium, 32), OreDictUnifier.get(cableGtSingle, NiobiumTitanium, 4)}, new FluidStack[]{SolderingAlloy.getFluid(288)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, SENSOR_IV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
     }
 
     private static void LuVComponents() {
