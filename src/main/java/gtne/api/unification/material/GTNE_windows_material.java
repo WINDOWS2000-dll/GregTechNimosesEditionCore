@@ -109,5 +109,15 @@ public class GTNE_windows_material {
                 .element(If)
                 .build();
 
+        Indalloy_140 = new Material.Builder(24007, gregtechId("indalloy_140"))
+                .dust()
+                .ingot()
+                .fluid(FluidTypes.LIQUID, false)
+                .fluidTemp(5475)
+                .color(0x66477a)
+                .build();
+
+        Indalloy_140.setFormula("Bi47Pb25Sn13Cd10In5", true);
+
     }
 }

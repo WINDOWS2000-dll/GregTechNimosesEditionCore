@@ -11,6 +11,7 @@ import gtne.loaders.recipes.ChemicalChains.SiliconTech;
 import gtne.loaders.recipes.ChemicalChains.WaterLine;
 import gtne.loaders.recipes.Components.LateGameComponents;
 import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
+import gtne.loaders.recipes.Material.AlloyBlastFurnaceRecipe;
 import gtne.loaders.recipes.Material.EBFRecipes;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
@@ -114,6 +115,7 @@ public class CommonProxy {
         }
         if (ConfigHolder.recipeoption.Harder_LateGame_Components_Recipe && ConfigHolder.recipeoption.Components_Assembler) {
             LateGameComponents.init();
+            AlloyBlastFurnaceRecipe.init();
             GTNELog.logger.info("Registering Harder LateGame Components Recipes...");
         }
     }

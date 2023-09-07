@@ -13,6 +13,7 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.common.items.MetaItems.*;
+import static gtne.api.unification.material.GTNEMaterials.*;
 
 public class LateGameComponents {
 
@@ -61,19 +62,158 @@ public class LateGameComponents {
                 .input(round, HSSS, 4)
                 .input(wireFine, Ruridit, 64)
                 .input(wireFine, Ruridit, 64)
-                .input(cableGtSingle, NiobiumTitanium, 2)
-                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .input(cableGtSingle, YttriumBariumCuprate, 2)
+                .fluidInputs(Indalloy_140.getFluid(L * 2))
                 .fluidInputs(Lubricant.getFluid(250))
                 .output(ELECTRIC_MOTOR_LuV, 1)
                 .research(b -> b
                         .researchStack(ELECTRIC_MOTOR_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
-                .EUt(8000).duration(600)
+                .EUt(7680).duration(600)
+                .buildAndRegister();
+
+        //Pump
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_LuV, 1)
+                .input(pipeSmallFluid, NiobiumTitanium, 2)
+                .input(plate, HSSS, 2)
+                .input(screw, HSSS, 8)
+                .input(ring, StyreneButadieneRubber, 4)
+                .input(rotor, HSSS, 2)
+                .input(cableGtSingle, YttriumBariumCuprate, 2)
+                .fluidInputs(Indalloy_140.getFluid(L * 2))
+                .fluidInputs(Lubricant.getFluid(250))
+                .output(ELECTRIC_PUMP_LuV, 1)
+                .research(b -> b
+                        .researchStack(ELECTRIC_PUMP_IV.getStackForm())
+                        .EUt(1920)
+                        .duration(6000))
+                .EUt(7680).duration(600)
+                .buildAndRegister();
+
+        //Conveyor
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_LuV, 2)
+                .input(plate, HSSS, 2)
+                .input(ring, HSSS, 4)
+                .input(round, HSSS, 32)
+                .input(cableGtSingle, YttriumBariumCuprate, 2)
+                .input(plate, SiliconeRubber, 16)
+                .fluidInputs(Indalloy_140.getFluid(L * 2))
+                .fluidInputs(Lubricant.getFluid(250))
+                .output(CONVEYOR_MODULE_LuV, 1)
+                .research(b -> b
+                        .researchStack(CONVEYOR_MODULE_IV.getStackForm())
+                        .EUt(1920)
+                        .duration(6000))
+                .EUt(7680).duration(600)
+                .buildAndRegister();
+
+        //Piston
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_LuV, 1)
+                .input(plate, HSSS, 6)
+                .input(ring, HSSS, 4)
+                .input(round, HSSS, 32)
+                .input(stick, HSSS, 4)
+                .input(gear, HSSS, 1)
+                .input(gearSmall, HSSS, 4)
+                .input(cableGtSingle, YttriumBariumCuprate, 4)
+                .fluidInputs(Indalloy_140.getFluid(L * 2))
+                .fluidInputs(Lubricant.getFluid(250))
+                .output(ELECTRIC_PISTON_LUV, 1)
+                .research(b -> b
+                        .researchStack(ELECTRIC_PISTON_IV.getStackForm())
+                        .EUt(1920)
+                        .duration(6000))
+                .EUt(7680).duration(600)
+                .buildAndRegister();
+
+        //RoBot Arm
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, HSSS, 4)
+                .input(gear, HSSS, 1)
+                .input(gear, HSSS, 3)
+                .input(ELECTRIC_MOTOR_LuV, 2)
+                .input(ELECTRIC_PISTON_LUV, 1)
+                .input(circuit, MarkerMaterials.Tier.LuV, 2)
+                .input(circuit, MarkerMaterials.Tier.IV, 4)
+                .input(circuit, MarkerMaterials.Tier.EV, 8)
+                .input(cableGtSingle, YttriumBariumCuprate, 6)
+                .fluidInputs(Indalloy_140.getFluid(L * 4))
+                .fluidInputs(Lubricant.getFluid(250))
+                .output(ROBOT_ARM_LuV, 1)
+                .research(b -> b
+                        .researchStack(ROBOT_ARM_IV.getStackForm())
+                        .EUt(1920)
+                        .duration(6000))
+                .EUt(7680).duration(600)
+                .buildAndRegister();
+
+        //Field Generator
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, HSSS, 1)
+                .input(plate, HSSS, 6)
+                .input(QUANTUM_STAR, 2)
+                .input(EMITTER_LuV, 4)
+                .input(SENSOR_LuV, 2)
+                .input(circuit, MarkerMaterials.Tier.ZPM)
+                .input(wireFine, Ruridit, 64)
+                .input(wireFine, Ruridit, 64)
+                .input(wireFine, Ruridit, 64)
+                .input(wireFine, Ruridit, 64)
+                .input(cableGtSingle, YttriumBariumCuprate, 8)
+                .fluidInputs(Indalloy_140.getFluid(L * 4))
+                .output(FIELD_GENERATOR_LuV, 1)
+                .research(b -> b
+                        .researchStack(FIELD_GENERATOR_IV.getStackForm())
+                        .EUt(1920)
+                        .duration(6000))
+                .EUt(7680).duration(600)
+                .buildAndRegister();
+
+        //Emitter
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, HSSS, 1)
+                .input(ELECTRIC_MOTOR_LuV, 1)
+                .input(stick, Ruridit, 8)
+                .input(QUANTUM_STAR, 1)
+                .input(circuit, MarkerMaterials.Tier.LuV, 4)
+                .input(foil, Gallium, 64)
+                .input(foil, Gallium, 64)
+                .input(foil, Gallium, 64)
+                .input(cableGtSingle, YttriumBariumCuprate, 7)
+                .fluidInputs(Indalloy_140.getFluid(L * 4))
+                .output(EMITTER_LuV, 1)
+                .research(b -> b
+                        .researchStack(EMITTER_IV.getStackForm())
+                        .EUt(1920)
+                        .duration(6000))
+                .EUt(7680).duration(600)
+                .buildAndRegister();
+
+        //Sensor
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, HSSS, 1)
+                .input(ELECTRIC_MOTOR_LuV, 1)
+                .input(plate, Ruridit, 8)
+                .input(QUANTUM_STAR, 1)
+                .input(circuit, MarkerMaterials.Tier.LuV, 4)
+                .input(foil, Gallium, 64)
+                .input(foil, Gallium, 64)
+                .input(foil, Gallium, 64)
+                .input(cableGtSingle, YttriumBariumCuprate, 7)
+                .fluidInputs(Indalloy_140.getFluid(L * 4))
+                .output(SENSOR_LuV, 1)
+                .research(b -> b
+                        .researchStack(SENSOR_IV.getStackForm())
+                        .EUt(1920)
+                        .duration(6000))
+                .EUt(7680).duration(600)
                 .buildAndRegister();
 
 
+
     }
-
-
 }

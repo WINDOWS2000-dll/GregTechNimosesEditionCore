@@ -80,6 +80,7 @@ public class GTNEMaterials {
     public static Material Purified_Water_Grade_C;
     public static Material Purified_Water_Grade_B;
     public static Material Purified_Water_Grade_A;
+    public static Material Indalloy_140;
 
 
     public static void registerMaterialHigh() {
