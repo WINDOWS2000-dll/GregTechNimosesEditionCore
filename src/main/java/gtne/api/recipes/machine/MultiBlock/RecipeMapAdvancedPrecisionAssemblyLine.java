@@ -63,7 +63,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
 
         if (!isOutputs) {
             //Data Slot
-            builder.widget(new SlotWidget(itemHandler, 20, startInputsX + 18 * 4, 3 + 18 * 2, true, true)
+            builder.widget(new SlotWidget(itemHandler, 16, startInputsX + 18 * 4, 3 + 18 * 2, true, true)
                     .setBackgroundTexture(GuiTextures.SLOT, GuiTextures.DATA_ORB_OVERLAY));
 
             for (int i = 0; i < itemSlotsToDown; i++) {
