@@ -22,6 +22,8 @@ public class LateGameComponents {
         if (ConfigHolder.recipeoption.Harder_LateGame_Components_Recipe) {
             RemoveLuVComponentsRecipe();
             LuVComponents();
+            RemoveZPMComponentsRecipe();
+            ZPMComponents();
         }
     }
 
@@ -158,7 +160,7 @@ public class LateGameComponents {
                 .input(QUANTUM_STAR, 2)
                 .input(EMITTER_LuV, 4)
                 .input(SENSOR_LuV, 2)
-                .input(circuit, MarkerMaterials.Tier.ZPM)
+                .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(wireFine, Ruridit, 64)
                 .input(wireFine, Ruridit, 64)
                 .input(wireFine, Ruridit, 64)
@@ -214,6 +216,34 @@ public class LateGameComponents {
                 .buildAndRegister();
 
 
+
+    }
+
+    private static void RemoveZPMComponentsRecipe() {
+        //Motor
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(stickLong, SamariumMagnetic, 1), OreDictUnifier.get(stickLong, Osmiridium, 4), OreDictUnifier.get(ring, Osmiridium, 4), OreDictUnifier.get(round, Osmiridium, 8), OreDictUnifier.get(wireFine, Europium, 64), OreDictUnifier.get(wireFine, Europium, 32), OreDictUnifier.get(cableGtSingle, VanadiumGallium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(288), Lubricant.getFluid(500)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ELECTRIC_MOTOR_LuV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
+        //Pump
+    }
+
+    private static void ZPMComponents() {
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, SamariumMagnetic, 1)
+                .input(stickLong, NaquadahAlloy, 4)
+                .input(ring, NaquadahAlloy, 4)
+                .input(round, NaquadahAlloy, 16)
+                .input(wireFine, Europium, 64)
+                .input(wireFine, Europium, 64)
+                .input(wireFine, Europium, 64)
+                .input(cableGtQuadruple, VanadiumGallium, 2)
+                .fluidInputs(Indalloy_140.getFluid(L * 4))
+                .fluidInputs(Lubricant.getFluid(750))
+                .research(b -> b
+                        .researchStack(ELECTRIC_MOTOR_LuV.getStackForm())
+                        .EUt(7680)
+                        .duration(7200))
+                .EUt(30720).duration(600)
+                .buildAndRegister();
 
     }
 }

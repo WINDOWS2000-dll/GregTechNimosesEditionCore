@@ -5,22 +5,33 @@ import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.ModularUI;
 import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.gui.widgets.SlotWidget;
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.machines.IResearchRecipeMap;
+import gregtech.api.recipes.recipeproperties.ResearchProperty;
+import gregtech.api.recipes.recipeproperties.ResearchPropertyData;
+import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import gtne.api.gui.GTNEGuiTextures;
 import gtne.api.recipes.GTNERecipeMaps;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.Map;
 
 
-public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> extends RecipeMap<R> {
+public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> extends RecipeMap<R> implements IResearchRecipeMap {
+
+    private final Map<String, Collection<Recipe>> researchEntries = new Object2ObjectOpenHashMap<>();
 
     public RecipeMapAdvancedPrecisionAssemblyLine(String unlocalizedName,
-                                                  int minInputs, int maxInputs, int minOutputs, int maxOutputs,
-                                                  int minFluidInputs, int maxFluidInputs, int minFluidOutputs, int maxFluidOutputs,
+                                                  int maxInputs,  int maxOutputs,
+                                                   int maxFluidInputs,  int maxFluidOutputs,
                                                   R defaultRecipe, boolean isHidden) {
-        super(unlocalizedName, minInputs, maxInputs, minOutputs, maxOutputs, minFluidInputs, maxFluidInputs, minFluidOutputs, maxFluidOutputs, defaultRecipe, isHidden);
+        super(unlocalizedName,  maxInputs,  maxOutputs,  maxFluidInputs, maxFluidOutputs, defaultRecipe, isHidden);
     }
 
     @Override
@@ -51,6 +62,10 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         int startInputsY = 45 - (int) (itemSlotsToDown / 2.0 * 21);
 
         if (!isOutputs) {
+            //Data Slot
+            builder.widget(new SlotWidget(itemHandler, 20, startInputsX + 18 * 4, 3 + 18 * 2, true, true)
+                    .setBackgroundTexture(GuiTextures.SLOT, GuiTextures.DATA_ORB_OVERLAY));
+
             for (int i = 0; i < itemSlotsToDown; i++) {
                 for (int j = 0; j < itemSlotsToLeft; j++) {
                     int slotIndex = i * itemSlotsToLeft + j;
@@ -72,5 +87,61 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
         } else {
             addSlot(builder, startInputsX + 18 * 4, 3, 0, itemHandler, fluidHandler, invertFluids, true);
         }
+    }
+
+    @Override
+    public boolean compileRecipe(Recipe recipe) {
+        if (!super.compileRecipe(recipe)) return false;
+        if (recipe.hasProperty(ResearchProperty.getInstance())) {
+            ResearchPropertyData data = recipe.getProperty(ResearchProperty.getInstance(), null);
+            if (data != null) {
+                for (ResearchPropertyData.ResearchEntry entry : data) {
+                    addDataStickEntry(entry.getResearchId(), recipe);
+                }
+                return true;
+            }
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean removeRecipe(@Nonnull Recipe recipe) {
+        if (!super.removeRecipe(recipe)) return false;
+        if (recipe.hasProperty(ResearchProperty.getInstance())) {
+            ResearchPropertyData data = recipe.getProperty(ResearchProperty.getInstance(), null);
+            if (data != null) {
+                for (ResearchPropertyData.ResearchEntry entry : data) {
+                    return removeDataStickEntry(entry.getResearchId(), recipe);
+                }
+            }
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public void addDataStickEntry(@Nonnull String researchId, @Nonnull Recipe recipe) {
+        Collection<Recipe> collection = researchEntries.computeIfAbsent(researchId, (k) -> new ObjectOpenHashSet<>());
+        collection.add(recipe);
+    }
+
+    @Nullable
+    @Override
+    public Collection<Recipe> getDataStickEntry(@Nonnull String researchId) {
+        return researchEntries.get(researchId);
+    }
+
+    @Override
+    public boolean removeDataStickEntry(@Nonnull String researchId, @Nonnull Recipe recipe) {
+        Collection<Recipe> collection = researchEntries.get(researchId);
+            if (collection == null) return false;
+            if (collection.remove(recipe)) {
+                if (collection.isEmpty()) {
+                    return researchEntries.remove(researchId) != null;
+            }
+            return true;
+        }
+        return false;
     }
 }

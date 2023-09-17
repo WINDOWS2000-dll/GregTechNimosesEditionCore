@@ -6,6 +6,7 @@ import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.*;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.gui.GTNEGuiTextures;
+import gtne.api.recipes.Builders.AdvancedPrecisionAssemblyLineRecipeBuilder;
 import net.minecraft.init.SoundEvents;
 import stanhebben.zenscript.annotations.ZenProperty;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedPrecisionAssemblyLine;
@@ -26,7 +27,7 @@ public class GTNERecipeMaps {
      */
 
     @ZenProperty
-    public static final RecipeMapAdvancedPrecisionAssemblyLine<SimpleRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES = (RecipeMapAdvancedPrecisionAssemblyLine<SimpleRecipeBuilder>) new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line", 1, 20, 1, 1, 0, 10, 0, 0, new SimpleRecipeBuilder(), false)
+    public static final RecipeMapAdvancedPrecisionAssemblyLine<AdvancedPrecisionAssemblyLineRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES = (RecipeMapAdvancedPrecisionAssemblyLine<AdvancedPrecisionAssemblyLineRecipeBuilder>) new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20,  1,  10,  0, new AdvancedPrecisionAssemblyLineRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ASSEMBLER);
 
