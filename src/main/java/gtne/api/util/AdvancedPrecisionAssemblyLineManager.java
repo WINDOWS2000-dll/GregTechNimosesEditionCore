@@ -46,7 +46,7 @@ public class AdvancedPrecisionAssemblyLineManager {
 
     public static void writeResearchToNBT(@Nonnull NBTTagCompound stackCompound, @Nonnull String researchId) {
         NBTTagCompound compound = new NBTTagCompound();
-        compound.setString(APAL_RESEARCH_NBT_TAG, researchId);
+        compound.setString(APAL_RESEARCH_ID_NBT_TAG, researchId);
         stackCompound.setTag(APAL_RESEARCH_NBT_TAG, compound);
     }
 
@@ -61,7 +61,7 @@ public class AdvancedPrecisionAssemblyLineManager {
         if (!hasResearchTag(compound)) return null;
 
         NBTTagCompound researchCompound = compound.getCompoundTag(APAL_RESEARCH_NBT_TAG);
-        String researchId = researchCompound.getString(APAL_RESEARCH_NBT_TAG);
+        String researchId = researchCompound.getString(APAL_RESEARCH_ID_NBT_TAG);
         return researchId.isEmpty() ? null : researchId;
     }
 
