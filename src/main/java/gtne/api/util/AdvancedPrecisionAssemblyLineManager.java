@@ -19,7 +19,7 @@ import net.minecraftforge.common.util.Constants;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class AdvancedPrecisionAssemblyLineManager {
+public final class AdvancedPrecisionAssemblyLineManager {
 
     public static final String APAL_RESEARCH_NBT_TAG = "advancedprecisionassemblylineResearch";
     public static final String APAL_RESEARCH_ID_NBT_TAG = "apal_researchId";
