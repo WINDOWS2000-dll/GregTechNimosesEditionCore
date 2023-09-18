@@ -21,7 +21,7 @@ public class Advanced_Precision_Assembly_Line {
                 .fluidInputs(SolderingAlloy.getFluid(18432))
                 .fluidInputs(NaquadahAlloy.getFluid(114514))
                 .outputs(MetaTileEntities.FUSION_REACTOR[2].getStackForm())
-                .research(h -> h
+                .research(b -> b
                         .researchStack(ROBOT_ARM_UHV.getStackForm())
                         .EUt(114514)
                         .CWUt(1024)
