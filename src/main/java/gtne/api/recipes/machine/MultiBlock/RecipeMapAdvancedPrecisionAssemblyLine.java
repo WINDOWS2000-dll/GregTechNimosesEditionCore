@@ -28,10 +28,10 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
     private final Map<String, Collection<Recipe>> researchEntries = new Object2ObjectOpenHashMap<>();
 
     public RecipeMapAdvancedPrecisionAssemblyLine(String unlocalizedName,
-                                                  int maxInputs,  int maxOutputs,
-                                                   int maxFluidInputs,  int maxFluidOutputs,
+                                                  int maxInputs, boolean modifyItemInputs,  int maxOutputs, boolean modifyItemOutputs,
+                                                   int maxFluidInputs, boolean modifyFluidInputs, int maxFluidOutputs, boolean modifyFluidOutputs,
                                                   R defaultRecipe, boolean isHidden) {
-        super(unlocalizedName,  maxInputs,  maxOutputs,  maxFluidInputs, maxFluidOutputs, defaultRecipe, isHidden);
+        super(unlocalizedName,  maxInputs, modifyItemInputs, maxOutputs, modifyItemOutputs, maxFluidInputs, modifyFluidInputs, maxFluidOutputs, modifyFluidOutputs, defaultRecipe, isHidden);
     }
 
     @Override
@@ -63,7 +63,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
 
         if (!isOutputs) {
             //Data Slot
-            builder.widget(new SlotWidget(itemHandler, 16, startInputsX + 18 * 4, 3 + 18 * 2, true, true)
+            builder.widget(new SlotWidget(itemHandler, 19, startInputsX + 18 * 4, 3 + 18 * 2, true, true)
                     .setBackgroundTexture(GuiTextures.SLOT, GuiTextures.DATA_ORB_OVERLAY));
 
             for (int i = 0; i < itemSlotsToDown; i++) {

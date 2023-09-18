@@ -106,7 +106,7 @@ public class AdvancedPrecisionAssemblyLineManager {
     }
 
     public static void createDefaultResearchRecipe(@Nonnull String researchId, @Nonnull ItemStack researchItem, @Nonnull ItemStack dataItem, int duration, int EUt, int CWUt) {
-        if (!ConfigHolder.machines.enableResearch) return;;
+        if (!ConfigHolder.machines.enableResearch) return;
 
         NBTTagCompound compound = GTUtility.getOrCreateNbtCompound(dataItem);
         writeResearchToNBT(compound, researchId);

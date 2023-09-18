@@ -27,7 +27,7 @@ public class GTNERecipeMaps {
      */
 
     @ZenProperty
-    public static final RecipeMapAdvancedPrecisionAssemblyLine<AdvancedPrecisionAssemblyLineRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES = (RecipeMapAdvancedPrecisionAssemblyLine<AdvancedPrecisionAssemblyLineRecipeBuilder>) new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20,  1,  10,  0, new AdvancedPrecisionAssemblyLineRecipeBuilder(), false)
+    public static final RecipeMap<AdvancedPrecisionAssemblyLineRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES = new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20, false,  1, false,  10, false, 0, false, new AdvancedPrecisionAssemblyLineRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ASSEMBLER);
 
