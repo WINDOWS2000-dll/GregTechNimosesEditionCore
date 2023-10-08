@@ -22,7 +22,7 @@ public class DHSCTCasing extends VariantActiveBlock<DHSCTCasing.DHSCTCasingType>
         setSoundType(SoundType.METAL);
         setHarvestLevel("wrench", 4);
         setDefaultState(getState(DHSCTCasingType.DIMENTIONALLY_TRANSCENDENT_CASING));
-        setRegistryName("gtne_dhsct_casing");
+        setRegistryName("gtne_hdsct_casing");
     }
 
     public boolean canCreatureSpawn(@Nonnull IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EntityLiving.SpawnPlacementType type) {

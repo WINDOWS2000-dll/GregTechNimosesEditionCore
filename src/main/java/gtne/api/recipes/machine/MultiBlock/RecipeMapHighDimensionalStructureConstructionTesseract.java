@@ -63,7 +63,7 @@ public class RecipeMapHighDimensionalStructureConstructionTesseract <R extends R
                             addSlot(builder, startInputX + 18 * j, startFluidY + 18 * i, SlotIndexFluid, itemHandler, fluidHandler, true, false);
                         }
                         if (i >= 2) {
-                            addSlot(builder, startInputX + 18 * j, (startFluidY + 53) * (i - 2), SlotIndexFluid, itemHandler, fluidHandler, true, false);
+                            addSlot(builder, startInputX + 18 * j, (startFluidY + 53) + (18 * (i - 2)), SlotIndexFluid, itemHandler, fluidHandler, true, false);
                         }
                     }
                 }

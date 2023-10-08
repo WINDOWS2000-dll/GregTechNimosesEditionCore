@@ -1,0 +1,28 @@
+{
+  "forge_marker": 1,
+  "default": {
+    "model": "minecraft:cube_all"
+  },
+  "variants": {
+    "variant": {
+      "dimentional_bridge": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/highdimentionalstructureconstructiontesseract/dimentional_bridge"
+        }
+      },
+      "dimentionally_transcendent_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/highdimentionalstructureconstructiontesseract/dimentionally_transcendent_casing"
+        }
+      },
+      "dimentional_matter_injection_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/highdimentionalstructureconstructiontesseract/dimentional_matter_injection_casing"
+        }
+      }
+    }
+  }
+}
