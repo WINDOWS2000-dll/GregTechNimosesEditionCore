@@ -127,7 +127,7 @@ public class MetaTileEntityHighDimensionalStructureConstructionTesseract extends
                         .or(FluidInputPredicate()))
                 .where('U', MultiFluidPredicate())
                 .where('E', states(GTNEMetaBlock.DHSCT_CASING.getState(DHSCTCasing.DHSCTCasingType.DIMENTIONAL_MATTER_INJECTION_CASING))
-                        .or(EnergyInputPredicate()))
+                        .or(abilities(MultiblockAbility.INPUT_ENERGY)))
                 .where('I', states(GTNEMetaBlock.DHSCT_CASING.getState(DHSCTCasing.DHSCTCasingType.DIMENTIONAL_MATTER_INJECTION_CASING))
                         .or(ItemInputPredicate()))
                 .where('O', states(GTNEMetaBlock.DHSCT_CASING.getState(DHSCTCasing.DHSCTCasingType.DIMENTIONAL_MATTER_INJECTION_CASING))
@@ -162,14 +162,6 @@ public class MetaTileEntityHighDimensionalStructureConstructionTesseract extends
         return metaTileEntities(MultiblockAbility.REGISTRY.get(MultiblockAbility.IMPORT_FLUIDS).stream()
                 .filter(mte -> mte instanceof MetaTileEntityMultiFluidHatch)
                 .toArray(MetaTileEntity[]::new));
-    }
-
-    protected static TraceabilityPredicate EnergyInputPredicate() {
-        return metaTileEntities(Arrays.stream(MetaTileEntities.ENERGY_INPUT_HATCH)
-                .filter(mte -> mte.getTier() >= UEV)
-                .toArray(MetaTileEntity[]::new))
-                .setMinGlobalLimited(1)
-                .setPreviewCount(4);
     }
 
     @Override
