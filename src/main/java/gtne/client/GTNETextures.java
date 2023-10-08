@@ -13,12 +13,11 @@ import static gregtech.client.renderer.texture.cube.OrientedOverlayRenderer.Over
 public class GTNETextures {
 
     public static SimpleOverlayRenderer ADVANCEDPRECISIONASSEMBLYLINECASING;
-    public static SimpleOverlayRenderer EnergyContainmentUnitCasing;
-    public static OrientedOverlayRenderer ECF_Overlay;
+
+    public static SimpleOverlayRenderer DIMENTIONALLY_TRANSCENDENT_CASING;
 
     public static void preInit() {
         ADVANCEDPRECISIONASSEMBLYLINECASING = new SimpleOverlayRenderer("casing/multiblockcasings/advancedprecisionassemblyline/advanced_precision_assembly_line_casing");
-        EnergyContainmentUnitCasing = new SimpleOverlayRenderer("");
-        ECF_Overlay = new OrientedOverlayRenderer("");
+        DIMENTIONALLY_TRANSCENDENT_CASING = new SimpleOverlayRenderer("casing/multiblockcasings/High_Dimentional_Structure_Construction_Tesseract/Dimentionally_Transcendent_Casing");
     }
 }

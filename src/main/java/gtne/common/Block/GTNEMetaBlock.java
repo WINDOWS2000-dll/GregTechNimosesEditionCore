@@ -19,12 +19,14 @@ public class GTNEMetaBlock {
     public static final GTNEBlockMetalCasing GTNE_BLOCK_METAL_CASING = new GTNEBlockMetalCasing();
     public static final BlockGTNEWireCoil BLOCK_GTNE_WIRE_COIL = new BlockGTNEWireCoil();
     public static final GTNEGlasses GTNE_GLASSES = new GTNEGlasses();
+    public static final DHSCTCasing DHSCT_CASING = new DHSCTCasing();
 
 
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
+        registerItemModel(DHSCT_CASING);
         BLOCK_GTNE_WIRE_COIL.onModelRegister();
         GTNE_GLASSES.onModelRegister();
     }

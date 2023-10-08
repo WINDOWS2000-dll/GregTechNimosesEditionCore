@@ -1,6 +1,5 @@
 package gtne.common;
 
-import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
 import gtne.GTNEValues;
 import gtne.common.item.GTNEMetaItems;
@@ -16,6 +15,7 @@ import gtne.loaders.recipes.Material.EBFRecipes;
 import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
 import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
 import gtne.loaders.recipes.MultiBlock.EBFCoils;
+import gtne.loaders.recipes.MultiBlock.HDSCT_Recipe;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -61,6 +61,8 @@ public class CommonProxy {
         GTNELog.logger.info("Registering Wire Coil");
         event.getRegistry().register(GTNE_GLASSES);
         GTNELog.logger.info("Registering Glasses");
+        event.getRegistry().register(DHSCT_CASING);
+        GTNELog.logger.info("Registering D-HSCT Casing");
     }
 
     @SubscribeEvent
@@ -69,6 +71,7 @@ public class CommonProxy {
         event.getRegistry().register(createItemBlock(GTNE_BLOCK_METAL_CASING, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
+        event.getRegistry().register(createItemBlock(DHSCT_CASING, VariantItemBlock::new));
     }
 
     private static <T extends Block>  ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
@@ -84,6 +87,7 @@ public class CommonProxy {
         Assembly_Line_Recipe.init();
         Advanced_Precision_Assembly_Line.init();
         Chemical.init();
+        HDSCT_Recipe.init();
         //コンフィグ有効時のみ読み込み
         if (ConfigHolder.recipeoption.Components_Assembler) {
             ComponentsAssembler.init();

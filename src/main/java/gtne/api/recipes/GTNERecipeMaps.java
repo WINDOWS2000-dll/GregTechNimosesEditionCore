@@ -8,6 +8,8 @@ import gregtech.api.util.AssemblyLineManager;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.gui.GTNEGuiTextures;
 import gtne.api.recipes.Builders.AdvancedPrecisionAssemblyLineRecipeBuilder;
+import gtne.api.recipes.machine.MultiBlock.RecipeMapHighDimensionalStructureConstructionTesseract;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.init.SoundEvents;
 import stanhebben.zenscript.annotations.ZenProperty;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedPrecisionAssemblyLine;
@@ -28,10 +30,18 @@ public class GTNERecipeMaps {
      */
 
     @ZenProperty
-    public static final RecipeMap<AssemblyLineRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES = new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20, false,  1, false,  10, false, 0, false, new AssemblyLineRecipeBuilder(), false)
+    public static final RecipeMap<AssemblyLineRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES =
+            new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20, false,  1, false,  10, false, 0, false, new AssemblyLineRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ASSEMBLER)
             .onRecipeBuild(AssemblyLineManager::createDefaultResearchRecipe);
+
+    @ZenProperty
+    public static final RecipeMap<ComputationRecipeBuilder> HIGH_DIMENTIONAL_STRUCTURE_CONSTRUCTION_TESSERACT =
+            new RecipeMapHighDimensionalStructureConstructionTesseract<>("high_dimensional_structure_construction_tesseract", 36, false, 1, false, 24, false, 0, false, new ComputationRecipeBuilder(), false)
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
+                    .setSound(GTSoundEvents.COMPUTATION);
+
 
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> COMPONENTS_ASSEMBLER =

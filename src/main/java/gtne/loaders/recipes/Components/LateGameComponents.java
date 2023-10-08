@@ -1,6 +1,7 @@
 package gtne.loaders.recipes.Components;
 
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -224,9 +225,27 @@ public class LateGameComponents {
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(stickLong, SamariumMagnetic, 1), OreDictUnifier.get(stickLong, Osmiridium, 4), OreDictUnifier.get(ring, Osmiridium, 4), OreDictUnifier.get(round, Osmiridium, 8), OreDictUnifier.get(wireFine, Europium, 64), OreDictUnifier.get(wireFine, Europium, 32), OreDictUnifier.get(cableGtSingle, VanadiumGallium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(288), Lubricant.getFluid(500)});
         GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ELECTRIC_MOTOR_LuV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
         //Pump
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{ELECTRIC_MOTOR_ZPM.getStackForm(1), OreDictUnifier.get(pipeNormalFluid, Polybenzimidazole, 1), OreDictUnifier.get(plate, Osmiridium, 2), OreDictUnifier.get(screw, Osmiridium, 8), OreDictUnifier.get(ring, SiliconeRubber, 8), OreDictUnifier.get(rotor, Osmiridium, 1), OreDictUnifier.get(cableGtSingle, VanadiumGallium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(288), Lubricant.getFluid(500)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ELECTRIC_PUMP_LuV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
+        //Conveyor
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{ELECTRIC_MOTOR_ZPM.getStackForm(2), OreDictUnifier.get(plate, Osmiridium, 2), OreDictUnifier.get(ring, Osmiridium, 4), OreDictUnifier.get(round, Osmiridium, 16), OreDictUnifier.get(screw, Osmiridium, 4), OreDictUnifier.get(cableGtSingle, VanadiumGallium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(288), Lubricant.getFluid(500), StyreneButadieneRubber.getFluid(2304)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, CONVEYOR_MODULE_LuV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
+        //Piston
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{ELECTRIC_MOTOR_ZPM.getStackForm(1), OreDictUnifier.get(plate, Osmiridium, 4), OreDictUnifier.get(ring, Osmiridium, 4), OreDictUnifier.get(round, Osmiridium, 16), OreDictUnifier.get(stick, Osmiridium, 4), OreDictUnifier.get(gear, Osmiridium, 1), OreDictUnifier.get(gearSmall, Osmiridium, 2), OreDictUnifier.get(cableGtSingle, VanadiumGallium, 2)}, new FluidStack[]{SolderingAlloy.getFluid(288), Lubricant.getFluid(500)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ELECTRIC_PISTON_ZPM.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
+        //RoBot Arm
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(stickLong, Osmiridium, 4), OreDictUnifier.get(gear, Osmiridium, 1), OreDictUnifier.get(gearSmall, Osmiridium, 3), ELECTRIC_MOTOR_ZPM.getStackForm(2), ELECTRIC_PISTON_ZPM.getStackForm(1), OreDictUnifier.get(circuit, MarkerMaterials.Tier.ZPM, 1),OreDictUnifier.get(circuit, MarkerMaterials.Tier.LuV, 2), OreDictUnifier.get(circuit, MarkerMaterials.Tier.IV, 4), OreDictUnifier.get(cableGtSingle, VanadiumGallium, 4)}, new FluidStack[]{SolderingAlloy.getFluid(1152), Lubricant.getFluid(500)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.SCANNER_RECIPES, ROBOT_ARM_LuV.getStackForm(1), TOOL_DATA_STICK.getStackForm(1));
+        //Field Generator
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(frameGt, NaquadahAlloy, 1), OreDictUnifier.get(plate, NaquadahAlloy, 6), QUANTUM_STAR.getStackForm(1), EMITTER_ZPM.getStackForm(2), OreDictUnifier.get(circuit, MarkerMaterials.Tier.ZPM, 2), OreDictUnifier.get(wireFine, UraniumRhodiumDinaquadide, 64), OreDictUnifier.get(wireFine, UraniumRhodiumDinaquadide, 64), OreDictUnifier.get(cableGtSingle, VanadiumGallium, 4)}, new FluidStack[]{SolderingAlloy.getFluid(1152)});
+        GTRecipeHandler.removeRecipesByInputs(RecipeMaps.RESEARCH_STATION_RECIPES, FIELD_GENERATOR_LuV.getStackForm(1), TOOL_DATA_ORB.getStackForm(1));
+        //Emitter
+        //GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ASSEMBLY_LINE_RECIPES, new ItemStack[]{OreDictUnifier.get(frameGt, NaquadahAlloy, 1), ELECTRIC_MOTOR_ZPM.getStackForm(1), OreDictUnifier.get(stickLong, Osmiridium, 4), QUANTUM_STAR.getStackForm(2), OreDictUnifier.get()})
     }
 
+
     private static void ZPMComponents() {
+        //Motor
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(stickLong, SamariumMagnetic, 1)
                 .input(stickLong, NaquadahAlloy, 4)
@@ -238,8 +257,27 @@ public class LateGameComponents {
                 .input(cableGtQuadruple, VanadiumGallium, 2)
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .fluidInputs(Lubricant.getFluid(750))
+                .output(ELECTRIC_MOTOR_ZPM)
                 .research(b -> b
                         .researchStack(ELECTRIC_MOTOR_LuV.getStackForm())
+                        .EUt(7680)
+                        .duration(7200))
+                .EUt(30720).duration(600)
+                .buildAndRegister();
+        //Pump
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_ZPM, 1)
+                .input(pipeNormalFluid, Naquadah, 2)
+                .input(plate, NaquadahAlloy, 4)
+                .input(screw, NaquadahAlloy, 8)
+                .input(ring, SiliconeRubber, 8)
+                .input(rotor, NaquadahAlloy, 2)
+                .input(cableGtQuadruple, VanadiumGallium, 2)
+                .fluidInputs(Indalloy_140.getFluid(L * 4))
+                .fluidInputs(Lubricant.getFluid(750))
+                .output(ELECTRIC_PUMP_ZPM)
+                .research(b -> b
+                        .researchStack(ELECTRIC_PUMP_LuV.getStackForm())
                         .EUt(7680)
                         .duration(7200))
                 .EUt(30720).duration(600)

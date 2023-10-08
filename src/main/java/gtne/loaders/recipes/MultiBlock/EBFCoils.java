@@ -214,11 +214,6 @@ public class EBFCoils {
                 .fluidInputs(Draconium.getFluid(HighTierCoilFluidValues))
                 .fluidInputs(SolderingAlloy.getFluid(9126))
                 .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.AWAKENEDDRACONIUM, 1))
-                .research(b -> b
-                        .researchStack(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM))
-                        .EUt(4000000)
-                        .CWUt(128)
-                        .duration(20000))
                 .EUt(VA[UEV]).duration(4800)
                 .buildAndRegister();
     }

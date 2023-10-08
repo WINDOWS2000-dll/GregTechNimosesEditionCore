@@ -105,11 +105,120 @@ public class GTNE_windows_material {
                         GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(6000F, 1800F, 8192000, 999))
-                .cableProperties(V[UXV], 128, 2, false)
+                .cableProperties(V[UEV], 32, 0, false)
                 .element(If)
                 .build();
 
-        Indalloy_140 = new Material.Builder(24007, gregtechId("indalloy_140"))
+        //Celestiallium
+        Celestiallium = new Material.Builder(24007, gregtechId("celestiallium"))
+                .dust()
+                .ingot()
+                .fluid(FluidTypes.LIQUID, false)
+                .plasma()
+                .color(0xFFFFFF)
+                .fluidTemp(16)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .blastTemp(200_000_000)
+                .toolStats(new ToolProperty(8000F, 2000F, 16384000, 999))
+                .cableProperties(V[UIV], 32, 0, false)
+                .element(CLS)
+                .build();
+
+        Lunatium = new Material.Builder(24008, gregtechId("lunatium"))
+                .dust()
+                .ingot()
+                .fluid(FluidTypes.LIQUID, false)
+                .plasma()
+                .color(0xFFFFFF)
+                .fluidTemp(666666666)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .blastTemp(200_000_000)
+                .toolStats(new ToolProperty(8000F, 2000F, 16384000, 999))
+                .cableProperties(V[UIV], 524288, 600000, false)
+                .element(LNT)
+                .build();
+
+        Sacred_Metal = new Material.Builder(24009, gregtechId("sacred_metal"))
+                .dust()
+                .ingot()
+                .fluid(FluidTypes.LIQUID, false)
+                .plasma()
+                .color(0xFFFFFF)
+                .fluidTemp(77777777)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .blastTemp(200_000_000)
+                .toolStats(new ToolProperty(9000F, 3000F, 32768000, 999))
+                .cableProperties(V[UIV], 64, 0, false)
+                .element(SCR)
+                .build();
+
+        Stellarium = new Material.Builder(24010, gregtechId("stellarium"))
+                .dust()
+                .ingot()
+                .fluid(FluidTypes.LIQUID, false)
+                .plasma()
+                .color(0xFFFFFF)
+                .fluidTemp(2)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .blastTemp(200_000_000)
+                .toolStats(new ToolProperty(10000F, 4000F, 65536000, 999))
+                .cableProperties(V[UXV], 64, 0, false)
+                .element(STL)
+                .build();
+
+        Fractallium = new Material.Builder(24011, gregtechId("fractallium"))
+                .dust()
+                .ingot()
+                .fluid(FluidTypes.LIQUID, false)
+                .plasma()
+                .color(0xFFFFFF)
+                .fluidTemp(0)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .blastTemp(200_000_000)
+                .toolStats(new ToolProperty(20000F, 8000F, 131072000, 999))
+                .cableProperties(V[OpV], 64, 0, false)
+                .element(FTL)
+                .build();
+
+        Entropium = new Material.Builder(24012, gregtechId("entropium"))
+                .dust()
+                .ingot()
+                .fluid(FluidTypes.LIQUID, false)
+                .plasma()
+                .color(0xFFFFFF)
+                .fluidTemp(0)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .blastTemp(200_000_000)
+                .toolStats(new ToolProperty(2147483647F, 10000000F, 2147483647, 999))
+                .cableProperties(V[MAX], 128, 0, false)
+                .element(ETP)
+                .build();
+
+        Indalloy_140 = new Material.Builder(24013, gregtechId("indalloy_140"))
                 .dust()
                 .ingot()
                 .fluid(FluidTypes.LIQUID, false)

@@ -81,6 +81,12 @@ public class GTNEMaterials {
     public static Material Purified_Water_Grade_B;
     public static Material Purified_Water_Grade_A;
     public static Material Indalloy_140;
+    public static Material Celestiallium;
+    public static Material Lunatium;
+    public static Material Stellarium;
+    public static Material Fractallium;
+    public static Material Entropium;
+    public static Material Sacred_Metal;
 
     public static Material Enderium_Base;
 
