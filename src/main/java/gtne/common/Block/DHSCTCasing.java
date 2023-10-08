@@ -16,7 +16,7 @@ public class DHSCTCasing extends VariantActiveBlock<DHSCTCasing.DHSCTCasingType>
 
     public DHSCTCasing() {
         super(Material.IRON);
-        setTranslationKey("gtne_dhsct_casing");
+        setTranslationKey("gtne_hdsct_casing");
         setHardness(40.0F);
         setResistance(60.0F);
         setSoundType(SoundType.METAL);
