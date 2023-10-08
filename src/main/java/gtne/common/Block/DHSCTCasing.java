@@ -29,11 +29,6 @@ public class DHSCTCasing extends VariantActiveBlock<DHSCTCasing.DHSCTCasingType>
         return false;
     }
 
-    @Override
-    public BlockRenderLayer getRenderLayer() {
-        return BlockRenderLayer.SOLID;
-    }
-
     public enum DHSCTCasingType implements IStringSerializable {
 
         DIMENTIONAL_BRIDGE("dimentional_bridge"),
