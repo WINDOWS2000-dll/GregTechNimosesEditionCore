@@ -25,6 +25,7 @@ public class DHSCTCasing extends VariantActiveBlock<DHSCTCasing.DHSCTCasingType>
         setRegistryName("gtne_hdsct_casing");
     }
 
+    @Override
     public boolean canCreatureSpawn(@Nonnull IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EntityLiving.SpawnPlacementType type) {
         return false;
     }
