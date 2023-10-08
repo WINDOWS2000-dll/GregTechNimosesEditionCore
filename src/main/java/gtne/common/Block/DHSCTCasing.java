@@ -1,6 +1,7 @@
 package gtne.common.Block;
 
 import gregtech.api.block.VariantActiveBlock;
+import gregtech.api.block.VariantBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -12,7 +13,7 @@ import net.minecraft.world.IBlockAccess;
 
 import javax.annotation.Nonnull;
 
-public class DHSCTCasing extends VariantActiveBlock<DHSCTCasing.DHSCTCasingType> {
+public class DHSCTCasing extends VariantBlock<DHSCTCasing.DHSCTCasingType> {
 
     public DHSCTCasing() {
         super(Material.IRON);
