@@ -80,7 +80,7 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
         AWAKENEDDRACONIUM("awakeneddraconium", 24000, 20, 12, GTNEMaterials.Awakened_Draconium),
         CELESTIALLIUM("celestiallium", 28000, 24, 14, GTNEMaterials.Celestiallium),
         LUNATIUM("lunatium", 36000, 28, 16, GTNEMaterials.Lunatium),
-        SACREDMETAL("Sacred", 48000, 32, 18, GTNEMaterials.Sacred_Metal),
+        SACREDMETAL("sacred", 48000, 32, 18, GTNEMaterials.Sacred_Metal),
         STELLARIUM("stellarium", 56000, 36, 22, GTNEMaterials.Stellarium),
         FRACTALLIUM("fractallium", 64000, 48, 28, GTNEMaterials.Fractallium),
         ENTROPIUM("entropium", 128000, 60, 32, GTNEMaterials.Entropium);
