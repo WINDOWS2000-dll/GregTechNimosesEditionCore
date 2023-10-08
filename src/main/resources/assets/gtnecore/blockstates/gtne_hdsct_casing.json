@@ -22,6 +22,24 @@
         "textures": {
           "all": "gregtech:blocks/casing/multiblockcasings/highdimentionalstructureconstructiontesseract/dimentional_matter_injection_casing"
         }
+      },
+      "dimentional_stabilisation_field_generator": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/highdimentionalstructureconstructiontesseract/dimentional_stabilisation_field_generator"
+        }
+      },
+      "spacetime_containment_field_generator": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/highdimentionalstructureconstructiontesseract/spacetime_containment_field_generator"
+        }
+      },
+      "spacetime_dilation_field_generator": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casing/multiblockcasings/highdimentionalstructureconstructiontesseract/spacetime_dilation_field_generator"
+        }
       }
     }
   }
