@@ -4,6 +4,8 @@ import gregtech.api.block.VariantItemBlock;
 import gtne.GTNEValues;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
+import gtne.loaders.recipes.Adjustment.UVSuperConductorCable;
+import gtne.loaders.recipes.Adjustment.VoltageController;
 import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.ChemicalChains.SiliconTech;
@@ -88,6 +90,8 @@ public class CommonProxy {
         Advanced_Precision_Assembly_Line.init();
         Chemical.init();
         HDSCT_Recipe.init();
+        VoltageController.init();
+        UVSuperConductorCable.init();
         //コンフィグ有効時のみ読み込み
         if (ConfigHolder.recipeoption.Components_Assembler) {
             ComponentsAssembler.init();

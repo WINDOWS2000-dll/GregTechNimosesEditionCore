@@ -66,10 +66,9 @@ public class Assembly_Line_Recipe {
                 .fluidInputs(Lubricant.getFluid(4000))
                 .fluidInputs(Polybenzimidazole.getFluid(1440))
                 .outputs(GTNE_BLOCK_METAL_CASING.getItemVariant(ADVANCEDPRECISIONASSEMBLYLINECASING, 4))
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(MetaBlocks.COMPUTER_CASING.getItemVariant(BlockComputerCasing.CasingType.ADVANCED_COMPUTER_CASING))
-                        .duration(72000)
-                        .CWUt(32)
+                        .CWUt(32, 2400000)
                         .EUt(VA[ZPM]))
                 .EUt(262144).duration(1600)
                 .buildAndRegister();
@@ -162,11 +161,10 @@ public class Assembly_Line_Recipe {
                 .fluidInputs(Polybenzimidazole.getFluid(2880))
                 .fluidInputs(UraniumRhodiumDinaquadide.getFluid(1440))
                 .outputs(GTNEMetaTileEntities.AdvancedPrecisionAssemblyLine.getStackForm(1))
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ASSEMBLY_LINE.getStackForm())
-                        .CWUt(64)
-                        .EUt(524288)
-                        .duration(288000))
+                        .CWUt(64, 20_000_000)
+                        .EUt(524288))
                 .EUt(524288).duration(4800)
                 .buildAndRegister();
 

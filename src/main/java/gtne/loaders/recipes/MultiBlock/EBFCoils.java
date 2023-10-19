@@ -158,11 +158,10 @@ public class EBFCoils {
                 .fluidInputs(Tritanium.getFluid(HighTierCoilFluidValues))
                 .fluidInputs(SolderingAlloy.getFluid(9126))
                 .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM, 1))
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TRITANIUM))
                         .EUt(1000000)
-                        .CWUt(32)
-                        .duration(10000))
+                        .CWUt(32, 400000))
                 .EUt(VA[UHV]).duration(3300)
                 .buildAndRegister();
 
@@ -176,11 +175,10 @@ public class EBFCoils {
                 .fluidInputs(Draconium.getFluid(HighTierCoilFluidValues))
                 .fluidInputs(SolderingAlloy.getFluid(9126))
                 .outputs(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.AWAKENEDDRACONIUM, 1))
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(GTNEMetaBlock.BLOCK_GTNE_WIRE_COIL.getItemVariant(BlockGTNEWireCoil.CoilType.DRACONIUM))
                         .EUt(4000000)
-                        .CWUt(128)
-                        .duration(20000))
+                        .CWUt(128, 2800000))
                 .EUt(VA[UEV]).duration(4800)
                 .buildAndRegister();
 

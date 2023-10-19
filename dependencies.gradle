@@ -25,7 +25,7 @@ dependencies {
     implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
     implementation rfg.deobf("curse.maven:cofh-world-271384:2920434")
     implementation rfg.deobf("curse.maven:cofh-core-69162:2920433")
-    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:4701483") // CEu 2.7.3
+    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:4799055") // CEu 2.7.4
     implementation rfg.deobf("curse.maven:thermal-foundation-222880:2926428")
     implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:4483468")
     implementation rfg.deobf("curse.maven:endercore-231868:4671384") // EnderCore 0.5.78

@@ -72,7 +72,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 2))
                 .fluidInputs(Lubricant.getFluid(250))
                 .output(ELECTRIC_MOTOR_LuV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_MOTOR_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -91,7 +91,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 2))
                 .fluidInputs(Lubricant.getFluid(250))
                 .output(ELECTRIC_PUMP_LuV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_PUMP_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -109,7 +109,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 2))
                 .fluidInputs(Lubricant.getFluid(250))
                 .output(CONVEYOR_MODULE_LuV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CONVEYOR_MODULE_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -129,7 +129,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 2))
                 .fluidInputs(Lubricant.getFluid(250))
                 .output(ELECTRIC_PISTON_LUV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_PISTON_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -150,7 +150,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .fluidInputs(Lubricant.getFluid(250))
                 .output(ROBOT_ARM_LuV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ROBOT_ARM_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -172,7 +172,7 @@ public class LateGameComponents {
                 .input(cableGtSingle, YttriumBariumCuprate, 8)
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .output(FIELD_GENERATOR_LuV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FIELD_GENERATOR_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -192,7 +192,7 @@ public class LateGameComponents {
                 .input(cableGtSingle, YttriumBariumCuprate, 7)
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .output(EMITTER_LuV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(EMITTER_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -212,7 +212,7 @@ public class LateGameComponents {
                 .input(cableGtSingle, YttriumBariumCuprate, 7)
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .output(SENSOR_LuV, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(SENSOR_IV.getStackForm())
                         .EUt(1920)
                         .duration(6000))
@@ -265,7 +265,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .fluidInputs(Lubricant.getFluid(750))
                 .output(ELECTRIC_MOTOR_ZPM, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_MOTOR_LuV.getStackForm())
                         .EUt(7680)
                         .duration(7200))
@@ -283,7 +283,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .fluidInputs(Lubricant.getFluid(750))
                 .output(ELECTRIC_PUMP_ZPM, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_PUMP_LuV.getStackForm())
                         .EUt(7680)
                         .duration(7200))
@@ -300,7 +300,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .fluidInputs(Lubricant.getFluid(750))
                 .output(CONVEYOR_MODULE_ZPM, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CONVEYOR_MODULE_LuV.getStackForm())
                         .EUt(7680)
                         .duration(7200))
@@ -319,7 +319,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 4))
                 .fluidInputs(Lubricant.getFluid(750))
                 .output(ELECTRIC_PISTON_ZPM, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_PISTON_ZPM.getStackForm())
                         .EUt(7680)
                         .duration(7200))
@@ -339,7 +339,7 @@ public class LateGameComponents {
                 .fluidInputs(Indalloy_140.getFluid(L * 8))
                 .fluidInputs(Lubricant.getFluid(750))
                 .output(ROBOT_ARM_ZPM, 1)
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ROBOT_ARM_LuV.getStackForm())
                         .EUt(7680)
                         .duration(7200))
@@ -360,11 +360,10 @@ public class LateGameComponents {
                 .input(cableGtQuadruple, VanadiumGallium, 8)
                 .fluidInputs(Indalloy_140.getFluid(1152))
                 .output(FIELD_GENERATOR_ZPM, 1)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(FIELD_GENERATOR_LuV.getStackForm())
                         .EUt(7680)
-                        .duration(7200)
-                        .CWUt(12))
+                        .CWUt(12, 86400))
                 .EUt(30720).duration(600)
                 .buildAndRegister();
 
@@ -381,11 +380,10 @@ public class LateGameComponents {
                 .input(cableGtQuadruple, VanadiumGallium, 7)
                 .fluidInputs(Indalloy_140.getFluid(1152))
                 .output(EMITTER_ZPM, 1)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(EMITTER_LuV.getStackForm())
                         .EUt(7680)
-                        .duration(7200)
-                        .CWUt(8))
+                        .CWUt(8, 57600))
                 .EUt(30720).duration(600)
                 .buildAndRegister();
         //Sensor
@@ -401,11 +399,10 @@ public class LateGameComponents {
                 .input(cableGtQuadruple, VanadiumGallium, 7)
                 .fluidInputs(Indalloy_140.getFluid(1152))
                 .output(SENSOR_ZPM, 1)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(SENSOR_LuV.getStackForm())
                         .EUt(7680)
-                        .duration(7200)
-                        .CWUt(4))
+                        .CWUt(4, 28800))
                 .EUt(30720).duration(600)
                 .buildAndRegister();
     }

@@ -21,7 +21,7 @@ public class VoltageController {
                 .inputs(MetaTileEntities.ASSEMBLER[LuV].getStackForm())
                 .fluidInputs(Indalloy_140.getFluid(576))
                 .outputs(GCYMMetaTileEntities.TIERED_HATCH[LuV].getStackForm(1))
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(GCYMMetaTileEntities.TIERED_HATCH[IV].getStackForm())
                         .EUt(30720)
                         .duration(4000))
@@ -36,11 +36,10 @@ public class VoltageController {
                 .inputs(MetaTileEntities.ASSEMBLER[ZPM].getStackForm())
                 .fluidInputs(Indalloy_140.getFluid(2304))
                 .outputs(GCYMMetaTileEntities.TIERED_HATCH[ZPM].getStackForm(1))
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(GCYMMetaTileEntities.TIERED_HATCH[LuV].getStackForm())
                         .EUt(12000)
-                        .duration(4000)
-                        .CWUt(16))
+                        .CWUt(16, 64000))
                 .EUt(262000).duration(7200)
                 .buildAndRegister();
 

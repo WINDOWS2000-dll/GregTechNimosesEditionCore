@@ -39,8 +39,8 @@ public class LateGameMachines {
     //LuV Machine Recipe Remove
     private static void RemoveLuVMachinesRecipe() {
 
-        for (int i = 0; i < GTNEMachineRecipeName.length; i++) {
-            ModHandler.removeRecipeByName("gregtech:gregtech.machine." + GTNEMachineRecipeName[i] + ".luv");
+        for (String name : GTNEMachineRecipeName) {
+            ModHandler.removeRecipeByName("gregtech:gregtech.machine." + name + ".luv");
         }
 
     }
@@ -60,7 +60,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(ELECTRIC_FURNACE[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_FURNACE[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -81,7 +81,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(MACERATOR[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(MACERATOR[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -102,7 +102,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(ALLOY_SMELTER[6].getStackForm())
-                .research(b ->b
+                .scannerResearch(b ->b
                         .researchStack(ALLOY_SMELTER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -121,7 +121,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(ARC_FURNACE[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ARC_FURNACE[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -146,7 +146,7 @@ public class LateGameMachines {
                 .fluidInputs(TungstenSteel.getFluid(576))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ASSEMBLER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ASSEMBLER[5].getStackForm())
                         .EUt(8000)
                         .duration(24000))
@@ -169,7 +169,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(AUTOCLAVE[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(AUTOCLAVE[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -189,7 +189,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(BENDER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(BENDER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -210,7 +210,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(BREWERY[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(BREWERY[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -230,7 +230,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(CANNER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CANNER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -252,7 +252,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(CENTRIFUGE[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CENTRIFUGE[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -273,7 +273,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(CHEMICAL_BATH[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CHEMICAL_BATH[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -298,7 +298,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(CHEMICAL_REACTOR[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CHEMICAL_REACTOR[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -319,7 +319,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(COMPRESSOR[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(COMPRESSOR[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -341,7 +341,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(CUTTER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CUTTER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -362,7 +362,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(DISTILLERY[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(DISTILLERY[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -382,7 +382,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(ELECTROLYZER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTROLYZER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -402,7 +402,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(ELECTROMAGNETIC_SEPARATOR[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTROMAGNETIC_SEPARATOR[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -424,7 +424,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(EXTRACTOR[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(EXTRACTOR[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -447,7 +447,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(EXTRUDER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(EXTRUDER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -467,7 +467,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(FERMENTER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FERMENTER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -489,7 +489,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(FLUID_HEATER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FLUID_HEATER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -510,7 +510,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(FLUID_SOLIDIFIER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FLUID_SOLIDIFIER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -530,7 +530,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(FORGE_HAMMER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FORGE_HAMMER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -550,7 +550,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(FORMING_PRESS[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FORMING_PRESS[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -571,7 +571,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(LATHE[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(LATHE[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -592,7 +592,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(SCANNER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(SCANNER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -613,7 +613,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(MIXER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(MIXER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -635,7 +635,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(ORE_WASHER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ORE_WASHER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -655,7 +655,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(PACKER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(PACKER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -676,7 +676,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(GAS_COLLECTOR[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(GAS_COLLECTOR[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -695,7 +695,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(POLARIZER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(POLARIZER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -715,7 +715,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(LASER_ENGRAVER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(LASER_ENGRAVER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -734,7 +734,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(SIFTER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(SIFTER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -755,7 +755,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(THERMAL_CENTRIFUGE[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(THERMAL_CENTRIFUGE[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -773,7 +773,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(WIREMILL[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(WIREMILL[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -798,7 +798,7 @@ public class LateGameMachines {
                 .fluidInputs(TungstenSteel.getFluid(576))
                 .fluidInputs(HSSG.getFluid(144))
                 .outputs(CIRCUIT_ASSEMBLER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CIRCUIT_ASSEMBLER[5].getStackForm())
                         .EUt(8000)
                         .duration(24000))
@@ -819,7 +819,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(ROCK_BREAKER[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ROCK_BREAKER[5].getStackForm())
                         .EUt(4096)
                         .duration(12000))
@@ -840,7 +840,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440))
                 .fluidInputs(TungstenSteel.getFluid(288))
                 .outputs(WORLD_ACCELERATOR[6].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(WORLD_ACCELERATOR[5].getStackForm())
                         .EUt(8000)
                         .duration(48000))
@@ -852,8 +852,8 @@ public class LateGameMachines {
     //ZPM Machine Recipe Remove
     private static void RemoveZPMMachineRecipe() {
 
-        for (int i = 0; i < GTNEMachineRecipeName.length; i++) {
-            ModHandler.removeRecipeByName("gregtech:gregtech.machine." + GTNEMachineRecipeName[i] + ".zpm");
+        for (String name : GTNEMachineRecipeName) {
+            ModHandler.removeRecipeByName("gregtech:gregtech.machine." + name + ".zpm");
         }
 
     }
@@ -873,7 +873,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(2280))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ELECTRIC_FURNACE[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTRIC_FURNACE[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -894,7 +894,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(2880))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(MACERATOR[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(MACERATOR[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -915,7 +915,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ALLOY_SMELTER[7].getStackForm())
-                .research(b ->b
+                .scannerResearch(b ->b
                         .researchStack(ALLOY_SMELTER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -934,7 +934,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ARC_FURNACE[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ARC_FURNACE[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -959,11 +959,10 @@ public class LateGameMachines {
                 .fluidInputs(HSSG.getFluid(576))
                 .fluidInputs(Naquadah.getFluid(288))
                 .outputs(ASSEMBLER[7].getStackForm())
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ASSEMBLER[6].getStackForm())
                         .EUt(30000)
-                        .CWUt(4)
-                        .duration(24000))
+                        .CWUt(4, 100000))
                 .EUt(100000).duration(1200)
                 .buildAndRegister();
 
@@ -983,7 +982,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(AUTOCLAVE[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(AUTOCLAVE[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1003,7 +1002,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(BENDER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(BENDER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1024,7 +1023,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(BREWERY[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(BREWERY[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1044,7 +1043,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(CANNER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CANNER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1066,7 +1065,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(CENTRIFUGE[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CENTRIFUGE[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1087,7 +1086,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(CHEMICAL_BATH[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CHEMICAL_BATH[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1112,7 +1111,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(CHEMICAL_REACTOR[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CHEMICAL_REACTOR[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1133,7 +1132,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(COMPRESSOR[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(COMPRESSOR[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1155,7 +1154,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(CUTTER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(CUTTER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1176,7 +1175,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(DISTILLERY[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(DISTILLERY[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1196,7 +1195,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ELECTROLYZER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTROLYZER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1216,7 +1215,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ELECTROMAGNETIC_SEPARATOR[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ELECTROMAGNETIC_SEPARATOR[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1238,7 +1237,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(EXTRACTOR[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(EXTRACTOR[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1261,7 +1260,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(EXTRUDER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(EXTRUDER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1281,7 +1280,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(FERMENTER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FERMENTER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1303,7 +1302,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(FLUID_HEATER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FLUID_HEATER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1324,7 +1323,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(FLUID_SOLIDIFIER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FLUID_SOLIDIFIER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1344,7 +1343,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(FORGE_HAMMER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FORGE_HAMMER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1364,7 +1363,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440* 2 ))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(FORMING_PRESS[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(FORMING_PRESS[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1385,7 +1384,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(LATHE[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(LATHE[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1406,11 +1405,10 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(SCANNER[7].getStackForm())
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(SCANNER[6].getStackForm())
                         .EUt(24000)
-                        .CWUt(4)
-                        .duration(12000))
+                        .CWUt(4, 50000))
                 .EUt(50000).duration(600)
                 .buildAndRegister();
 
@@ -1428,7 +1426,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(MIXER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(MIXER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1450,7 +1448,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ORE_WASHER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ORE_WASHER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1470,7 +1468,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(PACKER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(PACKER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1491,7 +1489,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(GAS_COLLECTOR[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(GAS_COLLECTOR[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1510,7 +1508,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(POLARIZER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(POLARIZER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1530,11 +1528,10 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(LASER_ENGRAVER[7].getStackForm())
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(LASER_ENGRAVER[6].getStackForm())
                         .EUt(4096)
-                        .CWUt(4)
-                        .duration(12000))
+                        .CWUt(4, 50000))
                 .EUt(50000).duration(600)
                 .buildAndRegister();
 
@@ -1550,7 +1547,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(SIFTER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(SIFTER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1571,7 +1568,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(THERMAL_CENTRIFUGE[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(THERMAL_CENTRIFUGE[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1589,7 +1586,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(WIREMILL[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(WIREMILL[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1614,11 +1611,10 @@ public class LateGameMachines {
                 .fluidInputs(HSSG.getFluid(576))
                 .fluidInputs(Naquadah.getFluid(144))
                 .outputs(CIRCUIT_ASSEMBLER[7].getStackForm())
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(CIRCUIT_ASSEMBLER[6].getStackForm())
                         .EUt(32000)
-                        .CWUt(8)
-                        .duration(24000))
+                        .CWUt(8, 192_000))
                 .EUt(120000).duration(1200)
                 .buildAndRegister();
 
@@ -1636,7 +1632,7 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(ROCK_BREAKER[7].getStackForm())
-                .research(b -> b
+                .scannerResearch(b -> b
                         .researchStack(ROCK_BREAKER[6].getStackForm())
                         .EUt(24000)
                         .duration(12000))
@@ -1657,11 +1653,10 @@ public class LateGameMachines {
                 .fluidInputs(SolderingAlloy.getFluid(1440 * 2))
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(WORLD_ACCELERATOR[7].getStackForm())
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(WORLD_ACCELERATOR[6].getStackForm())
                         .EUt(32000)
-                        .CWUt(16)
-                        .duration(48000))
+                        .CWUt(16, 800_000))
                 .EUt(131072).duration(4800)
                 .buildAndRegister();
 
@@ -1670,8 +1665,8 @@ public class LateGameMachines {
     //UV Machine Recipe Remove
     private static void RemoveUVMachineRecipe() {
 
-        for (int i = 0; i < GTNEMachineRecipeName.length; i++) {
-            ModHandler.removeRecipeByName("gregtech:gregtech.machine." + GTNEMachineRecipeName[i] + ".uv");
+        for (String name : GTNEMachineRecipeName) {
+            //ModHandler.removeRecipeByName("gregtech:gregtech.machine." + name + ".uv");
         }
 
     }
