@@ -169,6 +169,11 @@ public class MetaTileEntityHighDimensionalStructureConstructionTesseract extends
         return GTNETextures.DIMENTIONALLY_TRANSCENDENT_CASING;
     }
 
+    @Override
+    public boolean hasMaintenanceMechanics() {
+        return false;
+    }
+
     private static class HDSCTRecipeLogic extends ComputationRecipeLogic {
 
         public HDSCTRecipeLogic(MetaTileEntityHighDimensionalStructureConstructionTesseract metaTileEntity) {
