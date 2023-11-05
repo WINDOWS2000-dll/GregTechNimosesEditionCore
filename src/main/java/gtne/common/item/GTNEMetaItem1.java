@@ -20,6 +20,7 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         ANTI_SPACE_RADIATION_ALLOY_PLATE = addItem(2, "anti_space_radioation_alloy_plate");
         EUROPIUM_BOULE = addItem(3, "europium_boule");
         EUROPIUM_DOPED_WAFER = addItem(4, "europium_doped_wafer");
+        ADVANCED_HIGH_SPEED_PROCESSING_UNIT = addItem(5, "advanced_highspeed_processing_unit");
         //Circuit 24709 ~ 24749
         //T8 Bioware
         BIOWARE_PROCESSOR_ZPM = addItem(5, "circuit.bioware_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.ZPM);

@@ -13,6 +13,7 @@ public final class GTNEMetaItems {
     public static MetaItem<?>.MetaValueItem ANTI_SPACE_RADIATION_ALLOY_PLATE;
     public static MetaItem<?>.MetaValueItem EUROPIUM_BOULE;
     public static MetaItem<?>.MetaValueItem EUROPIUM_DOPED_WAFER;
+    public static MetaItem<?>.MetaValueItem ADVANCED_HIGH_SPEED_PROCESSING_UNIT;
 
     public static MetaItem<?>.MetaValueItem BIOWARE_PROCESSOR_ZPM;
     public static MetaItem<?>.MetaValueItem BIOWARE_PROCESSOR_ASSEMBLY_UV;
