@@ -20,8 +20,7 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         ANTI_SPACE_RADIATION_ALLOY_PLATE = addItem(2, "anti_space_radioation_alloy_plate");
         EUROPIUM_BOULE = addItem(3, "europium_boule");
         EUROPIUM_DOPED_WAFER = addItem(4, "europium_doped_wafer");
-        ADVANCED_HIGH_SPEED_PROCESSING_UNIT = addItem(5, "advanced_highspeed_processing_unit");
-        //Circuit 24709 ~ 24749
+        //Circuit 5 ~ 24
         //T8 Bioware
         BIOWARE_PROCESSOR_ZPM = addItem(5, "circuit.bioware_processor").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.ZPM);
         BIOWARE_PROCESSOR_ASSEMBLY_UV = addItem(6, "circuit.bioware_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UV);
@@ -47,6 +46,8 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         TEMPORALLY_PROCESSOR_ASSEMBLY_UXV = addItem(22, "circuit.temporally_assembly").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.UXV);
         TEMPORALLY_COMPUTER_OPV = addItem(23, "circuit.temporally_computer").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.OpV);
         TEMPORALLY_MAINFRAME_MAX = addItem(24, "circuit.temporally_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.MAX);
+        //Circuit End
+        ADVANCED_HIGH_SPEED_PROCESSING_UNIT = addItem(25, "advanced_highspeed_processing_unit");
 
     }
 }
