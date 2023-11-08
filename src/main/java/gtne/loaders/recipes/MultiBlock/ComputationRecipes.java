@@ -119,7 +119,7 @@ public class ComputationRecipes {
                 .input(circuit, MarkerMaterials.Tier.LuV, 8)
                 .input(CRYSTAL_SYSTEM_ON_CHIP, 4)
                 .input(ENGRAVED_LAPOTRON_CHIP, 32)
-                .input(ENGRAVED_LAPOTRON_CHIP, 16)
+                .input(CRYSTAL_CENTRAL_PROCESSING_UNIT, 16)
                 .input(ADVANCED_SMD_TRANSISTOR, 64)
                 .input(ADVANCED_SMD_RESISTOR,  64)
                 .input(ADVANCED_SMD_CAPACITOR, 64)
