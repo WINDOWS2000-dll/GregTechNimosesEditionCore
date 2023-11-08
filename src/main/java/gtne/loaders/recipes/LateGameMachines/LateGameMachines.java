@@ -1406,7 +1406,7 @@ public class LateGameMachines {
                 .fluidInputs(HSSG.getFluid(288))
                 .outputs(SCANNER[7].getStackForm())
                 .stationResearch(b -> b
-                        .researchStack(SCANNER[6].getStackForm())
+                        .researchStack(RESEARCH_STATION.getStackForm())
                         .EUt(24000)
                         .CWUt(4, 50000))
                 .EUt(50000).duration(600)

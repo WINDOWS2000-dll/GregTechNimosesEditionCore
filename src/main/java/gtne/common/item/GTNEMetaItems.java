@@ -14,6 +14,7 @@ public final class GTNEMetaItems {
     public static MetaItem<?>.MetaValueItem EUROPIUM_BOULE;
     public static MetaItem<?>.MetaValueItem EUROPIUM_DOPED_WAFER;
     public static MetaItem<?>.MetaValueItem ADVANCED_HIGH_SPEED_PROCESSING_UNIT;
+    public static MetaItem<?>.MetaValueItem IMPROVED_HIGH_SPEED_ARITHMETIC_INTEGRATED_PROCESSOR;
 
     public static MetaItem<?>.MetaValueItem BIOWARE_PROCESSOR_ZPM;
     public static MetaItem<?>.MetaValueItem BIOWARE_PROCESSOR_ASSEMBLY_UV;

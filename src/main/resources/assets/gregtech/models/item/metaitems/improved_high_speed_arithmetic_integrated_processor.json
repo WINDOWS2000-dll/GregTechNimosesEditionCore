@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtnecore:items/metaitems/improved_high_speed_arithmetic_integrated_processor"
+  }
+}

@@ -14,10 +14,7 @@ import gtne.loaders.recipes.Components.LateGameComponents;
 import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
 import gtne.loaders.recipes.Material.AlloyBlastFurnaceRecipe;
 import gtne.loaders.recipes.Material.EBFRecipes;
-import gtne.loaders.recipes.MultiBlock.Advanced_Precision_Assembly_Line;
-import gtne.loaders.recipes.MultiBlock.Assembly_Line_Recipe;
-import gtne.loaders.recipes.MultiBlock.EBFCoils;
-import gtne.loaders.recipes.MultiBlock.HDSCT_Recipe;
+import gtne.loaders.recipes.MultiBlock.*;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -112,6 +109,10 @@ public class CommonProxy {
         if (ConfigHolder.recipeoption.Harder_Water_Recipe) {
             WaterLine.init();
             GTNELog.logger.info("Registering WaterLine...");
+        }
+        if (ConfigHolder.recipeoption.Harder_Computation_System_Recipe) {
+            ComputationRecipes.init();
+            GTNELog.logger.info("Registering Harder Computation System Recipe...");
         }
         if (ConfigHolder.recipeoption.Super_HardMode_LateGame) {
             LateGameMachines.init();

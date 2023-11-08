@@ -48,6 +48,7 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         TEMPORALLY_MAINFRAME_MAX = addItem(24, "circuit.temporally_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.MAX);
         //Circuit End
         ADVANCED_HIGH_SPEED_PROCESSING_UNIT = addItem(25, "advanced_highspeed_processing_unit");
+        IMPROVED_HIGH_SPEED_ARITHMETIC_INTEGRATED_PROCESSOR = addItem(26, "improved_high_speed_arithmetic_integrated_processor");
 
     }
 }
