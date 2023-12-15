@@ -24,8 +24,6 @@ import javax.annotation.Nonnull;
 
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
-import static gregtech.loaders.recipe.MetaTileEntityLoader.registerMachineRecipe;
-import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.api.metatileentity.multiblock.CleanroomType.CLEANROOM;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;

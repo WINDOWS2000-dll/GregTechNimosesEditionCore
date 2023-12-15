@@ -38,7 +38,10 @@ public class GTNEBlockMetalCasing extends VariantBlock<GTNEBlockMetalCasing.Meta
         ELECTRO_MAGNETIC_IMPLOSION_COIL("electromagnetic_implosion_coil"),
         FUSION_MACHINE_CASING_MKIV("fusion_machine_casing_mk_iv"),
         FUSION_MACHINE_CASING_MKV("fusion_machine_casing_mk_v"),
-        ADVANCED_FUSION_COIL("advanced_fusion_coil");
+        ADVANCED_FUSION_COIL("advanced_fusion_coil"),
+        ADVANCED_DISTILLATION_TOWER_CASING("advanced_distillation_tower_casing"),
+        ADVANCED_DISTILLATION_TOWER_PIPE_CASING("advanced_distillation_tower_pipe_casing"),
+        ADVANCED_DISTILLATION_TOWER_BASE_CASING("advanced_distillation_tower_base_casing");
 
 
         private final String name;

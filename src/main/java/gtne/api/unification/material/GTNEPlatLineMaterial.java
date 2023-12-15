@@ -89,7 +89,7 @@ public class GTNEPlatLineMaterial {
                 .color(0x222fbd)
                 .iconSet(MaterialIconSet.SHINY)
                 .build();
-        SODIUM_RUTHENATE.setFormula("Na₂RuO₃");
+        SODIUM_RUTHENATE.setFormula("Na2RuO3", true);
         //Rarest Metal Residue
         RAREST_METAL_RESIDUE = new Material.Builder(24511, gregtechId("rarest_metal_residue"))
                 .dust()
@@ -119,14 +119,14 @@ public class GTNEPlatLineMaterial {
                 .color(0x4a4729)
                 .iconSet(MaterialIconSet.DULL)
                 .build();
-        SLUDGE_DUST_RESIDUE.setFormula("(SiO₂)₃Au₂");
+        SLUDGE_DUST_RESIDUE.setFormula("(SiO2)3Au2", true);
         //Iridium Dioxide
         IRIDIUM_DIOXIDE = new Material.Builder(24515, gregtechId("iridium_dioxide"))
                 .dust()
                 .color(0x4a4729)
                 .iconSet(MaterialIconSet.DULL)
                 .build();
-        IRIDIUM_DIOXIDE.setFormula("IrO₂");
+        IRIDIUM_DIOXIDE.setFormula("IrO2", true);
         //Acidic Iridium Solution
         ACIDIC_IRIDIUM_SOLUTION = new Material.Builder(24516, gregtechId("acidic_iridium_solution"))
                 .fluid(FluidTypes.LIQUID, false)
@@ -139,7 +139,7 @@ public class GTNEPlatLineMaterial {
                 .color(0x4a4729)
                 .iconSet(MaterialIconSet.DULL)
                 .build();
-        IRIDIUM_CHLORIDE.setFormula("IrCl₃");
+        IRIDIUM_CHLORIDE.setFormula("IrCl3", true);
         //Metallic Sludge Dust Residue
         METALLIC_SLUDGE_DUST_RESIDUE = new Material.Builder(24518, gregtechId("metallic_sludge_dust_residue"))
                 .dust()
@@ -166,7 +166,7 @@ public class GTNEPlatLineMaterial {
                 .color(0x5c4d2b)
                 .iconSet(MaterialIconSet.DULL)
                 .build();
-        ZINC_SULFATE.setFormula("ZnSO₄");
+        ZINC_SULFATE.setFormula("ZnSO4", true);
         //Crude Rhodium Metal
         CRUDE_RHODIUM_METAL = new Material.Builder(24522, gregtechId("crude_rhodium_metal"))
                 .dust()
@@ -210,7 +210,7 @@ public class GTNEPlatLineMaterial {
                 .color(0x5c4d2b)
                 .iconSet(MaterialIconSet.DULL)
                 .build();
-        REPRECIPITATED_RHODIUM.setFormula("Rh₂NH₄");
+        REPRECIPITATED_RHODIUM.setFormula("Rh2NH4", true);
         //Ruthenium Tetroxide Solution
         RUTHENIUM_TETROXIDE_SOLUTION = new Material.Builder(24529, gregtechId("ruthenium_tetroxide_solution"))
                 .fluid(FluidTypes.LIQUID, false)

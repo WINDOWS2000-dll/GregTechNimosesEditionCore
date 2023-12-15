@@ -133,9 +133,13 @@ public class ConfigHolder {
          * Computation周りの設備のレシピ難易度の上昇
          */
 
-        @Config.Comment({"Activating this config will greatly increase the difficulty of Late Game computer-related recipes!"})
+        @Config.Comment({"Activating this config will greatly increase the difficulty of Late Game computer-related recipes! [Default = true]"})
         @Config.Name("Harder_Computation_System_Recipe")
         public boolean Harder_Computation_System_Recipe = true;
+
+        @Config.Comment("Activating this config will increase the difficulty of the recipe for vanilla items [Default = true]")
+        @Config.Name("Harder_Vanilla_Recipe")
+        public boolean Harder_Vanilla_Recipe = true;
 
     }
 

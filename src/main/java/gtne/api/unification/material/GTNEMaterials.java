@@ -87,6 +87,7 @@ public class GTNEMaterials {
     public static Material Fractallium;
     public static Material Entropium;
     public static Material Sacred_Metal;
+    public static Material StoneIngot;
 
     public static Material Enderium_Base;
 

@@ -10,4 +10,7 @@ public class GTNEGuiTextures {
             PREGRESSBAR_CONPONENTS_ASSEMBLER = TextureArea.fullImage("textures/gui/progress_bar_components_assembler.png");
     public static final TextureArea
             PROGRESSBAR_HDSCT =TextureArea.fullImage("textures/gui/hdsct_progress_bar.png");
+
+    public static final TextureArea
+            PROGRESSBAR_ADVANCED_DISTILLATION_TOWER = TextureArea.fullImage("textures/gui/progress_bar_advanced_distillation_tower.png");
 }

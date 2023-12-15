@@ -3,11 +3,12 @@ package gtne.api.recipes;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget.MoveType;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.builders.*;
 import gregtech.api.util.AssemblyLineManager;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.gui.GTNEGuiTextures;
-import gtne.api.recipes.Builders.AdvancedPrecisionAssemblyLineRecipeBuilder;
+import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedDistillationTower;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapHighDimensionalStructureConstructionTesseract;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.init.SoundEvents;
@@ -54,5 +55,9 @@ public class GTNERecipeMaps {
             new RecipeMap<>("high_energy_electromagnetic_implosion_machine", 6, 3, 3, 3, new SimpleRecipeBuilder(), false)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.COMPRESSOR);
+
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_DISTILLATION_TOWER =
+            new RecipeMapAdvancedDistillationTower<>("advanced_distillation_tower", 0, false, 1, false, 1, false, 16, false, new SimpleRecipeBuilder(), false);
 
 }

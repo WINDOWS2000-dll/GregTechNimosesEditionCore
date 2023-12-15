@@ -9,7 +9,7 @@ public class GTNEValues {
 
     MODID_NC = "nuclearcraft";
 
-    public static final String MOD_VER = GTNEVersion.DEP_VERSION;
+    public static final String MOD_VER = GTNEVersion.VERSION;
 
     public static final String MOD_NAME = "GregTechNimosesEdition-Core";
 

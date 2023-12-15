@@ -15,6 +15,7 @@ import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
 import gtne.loaders.recipes.Material.AlloyBlastFurnaceRecipe;
 import gtne.loaders.recipes.Material.EBFRecipes;
 import gtne.loaders.recipes.MultiBlock.*;
+import gtne.loaders.recipes.Other.VanillaFix;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -81,7 +82,7 @@ public class CommonProxy {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
-        GTNELog.logger.info("Registering Recipes...");
+        GTNELog.logger.info("Start Recipe Registration");
         //常時読みこみ
         Assembly_Line_Recipe.init();
         Advanced_Precision_Assembly_Line.init();
@@ -90,6 +91,10 @@ public class CommonProxy {
         VoltageController.init();
         UVSuperConductorCable.init();
         //コンフィグ有効時のみ読み込み
+        if (ConfigHolder.recipeoption.Harder_Vanilla_Recipe) {
+            VanillaFix.init();
+            GTNELog.logger.info("Registering Harder Vanilla Recipes...");
+        }
         if (ConfigHolder.recipeoption.Components_Assembler) {
             ComponentsAssembler.init();
             GTNELog.logger.info("Registering ComponentsAssembler...");
@@ -127,5 +132,6 @@ public class CommonProxy {
             AlloyBlastFurnaceRecipe.init();
             GTNELog.logger.info("Registering Harder LateGame Components Recipes...");
         }
+        GTNELog.logger.info("End Recipe Registration");
     }
 }

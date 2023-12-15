@@ -12,4 +12,28 @@ public class GTNEUtil {
             "polarizer", "laser_engraver", "sifter", "thermal_centrifuge", "wiremill",
             "circuit_assembler", "rock_breaker", "world_accelerator"};
 
+    /**
+     * This String part of the bed recipe name.
+     */
+    public static final String[] BedRecipeName = new String[] {
+            "minecraft:yellow_bed_from_", "minecraft:red_bed_from_", "minecraft:purple_bed_from_", "minecraft:pink_bed_from_",
+            "minecraft:orange_bed_from_", "minecraft:lime_bed_from_", "minecraft:magenta_bed_from_", "minecraft:light_gray_bed_from_",
+            "minecraft:light_blue_bed_from_", "minecraft:green_bed_from_", "minecraft:gray_bed_from_", "minecraft:cyan_bed_from_",
+            "minecraft:brown_bed_from_", "minecraft:blue_bed_from_", "minecraft:black_bed_from_"
+    };
+
+    /**
+     * @implNote This String Array not including Oak Wood Type
+     */
+    public static final String[] WoodType_1 = new String[] {
+            "spruce", "birch", "jungle", "acacia", "dark_oak"
+    };
+
+    /**
+     * @implNote This String Array including Oak Wood Type
+     */
+    public static final String[] WoodType_2 = new String[] {
+            "oak", "spruce", "birch", "jungle", "acacia", "dark_oak"
+    };
+
 }

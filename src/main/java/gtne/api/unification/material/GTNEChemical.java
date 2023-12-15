@@ -39,21 +39,21 @@ public class GTNEChemical {
                 .color(0x787446)
                 .fluidTemp(1123)
                 .build();
-        POTASSIUM_DISULFATE.setFormula("K₂S₂O₇");
+        POTASSIUM_DISULFATE.setFormula("K2S2O7", true);
         //Sodium Nitrate
         SODIUM_NITRATE = new Material.Builder(24603, gregtechId("sodium_nitrate"))
                 .dust()
                 .color(0x4c577d)
                 .iconSet(MaterialIconSet.METALLIC)
                 .build();
-        SODIUM_NITRATE.setFormula("NaNO₃");
+        SODIUM_NITRATE.setFormula("NaNO3", true);
         //Formic Acid
         FORMIC_ACID = new Material.Builder(24604, gregtechId("formic_acid"))
                 .fluid(FluidTypes.LIQUID, false)
                 .color(0xbf9341)
                 .fluidTemp(300)
                 .build();
-        FORMIC_ACID.setFormula("CH₂O₂");
+        FORMIC_ACID.setFormula("CH2O2", true);
         //Sodium Formate
         SODIUM_FORMATE = new Material.Builder(24605, gregtechId("sodium_formate"))
                 .fluid(FluidTypes.LIQUID, false)

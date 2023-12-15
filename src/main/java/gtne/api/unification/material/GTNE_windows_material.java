@@ -170,7 +170,7 @@ public class GTNE_windows_material {
                 .fluid(FluidTypes.LIQUID, false)
                 .plasma()
                 .color(0xFFFFFF)
-                .fluidTemp(2)
+                .fluidTemp(0)
                 .iconSet(MaterialIconSet.DULL)
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
@@ -188,13 +188,12 @@ public class GTNE_windows_material {
                 .fluid(FluidTypes.LIQUID, false)
                 .plasma()
                 .color(0xFFFFFF)
-                .fluidTemp(0)
+                .fluidTemp(-16384)
                 .iconSet(MaterialIconSet.DULL)
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
                         GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
-                .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(20000F, 8000F, 131072000, 999))
                 .cableProperties(V[OpV], 64, 0, false)
                 .element(FTL)
@@ -206,13 +205,12 @@ public class GTNE_windows_material {
                 .fluid(FluidTypes.LIQUID, false)
                 .plasma()
                 .color(0xFFFFFF)
-                .fluidTemp(0)
+                .fluidTemp(-2147483648)
                 .iconSet(MaterialIconSet.DULL)
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
                         GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
-                .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(2147483647F, 10000000F, 2147483647, 999))
                 .cableProperties(V[MAX], 128, 0, false)
                 .element(ETP)
@@ -227,6 +225,15 @@ public class GTNE_windows_material {
                 .build();
 
         Indalloy_140.setFormula("Bi47Pb25Sn13Cd10In5", true);
+
+        StoneIngot = new Material.Builder(24014, gregtechId("stone_ingot"))
+                .dust()
+                .ingot()
+                .color(0x696969)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW, GENERATE_ROD, GENERATE_FRAME)
+                .toolStats(new ToolProperty(1.5F, 1.25F, 64, 1))
+                .build();
 
     }
 }
