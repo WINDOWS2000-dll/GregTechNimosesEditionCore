@@ -188,7 +188,7 @@ public class GTNE_windows_material {
                 .fluid(FluidTypes.LIQUID, false)
                 .plasma()
                 .color(0xFFFFFF)
-                .fluidTemp(-16384)
+                .fluidTemp(0)
                 .iconSet(MaterialIconSet.DULL)
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
@@ -205,7 +205,7 @@ public class GTNE_windows_material {
                 .fluid(FluidTypes.LIQUID, false)
                 .plasma()
                 .color(0xFFFFFF)
-                .fluidTemp(-2147483648)
+                .fluidTemp(0)
                 .iconSet(MaterialIconSet.DULL)
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
