@@ -108,7 +108,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(6000F, 1800F, 8192000, 999))
                 .cableProperties(V[UEV], 32, 0, false)
@@ -126,7 +126,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(8000F, 2000F, 16384000, 999))
                 .cableProperties(V[UIV], 32, 0, false)
@@ -144,7 +144,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(8000F, 2000F, 16384000, 999))
                 .cableProperties(V[UIV], 524288, 600000, false)
@@ -162,7 +162,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(9000F, 3000F, 32768000, 999))
                 .cableProperties(V[UIV], 64, 0, false)
@@ -180,7 +180,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(10000F, 4000F, 65536000, 999))
                 .cableProperties(V[UXV], 64, 0, false)
@@ -198,7 +198,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .toolStats(new ToolProperty(20000F, 8000F, 131072000, 999))
                 .cableProperties(V[OpV], 64, 0, false)
                 .element(FTL)
@@ -215,7 +215,7 @@ public class GTNE_windows_material {
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .toolStats(new ToolProperty(2147483647F, 10000000F, 2147483647, 999))
                 .cableProperties(V[MAX], 128, 0, false)
                 .element(ETP)
@@ -238,6 +238,20 @@ public class GTNE_windows_material {
                 .iconSet(MaterialIconSet.DULL)
                 .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW, GENERATE_ROD, GENERATE_FRAME)
                 .toolStats(new ToolProperty(1.5F, 1.25F, 64, 1))
+                .build();
+
+        Antimatter = new Material.Builder(24015, gregtechId("antimatter"))
+                .dust()
+                .ingot()
+                .color(0x14018a)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
+                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
+                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
+                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .toolStats(new ToolProperty(2147483647F, 5000000F, 2147483647, 999))
+                .cableProperties(V[MAX], 1, 0, true)
+                .element(AM)
                 .build();
 
     }

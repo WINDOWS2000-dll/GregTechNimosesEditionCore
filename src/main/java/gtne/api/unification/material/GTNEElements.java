@@ -23,6 +23,7 @@ public class GTNEElements {
     public static final Element FTL = add(0, 0, -1, null, "Fractallium", "Ftl", false);
     public static final Element ETP = add(0, 0, -1, null, "Entropium", "Etp", false);
     public static final Element SCR = add(777, 777, -1, null, "Sacred_Metal", "Scr", false);
+    public static final Element AM = add(0, 0, -1, null, "Antimatter", "ERROR", false);
 
     public static Element add(long protons, long neutrons, long halfLifeSeconds, String decayTo, String name, String symbol, boolean isIsotope) {
         Element element = new Element(protons, neutrons, halfLifeSeconds, decayTo, name, symbol, isIsotope);
