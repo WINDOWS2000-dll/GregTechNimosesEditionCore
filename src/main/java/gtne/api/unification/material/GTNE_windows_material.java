@@ -109,7 +109,6 @@ public class GTNE_windows_material {
                 .element(If)
                 .build();
 
-        //Celestiallium
         Celestiallium = new Material.Builder(24007, gregtechId("celestiallium"))
                 .dust()
                 .ingot()
@@ -171,7 +170,7 @@ public class GTNE_windows_material {
                 .plasma()
                 .color(0xFFFFFF)
                 .fluidTemp(0)
-                .iconSet(MaterialIconSet.DULL)
+                .iconSet(GTNEMaterialIconSet.STELLARIUM)
                 .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
                         GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
                         GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,

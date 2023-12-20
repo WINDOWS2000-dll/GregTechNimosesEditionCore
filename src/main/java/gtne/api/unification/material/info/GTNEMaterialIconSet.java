@@ -6,4 +6,6 @@ public class GTNEMaterialIconSet{
 
     public static final MaterialIconSet INFINITY = new MaterialIconSet("infinity", null, true);
 
+    public static final MaterialIconSet STELLARIUM = new MaterialIconSet("stellarium", null, true);
+
 }
