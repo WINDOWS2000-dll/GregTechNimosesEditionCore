@@ -445,7 +445,6 @@ public class VanillaFix {
                                 "DdD",
                                 "DhD",
                         'D', OreDictUnifier.get(plateDouble, Iron, 1),
-                        'P', OreDictUnifier.get(plate,Iron, 1),
                         'S', OreDictUnifier.get(screw, Iron, 1)
                 );
         //THE GOLDEN AGE WILL RETURN AGAIN Armor
@@ -480,7 +479,6 @@ public class VanillaFix {
                                 "DdD",
                                 "DhD",
                         'D', OreDictUnifier.get(plateDouble, Gold, 1),
-                        'P', OreDictUnifier.get(plate, Gold, 1),
                         'S', OreDictUnifier.get(screw, Gold, 1)
                 );
         //Wooden Screw Recipe
