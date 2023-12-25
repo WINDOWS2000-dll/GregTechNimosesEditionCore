@@ -50,6 +50,10 @@ public class VanillaFix {
         for (String bed_recipe_name : BedRecipeName) {
             ModHandler.removeRecipeByName(bed_recipe_name + "white_bed");
         }
+        //Bed Vanilla
+        for (String bed_recipe_name_1 : BedRecipeName1) {
+            ModHandler.removeRecipeByName(bed_recipe_name_1);
+        }
         //Fence Normal
         ModHandler.removeRecipeByName("gregtech:fence");
         ModHandler.removeRecipeByName("gregtech:fence_gate");
@@ -245,7 +249,7 @@ public class VanillaFix {
             );
         //Brick Line
             //Brick Compound
-            ModHandler.addShapedRecipe("brick_compound", new ItemStack(BRICK_COMPOUND.getStackForm().getItem()),
+            ModHandler.addShapedRecipe(true,"brick_compound", BRICK_COMPOUND.getStackForm(),
                     "CCC",
                             "CWG",
                             "GGG",
@@ -264,9 +268,9 @@ public class VanillaFix {
                     .buildAndRegister();
 
             //Compressed Clay
-            ModHandler.addShapelessRecipe("compressed_clay", new ItemStack(COMPRESSED_CLAY.getStackForm().getItem()),
-                new ItemStack(BRICK_COMPOUND.getStackForm().getItem()),
-                new ItemStack(WOODEN_FORM_BRICK.getStackForm().getItem())
+            ModHandler.addShapelessRecipe("compressed_clay", COMPRESSED_CLAY.getStackForm(),
+                BRICK_COMPOUND.getStackForm(),
+                WOODEN_FORM_BRICK.getStackForm()
             );
 
             //Alloy Smelter Brick Recipe
@@ -482,7 +486,7 @@ public class VanillaFix {
                         'S', OreDictUnifier.get(screw, Gold, 1)
                 );
         //Wooden Screw Recipe
-            ModHandler.addShapedRecipe("easy_wooden_screw", new ItemStack(OreDictUnifier.get(screw, Wood).getItem(), 2),
+            ModHandler.addShapedRecipe("easy_wooden_screw", OreDictUnifier.get(screw, Wood, 2),
                     "S F",
                     'S', new ItemStack(Items.STICK),
                     'F', new ItemStack(Items.FLINT)
