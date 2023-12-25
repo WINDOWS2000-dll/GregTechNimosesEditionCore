@@ -89,6 +89,11 @@ public class GTNEMaterials {
     public static Material Sacred_Metal;
     public static Material StoneIngot;
     public static Material Antimatter;
+    public static Material Terrasteel;
+    public static Material Manasteel;
+    public static Material Elementium;
+    public static Material Thaumium;
+    public static Material VoidMetal;
 
     public static Material Enderium_Base;
 

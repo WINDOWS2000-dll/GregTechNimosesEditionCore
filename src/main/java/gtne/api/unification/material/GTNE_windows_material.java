@@ -17,10 +17,16 @@ import static gtne.api.unification.material.GTNEElements.*;
 import static gtne.api.unification.material.GTNEMaterials.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
+import static gtne.api.util.GTNEUtil.DefaultMaterialFlags;
 
 public class GTNE_windows_material {
     public static void init() {
 
+        //Add Material Flags
+        //Enriched Naquadah
+        NaquadahEnriched.addFlags(GENERATE_DOUBLE_PLATE);
+        //UraniumRhodiumDinaquadide
+        UraniumRhodiumDinaquadide.addFlags(GENERATE_SPRING);
 
         //24001 ~ 24500
 
@@ -40,10 +46,7 @@ public class GTNE_windows_material {
                 .fluid(FluidTypes.LIQUID, false)
                 .color(0x9b00ff)
                 .iconSet(MaterialIconSet.SHINY)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .blastTemp(4700, GasTier.HIGH, 16384, 10000)
                 .toolStats(new ToolProperty(400F, 100F, 42000, 160))
                 .cableProperties(8192L, 16, 16, false)
@@ -57,10 +60,7 @@ public class GTNE_windows_material {
                 .fluid(FluidTypes.LIQUID, false)
                 .color(0xff5100)
                 .iconSet(MaterialIconSet.SHINY)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .blastTemp(9000, GasTier.HIGHEST, 120000, 12000)
                 .toolStats(new ToolProperty(700F, 200F, 81920, 500))
                 .cableProperties(GTValues.V[9], 32, 16, false)
@@ -105,10 +105,7 @@ public class GTNE_windows_material {
                 .color(0xFFFFFF)
                 .fluidTemp(2000000000)
                 .iconSet(GTNEMaterialIconSet.INFINITY)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(6000F, 1800F, 8192000, 999))
                 .cableProperties(V[UEV], 32, 0, false)
@@ -123,10 +120,7 @@ public class GTNE_windows_material {
                 .color(0xFFFFFF)
                 .fluidTemp(16)
                 .iconSet(MaterialIconSet.DULL)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(8000F, 2000F, 16384000, 999))
                 .cableProperties(V[UIV], 32, 0, false)
@@ -141,10 +135,7 @@ public class GTNE_windows_material {
                 .color(0xFFFFFF)
                 .fluidTemp(666666666)
                 .iconSet(MaterialIconSet.DULL)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(8000F, 2000F, 16384000, 999))
                 .cableProperties(V[UIV], 524288, 600000, false)
@@ -159,10 +150,7 @@ public class GTNE_windows_material {
                 .color(0xFFFFFF)
                 .fluidTemp(77777777)
                 .iconSet(MaterialIconSet.DULL)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(9000F, 3000F, 32768000, 999))
                 .cableProperties(V[UIV], 64, 0, false)
@@ -177,10 +165,7 @@ public class GTNE_windows_material {
                 .color(0xFFFFFF)
                 .fluidTemp(0)
                 .iconSet(GTNEMaterialIconSet.STELLARIUM)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .blastTemp(200_000_000)
                 .toolStats(new ToolProperty(10000F, 4000F, 65536000, 999))
                 .cableProperties(V[UXV], 64, 0, false)
@@ -195,10 +180,7 @@ public class GTNE_windows_material {
                 .color(0xFFFFFF)
                 .fluidTemp(0)
                 .iconSet(MaterialIconSet.DULL)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .toolStats(new ToolProperty(20000F, 8000F, 131072000, 999))
                 .cableProperties(V[OpV], 64, 0, false)
                 .element(FTL)
@@ -212,10 +194,7 @@ public class GTNE_windows_material {
                 .color(0xFFFFFF)
                 .fluidTemp(0)
                 .iconSet(MaterialIconSet.DULL)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .toolStats(new ToolProperty(2147483647F, 10000000F, 2147483647, 999))
                 .cableProperties(V[MAX], 128, 0, false)
                 .element(ETP)
@@ -245,14 +224,75 @@ public class GTNE_windows_material {
                 .ingot()
                 .color(0x14018a)
                 .iconSet(MaterialIconSet.SHINY)
-                .flags(GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL,
-                        GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING,
-                        GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_ROTOR, GENERATE_RING,
-                        GENERATE_DENSE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(DefaultMaterialFlags)
                 .toolStats(new ToolProperty(2147483647F, 5000000F, 2147483647, 999))
                 .cableProperties(V[MAX], 1, 0, true)
                 .element(AM)
                 .build();
+
+        Terrasteel = new Material.Builder(24016, gregtechId("terrasteel"))
+                .dust()
+                .ingot()
+                .plasma()
+                .color(0x0ffa32)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .toolStats(new ToolProperty(100F,18F,38000,120))
+                .cableProperties(32768,4,2,false)
+                .element(TS)
+                .build();
+
+        Manasteel = new Material.Builder(24017, gregtechId("manasteel"))
+                .dust()
+                .ingot()
+                .plasma()
+                .color(0x0f65fa)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .toolStats(new ToolProperty(35F,6F,1024,20))
+                .cableProperties(128, 4, 0, false)
+                .element(EL)
+                .build();
+
+
+        Elementium = new Material.Builder(24018, gregtechId("elementium"))
+                .dust()
+                .ingot()
+                .plasma()
+                .color(0xfb54ae)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .toolStats(new ToolProperty(50F, 12F, 18000, 40))
+                .cableProperties(32768, 8, 0, false)
+                .element(EL)
+                .build();
+
+        Thaumium = new Material.Builder(24019, gregtechId("thaumium"))
+                .dust()
+                .ingot()
+                .plasma()
+                .color(0x4e4177)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .toolStats(new ToolProperty(38F,8.25F,1280,21))
+                .cableProperties(128, 4, 2, false)
+                .element(TH)
+                .build();
+
+        VoidMetal = new Material.Builder(24020, gregtechId("void"))
+                .dust()
+                .ingot()
+                .plasma()
+                .color(0x110422)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .toolStats(new ToolProperty(66F, 29.59704F, 13332, 66))
+                .cableProperties(2048, 4, 4, false)
+                .element(Vid)
+                .build();
+
+
+
 
     }
 }

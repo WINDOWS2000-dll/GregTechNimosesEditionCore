@@ -2,6 +2,7 @@ package gtne.api.unification.material;
 
 import com.google.common.base.CaseFormat;
 import gregtech.api.unification.Element;
+import scala.xml.Elem;
 
 import java.util.*;
 
@@ -24,6 +25,11 @@ public class GTNEElements {
     public static final Element ETP = add(0, 0, -1, null, "Entropium", "Etp", false);
     public static final Element SCR = add(777, 777, -1, null, "Sacred_Metal", "Scr", false);
     public static final Element AM = add(0, 0, -1, null, "Antimatter", "ERROR", false);
+    public static final Element TS = add(144, 233, -1, null, "Terrasteel", "TlMa", false);
+    public static final Element MS = add(13, 21, -1, null, "Manasteel", "MaFe", false);
+    public static final Element EL = add(55, 89, -1, null, "Elementium", "Tl(MaFe)", false);
+    public static final Element TH = add(66, 44, -1, null, "Thaumium", "EdFe", false);
+    public static final Element Vid = add(666, 444, -1, null, "Void", "Vit(Ed)Mtl", false);
 
     public static Element add(long protons, long neutrons, long halfLifeSeconds, String decayTo, String name, String symbol, boolean isIsotope) {
         Element element = new Element(protons, neutrons, halfLifeSeconds, decayTo, name, symbol, isIsotope);
