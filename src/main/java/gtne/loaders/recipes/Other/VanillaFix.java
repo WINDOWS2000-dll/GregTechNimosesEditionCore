@@ -10,6 +10,7 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.items.MetaItem1;
 import gregtech.common.items.MetaItems;
+import gtne.api.items.GTNEOreDictNames;
 import gtne.common.ConfigHolder;
 import gtne.common.item.GTNEMetaItem1;
 import gtne.common.item.GTNEMetaItems;
@@ -515,7 +516,7 @@ public class VanillaFix {
                             "RHG",
                             "CFC",
                     'P', OreDictUnifier.get(plank, Wood),
-                    'H', OreDictionary.getOres("fenceWood"),
+                    'H', GTNEOreDictNames.fenceWood,
                     'F', OreDictUnifier.get(frameGt, StoneIngot),
                     'C', OreDictNames.stoneCobble,
                     'G', OreDictUnifier.get(gear, Iron),

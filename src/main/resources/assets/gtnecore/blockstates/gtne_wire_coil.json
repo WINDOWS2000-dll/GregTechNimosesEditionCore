@@ -32,6 +32,13 @@
       "textures": {
         "all": "gregtech:blocks/casing/coil/machine_coil_stellarium"
       }
+    },
+    "active=true,variant=stellarium": {
+      "model": "gregtech:cube_2_layer_all",
+      "textures": {
+        "bot_all": "gregtech:blocks/casing/coil/machine_coil_stellarium",
+        "top_all": "gregtech:blocks/casing/coil/machine_coil_stellarium_bloom"
+      }
     }
   }
 }
