@@ -1,5 +1,6 @@
 package gtne.loaders.recipes.Other;
 
+import gregtech.api.items.OreDictNames;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.recipes.RecipeMaps;
@@ -18,6 +19,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.ArrayList;
 
@@ -26,6 +28,7 @@ import static gregtech.common.items.MetaItems.*;
 import static gregtech.api.metatileentity.multiblock.CleanroomType.CLEANROOM;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
+import static gtne.api.unification.material.GTNEMaterials.*;
 import static gtne.api.util.GTNEUtil.*;
 import static gtne.common.item.GTNEMetaItems.*;
 
@@ -252,21 +255,23 @@ public class VanillaFix {
             );
         //Brick Line
             //Brick Compound
-            ModHandler.addShapedRecipe(true,"brick_compound", BRICK_COMPOUND.getStackForm(),
-                    "CCC",
+            ModHandler.addShapedRecipe(true,"brick_compound", BRICK_COMPOUND.getStackForm(4),
+                    "CCY",
                             "CWG",
-                            "GGG",
+                            "YGG",
                     'C', new ItemStack(Blocks.SAND),
                     'W', new ItemStack(Items.WATER_BUCKET),
-                    'G', new ItemStack(Blocks.GRAVEL)
+                    'G', new ItemStack(Blocks.GRAVEL),
+                    'Y', new ItemStack(Blocks.CLAY)
             );
 
             //Brick Compound Mixer Recipe
             RecipeMaps.MIXER_RECIPES.recipeBuilder()
                     .input(Blocks.SAND, 4)
                     .input(Blocks.GRAVEL, 4)
+                    .input(Blocks.CLAY, 2)
                     .fluidInputs(Water.getFluid(1000))
-                    .output(BRICK_COMPOUND, 2)
+                    .output(BRICK_COMPOUND, 8)
                     .EUt(8).duration(20)
                     .buildAndRegister();
 
@@ -489,7 +494,7 @@ public class VanillaFix {
                         'S', OreDictUnifier.get(screw, Gold, 1)
                 );
         //Wooden Screw Recipe
-            ModHandler.addShapedRecipe("easy_wooden_screw", OreDictUnifier.get(screw, Wood, 2),
+            ModHandler.addShapedRecipe("easy_wooden_screw", OreDictUnifier.get(screw, Wood, 1),
                     "S F",
                     'S', new ItemStack(Items.STICK),
                     'F', new ItemStack(Items.FLINT)
@@ -503,6 +508,18 @@ public class VanillaFix {
                     'S', OreDictUnifier.get(spring, Iron, 1),
                     'G', OreDictUnifier.get(gear, Iron, 1),
                     'C', new ItemStack(Blocks.CHEST)
+            );
+        //Piston
+            ModHandler.addShapedRecipe("piston", new ItemStack(Blocks.PISTON, 1),
+                    "PPP",
+                            "RHG",
+                            "CFC",
+                    'P', OreDictUnifier.get(plank, Wood),
+                    'H', OreDictionary.getOres("fenceWood"),
+                    'F', OreDictUnifier.get(frameGt, StoneIngot),
+                    'C', OreDictNames.stoneCobble,
+                    'G', OreDictUnifier.get(gear, Iron),
+                    'R', OreDictUnifier.get(plate, RedAlloy)
             );
 
     }

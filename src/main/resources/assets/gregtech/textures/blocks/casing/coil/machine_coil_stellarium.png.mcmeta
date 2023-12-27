@@ -1,0 +1,16 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "CTM",
+    "layer": "SOLID",
+    "textures": [
+      "gregtech:blocks/casing/coil/machine_coil_stellarium_ctm"
+    ],
+    "extra": {
+      "connect_inside": true
+    }
+  },
+  "animation": {
+    "frametime": 3
+  }
+}
