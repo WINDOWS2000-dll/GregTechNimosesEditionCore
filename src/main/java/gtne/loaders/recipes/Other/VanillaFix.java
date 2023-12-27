@@ -96,6 +96,9 @@ public class VanillaFix {
         ModHandler.removeRecipeByName("gregtech:stick_normal");
         ModHandler.removeRecipeByName("enderio:compatibility_glass_pane");
         ModHandler.removeRecipeByName("thermalfoundation:saddle");
+        ModHandler.removeRecipeByName("extrautils2:shortcut_stick");
+        ModHandler.removeRecipeByName("extrautils2:shortcut_chest");
+        ModHandler.removeRecipeByName("extrautils2:shortcut_hopper");
 
     }
 
