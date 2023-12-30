@@ -50,6 +50,8 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         ADVANCED_HIGH_SPEED_PROCESSING_UNIT = addItem(25, "advanced_highspeed_processing_unit");
         IMPROVED_HIGH_SPEED_ARITHMETIC_INTEGRATED_PROCESSOR = addItem(26, "improved_high_speed_arithmetic_integrated_processor");
         BRICK_COMPOUND = addItem(27, "brick_compound");
+        ADVANCED_STORAGE_HOUSING = addItem(28, "advanced_storage_housing");
+        FLUID_STORAGE_HOUSING = addItem(29, "fluid_storage_housing");
 
     }
 }

@@ -254,7 +254,7 @@ public class GTNE_windows_material {
                 .flags(DefaultMaterialFlags)
                 .toolStats(new ToolProperty(35F,6F,1024,20))
                 .cableProperties(128, 4, 0, false)
-                .element(EL)
+                .element(MS)
                 .build();
 
 
