@@ -28,7 +28,7 @@
       }
     },
     "active=false,variant=stellarium": {
-      "model": "gregtech:cube_all",
+      "model": "minecraft:cube_all",
       "textures": {
         "all": "gregtech:blocks/casing/coil/machine_coil_stellarium"
       }
