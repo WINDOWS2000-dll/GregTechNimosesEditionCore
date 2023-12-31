@@ -1,4 +1,7 @@
 {
+  "animation": {
+    "frametime": 3
+  },
   "ctm": {
     "ctm_version": 1,
     "type": "CTM",
@@ -9,8 +12,5 @@
     "extra": {
       "connect_inside": true
     }
-  },
-  "animation": {
-    "frametime": 3
   }
 }
