@@ -5,29 +5,20 @@ import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
-import gregtech.common.items.MetaItem1;
-import gregtech.common.items.MetaItems;
 import gtne.api.items.GTNEOreDictNames;
+import gtne.api.unification.material.GTNEMaterials;
 import gtne.common.ConfigHolder;
-import gtne.common.item.GTNEMetaItem1;
-import gtne.common.item.GTNEMetaItems;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.oredict.OreDictionary;
-
-import java.util.ArrayList;
+import net.minecraft.util.ResourceLocation;
 
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
-import static gregtech.api.metatileentity.multiblock.CleanroomType.CLEANROOM;
-import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gtne.api.unification.material.GTNEMaterials.*;
 import static gtne.api.util.GTNEUtil.*;
@@ -77,6 +68,12 @@ public class VanillaFix {
             ModHandler.removeRecipeByName("minecraft:wooden_shovel");
             ModHandler.removeRecipeByName("minecraft:wooden_axe");
             ModHandler.removeRecipeByName("minecraft:wooden_hoe");
+        //StoneTools
+            ModHandler.removeRecipeByName("minecraft:stone_shovel");
+            ModHandler.removeRecipeByName("minecraft:stone_axe");
+            ModHandler.removeRecipeByName("minecraft:stone_pickaxe");
+            ModHandler.removeRecipeByName("minecraft:stone_hoe");
+            ModHandler.removeRecipeByName("minecraft:stone_sword");
         //Armor Stand
             ModHandler.removeRecipeByName("minecraft:armor_stand");
         //Vanilla Armor
@@ -94,6 +91,8 @@ public class VanillaFix {
             ModHandler.removeRecipeByName("gregtech:golden_boots");
         //Hopper
             ModHandler.removeRecipeByName("gregtech:hopper");
+        //Sign
+            ModHandler.removeRecipeByName("minecraft:sign");
     }
 
     private static void RemoveAddonRecipes() {
@@ -382,6 +381,12 @@ public class VanillaFix {
                     'S', new ItemStack(Items.STICK),
                     'F', new ItemStack(Items.FLINT)
             );
+        //StoneTools
+            createShovelRecipe("stone_shovel", new ItemStack(Items.STONE_SHOVEL), StoneIngot);
+            createAxeRecipe("stone_axe", new ItemStack(Items.STONE_AXE), StoneIngot);
+            createPickaxeRecipe("stone_pickaxe", new ItemStack(Items.STONE_PICKAXE), StoneIngot);
+            createHoeRecipe("stone_hoe", new ItemStack(Items.STONE_HOE), StoneIngot);
+            createSwordRecipe("stone_sword", new ItemStack(Items.STONE_SWORD), StoneIngot);
         //Super Nerf Stick Recipe
             ModHandler.addShapedRecipe("nerfed_stick_recipe", new ItemStack(Items.STICK),
                     "W",
@@ -522,6 +527,56 @@ public class VanillaFix {
                     'G', OreDictUnifier.get(gear, Iron),
                     'R', OreDictUnifier.get(plate, RedAlloy)
             );
+        //Sign.mage
+            ModHandler.addShapedRecipe("sing_mage", new ItemStack(Items.SIGN, 1),
+                    "PPP",
+                            "PSP",
+                            "DSf",
+                    'P', new UnificationEntry(OrePrefix.plank, Materials.Wood),
+                    'S', new ItemStack(Items.STICK),
+                    'D', new ItemStack(Items.DYE,1, 0));
+    }
 
+    private static void createShovelRecipe(String regName, ItemStack output, Material material) {
+        ModHandler.removeRecipeByName(new ResourceLocation(regName));
+        ModHandler.addShapedRecipe(regName, output, "hPf", " S ", " S ",
+                'P', new UnificationEntry(OrePrefix.plate, material),
+                'S', new ItemStack(Items.STICK)
+        );
+    }
+
+    private static void createPickaxeRecipe(String regName, ItemStack output, Material material) {
+        ModHandler.removeRecipeByName(new ResourceLocation(regName));
+        ModHandler.addShapedRecipe(regName, output, "PII", "hSf", " S ",
+                'P', new UnificationEntry(OrePrefix.plate, material),
+                'I', new UnificationEntry(material.equals(Materials.Diamond) ? OrePrefix.gem : OrePrefix.ingot, material),
+                'S', new ItemStack(Items.STICK)
+        );
+    }
+
+    private static void createAxeRecipe(String regName, ItemStack output, Material material) {
+        ModHandler.removeRecipeByName(new ResourceLocation(regName));
+        ModHandler.addShapedRecipe(regName, output, "PIf", "PS ", "hS ",
+                'P', new UnificationEntry(OrePrefix.plate, material),
+                'I', new UnificationEntry(material.equals(Materials.Diamond) ? OrePrefix.gem : OrePrefix.ingot, material),
+                'S', new ItemStack(Items.STICK)
+        );
+    }
+
+    private static void createSwordRecipe(String regName, ItemStack output, Material material) {
+        ModHandler.removeRecipeByName(new ResourceLocation(regName));
+        ModHandler.addShapedRecipe(regName, output, " P ", "hPf", " S ",
+                'P', new UnificationEntry(OrePrefix.plate, material),
+                'S', new ItemStack(Items.STICK)
+        );
+    }
+
+    private static void createHoeRecipe(String regName, ItemStack output, Material material) {
+        ModHandler.removeRecipeByName(new ResourceLocation(regName));
+        ModHandler.addShapedRecipe(regName, output, "PIf", "hS ", " S ",
+                'P', new UnificationEntry(OrePrefix.plate, material),
+                'I', new UnificationEntry(material.equals(Materials.Diamond) ? OrePrefix.gem : OrePrefix.ingot, material),
+                'S', new ItemStack(Items.STICK)
+        );
     }
 }
