@@ -12,6 +12,8 @@ public class UVSuperConductorCable {
 
     public static void init() {
 
+        /*
+        使用見送り
         RecipeMaps.BLAST_RECIPES.recipeBuilder()
                 .input(dust, NaquadahAlloy, 48)
                 .input(dust, Europium, 32)
@@ -21,6 +23,8 @@ public class UVSuperConductorCable {
                 .blastFurnaceTemp(10000)
                 .EUt(180000).duration(40000)
                 .buildAndRegister();
+
+         */
 
     }
 

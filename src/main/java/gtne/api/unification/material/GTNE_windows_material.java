@@ -216,6 +216,7 @@ public class GTNE_windows_material {
                 .color(0x696969)
                 .iconSet(MaterialIconSet.DULL)
                 .flags(DefaultMaterialFlags)
+                .toolStats(new ToolProperty(4F, 4F, 32, 1))
                 .build();
 
         Antimatter = new Material.Builder(24015, gregtechId("antimatter"))

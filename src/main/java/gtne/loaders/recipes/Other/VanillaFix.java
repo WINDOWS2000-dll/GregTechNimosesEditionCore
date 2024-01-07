@@ -535,6 +535,25 @@ public class VanillaFix {
                     'P', new UnificationEntry(OrePrefix.plank, Materials.Wood),
                     'S', new ItemStack(Items.STICK),
                     'D', new ItemStack(Items.DYE,1, 0));
+        //StoneIngot
+            //StoneIngotDust
+                ModHandler.addShapedRecipe("stoneingot_dust", OreDictUnifier.get(dust, StoneIngot, 8),
+                        "FSF",
+                                "SGS",
+                                "FSF",
+                        'F', OreDictUnifier.get(dust, Flint, 1),
+                        'S', OreDictUnifier.get(dust, Stone, 1),
+                        'G', new ItemStack(Blocks.GRAVEL)
+                );
+            //StoneIngot Another Recipe
+                ModHandler.addShapedRecipe("stoneingot_another", OreDictUnifier.get(dust, StoneIngot, 2),
+                        "FSF",
+                                "SGS",
+                                "FSF",
+                        'F', OreDictUnifier.get(dustSmall, Flint, 1),
+                        'S', OreDictUnifier.get(dustSmall, Stone, 1),
+                        'G', new ItemStack(Blocks.GRAVEL)
+                );
     }
 
     private static void createShovelRecipe(String regName, ItemStack output, Material material) {
