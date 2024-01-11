@@ -10,7 +10,7 @@ import javax.annotation.Nonnull;
 public class ExtendedOverclockingLogic {
 
     public static final double EXTENDED_STANDARD_OVERCLOCK_VOLTAGE_MULTIPLIER = 4.0D;
-    public static final double EXTENDED_STANDARD_OVERCLOCK_DURATION_DIVISOR = ConfigHolder.machines.overclockDivisor;
+    public static final double EXTENDED_STANDARD_OVERCLOCK_DURATION_DIVISOR = 2.0D;
     public static final double EXTENDED_PERFECT_OVERCLOCK_DURATION_DIVISOR = 4.0D;
 
     public static final long EXTENDED_COIL_EUT_DISCOUNT_TEMPERATURE = 900L;

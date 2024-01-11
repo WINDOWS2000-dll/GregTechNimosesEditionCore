@@ -1,22 +1,15 @@
 package gtne.loaders.recipes.MultiBlock;
 
-import crafttweaker.api.item.IItemStack;
-import gregtech.api.GTValues;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
-import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.blocks.BlockWireCoil;
 import gregtech.common.blocks.MetaBlocks;
 import gtne.common.Block.BlockGTNEWireCoil;
 import gtne.common.Block.GTNEMetaBlock;
 import gtne.common.ConfigHolder;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 
 import static gregtech.api.GTValues.*;
@@ -95,11 +88,11 @@ public class EBFCoils {
 
         //TungstenSteel
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
-                .input(wireGtDouble, TungstenSteel, 8)
-                .input(wireFine, TungstenSteel, 16)
+                .input(wireGtDouble, RTMAlloy, 8)
+                .input(wireFine, RTMAlloy, 16)
                 .input(foil, VanadiumSteel, 8)
                 .fluidInputs(Nichrome.getFluid(CoilFluidValues))
-                .outputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TUNGSTENSTEEL, 1))
+                .outputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.RTM_ALLOY, 1))
                 .EUt(VA[EV]).duration(1500)
                 .buildAndRegister();
 
@@ -108,7 +101,7 @@ public class EBFCoils {
                 .input(wireGtDouble, HSSG, 8)
                 .input(wireFine, HSSG, 16)
                 .input(foil, TungstenCarbide, 8)
-                .fluidInputs(TungstenSteel.getFluid(CoilFluidValues))
+                .fluidInputs(RTMAlloy.getFluid(CoilFluidValues))
                 .outputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.HSS_G, 1))
                 .EUt(VA[IV]).duration(1800)
                 .buildAndRegister();

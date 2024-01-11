@@ -15,7 +15,6 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import gtne.api.gui.GTNEGuiTextures;
-import gtne.api.recipes.GTNERecipeMaps;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -28,10 +27,10 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
     private final Map<String, Collection<Recipe>> researchEntries = new Object2ObjectOpenHashMap<>();
 
     public RecipeMapAdvancedPrecisionAssemblyLine(String unlocalizedName,
-                                                  int maxInputs, boolean modifyItemInputs,  int maxOutputs, boolean modifyItemOutputs,
-                                                   int maxFluidInputs, boolean modifyFluidInputs, int maxFluidOutputs, boolean modifyFluidOutputs,
+                                                  int maxInputs,  int maxOutputs,
+                                                   int maxFluidInputs, int maxFluidOutputs,
                                                   R defaultRecipe, boolean isHidden) {
-        super(unlocalizedName,  maxInputs, modifyItemInputs, maxOutputs, modifyItemOutputs, maxFluidInputs, modifyFluidInputs, maxFluidOutputs, modifyFluidOutputs, defaultRecipe, isHidden);
+        super(unlocalizedName,  maxInputs, maxOutputs, maxFluidInputs, maxFluidOutputs, defaultRecipe, isHidden);
     }
 
     @Override

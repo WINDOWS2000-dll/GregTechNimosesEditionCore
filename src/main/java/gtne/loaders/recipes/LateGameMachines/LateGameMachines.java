@@ -1,24 +1,17 @@
 package gtne.loaders.recipes.LateGameMachines;
 
-import gregtech.api.GTValues;
-import gregtech.api.items.OreDictNames;
 import gregtech.api.recipes.*;
 import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition;
 import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher;
-import gregtech.api.unification.material.MarkerMaterial;
 import gregtech.api.unification.material.MarkerMaterials;
-import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockWireCoil;
 import gregtech.common.blocks.MetaBlocks;
 import gtne.common.ConfigHolder;
-import net.minecraftforge.oredict.OreDictionary;
 
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.metatileentities.MetaTileEntities.*;
-import static gregtech.loaders.recipe.MetaTileEntityLoader.registerMachineRecipe;
-import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.common.items.MetaItems.*;
 import static gtne.api.util.GTNEUtil.GTNEMachineRecipeName;
@@ -92,7 +85,7 @@ public class LateGameMachines {
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
-                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TUNGSTENSTEEL, 2))
+                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.RTM_ALLOY, 2))
                 .input(wireGtQuadruple, HSSG, 2)
                 .input(VOLTAGE_COIL_LuV, 6)
                 .input(VOLTAGE_COIL_IV, 12)
@@ -438,7 +431,7 @@ public class LateGameMachines {
                 .input(ELECTRIC_PISTON_LUV, 4)
                 .input(wireGtQuadruple, HSSG, 4)
                 .input(VOLTAGE_COIL_LuV, 4)
-                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TUNGSTENSTEEL, 4))
+                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.RTM_ALLOY, 4))
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS, 2))
                 .input(pipeLargeFluid, NiobiumTitanium, 1)
                 .input(HIGH_POWER_INTEGRATED_CIRCUIT, 16)
@@ -482,7 +475,7 @@ public class LateGameMachines {
                 .input(pipeNormalFluid, NiobiumTitanium, 2)
                 .input(cableGtQuadruple, HSSG, 4)
                 .input(VOLTAGE_COIL_LuV, 2)
-                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TUNGSTENSTEEL, 1))
+                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.RTM_ALLOY, 1))
                 .input(HIGH_POWER_INTEGRATED_CIRCUIT, 8)
                 .input(CARBON_FIBER_PLATE, 4)
                 .input(cableGtSingle, NiobiumTitanium, 4)
@@ -747,7 +740,7 @@ public class LateGameMachines {
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 4)
                 .input(wireGtQuadruple, HSSG, 4)
-                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TUNGSTENSTEEL, 2))
+                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.RTM_ALLOY, 2))
                 .input(VOLTAGE_COIL_LuV, 4)
                 .input(HIGH_POWER_INTEGRATED_CIRCUIT, 8)
                 .input(CARBON_FIBER_PLATE, 4)
@@ -1251,7 +1244,7 @@ public class LateGameMachines {
                 .input(ELECTRIC_PISTON_ZPM, 4)
                 .input(wireGtQuadruple, Naquadah, 4)
                 .input(VOLTAGE_COIL_LuV, 4)
-                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.TUNGSTENSTEEL, 4))
+                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.RTM_ALLOY, 4))
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS, 2))
                 .input(pipeLargeFluid, NiobiumTitanium, 1)
                 .input(HIGH_POWER_INTEGRATED_CIRCUIT, 16)

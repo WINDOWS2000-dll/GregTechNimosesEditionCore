@@ -15,9 +15,9 @@ import javax.annotation.Nonnull;
 
 public class RecipeMapHighDimensionalStructureConstructionTesseract <R extends RecipeBuilder<R>> extends RecipeMap<R> {
 
-    public RecipeMapHighDimensionalStructureConstructionTesseract(String unlocalizedName, int maxInputs, boolean modifyItemInputs, int maxOutputs, boolean modifyItemOutputs,
-                                                                  int maxFluidInputs, boolean modifyFluidInputs, int maxFluidOutputs, boolean modifyFluidOutputs, R defaultRecipe, boolean isHidden) {
-        super(unlocalizedName, maxInputs, modifyItemInputs, maxOutputs, modifyItemOutputs, maxFluidInputs, modifyFluidInputs, maxFluidOutputs, modifyFluidOutputs, defaultRecipe, isHidden);
+    public RecipeMapHighDimensionalStructureConstructionTesseract(String unlocalizedName, int maxInputs, int maxOutputs,
+                                                                  int maxFluidInputs, int maxFluidOutputs, R defaultRecipe, boolean isHidden) {
+        super(unlocalizedName, maxInputs, maxOutputs, maxFluidInputs, maxFluidOutputs, defaultRecipe, isHidden);
     }
 
     @Override

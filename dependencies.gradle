@@ -22,12 +22,13 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
+    implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848") // CCL 3.2.3.358
     implementation rfg.deobf("curse.maven:cofh-world-271384:2920434")
     implementation rfg.deobf("curse.maven:cofh-core-69162:2920433")
-    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:4799055") // CEu 2.7.4
+    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:4965457") // CEu 2.8.5
+    implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4904513")
     implementation rfg.deobf("curse.maven:thermal-foundation-222880:2926428")
-    implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:4483468")
+    implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:4910674") // GCYM 1.2.7
     implementation rfg.deobf("curse.maven:endercore-231868:4671384") // EnderCore 0.5.78
     implementation rfg.deobf("curse.maven:ender-io-base-297193:4674231") // EIO 5.3.72
     implementation rfg.deobf("curse.maven:ender-io-endergy-304346:4674241") // EIOE 5.3.72
@@ -40,12 +41,11 @@ dependencies {
     implementation rfg.deobf("curse.maven:llibrary-243298:3116493")
     implementation rfg.deobf("curse.maven:groovyscript-687577:4426112")
     implementation rfg.deobf("curse.maven:ae2-extended-life-570458:4673868") // AE2UEL 0.55.20
-    implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.690" // CrT 4.1.20
+    implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.698" // CrT 4.1.20.684
     implementation rfg.deobf("curse.maven:groovyscript-687577:4687204") // GrS 0.6.0
     implementation rfg.deobf("curse.maven:nuclearcraft-mod-226254:3784145")
-    //implementation (files("libs/groovyscript-0.6.1-dev.jar")) // GrS 0.6.1
+    compileOnlyApi ("com.cleanroommc:groovyscript:0.7.1") { transitive = false } // GrS 0.7.1
     implementation rfg.deobf("curse.maven:ctm-267602:2915363") // CTM 1.0.2.31
-    implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4480325")
     implementation rfg.deobf("curse.maven:draconic-evolution-223565:3431261")
     implementation rfg.deobf("curse.maven:brandons-core-231382:3408276")
     implementation rfg.deobf("curse.maven:draconicadditions-314515:3514704")
