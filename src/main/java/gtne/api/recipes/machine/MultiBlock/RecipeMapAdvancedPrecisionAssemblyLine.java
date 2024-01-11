@@ -15,7 +15,6 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import gtne.api.gui.GTNEGuiTextures;
-import gtne.api.recipes.GTNERecipeMaps;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

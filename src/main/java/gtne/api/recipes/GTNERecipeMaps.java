@@ -1,20 +1,21 @@
 package gtne.api.recipes;
 
+import crafttweaker.annotations.ZenRegister;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget.MoveType;
 import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.builders.*;
 import gregtech.api.util.AssemblyLineManager;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.gui.GTNEGuiTextures;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedDistillationTower;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapHighDimensionalStructureConstructionTesseract;
-import net.minecraft.client.gui.Gui;
-import net.minecraft.init.SoundEvents;
+import stanhebben.zenscript.annotations.ZenExpansion;
 import stanhebben.zenscript.annotations.ZenProperty;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedPrecisionAssemblyLine;
 
+@ZenExpansion("mods.gregtech.recipe.RecipeMaps")
+@ZenRegister
 public class GTNERecipeMaps {
 
     /**

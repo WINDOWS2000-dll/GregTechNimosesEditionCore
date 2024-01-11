@@ -41,7 +41,7 @@ dependencies {
     implementation rfg.deobf("curse.maven:llibrary-243298:3116493")
     implementation rfg.deobf("curse.maven:groovyscript-687577:4426112")
     implementation rfg.deobf("curse.maven:ae2-extended-life-570458:4673868") // AE2UEL 0.55.20
-    implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.684" // CrT 4.1.20.684
+    implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.698" // CrT 4.1.20.684
     implementation rfg.deobf("curse.maven:groovyscript-687577:4687204") // GrS 0.6.0
     implementation rfg.deobf("curse.maven:nuclearcraft-mod-226254:3784145")
     compileOnlyApi ("com.cleanroommc:groovyscript:0.7.1") { transitive = false } // GrS 0.7.1
