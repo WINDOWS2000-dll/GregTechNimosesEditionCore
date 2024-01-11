@@ -521,7 +521,7 @@ public class VanillaFix {
                             "RHG",
                             "CFC",
                     'P', OreDictUnifier.get(plank, Wood),
-                    'H', GTNEOreDictNames.fenceWood,
+                    'H', OreDictNames.fenceWood,
                     'F', OreDictUnifier.get(frameGt, StoneIngot),
                     'C', OreDictNames.stoneCobble,
                     'G', OreDictUnifier.get(gear, Iron),
