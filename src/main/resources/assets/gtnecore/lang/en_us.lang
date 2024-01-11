@@ -22,7 +22,7 @@ gtnecore.machine.fusion_reactor.uhv.name=Fusion Reactor Computer Mark4
 gtnecore.machine.fusion_reactor.uev.name=Fusion Reactor Computer Mark5
 
 #information text
-gtne.multi.data.remind=§cData will not update when the machine is disabled.
+
 
 #Shift
 gtnecore.tooltip.hold_shift=Hold §aShift§7 for more info
