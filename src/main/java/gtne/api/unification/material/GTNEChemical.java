@@ -1,7 +1,7 @@
 package gtne.api.unification.material;
 
 import gregtech.api.GTValues;
-import gregtech.api.fluids.fluidType.FluidTypes;
+import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.info.MaterialIconSet;
@@ -27,17 +27,15 @@ public class GTNEChemical {
 
         //Ammonium Chloride
         AMMONIUM_CHLORIDE = new Material.Builder(24601, gregtechId("ammonium_chloride"))
-                .fluid(FluidTypes.LIQUID, false)
+                .liquid(new FluidBuilder().temperature(611))
                 .color(0xd8d9cc)
-                .fluidTemp(300)
                 .build();
 
         //Potassium Disulfate
         POTASSIUM_DISULFATE = new Material.Builder(24602, gregtechId("potassium_disulfate"))
-                .fluid(FluidTypes.LIQUID, false)
+                .liquid(new FluidBuilder().temperature(598))
                 .dust()
                 .color(0x787446)
-                .fluidTemp(1123)
                 .build();
         POTASSIUM_DISULFATE.setFormula("K2S2O7", true);
         //Sodium Nitrate
@@ -49,22 +47,19 @@ public class GTNEChemical {
         SODIUM_NITRATE.setFormula("NaNO3", true);
         //Formic Acid
         FORMIC_ACID = new Material.Builder(24604, gregtechId("formic_acid"))
-                .fluid(FluidTypes.LIQUID, false)
+                .liquid(new FluidBuilder().temperature(300))
                 .color(0xbf9341)
-                .fluidTemp(300)
                 .build();
         FORMIC_ACID.setFormula("CH2O2", true);
         //Sodium Formate
         SODIUM_FORMATE = new Material.Builder(24605, gregtechId("sodium_formate"))
-                .fluid(FluidTypes.LIQUID, false)
+                .liquid(new FluidBuilder().temperature(300))
                 .color(0xbf9341)
-                .fluidTemp(300)
                 .build();
         //Silicon tetrachloride
         SILICON_TETRACHLORIDE = new Material.Builder(24606, gregtechId("silicon_tetrachloride"))
-                .fluid(FluidTypes.LIQUID, false)
+                .liquid(new FluidBuilder().temperature(204))
                 .color(0xffffff)
-                .fluidTemp(204)
                 .build();
 
     }
