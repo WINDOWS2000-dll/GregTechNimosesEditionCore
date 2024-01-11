@@ -32,14 +32,14 @@ public class GTNERecipeMaps {
 
     @ZenProperty
     public static final RecipeMap<AssemblyLineRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES =
-            new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20, false,  1, false,  10, false, 0, false, new AssemblyLineRecipeBuilder(), false)
+            new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20,  1,  10, 0, new AssemblyLineRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ASSEMBLER)
             .onRecipeBuild(AssemblyLineManager::createDefaultResearchRecipe);
 
     @ZenProperty
     public static final RecipeMap<ComputationRecipeBuilder> HIGH_DIMENTIONAL_STRUCTURE_CONSTRUCTION_TESSERACT =
-            new RecipeMapHighDimensionalStructureConstructionTesseract<>("high_dimensional_structure_construction_tesseract", 36, false, 1, false, 24, false, 0, false, new ComputationRecipeBuilder(), false)
+            new RecipeMapHighDimensionalStructureConstructionTesseract<>("high_dimensional_structure_construction_tesseract", 36, 1, 24, 0, new ComputationRecipeBuilder(), false)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.COMPUTATION);
 
@@ -58,6 +58,6 @@ public class GTNERecipeMaps {
 
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_DISTILLATION_TOWER =
-            new RecipeMapAdvancedDistillationTower<>("advanced_distillation_tower", 0, false, 1, false, 1, false, 16, false, new SimpleRecipeBuilder(), false);
+            new RecipeMapAdvancedDistillationTower<>("advanced_distillation_tower", 0, 1, 1, 16, new SimpleRecipeBuilder(), false);
 
 }
