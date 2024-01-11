@@ -93,6 +93,8 @@ public class VanillaFix {
             ModHandler.removeRecipeByName("gregtech:hopper");
         //Sign
             ModHandler.removeRecipeByName("minecraft:sign");
+        //Torch
+            ModHandler.removeRecipeByName("minecraft:torch");
     }
 
     private static void RemoveAddonRecipes() {
@@ -102,7 +104,7 @@ public class VanillaFix {
         ModHandler.removeRecipeByName("extrautils2:shortcut_stick");
         ModHandler.removeRecipeByName("extrautils2:shortcut_chest");
         ModHandler.removeRecipeByName("extrautils2:shortcut_hopper");
-
+        ModHandler.removeRecipeByName("tconstruct:gadgets/stone/stone_torch");
     }
 
     private static void Hard_Vanilla_Recipe() {
@@ -553,6 +555,12 @@ public class VanillaFix {
                         'F', OreDictUnifier.get(dustSmall, Flint, 1),
                         'S', OreDictUnifier.get(dustSmall, Stone, 1),
                         'G', new ItemStack(Blocks.GRAVEL)
+                );
+            //StoneDust Recipe
+                ModHandler.addShapedRecipe("easy_stone_dust", OreDictUnifier.get(dust, Stone, 2),
+                        "m  ",
+                                " C ",
+                        'C', OreDictNames.cobblestone
                 );
     }
 
