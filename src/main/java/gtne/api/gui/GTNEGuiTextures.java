@@ -13,4 +13,10 @@ public class GTNEGuiTextures {
 
     public static final TextureArea
             PROGRESSBAR_ADVANCED_DISTILLATION_TOWER = TextureArea.fullImage("textures/gui/progress_bar_advanced_distillation_tower.png");
+
+    public static final TextureArea
+            FUSION_REACTOR_MK4_TITLE = TextureArea.fullImage("textures/gui/widget/fusion_reactor_mk4_title.png");
+
+    public static final TextureArea
+            FUSION_REACTOR_MK5_TITLE = TextureArea.fullImage("textures/gui/widget/fusion_reactor_mk5_title.png");
 }
