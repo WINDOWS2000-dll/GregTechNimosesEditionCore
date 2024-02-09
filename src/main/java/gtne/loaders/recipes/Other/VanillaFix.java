@@ -41,13 +41,17 @@ public class VanillaFix {
         ModHandler.removeRecipeByOutput(new ItemStack(Blocks.FURNACE));
         //Bed Normal
         ModHandler.removeRecipeByOutput(new ItemStack(Blocks.BED));
+        //Bed GregTech Normal Recipe
+        for (String bed_recipe_name : BedRecipeName2) {
+            ModHandler.removeRecipeByName(bed_recipe_name);
+        }
         //Bed Stained
-        for (String bed_recipe_name : BedRecipeName) {
-            ModHandler.removeRecipeByName(bed_recipe_name + "white_bed");
+        for (String bed_recipe_name_1 : BedRecipeName) {
+            ModHandler.removeRecipeByName(bed_recipe_name_1 + "white_bed");
         }
         //Bed Vanilla
-        for (String bed_recipe_name_1 : BedRecipeName1) {
-            ModHandler.removeRecipeByName(bed_recipe_name_1);
+        for (String bed_recipe_name_2 : BedRecipeName1) {
+            ModHandler.removeRecipeByName(bed_recipe_name_2);
         }
         //Fence Normal
         ModHandler.removeRecipeByName("gregtech:fence");

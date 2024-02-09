@@ -33,6 +33,13 @@ public class GTNEUtil {
             "minecraft:brown_bed", "minecraft:blue_bed", "minecraft:black_bed", "minecraft:white_bed"
     };
 
+    public static final String[] BedRecipeName2 = new String[] {
+            "gregtech:yellow_bed", "gregtech:red_bed", "gregtech:purple_bed", "gregtech:pink_bed"
+            , "gregtech:orange_bed", "gregtech:lime_bed", "gregtech:magenta_bed", "gregtech:light_gray_bed"
+            , "gregtech:light_blue_bed", "gregtech:green_bed", "gregtech:gray_bed", "gregtech:cyan_bed"
+            , "gregtech:brown_bed", "gregtech:blue_bed", "gregtech:black_bed", "gregtech:white_bed"
+    };
+
     /**
      * @implNote This String Array not including Oak Wood Type
      */

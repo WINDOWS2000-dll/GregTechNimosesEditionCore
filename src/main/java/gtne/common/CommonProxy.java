@@ -1,6 +1,8 @@
 package gtne.common;
 
+import gregtech.api.GTValues;
 import gregtech.api.block.VariantItemBlock;
+import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gtne.GTNEValues;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
@@ -15,6 +17,7 @@ import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
 import gtne.loaders.recipes.Material.AlloyBlastFurnaceRecipe;
 import gtne.loaders.recipes.Material.EBFRecipes;
 import gtne.loaders.recipes.MultiBlock.*;
+import gtne.loaders.recipes.Other.GTNEWoodRecipeLoader;
 import gtne.loaders.recipes.Other.VanillaFix;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
@@ -23,6 +26,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.crafting.IRecipe;
 import gtne.api.util.GTNELog;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -83,6 +87,9 @@ public class CommonProxy {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         GTNELog.logger.info("Start Recipe Registration");
+        //Fusion tierをプロパティに書きこみ
+        FusionEUToStartProperty.registerFusionTier(GTValues.UHV, "(MK4)");
+        FusionEUToStartProperty.registerFusionTier(GTValues.UEV, "(MK5)");
         //常時読みこみ
         Assembly_Line_Recipe.init();
         Advanced_Precision_Assembly_Line.init();
@@ -90,6 +97,11 @@ public class CommonProxy {
         HDSCT_Recipe.init();
         VoltageController.init();
         UVSuperConductorCable.init();
+        //各種MOD読み込み時動作
+        if (Loader.isModLoaded("twilightforest")) {
+            GTNEWoodRecipeLoader.registerRecipes();
+            GTNEWoodRecipeLoader.registerUnificationInfo();
+        }
         //コンフィグ有効時のみ読み込み
         if (ConfigHolder.recipeoption.Harder_Vanilla_Recipe) {
             VanillaFix.init();

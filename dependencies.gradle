@@ -23,6 +23,7 @@
  */
 dependencies {
     implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848") // CCL 3.2.3.358
+    implementation rfg.deobf("curse.maven:the-twilight-forest-227639:3051450") //TF
     implementation rfg.deobf("curse.maven:cofh-world-271384:2920434")
     implementation rfg.deobf("curse.maven:cofh-core-69162:2920433")
     implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5050979") // CEu 2.8.6

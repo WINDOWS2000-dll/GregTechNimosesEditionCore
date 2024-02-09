@@ -21,6 +21,7 @@ import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiFluidHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.appeng.MetaTileEntityMEInputHatch;
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.client.GTNETextures;
 import gtne.common.Block.BlockGTNEWireCoil;
@@ -154,7 +155,7 @@ public class MetaTileEntityHighDimensionalStructureConstructionTesseract extends
 
     protected static TraceabilityPredicate FluidInputPredicate() {
         return metaTileEntities(MultiblockAbility.REGISTRY.get(MultiblockAbility.IMPORT_FLUIDS).stream()
-                .filter(mte -> !(mte instanceof MetaTileEntityMultiFluidHatch))
+                .filter(mte -> !(mte instanceof MetaTileEntityMultiFluidHatch) && !(mte instanceof MetaTileEntityMEInputHatch))
                 .toArray(MetaTileEntity[]::new));
     }
 
