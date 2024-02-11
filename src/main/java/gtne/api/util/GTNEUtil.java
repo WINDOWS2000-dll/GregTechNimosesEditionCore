@@ -44,7 +44,7 @@ public class GTNEUtil {
      * @implNote This String Array not including Oak Wood Type
      */
     public static final String[] WoodType_1 = new String[] {
-            "spruce", "birch", "jungle", "acacia", "dark_oak"
+            "oak", "spruce", "birch", "jungle", "acacia", "dark_oak"
     };
 
     /**

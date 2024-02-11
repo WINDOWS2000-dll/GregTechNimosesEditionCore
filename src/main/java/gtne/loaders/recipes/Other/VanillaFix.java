@@ -9,6 +9,7 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.blocks.MetaBlocks;
 import gtne.api.items.GTNEOreDictNames;
 import gtne.api.unification.material.GTNEMaterials;
 import gtne.common.ConfigHolder;
@@ -210,6 +211,26 @@ public class VanillaFix {
                     'U', new UnificationEntry(OrePrefix.plank, Materials.Wood),
                     'S', new ItemStack(Items.STICK)
             );
+            //Rubber Wood
+            ModHandler.addShapedRecipe("rubber_wood_fence", new ItemStack(MetaBlocks.RUBBER_WOOD_FENCE),
+                            "IPI",
+                                    "SUS",
+                                    "SUS",
+                    'I', OreDictUnifier.get(screw, Iron),
+                    'P', new ItemStack(MetaBlocks.PLANKS, 1, 0),
+                    'U', new UnificationEntry(OrePrefix.plank, Materials.Wood),
+                    'S', new ItemStack(Items.STICK)
+            );
+            //Treated Wood Fence
+            ModHandler.addShapedRecipe("treated_wood_fence", new ItemStack(MetaBlocks.TREATED_WOOD_FENCE),
+                            "IPI",
+                                    "SUS",
+                                    "SUS",
+                    'I', OreDictUnifier.get(screw, Iron),
+                    'P', new ItemStack(MetaBlocks.PLANKS, 1, 1),
+                    'U', new UnificationEntry(OrePrefix.plank, Materials.Wood),
+                    'S', new ItemStack(Items.STICK)
+            );
         //Fence Gate
             //Oak
             ModHandler.addShapedRecipe("oak_fence_gate", new ItemStack(Blocks.OAK_FENCE_GATE),
@@ -252,11 +273,27 @@ public class VanillaFix {
                     'I', OreDictUnifier.get(screw, Iron)
             );
             //Dark Oak
-            ModHandler.addShapedRecipe("dark_oak_fance_gate", new ItemStack(Blocks.DARK_OAK_FENCE_GATE),
+            ModHandler.addShapedRecipe("dark_oak_fence_gate", new ItemStack(Blocks.DARK_OAK_FENCE_GATE),
                     "   ",
                             "FIF",
                             "FIF",
                     'F', new ItemStack(Blocks.DARK_OAK_FENCE),
+                    'I', OreDictUnifier.get(screw, Iron)
+            );
+            //Rubber Wood
+            ModHandler.addShapedRecipe("rubber_wood_fence_gate", new ItemStack(MetaBlocks.RUBBER_WOOD_FENCE_GATE),
+                    "   ",
+                            "FIF",
+                            "FIF",
+                    'F', new ItemStack(MetaBlocks.RUBBER_WOOD_FENCE),
+                    'I', OreDictUnifier.get(screw, Iron)
+            );
+            //Treated Wood
+            ModHandler.addShapedRecipe("treated_wood_fence_gate", new ItemStack(MetaBlocks.TREATED_WOOD_FENCE_GATE),
+                    "   ",
+                            "FIF",
+                            "FIF",
+                    'F', new ItemStack(MetaBlocks.TREATED_WOOD_FENCE),
                     'I', OreDictUnifier.get(screw, Iron)
             );
         //Brick Line
