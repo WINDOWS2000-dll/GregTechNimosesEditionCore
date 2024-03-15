@@ -13,10 +13,12 @@ import gregtech.common.blocks.MetaBlocks;
 import gtne.api.items.GTNEOreDictNames;
 import gtne.api.unification.material.GTNEMaterials;
 import gtne.common.ConfigHolder;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.oredict.OreDictionary;
 
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
@@ -110,6 +112,7 @@ public class VanillaFix {
         ModHandler.removeRecipeByName("extrautils2:shortcut_chest");
         ModHandler.removeRecipeByName("extrautils2:shortcut_hopper");
         ModHandler.removeRecipeByName("tconstruct:gadgets/stone/stone_torch");
+        ModHandler.removeFurnaceSmelting(new ItemStack(Block.getBlockById(OreDictionary.getOreID("logWood"))));
     }
 
     private static void Hard_Vanilla_Recipe() {

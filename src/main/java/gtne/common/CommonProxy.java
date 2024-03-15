@@ -4,6 +4,7 @@ import gregtech.api.GTValues;
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gtne.GTNEValues;
+import gtne.api.capabilities.energy.CapabilityLongEnergy;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.Adjustment.UVSuperConductorCable;
@@ -48,6 +49,8 @@ public class CommonProxy {
         GTNEMetaItems.init();
         GTNELog.logger.info("Registering MetaTileEntities...");
         GTNEMetaTileEntities.init();
+
+        CapabilityLongEnergy.register(); 
     }
 
     public void init(FMLInitializationEvent e) {

@@ -287,7 +287,6 @@ public class PlatLines {
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, IRIDIUM_CHLORIDE, 1)
                 .input(dust, Calcium, 1)
-                .output(dust, METALLIC_SLUDGE_DUST_RESIDUE, 1)
                 .output(dust, Iridium, 1)
                 .output(dust, CalciumChloride, 3)
                 .EUt(VA[EV]).duration(300)
@@ -511,7 +510,6 @@ public class PlatLines {
                 .output(dust, Palladium, 2)
                 .fluidOutputs(Ammonia.getFluid(4000))
                 .fluidOutputs(Ethylene.getFluid(1000))
-                .fluidOutputs(Water.getFluid(1000))
                 .EUt(VA[LV]).duration(250)
                 .buildAndRegister();
 

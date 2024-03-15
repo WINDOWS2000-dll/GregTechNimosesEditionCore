@@ -42,6 +42,7 @@ import gregtech.common.metatileentities.MetaTileEntities;
 import gtne.api.gui.GTNEGuiTextures;
 import gtne.common.Block.GTNEBlockMetalCasing;
 import gtne.common.Block.GTNEMetaBlock;
+import gtne.common.metatileentities.GTNEMetaTileEntities;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
@@ -162,7 +163,7 @@ public class MetaTileLateGameEntityFusionReactor extends RecipeMapMultiblockCont
                 .aisle("####CC###CC####", "###w##WGW##s###", "####CC###CC####")
                 .aisle("######DCD######", "####GGKKKGG####", "######UCU######")
                 .aisle("###############", "######EME######", "###############")
-                .where('M', MetaTileEntities.FUSION_REACTOR[tier - UHV], EnumFacing.SOUTH)
+                .where('M', GTNEMetaTileEntities.LGFUSION_REACTOR[tier - 5], EnumFacing.SOUTH)
                 .where('C', getCasingState())
                 .where('G', MetaBlocks.TRANSPARENT_CASING.getState(
                         BlockGlassCasing.CasingType.FUSION_GLASS))

@@ -376,6 +376,7 @@ public class ComputationRecipes {
                 .input(OPTICAL_PIPES[0],4)
                 .fluidInputs(Indalloy_140.getFluid(1152))
                 .fluidInputs(Polybenzimidazole.getFluid(576))
+                .output(OBJECT_HOLDER, 1)
                 .EUt(100_000).duration(2400)
                 .buildAndRegister();
 

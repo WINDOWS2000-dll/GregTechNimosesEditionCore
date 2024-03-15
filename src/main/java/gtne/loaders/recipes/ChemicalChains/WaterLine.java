@@ -147,6 +147,7 @@ public class WaterLine {
                 .input(dust, Collagen, 4)
                 .fluidInputs(Purified_Water_Grade_D.getFluid(3000))
                 .fluidInputs(PhosphoricAcid.getFluid(1000))
+                .output(dust, GelatinMixture, 1)
                 .EUt(480).duration(1600)
                 .cleanroom(CleanroomType.STERILE_CLEANROOM)
                 .buildAndRegister();
