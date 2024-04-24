@@ -27,6 +27,8 @@ public class GTNE_windows_material {
         NaquadahEnriched.addFlags(GENERATE_DOUBLE_PLATE);
         //UraniumRhodiumDinaquadide
         UraniumRhodiumDinaquadide.addFlags(GENERATE_SPRING);
+        //Naquadah Alloy
+        NaquadahAlloy.addFlags(GENERATE_ROUND);
 
         //24001 ~ 24500
 

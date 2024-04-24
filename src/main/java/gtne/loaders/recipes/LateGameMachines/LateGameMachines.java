@@ -8,8 +8,10 @@ import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockWireCoil;
 import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.metatileentities.MetaTileEntities;
 import gtne.common.ConfigHolder;
 
+import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -43,7 +45,7 @@ public class LateGameMachines {
 
         //Electric Furnace
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(wireGtQuadruple, NiobiumTitanium, 6)
                 .input(VOLTAGE_COIL_LuV, 4)
@@ -62,7 +64,7 @@ public class LateGameMachines {
 
         //Macerator
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 2)
                 .input(gear, TungstenSteel, 2)
@@ -83,7 +85,7 @@ public class LateGameMachines {
 
         //Alloy Smelter
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.RTM_ALLOY, 2))
                 .input(wireGtQuadruple, HSSG, 2)
@@ -104,7 +106,7 @@ public class LateGameMachines {
 
         //Arc Furnace
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 6)
                 .input(dust, Graphite, 16)
                 .input(cableGtOctal, HSSG, 2)
@@ -123,7 +125,7 @@ public class LateGameMachines {
 
         //Assembling Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(circuit, MarkerMaterials.Tier.LuV, 8)
                 .input(ROBOT_ARM_LuV, 2)
@@ -148,7 +150,7 @@ public class LateGameMachines {
 
         //Auto Clave
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PUMP_LuV, 2)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS, 4))
@@ -171,7 +173,7 @@ public class LateGameMachines {
 
         //Bending Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 4)
@@ -191,7 +193,7 @@ public class LateGameMachines {
 
         //Brewery
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PUMP_LuV, 2)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS, 4))
@@ -212,7 +214,7 @@ public class LateGameMachines {
 
         //Canning Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PUMP_LuV, 2)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS, 6))
@@ -232,7 +234,7 @@ public class LateGameMachines {
 
         //Centrifuge
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 8)
                 .input(ELECTRIC_MOTOR_LuV, 4)
                 .input(gear, HSSG, 2)
@@ -254,7 +256,7 @@ public class LateGameMachines {
 
         //Chemical Bath
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(CONVEYOR_MODULE_LuV, 3)
                 .input(ELECTRIC_PUMP_LuV, 2)
@@ -275,7 +277,7 @@ public class LateGameMachines {
 
         //Chemical Reactor
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PUMP_LuV, 2)
                 .input(ELECTRIC_MOTOR_LuV, 2)
@@ -300,7 +302,7 @@ public class LateGameMachines {
 
         //Compressor
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 2)
@@ -321,7 +323,7 @@ public class LateGameMachines {
 
         //Cutting Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 2)
                 .input(CONVEYOR_MODULE_LuV, 2)
@@ -343,7 +345,7 @@ public class LateGameMachines {
 
         //Distillery
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 2)
                 .input(spring, HSSG, 2)
@@ -364,7 +366,7 @@ public class LateGameMachines {
 
         //Electrolyzer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(wireGtDouble, Osmium, 4)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS, 2))
@@ -384,7 +386,7 @@ public class LateGameMachines {
 
         //Electromagnetic Separator
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(CONVEYOR_MODULE_LuV, 2)
                 .input(cableGtOctal, Graphene, 2)
@@ -404,7 +406,7 @@ public class LateGameMachines {
 
         //Extractor
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 2)
                 .input(ELECTRIC_PUMP_LuV, 2)
@@ -426,7 +428,7 @@ public class LateGameMachines {
 
         //Extruder
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 4)
                 .input(wireGtQuadruple, HSSG, 4)
@@ -449,7 +451,7 @@ public class LateGameMachines {
 
         //Fermenter
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 2)
                 .input(pipeNormalFluid, Polybenzimidazole, 2)
@@ -469,7 +471,7 @@ public class LateGameMachines {
 
         //FluidHeater
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 4)
                 .input(pipeNormalFluid, NiobiumTitanium, 2)
@@ -491,7 +493,7 @@ public class LateGameMachines {
 
         //Fluid Solidifier
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PUMP_LuV, 4)
                 .input(pipeNormalFluid, NiobiumTitanium, 2)
@@ -512,7 +514,7 @@ public class LateGameMachines {
 
         //Forge Hammer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 2)
                 .input(gear, HSSG, 2)
@@ -532,7 +534,7 @@ public class LateGameMachines {
 
         //Forming Press
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 4)
                 .input(gear, HSSG, 2)
@@ -552,7 +554,7 @@ public class LateGameMachines {
 
         //Lathe
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 2)
                 .input(ELECTRIC_MOTOR_LuV, 2)
@@ -573,7 +575,7 @@ public class LateGameMachines {
 
         //Scanner
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 8)
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(EMITTER_LuV, 4)
@@ -594,7 +596,7 @@ public class LateGameMachines {
 
         //Mixer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 2)
                 .input(ELECTRIC_PUMP_LuV, 1)
@@ -615,7 +617,7 @@ public class LateGameMachines {
 
         //Ore Washer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 2)
                 .input(ELECTRIC_PUMP_LuV, 1)
@@ -637,7 +639,7 @@ public class LateGameMachines {
 
         //Packager
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ROBOT_ARM_LuV, 2)
                 .input(CONVEYOR_MODULE_LuV, 2)
@@ -657,7 +659,7 @@ public class LateGameMachines {
 
         //Gas Collector
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 2)
                 .input(ELECTRIC_PUMP_LuV, 4)
                 .input(FLUID_FILTER, 4)
@@ -678,7 +680,7 @@ public class LateGameMachines {
 
         //Polarizer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 1)
                 .input(stickLong, Osmium, 2)
                 .input(wireGtOctal, Graphene, 4)
@@ -697,7 +699,7 @@ public class LateGameMachines {
 
         //Precision Laser Engraver
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 6)
                 .input(EMITTER_LuV, 2)
                 .input(ELECTRIC_PISTON_LUV, 4)
@@ -717,7 +719,7 @@ public class LateGameMachines {
 
         //Sifting Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_PISTON_LUV, 4)
                 .input(ITEM_FILTER, 4)
@@ -736,7 +738,7 @@ public class LateGameMachines {
 
         //Thermal Centrifuge
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 4)
                 .input(wireGtQuadruple, HSSG, 4)
@@ -757,7 +759,7 @@ public class LateGameMachines {
 
         //WireMill
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 4)
                 .input(ELECTRIC_MOTOR_LuV, 8)
                 .input(HIGH_POWER_INTEGRATED_CIRCUIT, 8)
@@ -775,7 +777,7 @@ public class LateGameMachines {
 
         //Circuit Assembler
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(circuit, MarkerMaterials.Tier.LuV, 16)
                 .input(ROBOT_ARM_LuV, 2)
@@ -800,7 +802,7 @@ public class LateGameMachines {
 
         //RockBreaker
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.LuV, 2)
                 .input(ELECTRIC_PISTON_LUV, 1)
                 .input(ELECTRIC_MOTOR_LuV, 1)
@@ -821,7 +823,7 @@ public class LateGameMachines {
 
         //World Accelerator
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .input(HULL[LuV])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 32)
                 .input(circuit, MarkerMaterials.Tier.LuV, 64)
                 .input(FIELD_GENERATOR_LuV, 8)
@@ -856,7 +858,7 @@ public class LateGameMachines {
 
         //Electric Furnace
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(wireGtQuadruple, VanadiumGallium, 6)
                 .input(VOLTAGE_COIL_ZPM, 4)
@@ -875,7 +877,7 @@ public class LateGameMachines {
 
         //Macerator
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 2)
                 .input(gear, HSSS, 2)
@@ -896,7 +898,7 @@ public class LateGameMachines {
 
         //Alloy Smelter
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.HSS_G, 2))
                 .input(wireGtQuadruple, Naquadah, 2)
@@ -917,7 +919,7 @@ public class LateGameMachines {
 
         //Arc Furnace
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 6)
                 .input(dust, Graphite, 24)
                 .input(cableGtOctal, Naquadah, 2)
@@ -936,7 +938,7 @@ public class LateGameMachines {
 
         //Assembling Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.UV, 4)
                 .input(circuit, MarkerMaterials.Tier.ZPM, 8)
                 .input(ROBOT_ARM_ZPM, 2)
@@ -961,7 +963,7 @@ public class LateGameMachines {
 
         //Auto Clave
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PUMP_ZPM, 2)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS, 4))
@@ -984,7 +986,7 @@ public class LateGameMachines {
 
         //Bending Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 4)
@@ -1004,7 +1006,7 @@ public class LateGameMachines {
 
         //Brewery
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PUMP_ZPM, 2)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS, 4))
@@ -1025,7 +1027,7 @@ public class LateGameMachines {
 
         //Canning Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PUMP_ZPM, 2)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS, 6))
@@ -1045,7 +1047,7 @@ public class LateGameMachines {
 
         //Centrifuge
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 8)
                 .input(ELECTRIC_MOTOR_ZPM, 4)
                 .input(gear, NaquadahAlloy, 2)
@@ -1067,7 +1069,7 @@ public class LateGameMachines {
 
         //Chemical Bath
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(CONVEYOR_MODULE_ZPM, 3)
                 .input(ELECTRIC_PUMP_ZPM, 2)
@@ -1088,7 +1090,7 @@ public class LateGameMachines {
 
         //Chemical Reactor
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PUMP_ZPM, 2)
                 .input(ELECTRIC_MOTOR_ZPM, 2)
@@ -1113,7 +1115,7 @@ public class LateGameMachines {
 
         //Compressor
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 2)
@@ -1134,7 +1136,7 @@ public class LateGameMachines {
 
         //Cutting Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 2)
                 .input(CONVEYOR_MODULE_ZPM, 2)
@@ -1156,7 +1158,7 @@ public class LateGameMachines {
 
         //Distillery
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 2)
                 .input(spring, NaquadahAlloy, 2)
@@ -1177,7 +1179,7 @@ public class LateGameMachines {
 
         //Electrolyzer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(wireGtDouble, YttriumBariumCuprate, 4)
                 .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS, 2))
@@ -1197,7 +1199,7 @@ public class LateGameMachines {
 
         //Electromagnetic Separator
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(CONVEYOR_MODULE_ZPM, 2)
                 .input(cableGtOctal, Graphene, 2)
@@ -1217,7 +1219,7 @@ public class LateGameMachines {
 
         //Extractor
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 2)
                 .input(ELECTRIC_PUMP_ZPM, 2)
@@ -1239,7 +1241,7 @@ public class LateGameMachines {
 
         //Extruder
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 4)
                 .input(wireGtQuadruple, Naquadah, 4)
@@ -1262,7 +1264,7 @@ public class LateGameMachines {
 
         //Fermenter
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 2)
                 .input(pipeNormalFluid, Naquadah, 2)
@@ -1282,7 +1284,7 @@ public class LateGameMachines {
 
         //FluidHeater
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 4)
                 .input(pipeNormalFluid, Naquadah, 2)
@@ -1304,7 +1306,7 @@ public class LateGameMachines {
 
         //Fluid Solidifier
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PUMP_ZPM, 4)
                 .input(pipeNormalFluid, Naquadah, 2)
@@ -1325,7 +1327,7 @@ public class LateGameMachines {
 
         //Forge Hammer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 2)
                 .input(gear, NaquadahAlloy, 2)
@@ -1345,7 +1347,7 @@ public class LateGameMachines {
 
         //Forming Press
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 4)
                 .input(gear, NaquadahAlloy, 2)
@@ -1365,7 +1367,7 @@ public class LateGameMachines {
 
         //Lathe
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 2)
                 .input(ELECTRIC_MOTOR_ZPM, 2)
@@ -1386,7 +1388,7 @@ public class LateGameMachines {
 
         //Scanner
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 8)
                 .input(circuit, MarkerMaterials.Tier.UV, 4)
                 .input(EMITTER_ZPM, 4)
@@ -1407,7 +1409,7 @@ public class LateGameMachines {
 
         //Mixer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 2)
                 .input(ELECTRIC_PUMP_ZPM, 1)
@@ -1428,7 +1430,7 @@ public class LateGameMachines {
 
         //Ore Washer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 2)
                 .input(ELECTRIC_PUMP_ZPM, 1)
@@ -1450,7 +1452,7 @@ public class LateGameMachines {
 
         //Packager
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ROBOT_ARM_ZPM, 2)
                 .input(CONVEYOR_MODULE_ZPM, 2)
@@ -1470,7 +1472,7 @@ public class LateGameMachines {
 
         //Gas Collector
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 2)
                 .input(ELECTRIC_PUMP_ZPM, 4)
                 .input(FLUID_FILTER, 8)
@@ -1491,7 +1493,7 @@ public class LateGameMachines {
 
         //Polarizer
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 1)
                 .input(stickLong, Osmiridium, 2)
                 .input(wireGtOctal, Graphene, 4)
@@ -1510,7 +1512,7 @@ public class LateGameMachines {
 
         //Precision Laser Engraver
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 6)
                 .input(EMITTER_ZPM, 2)
                 .input(ELECTRIC_PISTON_ZPM, 4)
@@ -1530,7 +1532,7 @@ public class LateGameMachines {
 
         //Sifting Machine
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_PISTON_ZPM, 4)
                 .input(ITEM_FILTER, 8)
@@ -1549,7 +1551,7 @@ public class LateGameMachines {
 
         //Thermal Centrifuge
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 4)
                 .input(wireGtQuadruple, Naquadah, 4)
@@ -1570,7 +1572,7 @@ public class LateGameMachines {
 
         //WireMill
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 4)
                 .input(ELECTRIC_MOTOR_ZPM, 8)
                 .input(HIGH_POWER_INTEGRATED_CIRCUIT, 16)
@@ -1588,7 +1590,7 @@ public class LateGameMachines {
 
         //Circuit Assembler
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.UV, 4)
                 .input(circuit, MarkerMaterials.Tier.ZPM, 16)
                 .input(ROBOT_ARM_ZPM, 2)
@@ -1613,7 +1615,7 @@ public class LateGameMachines {
 
         //RockBreaker
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.ZPM, 2)
                 .input(ELECTRIC_PISTON_ZPM, 1)
                 .input(ELECTRIC_MOTOR_ZPM, 1)
@@ -1634,7 +1636,7 @@ public class LateGameMachines {
 
         //World Accelerator
         RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .input(HULL[ZPM])
                 .input(circuit, MarkerMaterials.Tier.UV, 32)
                 .input(circuit, MarkerMaterials.Tier.ZPM, 64)
                 .input(FIELD_GENERATOR_ZPM, 8)
@@ -1659,13 +1661,20 @@ public class LateGameMachines {
     private static void RemoveUVMachineRecipe() {
 
         for (String name : GTNEMachineRecipeName) {
-            //ModHandler.removeRecipeByName("gregtech:gregtech.machine." + name + ".uv");
+            ModHandler.removeRecipeByName("gregtech:gregtech.machine." + name + ".uv");
         }
 
     }
 
     //UV Machine Recipe Change
     private static void ChangeUVMachineRecipe() {
+
+        /*
+        RecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(HULL[UV])
+
+         */
+
     }
 
 }

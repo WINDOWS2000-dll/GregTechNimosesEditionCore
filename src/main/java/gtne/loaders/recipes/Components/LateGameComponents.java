@@ -320,7 +320,7 @@ public class LateGameComponents {
                 .fluidInputs(Lubricant.getFluid(750))
                 .output(ELECTRIC_PISTON_ZPM, 1)
                 .scannerResearch(b -> b
-                        .researchStack(ELECTRIC_PISTON_ZPM.getStackForm())
+                        .researchStack(ELECTRIC_PISTON_LUV.getStackForm())
                         .EUt(7680)
                         .duration(7200))
                 .EUt(30720).duration(600)
