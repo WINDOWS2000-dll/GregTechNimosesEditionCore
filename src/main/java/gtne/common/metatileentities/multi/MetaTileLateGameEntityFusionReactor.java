@@ -369,7 +369,7 @@ public class MetaTileLateGameEntityFusionReactor extends RecipeMapMultiblockCont
 
         //Title
         if (tier == UHV) {
-            builder.widget(new ImageWidget(64, 9, 71, 12, GTNEGuiTextures.FUSION_REACTOR_MK4_TITLE).setIgnoreColor(true));
+            builder.widget(new ImageWidget(60, 9, 71, 12, GTNEGuiTextures.FUSION_REACTOR_MK4_TITLE).setIgnoreColor(true));
         } else if (tier == UEV) {
             builder.widget(new ImageWidget(64, 9, 71, 12, GTNEGuiTextures.FUSION_REACTOR_MK5_TITLE).setIgnoreColor(true));
 
