@@ -137,6 +137,7 @@ public class SiliconTech {
                 .fluidInputs(HIGH_PURITY_SILICON.getFluid(18432))
                 .output(NAQUADAH_BOULE, 1)
                 .EUt(1920).duration(60000)
+                .blastFurnaceTemp(5600)
                 .buildAndRegister();
 
 

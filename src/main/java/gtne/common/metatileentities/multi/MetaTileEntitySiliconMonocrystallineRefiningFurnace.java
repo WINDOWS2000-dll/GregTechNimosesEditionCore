@@ -166,7 +166,7 @@ public class MetaTileEntitySiliconMonocrystallineRefiningFurnace extends RecipeM
 
     @Override
     public boolean hasMufflerMechanics() {
-        return true;
+        return false;
     }
 
     @Override
