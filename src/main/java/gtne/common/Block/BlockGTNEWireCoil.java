@@ -76,14 +76,14 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
     }
 
     public enum CoilType implements IStringSerializable, IHeatingCoilBlockStats {
-        DRACONIUM("draconium", 18000, 16, 10, GTNEMaterials.Draconium),
-        AWAKENEDDRACONIUM("awakeneddraconium", 24000, 20, 12, GTNEMaterials.Awakened_Draconium),
-        CELESTIALLIUM("celestiallium", 28000, 24, 14, GTNEMaterials.Celestiallium),
-        LUNATIUM("lunatium", 36000, 28, 16, GTNEMaterials.Lunatium),
-        SACREDMETAL("sacred", 48000, 32, 18, GTNEMaterials.Sacred_Metal),
-        STELLARIUM("stellarium", 56000, 36, 22, GTNEMaterials.Stellarium),
-        FRACTALLIUM("fractallium", 64000, 48, 28, GTNEMaterials.Fractallium),
-        ENTROPIUM("entropium", 128000, 60, 32, GTNEMaterials.Entropium);
+        DRACONIUM("draconium", 18000, 16, 10, 9, GTNEMaterials.Draconium),
+        AWAKENEDDRACONIUM("awakeneddraconium", 24000, 20, 12, 10, GTNEMaterials.Awakened_Draconium),
+        CELESTIALLIUM("celestiallium", 28000, 24, 14, 11, GTNEMaterials.Celestiallium),
+        LUNATIUM("lunatium", 36000, 28, 16, 12, GTNEMaterials.Lunatium),
+        SACREDMETAL("sacred", 48000, 32, 18, 13, GTNEMaterials.Sacred_Metal),
+        STELLARIUM("stellarium", 56000, 36, 22, 14, GTNEMaterials.Stellarium),
+        FRACTALLIUM("fractallium", 64000, 48, 28, 15, GTNEMaterials.Fractallium),
+        ENTROPIUM("entropium", 128000, 60, 32, 16, GTNEMaterials.Entropium);
 
 
 
@@ -91,13 +91,15 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
         private final int coilTemperature;
         private final int level;
         private final int energyDiscount;
+        private final int tier;
         private final gregtech.api.unification.material.Material material;
 
-        CoilType(String name, int coilTemperature, int level, int energyDiscount, gregtech.api.unification.material.Material material) {
+        CoilType(String name, int coilTemperature, int level, int energyDiscount, int tier, gregtech.api.unification.material.Material material) {
             this.name = name;
             this.coilTemperature = coilTemperature;
             this.level = level;
             this.energyDiscount = energyDiscount;
+            this.tier = tier;
             this.material = material;
         }
 
@@ -119,7 +121,7 @@ public class BlockGTNEWireCoil extends VariantActiveBlock<BlockGTNEWireCoil.Coil
         }
 
         public int getTier() {
-            return this.ordinal();
+            return this.tier;
         }
 
         @Nullable
