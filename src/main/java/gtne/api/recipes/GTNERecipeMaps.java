@@ -61,4 +61,10 @@ public class GTNERecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_DISTILLATION_TOWER =
             new RecipeMapAdvancedDistillationTower<>("advanced_distillation_tower", 0, 1, 1, 16, new SimpleRecipeBuilder(), false);
 
+    @ZenProperty
+    public static final RecipeMap<BlastRecipeBuilder> SiliconMonocrystallineRefiningFurnace =
+            new RecipeMap<>("silicon_monocrystalline_refining_furnace", 6, 1, 3, 0, new BlastRecipeBuilder(), false)
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
+                    .setSound(GTSoundEvents.FURNACE);
+
 }

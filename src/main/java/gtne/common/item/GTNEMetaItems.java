@@ -43,6 +43,10 @@ public final class GTNEMetaItems {
     public static MetaItem<?>.MetaValueItem TEMPORALLY_PROCESSOR_ASSEMBLY_UXV;
     public static MetaItem<?>.MetaValueItem TEMPORALLY_COMPUTER_OPV;
     public static MetaItem<?>.MetaValueItem TEMPORALLY_MAINFRAME_MAX;
+    public static MetaItem<?>.MetaValueItem STEEL_REINFORCED_WIRE;
+    public static MetaItem<?>.MetaValueItem SILICON_CRYSTAL;
+    public static MetaItem<?>.MetaValueItem VANADIUM_STEEL_REINFORCED_WIRE;
+    public static MetaItem<?>.MetaValueItem TUNGSTEN_CARBIDE_REINFORCED_WIRE;
 
     public static void init() {
         GTNEMetaItem1 metaItem1 = new GTNEMetaItem1();

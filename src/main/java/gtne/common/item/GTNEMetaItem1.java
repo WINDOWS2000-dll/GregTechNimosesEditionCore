@@ -52,6 +52,10 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         BRICK_COMPOUND = addItem(27, "brick_compound");
         ADVANCED_STORAGE_HOUSING = addItem(28, "advanced_storage_housing");
         FLUID_STORAGE_HOUSING = addItem(29, "fluid_storage_housing");
+        STEEL_REINFORCED_WIRE = addItem(30, "steel_reinforced_wire");
+        SILICON_CRYSTAL = addItem(31, "silicon_crystal");
+        VANADIUM_STEEL_REINFORCED_WIRE = addItem(32, "vanadium_steel_reinforced_wire");
+        TUNGSTEN_CARBIDE_REINFORCED_WIRE = addItem(33, "tungsten_carbide_reinforced_wire");
 
     }
 }

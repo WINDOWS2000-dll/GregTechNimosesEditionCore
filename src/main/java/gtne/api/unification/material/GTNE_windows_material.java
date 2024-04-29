@@ -29,6 +29,10 @@ public class GTNE_windows_material {
         UraniumRhodiumDinaquadide.addFlags(GENERATE_SPRING);
         //Naquadah Alloy
         NaquadahAlloy.addFlags(GENERATE_ROUND);
+        //Vanadium Steel
+        VanadiumSteel.addFlags(GENERATE_FINE_WIRE);
+        //Tungsten Carbide
+        TungstenCarbide.addFlags(GENERATE_FINE_WIRE);
 
         //24001 ~ 24500
 

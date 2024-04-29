@@ -26,6 +26,7 @@ public class GTNEMetaTileEntities {
     public static final MetaTileLateGameEntityFusionReactor[] LGFUSION_REACTOR = new MetaTileLateGameEntityFusionReactor[2];
     public static MetaTileEntityHighDimensionalStructureConstructionTesseract HIGH_DIMENSIONAL_STRUCTURE_CONSTRUCTION_TESSERACT;
     public static MetaTileEntityAdvancedDistilleryTower AdvancedDistillationTower;
+    public static MetaTileEntitySiliconMonocrystallineRefiningFurnace SiliconMonocrystallineRefiningFurnace;
 
     //Hatches
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH = new MetaTileEntityEnergyHatch[1];
@@ -71,6 +72,8 @@ public class GTNEMetaTileEntities {
         LGFUSION_REACTOR[1] = registerMetaTileEntity(12003, new MetaTileLateGameEntityFusionReactor(gtneId("fusion_reactor.uev"), UEV));
         HIGH_DIMENSIONAL_STRUCTURE_CONSTRUCTION_TESSERACT = registerMetaTileEntity(12004, new MetaTileEntityHighDimensionalStructureConstructionTesseract(gtneId("high_dimensional_structure_construction_tesseract")));
         AdvancedDistillationTower = registerMetaTileEntity(12005, new MetaTileEntityAdvancedDistilleryTower(gtneId("advanced_distillation_tower")));
+        SiliconMonocrystallineRefiningFurnace = registerMetaTileEntity(12006, new MetaTileEntitySiliconMonocrystallineRefiningFurnace(gtneId("silicon_monocrystalline_refining_furnace")));
+
 
         //HighTierEnergyHatch 13000~13031
         if (ConfigHolder.metaTileEntityOptions.HigherTierEnergyHatch) {
