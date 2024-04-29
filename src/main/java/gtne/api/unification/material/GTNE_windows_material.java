@@ -39,6 +39,7 @@ public class GTNE_windows_material {
         HIGH_PURITY_SILICON = new Material.Builder(24001, gregtechId("high_purity_silicon"))
                 .dust()
                 .ingot()
+                .liquid(new FluidBuilder().temperature(2273))
                 .color(0x2a2a2a)
                 .iconSet(MaterialIconSet.METALLIC)
                 .flags(GENERATE_PLATE, GENERATE_ROD)
