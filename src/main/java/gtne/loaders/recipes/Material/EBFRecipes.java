@@ -20,6 +20,7 @@ import net.minecraftforge.fml.common.Mod;
 import cofh.thermalfoundation.init.TFFluids;
 import scala.collection.script.End;
 import gtne.common.ConfigHolder;
+import scala.collection.script.Remove;
 
 import javax.annotation.Nonnull;
 
@@ -36,7 +37,12 @@ public class EBFRecipes {
     public static void init() {
         if (ConfigHolder.recipeoption.Harder_EBF_Recipe) {
             EBFRecipe();
+            RemoveOtherRecipe();
         }
+    }
+
+    private static void RemoveOtherRecipe() {
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Neutronium, 1));
     }
 
     private static void EBFRecipe() {

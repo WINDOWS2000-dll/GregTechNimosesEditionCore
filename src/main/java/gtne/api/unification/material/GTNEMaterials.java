@@ -94,6 +94,9 @@ public class GTNEMaterials {
     public static Material Elementium;
     public static Material Thaumium;
     public static Material VoidMetal;
+    public static Material RawNeutronium;
+    public static Material SamariumEuropiumNeodymiumTrinaquadide;
+    public static Material SamariumEuropiumNeodymiumTrinaquadideMagnetic;
 
     public static Material Enderium_Base;
 

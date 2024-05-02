@@ -33,6 +33,8 @@ public class GTNE_windows_material {
         VanadiumSteel.addFlags(GENERATE_FINE_WIRE);
         //Tungsten Carbide
         TungstenCarbide.addFlags(GENERATE_FINE_WIRE);
+        //Neutronium
+        Neutronium.addFlags(GENERATE_SMALL_GEAR, GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_FINE_WIRE, GENERATE_FOIL, GENERATE_RING, GENERATE_ROTOR);
 
         //24001 ~ 24500
 
@@ -318,6 +320,36 @@ public class GTNE_windows_material {
                 .cableProperties(2048, 4, 4, false)
                 .element(Vid)
                 .build();
+
+        RawNeutronium = new Material.Builder(24021, gregtechId("raw_neutronium"))
+                .dust()
+                .color(0xeef728)
+                .build();
+
+        SamariumEuropiumNeodymiumTrinaquadide = new Material.Builder(24022, gregtechId("samarium_europium_neodymium_trinaquadide"))
+                .dust()
+                .ingot()
+                .liquid(new FluidBuilder().temperature(7150))
+                .color(0x04660d)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .components(Samarium, 2, Europium, 3, Neodymium, 5, Naquadah, 3)
+                .build();
+
+        SamariumEuropiumNeodymiumTrinaquadideMagnetic = new Material.Builder(24023, gregtechId("samarium_europium_neodymium_trinaquadide_magnetic"))
+                .ingot()
+                .color(0x04660d)
+                .iconSet(MaterialIconSet.MAGNETIC)
+                .flags(GENERATE_LONG_ROD, IS_MAGNETIC)
+                .components(SamariumEuropiumNeodymiumTrinaquadide, 1)
+                .ingotSmeltInto(SamariumEuropiumNeodymiumTrinaquadide)
+                .arcSmeltInto(SamariumEuropiumNeodymiumTrinaquadide)
+                .macerateInto(SamariumEuropiumNeodymiumTrinaquadide)
+                .build();
+        SamariumEuropiumNeodymiumTrinaquadide.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumEuropiumNeodymiumTrinaquadideMagnetic);
+
+
+
 
 
 
