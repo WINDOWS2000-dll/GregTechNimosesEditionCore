@@ -324,6 +324,7 @@ public class GTNE_windows_material {
         RawNeutronium = new Material.Builder(24021, gregtechId("raw_neutronium"))
                 .dust()
                 .color(0xeef728)
+                .iconSet(MaterialIconSet.SHINY)
                 .build();
 
         SamariumEuropiumNeodymiumTrinaquadide = new Material.Builder(24022, gregtechId("samarium_europium_neodymium_trinaquadide"))

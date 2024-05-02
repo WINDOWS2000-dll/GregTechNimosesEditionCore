@@ -37,12 +37,7 @@ public class EBFRecipes {
     public static void init() {
         if (ConfigHolder.recipeoption.Harder_EBF_Recipe) {
             EBFRecipe();
-            RemoveOtherRecipe();
         }
-    }
-
-    private static void RemoveOtherRecipe() {
-        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Neutronium, 1));
     }
 
     private static void EBFRecipe() {

@@ -137,9 +137,19 @@ public class ConfigHolder {
         @Config.Name("Harder_Computation_System_Recipe")
         public boolean Harder_Computation_System_Recipe = true;
 
+        /**
+         * バニラレシピの改変
+         */
         @Config.Comment("Activating this config will increase the difficulty of the recipe for vanilla items [Default = true]")
         @Config.Name("Harder_Vanilla_Recipe")
         public boolean Harder_Vanilla_Recipe = true;
+
+        /**
+         * Neutronium レシピの修正(要AS)
+         */
+        @Config.Comment("Tweaking of recipes around Neutronium (AS required) [Default = true]")
+        @Config.Name("Neutronium Fix")
+        public boolean Neutronium_Fix = true;
 
     }
 
