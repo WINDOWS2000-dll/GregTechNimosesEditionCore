@@ -7,6 +7,7 @@ import gtne.GTNEValues;
 import gtne.api.capabilities.energy.CapabilityLongEnergy;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
+import gtne.loaders.recipes.Adjustment.NeutroniumFix;
 import gtne.loaders.recipes.Adjustment.UVSuperConductorCable;
 import gtne.loaders.recipes.Adjustment.VoltageController;
 import gtne.loaders.recipes.ChemicalChains.Chemical;
@@ -146,6 +147,9 @@ public class CommonProxy {
             LateGameComponents.init();
             AlloyBlastFurnaceRecipe.init();
             GTNELog.logger.info("Registering Harder LateGame Components Recipes...");
+        }
+        if (ConfigHolder.recipeoption.Neutronium_Fix) {
+            NeutroniumFix.init();
         }
         GTNELog.logger.info("End Recipe Registration");
     }
