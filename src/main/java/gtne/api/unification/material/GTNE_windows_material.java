@@ -1,5 +1,6 @@
 package gtne.api.unification.material;
 
+import gregicality.multiblocks.api.unification.GCYMMaterials;
 import gregtech.api.GTValues;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
@@ -354,6 +355,18 @@ public class GTNE_windows_material {
                 .liquid(new FluidBuilder().temperature(200000000))
                 .color(0x000001)
                 .build();
+
+        Quantium = new Material.Builder(24025, gregtechId("quantium"))
+                .liquid(new FluidBuilder().temperature(11400))
+                .ingot()
+                .dust()
+                .color(0x0b0014)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .components(Draconium, 2, GCYMMaterials.HastelloyX, 2, Plutonium241, 3, Rhodium, 4, Amethyst, 3, Europium, 3)
+                .build();
+
+
 
 
 

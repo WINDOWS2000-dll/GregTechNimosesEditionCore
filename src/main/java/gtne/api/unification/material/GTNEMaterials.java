@@ -98,6 +98,7 @@ public class GTNEMaterials {
     public static Material SamariumEuropiumNeodymiumTrinaquadide;
     public static Material SamariumEuropiumNeodymiumTrinaquadideMagnetic;
     public static Material NeutronMixture;
+    public static Material Quantium;
 
     public static Material Enderium_Base;
 

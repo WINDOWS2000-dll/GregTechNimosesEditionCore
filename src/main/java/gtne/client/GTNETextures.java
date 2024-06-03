@@ -16,11 +16,15 @@ public class GTNETextures {
 
     public static SimpleOverlayRenderer DIMENTIONALLY_TRANSCENDENT_CASING;
 
+    public static SimpleOverlayRenderer QUANTIUM_CASING;
+
     public static OrientedOverlayRenderer COSMIC_RAY_DETECTOR;
 
     public static void preInit() {
         ADVANCEDPRECISIONASSEMBLYLINECASING = new SimpleOverlayRenderer("casing/multiblockcasings/advancedprecisionassemblyline/advanced_precision_assembly_line_casing");
         DIMENTIONALLY_TRANSCENDENT_CASING = new SimpleOverlayRenderer("casing/multiblockcasings/highdimentionalstructureconstructiontesseract/dimentionally_transcendent_casing");
+        QUANTIUM_CASING = new SimpleOverlayRenderer("casing/metalcasing/quantium_casing");
+        //Overlay
         COSMIC_RAY_DETECTOR = new OrientedOverlayRenderer("machines/cosmic_ray_detector");
     }
 }

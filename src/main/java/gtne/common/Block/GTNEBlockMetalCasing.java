@@ -41,7 +41,9 @@ public class GTNEBlockMetalCasing extends VariantBlock<GTNEBlockMetalCasing.Meta
         ADVANCED_FUSION_COIL("advanced_fusion_coil"),
         ADVANCED_DISTILLATION_TOWER_CASING("advanced_distillation_tower_casing"),
         ADVANCED_DISTILLATION_TOWER_PIPE_CASING("advanced_distillation_tower_pipe_casing"),
-        ADVANCED_DISTILLATION_TOWER_BASE_CASING("advanced_distillation_tower_base_casing");
+        ADVANCED_DISTILLATION_TOWER_BASE_CASING("advanced_distillation_tower_base_casing"),
+        QUANTIUM_CASING("quantium_casing"),
+        TRITANIUM_CASING("tritanium_casing");
 
 
         private final String name;

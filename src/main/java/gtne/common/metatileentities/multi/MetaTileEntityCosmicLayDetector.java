@@ -10,17 +10,25 @@ import gregtech.api.capability.impl.EnergyContainerList;
 import gregtech.api.capability.impl.FluidTankList;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
+import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.MultiblockWithDisplayBase;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.PatternMatchContext;
+import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
+import gregtech.common.blocks.BlockFusionCasing;
+import gregtech.common.blocks.MetaBlocks;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.unification.material.GTNEMaterials;
 import gtne.client.GTNETextures;
-import net.minecraft.block.Block;
+import gtne.common.Block.GTNEBlockMetalCasing;
+import gtne.common.Block.GTNEMetaBlock;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.EnumFacing;
@@ -28,15 +36,22 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-//ToDo 構造物のマテリアルを考える
+import java.util.List;
 
-/*
+import static gregtech.api.unification.material.Materials.Neutronium;
+import static gtne.client.GTNETextures.QUANTIUM_CASING;
+
 public class MetaTileEntityCosmicLayDetector extends MultiblockWithDisplayBase implements IControllable {
 
     public boolean isWorkingEnabled = false;
@@ -89,6 +104,79 @@ public class MetaTileEntityCosmicLayDetector extends MultiblockWithDisplayBase i
     @Override
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
+                .aisle("###############", "###############", "###############", "###############", "###############", "###############", "###############", "###############", "######xxx######", "###############")
+                .aisle("###############", "###############", "###############", "###############", "###############", "###############", "###############", "######xxx######", "####xx###xx####", "###############")
+                .aisle("###############", "###############", "###############", "###############", "###############", "###############", "#######x#######", "####xxx#xxx####", "###x#######x###", "###############")
+                .aisle("######XXX######", "######XXX######", "######XXX######", "###############", "###############", "#######X#######", "#####xxxxx#####", "###xx#####xx###", "##x#########x##", "###############")
+                .aisle("#####XXXXX#####", "#####X###X#####", "#####X###X#####", "######XXX######", "######XXX######", "#####XXXXX#####", "####xxxxxxx####", "##xx#######xx##", "#x###########x#", "###############")
+                .aisle("####XXXXXXX####", "####X#####X####", "####X#####X####", "#####X###X#####", "#####X###X#####", "####XXxxxXX####", "###xxx###xxx###", "##x#########x##", "#x###########x#", "###############")
+                .aisle("###XXXXXXXXX###", "###X###E###X###", "###X#######X###", "####X#####X####", "####X##F##X####", "####XxxxxxX####", "###xx#####xx###", "#xx#########xx#", "x#############x", "###############")
+                .aisle("###XXXXXXXXX###", "###X##EcE##X###", "###X###c###X###", "####X##c##X####", "####X#FcF#X####", "###XXxxExxXX###", "##xxx##C##xxx##", "#x#####C#####x#", "x######C######x", "#######s#######")
+                .aisle("###XXXXXXXXX###", "###X###E###X###", "###X#######X###", "####X#####X####", "####X##F##X####", "####XxxxxxX####", "###xx#####xx###", "#xx#########xx#", "x#############x", "###############")
+                .aisle("####XXXXXXX####", "####X#####X####", "####X#####X####", "#####X###X#####", "#####X###X#####", "####XXxxxXX####", "###xxx###xxx###", "##x#########x##", "#x###########x#", "###############")
+                .aisle("#####XXXXX#####", "#####X###X#####", "#####X###X#####", "######XXX######", "######XXX######", "#####XXXXX#####", "####xxxxxxx####", "##xx#######xx##", "#x###########x#", "###############")
+                .aisle("######XXX######", "######XSX######", "######XXX######", "###############", "###############", "#######X#######", "#####xxxxx#####", "###xx#####xx###", "##x#########x##", "###############")
+                .aisle("###############", "###############", "###############", "###############", "###############", "###############", "#######x#######", "####xxx#xxx####", "###x#######x###", "###############")
+                .aisle("###############", "###############", "###############", "###############", "###############", "###############", "###############", "######xxx######", "####xx###xx####", "###############")
+                .aisle("###############", "###############", "###############", "###############", "###############", "###############", "###############", "###############", "######xxx######", "###############")
+                .where('S', selfPredicate())
+                .where('X', states(getCasingState()).setMinGlobalLimited(145).or(autoAbilities(true, true, true, false)))
+                .where('x', states(getSecondaryCasingState()))
+                .where('C', frames(Neutronium))
+                .where('c', states(MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL)))
+                .where('F', air())
+                .where('E', air())
+                .where('s', air())
+                .where('#', any())
+                .build();
+    }
+
+    public TraceabilityPredicate autoAbilities(boolean checkEnergyIn,
+                                               boolean checkMaintenance,
+                                               boolean checkFluidOut,
+                                               boolean checkMuffler) {
+        TraceabilityPredicate predicate = super.autoAbilities(checkMaintenance, checkMuffler);
+
+        if (checkEnergyIn) {
+            predicate = predicate.or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1)
+                    .setMaxGlobalLimited(2)
+                    .setPreviewCount(1));
+        }
+
+        if (checkFluidOut) {
+            predicate = predicate.or(abilities(MultiblockAbility.EXPORT_FLUIDS).setPreviewCount(1));
+        }
+        return predicate;
+    }
+
+    @Override
+    protected void addDisplayText(List<ITextComponent> textList) {
+        if (this.energyContainer != null && energyContainer.getEnergyCapacity() > 0) {
+            maxVoltage = energyContainer.getInputVoltage();
+            if (maxVoltage >= getVoltage()) {
+                String voltageName = GTValues.VN[GTUtility.getTierByVoltage(maxVoltage)];
+                textList.add(new TextComponentTranslation("gregtech.multiblock.max_energy_per_tick", maxVoltage, voltageName));
+            } else if (!hasEnoughEnergy)
+                textList.add(new TextComponentTranslation("gregtech.multiblock.not_enough_energy").setStyle(new Style().setColor(TextFormatting.RED)));
+        }
+        if (!canSeeSky)
+            textList.add(new TextComponentTranslation("gtne.multiblock.cosmic_ray_detector.tooltip.1")
+                    .setStyle(new Style().setColor(TextFormatting.RED)));
+        if (exportFluidHandler.fill(GTNEMaterials.NeutronMixture.getFluid(1), false) < 1)
+            textList.add(new TextComponentTranslation("gtne.multiblock.cosmic_ray_detector.tooltip.8").setStyle(new Style().setColor(TextFormatting.RED)));
+        if (hasEnoughEnergy && canSeeSky) {
+            textList.add(new TextComponentTranslation("gtne.multiblock.cosmic_ray_detector.tooltip.5", this.amount));
+        }
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
+        super.addInformation(stack, player, tooltip, advanced);
+        tooltip.add(I18n.format("gtne.multiblock.cosmic_ray_detector.tooltip.2"));
+        tooltip.add(I18n.format("gtne.multiblock.cosmic_ray_detector.tooltip.3"));
+        tooltip.add(I18n.format("gtne.multiblock.cosmic_ray_detector.tooltip.4"));
+        tooltip.add(I18n.format("gtne.multiblock.cosmic_ray_detector.tooltip.6"));
+        tooltip.add(I18n.format("gtne.multiblock.cosmic_ray_detector.tooltip.7"));
     }
 
     @Override
@@ -143,6 +231,20 @@ public class MetaTileEntityCosmicLayDetector extends MultiblockWithDisplayBase i
         super.invalidateStructure();
         this.maxVoltage = 0;
         this.resetTileAbilities();
+    }
+
+    private IBlockState getCasingState() {
+        return GTNEMetaBlock.GTNE_BLOCK_METAL_CASING.getState(GTNEBlockMetalCasing.MetalCasingType.QUANTIUM_CASING);
+    }
+
+    private IBlockState getSecondaryCasingState() {
+        return GTNEMetaBlock.GTNE_BLOCK_METAL_CASING.getState(GTNEBlockMetalCasing.MetalCasingType.TRITANIUM_CASING);
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
+        return QUANTIUM_CASING;
     }
 
     @Override
@@ -239,10 +341,4 @@ public class MetaTileEntityCosmicLayDetector extends MultiblockWithDisplayBase i
         this.isActive = data.getBoolean("isActive");
         this.isWorkingEnabled = data.getBoolean("isWorkingEnabled");
     }
-
-
-
-
-
 }
- */
