@@ -45,7 +45,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.twilight_oak_slab), "wood/twilight_oak_slab")
                                 .fence(new ItemStack(TFBlocks.twilight_oak_fence), "wood/twilight_oak_fence")
                                 .fenceGate(new ItemStack(TFBlocks.twilight_oak_gate), "wood/twilight_oak_gate")
-                                .stairs(new ItemStack(TFBlocks.twilight_oak_stairs))
+                                .stairs(new ItemStack(TFBlocks.twilight_oak_stairs), "wood/twilight_oak_stairs")
                                 .registerAllUnificationInfo()
                                 .build(),
                         new WoodTypeEntry.Builder(twModId, "canopy")
@@ -55,7 +55,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.canopy_slab), "wood/canopy_slab")
                                 .fence(new ItemStack(TFBlocks.canopy_fence), "wood/canopy_fence")
                                 .fenceGate(new ItemStack(TFBlocks.canopy_gate), "wood/canopy_gate")
-                                .stairs(new ItemStack(TFBlocks.canopy_stairs))
+                                .stairs(new ItemStack(TFBlocks.canopy_stairs), "wood/canopy_stairs")
                                 .registerAllUnificationInfo()
                                 .build(),
                         new WoodTypeEntry.Builder(twModId, "mangrove")
@@ -65,7 +65,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.mangrove_slab), "wood/mangrove_slab")
                                 .fence(new ItemStack(TFBlocks.mangrove_fence), "wood/mangrove_fence")
                                 .fenceGate(new ItemStack(TFBlocks.mangrove_gate), "wood/mangrove_gate")
-                                .stairs(new ItemStack(TFBlocks.mangrove_stairs))
+                                .stairs(new ItemStack(TFBlocks.mangrove_stairs), "wood/mangrove_stairs")
                                 .registerAllUnificationInfo()
                                 .build(),
                         new WoodTypeEntry.Builder(twModId, "dark_wood")
@@ -75,7 +75,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.dark_slab), "wood/darkwood_slab")
                                 .fence(new ItemStack(TFBlocks.dark_fence), "wood/darkwood_fence")
                                 .fenceGate(new ItemStack(TFBlocks.dark_gate), "wood/darkwood_gate")
-                                .stairs(new ItemStack(TFBlocks.dark_stairs))
+                                .stairs(new ItemStack(TFBlocks.dark_stairs), "wood/dark_wood_stairs")
                                 .registerAllUnificationInfo()
                                 .build(),
                         new WoodTypeEntry.Builder(twModId, "time_wood")
@@ -85,7 +85,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.time_slab), "wood/time_slab")
                                 .fence(new ItemStack(TFBlocks.time_fence), "wood/time_fence")
                                 .fenceGate(new ItemStack(TFBlocks.time_gate), "wood/time_gate")
-                                .stairs(new ItemStack(TFBlocks.time_stairs))
+                                .stairs(new ItemStack(TFBlocks.time_stairs), "wood/time_wood_stairs")
                                 .registerAllUnificationInfo()
                                 .build(),
                         new WoodTypeEntry.Builder(twModId, "trans_wood")
@@ -95,7 +95,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.trans_slab), "wood/trans_slab")
                                 .fence(new ItemStack(TFBlocks.trans_fence), "wood/trans_fence")
                                 .fenceGate(new ItemStack(TFBlocks.trans_gate), "wood/trans_gate")
-                                .stairs(new ItemStack(TFBlocks.trans_stairs))
+                                .stairs(new ItemStack(TFBlocks.trans_stairs), "wood/trans_wood_stairs")
                                 .registerAllUnificationInfo()
                                 .build(),
                         new WoodTypeEntry.Builder(twModId, "mine_wood")
@@ -105,7 +105,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.mine_slab), "wood/mine_slab")
                                 .fence(new ItemStack(TFBlocks.mine_fence), "wood/mine_fence")
                                 .fenceGate(new ItemStack(TFBlocks.mine_gate), "wood/mine_gate")
-                                .stairs(new ItemStack(TFBlocks.mine_stairs))
+                                .stairs(new ItemStack(TFBlocks.mine_stairs), "wood/mine_wood_stairs")
                                 .registerAllUnificationInfo()
                                 .build(),
                         new WoodTypeEntry.Builder(twModId, "sort_wood")
@@ -115,7 +115,7 @@ public class GTNEWoodRecipeLoader {
                                 .slab(new ItemStack(TFBlocks.sort_slab), "wood/sort_slab")
                                 .fence(new ItemStack(TFBlocks.sort_fence), "wood/sort_fence")
                                 .fenceGate(new ItemStack(TFBlocks.sort_gate), "wood/sort_gate")
-                                .stairs(new ItemStack(TFBlocks.sort_stairs))
+                                .stairs(new ItemStack(TFBlocks.sort_stairs), "wood/sort_wood_stairs")
                                 .registerAllUnificationInfo()
                                 .build()
                 );
