@@ -349,6 +349,11 @@ public class GTNE_windows_material {
                 .build();
         SamariumEuropiumNeodymiumTrinaquadide.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumEuropiumNeodymiumTrinaquadideMagnetic);
 
+        NeutronMixture = new Material.Builder(24024, gregtechId("neutronium_mixture"))
+                .plasma()
+                .liquid(new FluidBuilder().temperature(200000000))
+                .color(0x000001)
+                .build();
 
 
 

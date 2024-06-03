@@ -26,7 +26,7 @@ dependencies {
     implementation rfg.deobf("curse.maven:the-twilight-forest-227639:3051450") //TF
     implementation rfg.deobf("curse.maven:cofh-world-271384:2920434")
     implementation rfg.deobf("curse.maven:cofh-core-69162:2920433")
-    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5121638") // CEu 2.8.7
+    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5322654") // CEu 2.8.8
     implementation rfg.deobf("curse.maven:astral-sorcery-241721:3044416") //AS_LTS
     implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4904513")
     implementation rfg.deobf("curse.maven:thermal-foundation-222880:2926428")
