@@ -132,6 +132,29 @@ gregtech.material.silicon_tetrachloride=Silicon Tetrachloride
 gregtech.material.high_purity_silicon=High Purity Silicon
 gregtech.material.draconium=Draconium
 gregtech.material.draconium_awakened=Awakened Draconium
+gregtech.material.terrasteel=TerraSteel
+gregtech.material.manasteel=ManaSteel
+gregtech.material.elementium=Elementium
+gregtech.material.thaumium=Thaumium
+gregtech.material.void=Void Metal
+gregtech.material.raw_neutronium=Raw Neutronium
+gregtech.material.samarium_europium_neodymium_trinaquadide=Samarium Europium Neodymium Trinaquadide
+gregtech.material.samarium_europium_neodymium_trinaquadide_magnetic=Magnetic Samarium Europium Neodymium Trinaquadide
+gregtech.material.quantium=Quantium
+gregtech.material.highly_active_draconium=Highly Active Draconium
+gregtech.material.highly_active_awakened_draconium=Highly Active Awakened Draconium
+gregtech.material.infinity=Infinity
+gregtech.material.celestiallium=Celestiallium
+gregtech.material.lunatium=Lunatium
+gregtech.material.sacred_metal=Sacred Material
+gregtech.material.stellarium=Stellarium
+gregtech.material.fractallium=Fractallium
+gregtech.material.entropium=Entropium
+gregtech.material.indalloy_140=Indalloy-140
+gregtech.material.stone_ingot=StoneIngot
+gregtech.material.neutronium_mixture=Neutronium Mixture
+
+
 #Messages
 #Holiday
 #souritu
