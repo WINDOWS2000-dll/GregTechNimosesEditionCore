@@ -7,6 +7,7 @@ import gtne.GTNEValues;
 import gtne.api.capabilities.energy.CapabilityLongEnergy;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
+import gtne.loaders.recipes.AboveUV.Material.UHV.UHVMaterialsRecipe;
 import gtne.loaders.recipes.Adjustment.NeutroniumFix;
 import gtne.loaders.recipes.Adjustment.UVSuperConductorCable;
 import gtne.loaders.recipes.Adjustment.VoltageController;
@@ -101,6 +102,7 @@ public class CommonProxy {
         HDSCT_Recipe.init();
         VoltageController.init();
         UVSuperConductorCable.init();
+        UHVMaterialsRecipe.init();
         //各種MOD読み込み時動作
         if (Loader.isModLoaded("twilightforest")) {
             GTNEWoodRecipeLoader.registerRecipes();
@@ -151,6 +153,7 @@ public class CommonProxy {
         if (ConfigHolder.recipeoption.Neutronium_Fix) {
             NeutroniumFix.init();
         }
+
         GTNELog.logger.info("End Recipe Registration");
     }
 }
