@@ -57,7 +57,7 @@ public class UHVMaterialsRecipe {
                 .EUToStart(630_000_000)
                 .duration(600)
                 .EUt(256_000)
-                .build();
+                .buildAndRegister();
 
 
     }
