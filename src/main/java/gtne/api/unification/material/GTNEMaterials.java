@@ -113,6 +113,7 @@ public class GTNEMaterials {
 
     public static void registerMaterialLow() {
         GTNE_windows_material.init();
+        GTNE_windows_material.MaterialChanges();
         GTNEPlatLineMaterial.init();
         GTNEChemical.init();
         Water.init();
