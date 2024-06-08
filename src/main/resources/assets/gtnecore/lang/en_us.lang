@@ -152,7 +152,11 @@ gregtech.material.fractallium=Fractallium
 gregtech.material.entropium=Entropium
 gregtech.material.indalloy_140=Indalloy-140
 gregtech.material.stone_ingot=StoneIngot
-gregtech.material.neutronium_mixture=Neutronium Mixture
+gregtech.material.neutronium_mixture=Neutron Mixture
+gregtech.material.antimatter=Anti-Matter
+gregtech.material.neutron_liquid=Neutron Liquid
+gregtech.material.enriched_neutron_liquid=Enriched Neutron Liquid
+gregtech.material.cosmic_neutronium=Cosmic Neutronium
 
 
 #Messages

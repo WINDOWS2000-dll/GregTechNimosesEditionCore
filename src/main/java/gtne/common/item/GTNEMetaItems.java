@@ -47,6 +47,7 @@ public final class GTNEMetaItems {
     public static MetaItem<?>.MetaValueItem SILICON_CRYSTAL;
     public static MetaItem<?>.MetaValueItem VANADIUM_STEEL_REINFORCED_WIRE;
     public static MetaItem<?>.MetaValueItem TUNGSTEN_CARBIDE_REINFORCED_WIRE;
+    public static MetaItem<?>.MetaValueItem NEUTRON_CONCENTRATOR;
 
     public static void init() {
         GTNEMetaItem1 metaItem1 = new GTNEMetaItem1();

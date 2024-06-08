@@ -56,6 +56,7 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         SILICON_CRYSTAL = addItem(31, "silicon_crystal");
         VANADIUM_STEEL_REINFORCED_WIRE = addItem(32, "vanadium_steel_reinforced_wire");
         TUNGSTEN_CARBIDE_REINFORCED_WIRE = addItem(33, "tungsten_carbide_reinforced_wire");
+        NEUTRON_CONCENTRATOR = addItem(34, "neutron_concentrator");
 
     }
 }

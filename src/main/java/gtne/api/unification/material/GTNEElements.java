@@ -30,6 +30,7 @@ public class GTNEElements {
     public static final Element EL = add(55, 89, -1, null, "Elementium", "Tl(MaFe)", false);
     public static final Element TH = add(66, 44, -1, null, "Thaumium", "EdFe", false);
     public static final Element Vid = add(666, 444, -1, null, "Void", "Vit(Ed)Mtl", false);
+    public static final Element SpNt = add(0, 10000, -1, null, "CosmicNeutronium", "SpNt", false);
 
     public static Element add(long protons, long neutrons, long halfLifeSeconds, String decayTo, String name, String symbol, boolean isIsotope) {
         Element element = new Element(protons, neutrons, halfLifeSeconds, decayTo, name, symbol, isIsotope);

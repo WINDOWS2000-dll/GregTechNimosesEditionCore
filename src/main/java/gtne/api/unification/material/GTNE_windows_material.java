@@ -3,11 +3,10 @@ package gtne.api.unification.material;
 import gregicality.multiblocks.api.unification.GCYMMaterials;
 import gregtech.api.GTValues;
 import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.fluids.store.FluidStorageKeys;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
-import gregtech.api.unification.material.properties.FluidProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 import static gregtech.api.util.GTUtility.gregtechId;
 import gregtech.api.unification.material.properties.ToolProperty;
@@ -19,6 +18,8 @@ import static gtne.api.unification.material.GTNEMaterials.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gtne.api.util.GTNEUtil.DefaultMaterialFlags;
+import static gregtech.integration.crafttweaker.material.MaterialPropertyExpansion.*;
+import static gregtech.integration.groovy.MaterialPropertyExpansion.addLiquid;
 
 public class GTNE_windows_material {
     public static void init() {
@@ -351,10 +352,11 @@ public class GTNE_windows_material {
         SamariumEuropiumNeodymiumTrinaquadide.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumEuropiumNeodymiumTrinaquadideMagnetic);
 
         NeutronMixture = new Material.Builder(24024, gregtechId("neutronium_mixture"))
-                .plasma()
-                .liquid(new FluidBuilder().temperature(200000000))
+                .liquid(new FluidBuilder().temperature(1))
+                .gas(new FluidBuilder().temperature(1))
                 .color(0x000001)
                 .build();
+        NeutronMixture.setFormula("§4§kM§r §b??n??§r §4§kM", true);
 
         Quantium = new Material.Builder(24025, gregtechId("quantium"))
                 .liquid(new FluidBuilder().temperature(11400))
@@ -366,12 +368,75 @@ public class GTNE_windows_material {
                 .components(Draconium, 2, GCYMMaterials.HastelloyX, 2, Plutonium241, 3, Rhodium, 4, Amethyst, 3, Europium, 3)
                 .build();
 
+        NeutronLiquid = new Material.Builder(24026, gregtechId("neutron_liquid"))
+                .liquid(new FluidBuilder().temperature(1))
+                .gas(new FluidBuilder().temperature(1))
+                .color(0x000009)
+                .build();
 
+        EnrichedNeutronLiquid = new Material.Builder(24027, gregtechId("enriched_neutron_liquid"))
+                .liquid(new FluidBuilder().temperature(1))
+                .color(0x00000a)
+                .build();
 
+        CosmicNeutronium = new Material.Builder(24028, gregtechId("cosmic_neutronium"))
+                .dust()
+                .liquid(new FluidBuilder().temperature(1_000_000))
+                .plasma(new FluidBuilder().temperature(24_000_000))
+                .color(0x0d0d0f)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DefaultMaterialFlags)
+                .fluidPipeProperties(120000000, 180000, true, true, true, true)
+                .element(SpNt)
+                .build();
+    }
 
+    public static void MaterialChanges() {
 
+        //Add Material Flags
+        //Enriched Naquadah
+        NaquadahEnriched.addFlags(GENERATE_DOUBLE_PLATE);
+        //UraniumRhodiumDinaquadide
+        UraniumRhodiumDinaquadide.addFlags(GENERATE_SPRING);
+        //Naquadah Alloy
+        NaquadahAlloy.addFlags(GENERATE_ROUND);
+        //Vanadium Steel
+        VanadiumSteel.addFlags(GENERATE_FINE_WIRE);
+        //Tungsten Carbide
+        TungstenCarbide.addFlags(GENERATE_FINE_WIRE);
+        //Neutronium
+        Neutronium.addFlags(GENERATE_SMALL_GEAR, GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_FINE_WIRE, GENERATE_FOIL, GENERATE_RING, GENERATE_ROTOR);
 
+        //Hydrogen
+        addLiquid(Hydrogen, new FluidBuilder()
+                .temperature(20)
+                .color(Hydrogen.getMaterialRGB())
+                .name("liquid_" + Hydrogen.getName())
+                .translation("gregtech.fluid.liquid_generic")
+        );
+        Hydrogen.getProperty(PropertyKey.FLUID).setPrimaryKey(FluidStorageKeys.GAS);
 
+        addFluid(Hydrogen, "plasma", false);
+
+        //Nitrogen
+        addLiquid(Nitrogen, new FluidBuilder()
+                .temperature(77)
+                .color(Nitrogen.getMaterialRGB())
+                .name("liquid_" + Nitrogen.getName())
+                .translation("gregtech.fluid.liquid_generic")
+        );
+        Nitrogen.getProperty(PropertyKey.FLUID).setPrimaryKey(FluidStorageKeys.GAS);
+
+        addFluid(Nitrogen, "plasma", false);
+
+        //Xenon
+        addLiquid(Xenon, new FluidBuilder()
+                .temperature(165)
+                .color(Xenon.getMaterialRGB())
+                .name("liquid_" + Xenon.getName())
+                .translation("gregtech.fluid.liquid_generic")
+        );
+        addFluid(Xenon, "plasma", false);
 
     }
 }
