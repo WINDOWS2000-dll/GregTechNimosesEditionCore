@@ -3,6 +3,7 @@ package gtne;
 import gregtech.GTInternalTags;
 import gregtech.api.GTValues;
 import gtne.api.util.GTNELog;
+import gtne.api.util.VirtualEnergyRegistry;
 import gtne.common.Block.BlockGTNEWireCoil;
 import gtne.common.CommonProxy;
 import gtne.common.Block.GTNEMetaBlock;
@@ -11,6 +12,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStoppedEvent;
 import org.apache.logging.log4j.Logger;
 
 import static gregtech.api.GregTechAPI.HEATING_COILS;
@@ -51,6 +53,11 @@ public class GTNECore {
         GTNELog.logger.info("Successful Heating Coil Registration!!!!");
         /* End Heating Coil Registration */
 
+    }
+
+    @Mod.EventHandler
+    public void serverStopped(FMLServerStoppedEvent event) {
+        VirtualEnergyRegistry.clearMap();
     }
 
     @Mod.EventHandler

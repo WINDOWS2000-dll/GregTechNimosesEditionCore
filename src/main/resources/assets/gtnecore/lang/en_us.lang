@@ -42,6 +42,12 @@ gtne.multiblock.cosmic_ray_detector.tooltip.6=The top Sensor Block needs to be a
 gtne.multiblock.cosmic_ray_detector.tooltip.7=Overclocks increase the production by approximately 150%.
 gtne.multiblock.cosmic_ray_detector.tooltip.8=Output Hatch Full!
 
+#Wireless Energy Hatch
+gtne.wireless_energy_hatch.tooltip.1=Use a Screwdriver to activate Wireless. Use while Sneaking to make it Private.
+gtne.wireless_energy_hatch.tooltip.2=Can only be changed by replacing.
+gtne.wireless_initialized_private=Initialized (Private)
+gtne.wireless_initialized_public=Initialized (Public)
+
 #information text
 
 

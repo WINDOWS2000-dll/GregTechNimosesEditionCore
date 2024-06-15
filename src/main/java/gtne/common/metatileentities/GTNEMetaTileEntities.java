@@ -7,6 +7,7 @@ import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnerg
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.common.ConfigHolder;
 import gtne.common.metatileentities.multi.*;
+import gtne.common.metatileentities.multi.multiblockpart.MetaTileEntityWirelessEnergyHatch;
 import net.minecraft.util.ResourceLocation;
 
 
@@ -39,6 +40,18 @@ public class GTNEMetaTileEntities {
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH_32A = new MetaTileEntityEnergyHatch[5];
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_OUTPUT_HATCH_32A = new MetaTileEntityEnergyHatch[5];
 
+    //////////////////////////////////////////////////////
+    public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_INPUT = new MetaTileEntityWirelessEnergyHatch[V.length];
+
+    public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_INPUT_4A = new MetaTileEntityWirelessEnergyHatch[V.length - 4];
+
+    public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_INPUT_16A = new MetaTileEntityWirelessEnergyHatch[V.length - 5];
+
+    public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_INPUT_64A = new MetaTileEntityWirelessEnergyHatch[V.length - 5];
+
+    public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_OUTPUT = new MetaTileEntityWirelessEnergyHatch[V.length];
+
+    public static int wirelessids = 13032;
     public static void init() {
         /*
          * FOR ADDON DEVELOPERS:
@@ -112,6 +125,24 @@ public class GTNEMetaTileEntities {
             GTNE_ENERGY_OUTPUT_HATCH_32A[3] = registerMetaTileEntity(13030, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_32a." + GTValues.VN[OpV]), 13, 32, true));
             GTNE_ENERGY_OUTPUT_HATCH_32A[4] = registerMetaTileEntity(13031, new MetaTileEntityEnergyHatch(gtneId("energy_hatch.output_32a." + GTValues.VN[MAX]), 14, 32, true));
         }
+
+        for (int i = 0; i < WIRELESS_ENERGY_HATCH_OUTPUT.length; i++) {
+            String voltageName = VN[i].toLowerCase();
+            WIRELESS_ENERGY_HATCH_INPUT[i] = registerMetaTileEntity(++wirelessids, new MetaTileEntityWirelessEnergyHatch(gtneId("wireless_energy_hatch.input." + voltageName), i, 1, false));
+
+            if (i > 3) {
+                WIRELESS_ENERGY_HATCH_INPUT_4A[i - 4] = registerMetaTileEntity(++wirelessids, new MetaTileEntityWirelessEnergyHatch(gtneId("wireless_energy_hatch.input." + voltageName + ".4a"), i, 4, false));
+            }
+
+            if (i > 4) {
+                WIRELESS_ENERGY_HATCH_INPUT_16A[i - 5] = registerMetaTileEntity(++wirelessids, new MetaTileEntityWirelessEnergyHatch(gtneId("wireless_energy_hatch.input." + voltageName + ".16a"), i, 16, false));
+                WIRELESS_ENERGY_HATCH_INPUT_64A[i - 5] = registerMetaTileEntity(++wirelessids, new MetaTileEntityWirelessEnergyHatch(gtneId("wireless_energy_hatch.input." + voltageName + ".64a"), i, 64, false));
+            }
+
+            WIRELESS_ENERGY_HATCH_OUTPUT[i] = registerMetaTileEntity(++wirelessids, new MetaTileEntityWirelessEnergyHatch(gtneId("wireless_energy_hatch.output." + voltageName), i, 1, true));
+
+        }
+
     }
 
     @Nonnull

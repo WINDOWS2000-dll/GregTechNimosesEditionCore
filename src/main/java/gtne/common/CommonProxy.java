@@ -5,6 +5,7 @@ import gregtech.api.block.VariantItemBlock;
 import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gtne.GTNEValues;
 import gtne.api.capabilities.energy.CapabilityLongEnergy;
+import gtne.api.util.VirtualEnergyRegistry;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.AboveUV.Material.UHV.UHVMaterialsRecipe;
@@ -29,6 +30,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.crafting.IRecipe;
 import gtne.api.util.GTNELog;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -81,6 +83,11 @@ public class CommonProxy {
         event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(DHSCT_CASING, VariantItemBlock::new));
+    }
+
+    @SubscribeEvent
+    public static void onWorldLoadEvent(WorldEvent.Load event) {
+        VirtualEnergyRegistry.initializeStorage(event.getWorld());
     }
 
     private static <T extends Block>  ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
