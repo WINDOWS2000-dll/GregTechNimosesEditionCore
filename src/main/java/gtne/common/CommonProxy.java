@@ -12,17 +12,18 @@ import gtne.loaders.recipes.AboveUV.Material.UHV.UHVMaterialsRecipe;
 import gtne.loaders.recipes.Adjustment.NeutroniumFix;
 import gtne.loaders.recipes.Adjustment.UVSuperConductorCable;
 import gtne.loaders.recipes.Adjustment.VoltageController;
-import gtne.loaders.recipes.ChemicalChains.Chemical;
 import gtne.loaders.recipes.ChemicalChains.PlatLines;
 import gtne.loaders.recipes.ChemicalChains.SiliconTech;
 import gtne.loaders.recipes.ChemicalChains.WaterLine;
 import gtne.loaders.recipes.Components.LateGameComponents;
+import gtne.loaders.recipes.LateGameMachines.ComputationRecipes;
 import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
-import gtne.loaders.recipes.Material.AlloyBlastFurnaceRecipe;
-import gtne.loaders.recipes.Material.EBFRecipes;
+import gtne.loaders.recipes.MultiBlock.AlloyBlastFurnaceRecipe;
+import gtne.loaders.recipes.MultiBlock.EBFRecipes;
 import gtne.loaders.recipes.MultiBlock.*;
 import gtne.loaders.recipes.Other.GTNEWoodRecipeLoader;
 import gtne.loaders.recipes.Other.VanillaFix;
+import gtne.loaders.recipes.RecipeHandler;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -40,8 +41,6 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.function.Function;
-
-import gtne.api.unification.material.GTNEMaterials;
 
 import static gtne.common.Block.GTNEMetaBlock.*;
 
@@ -87,7 +86,9 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void onWorldLoadEvent(WorldEvent.Load event) {
+        GTNELog.logger.info("Virtual Energy Storage Initialize...");
         VirtualEnergyRegistry.initializeStorage(event.getWorld());
+        GTNELog.logger.info("Initialize Complete");
     }
 
     private static <T extends Block>  ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
@@ -96,70 +97,20 @@ public class CommonProxy {
         return itemBlock;
     }
 
-    @SubscribeEvent(priority = EventPriority.LOWEST)
+    @SubscribeEvent(priority = EventPriority.NORMAL)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         GTNELog.logger.info("Start Recipe Registration");
         //Fusion tierをプロパティに書きこみ
+
+        GTNELog.logger.info("Start Fusion Property Registration");
         FusionEUToStartProperty.registerFusionTier(GTValues.UHV, "(MK4)");
         FusionEUToStartProperty.registerFusionTier(GTValues.UEV, "(MK5)");
-        //常時読みこみ
-        Assembly_Line_Recipe.init();
-        Advanced_Precision_Assembly_Line.init();
-        Chemical.init();
-        HDSCT_Recipe.init();
-        VoltageController.init();
-        UVSuperConductorCable.init();
-        UHVMaterialsRecipe.init();
-        //各種MOD読み込み時動作
-        if (Loader.isModLoaded("twilightforest")) {
-            GTNEWoodRecipeLoader.registerRecipes();
-            GTNEWoodRecipeLoader.registerUnificationInfo();
-        }
-        //コンフィグ有効時のみ読み込み
-        if (ConfigHolder.recipeoption.Harder_Vanilla_Recipe) {
-            VanillaFix.init();
-            GTNELog.logger.info("Registering Harder Vanilla Recipes...");
-        }
-        if (ConfigHolder.recipeoption.Components_Assembler) {
-            ComponentsAssembler.init();
-            GTNELog.logger.info("Registering ComponentsAssembler...");
-        }
-        if (ConfigHolder.recipeoption.Harder_Wire_Coil_Recipe) {
-            EBFCoils.init();
-            GTNELog.logger.info("Registering EBFCoils...");
-        }
-        if (ConfigHolder.recipeoption.GTNHPlatLine) {
-            PlatLines.init();
-            GTNELog.logger.info("Registering PlatLines...");
-        }
-        if (ConfigHolder.recipeoption.GTNHSiliconLine) {
-            SiliconTech.init();
-            GTNELog.logger.info("Registering SiliconTech...");
-        }
-        if (ConfigHolder.recipeoption.Harder_Water_Recipe) {
-            WaterLine.init();
-            GTNELog.logger.info("Registering WaterLine...");
-        }
-        if (ConfigHolder.recipeoption.Harder_Computation_System_Recipe) {
-            ComputationRecipes.init();
-            GTNELog.logger.info("Registering Harder Computation System Recipe...");
-        }
-        if (ConfigHolder.recipeoption.Super_HardMode_LateGame) {
-            LateGameMachines.init();
-            GTNELog.logger.info("Registering LateGameMachineRecipes...");
-        }
-        if (ConfigHolder.recipeoption.Harder_EBF_Recipe) {
-            EBFRecipes.init();
-            GTNELog.logger.info("Registering Harder EBF Recipes...");
-        }
-        if (ConfigHolder.recipeoption.Harder_LateGame_Components_Recipe && ConfigHolder.recipeoption.Components_Assembler) {
-            LateGameComponents.init();
-            AlloyBlastFurnaceRecipe.init();
-            GTNELog.logger.info("Registering Harder LateGame Components Recipes...");
-        }
-        if (ConfigHolder.recipeoption.Neutronium_Fix) {
-            NeutroniumFix.init();
-        }
+
+        //RecipeHandler読み込み
+        GTNELog.logger.info("Start RecipeHandler Registration");
+        RecipeHandler.initRecipes();
+        RecipeHandler.ChemicalChainInit();
+        RecipeHandler.AboveUVInit();
 
         GTNELog.logger.info("End Recipe Registration");
     }

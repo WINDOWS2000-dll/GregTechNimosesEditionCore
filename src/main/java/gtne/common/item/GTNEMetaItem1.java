@@ -3,6 +3,7 @@ package gtne.common.item;
 import gregtech.api.items.metaitem.StandardMetaItem;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
+import gtne.loaders.recipes.Components.CircuitOverride.SMD.Quantum;
 
 import static gregtech.common.items.MetaItems.WETWARE_PROCESSOR_LUV;
 import static gtne.common.item.GTNEMetaItems.*;
@@ -57,6 +58,28 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         VANADIUM_STEEL_REINFORCED_WIRE = addItem(32, "vanadium_steel_reinforced_wire");
         TUNGSTEN_CARBIDE_REINFORCED_WIRE = addItem(33, "tungsten_carbide_reinforced_wire");
         NEUTRON_CONCENTRATOR = addItem(34, "neutron_concentrator");
+        //SMDs
+        NANO_SMD_TRANSISTOR = addItem(35, "smd_nano_transistor");
+        NANO_SMD_RESISTOR = addItem(36, "smd_nano_resistor");
+        NANO_SMD_CAPACITOR = addItem(37, "smd_nano_capacitor");
+        NANO_SMD_DIODE = addItem(38, "smd_nano_diode");
+        QUANTUM_SMD_TRANSISTOR = addItem(39, "smd_quantum_transistor");
+        QUANTUM_SMD_RESISTOR = addItem(40, "smd_quantum_resistor");
+        QUANTUM_SMD_CAPACITOR = addItem(41, "smd_quantum_capacitor");
+        QUANTUM_SMD_DIODE = addItem(42, "smd_quantum_diode");
+        CRYSTAL_SMD_TRANSISTOR = addItem(43, "smd_crystal_transistor");
+        CRYSTAL_SMD_RESISTOR = addItem(44, "smd_crystal_resistor");
+        CRYSTAL_SMD_CAPACITOR = addItem(45, "smd_crystal_capacitor");
+        CRYSTAL_SMD_DIODE = addItem(46, "smd_crystal_diode");
+        WETWARE_SMD_TRANSISTOR = addItem(47, "smd_wetware_transistor");
+        WETWARE_SMD_RESISTOR = addItem(48, "smd_wetware_resistor");
+        WETWARE_SMD_CAPACITOR = addItem(49, "smd_wetware_capacitor");
+        WETWARE_SMD_DIODE = addItem(50, "smd_wetware_diode");
+        NANO_SMD_INDUCTOR = addItem(51, "smd_nano_inductor");
+        QUANTUM_SMD_INDUCTOR = addItem(52, "smd_quantum_inductor");
+        CRYSTAL_SMD_INDUCTOR = addItem(53, "smd_crystal_inductor");
+        WETWARE_SMD_INDUCTOR = addItem(54, "smd_wetware_inductor");
+
 
     }
 }

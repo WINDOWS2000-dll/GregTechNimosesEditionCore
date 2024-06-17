@@ -48,6 +48,26 @@ public final class GTNEMetaItems {
     public static MetaItem<?>.MetaValueItem VANADIUM_STEEL_REINFORCED_WIRE;
     public static MetaItem<?>.MetaValueItem TUNGSTEN_CARBIDE_REINFORCED_WIRE;
     public static MetaItem<?>.MetaValueItem NEUTRON_CONCENTRATOR;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_RESISTOR;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_DIODE;
+    public static MetaItem<?>.MetaValueItem QUANTUM_SMD_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem QUANTUM_SMD_RESISTOR;
+    public static MetaItem<?>.MetaValueItem QUANTUM_SMD_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem QUANTUM_SMD_DIODE;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_SMD_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_SMD_RESISTOR;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_SMD_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_SMD_DIODE;
+    public static MetaItem<?>.MetaValueItem WETWARE_SMD_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem WETWARE_SMD_RESISTOR;
+    public static MetaItem<?>.MetaValueItem WETWARE_SMD_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem WETWARE_SMD_DIODE;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_INDUCTOR;
+    public static MetaItem<?>.MetaValueItem QUANTUM_SMD_INDUCTOR;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_SMD_INDUCTOR;
+    public static MetaItem<?>.MetaValueItem WETWARE_SMD_INDUCTOR;
 
     public static void init() {
         GTNEMetaItem1 metaItem1 = new GTNEMetaItem1();

@@ -1,4 +1,4 @@
-package gtne.loaders.recipes.MultiBlock;
+package gtne.loaders.recipes.LateGameMachines;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.*;
