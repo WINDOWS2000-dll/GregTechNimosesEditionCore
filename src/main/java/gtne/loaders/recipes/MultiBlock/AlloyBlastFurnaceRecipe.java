@@ -1,4 +1,4 @@
-package gtne.loaders.recipes.Material;
+package gtne.loaders.recipes.MultiBlock;
 
 import gregicality.multiblocks.api.recipes.GCYMRecipeMaps;
 import gtne.common.ConfigHolder;

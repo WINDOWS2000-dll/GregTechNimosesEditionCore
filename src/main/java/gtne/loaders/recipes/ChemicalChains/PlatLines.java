@@ -15,6 +15,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtechfoodoption.GTFOMaterialHandler.SodiumSulfate;
 import static gtne.api.unification.material.GTNEMaterials.*;
 import static gregtech.api.GTValues.*;
 
@@ -85,6 +86,7 @@ public class PlatLines {
                 .output(dustTiny, PLATINUM_RESIDUE, 1)
                 .EUt(VA[LV]).duration(250)
                 .buildAndRegister();
+
         //9xPlatinum Metallic Powder
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, PLATINUM_METALLIC_POWDER, 1)
@@ -511,6 +513,52 @@ public class PlatLines {
                 .fluidOutputs(Ammonia.getFluid(4000))
                 .fluidOutputs(Ethylene.getFluid(1000))
                 .EUt(VA[LV]).duration(250)
+                .buildAndRegister();
+
+        //Ammonium Chloride Fluid Recipe
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Ammonia.getFluid(1000))
+                .fluidInputs(HydrochloricAcid.getFluid(1000))
+                .fluidOutputs(AMMONIUM_CHLORIDE.getFluid(1000))
+                .circuitMeta(1)
+                .EUt(VA[LV]).duration(15)
+                .buildAndRegister();
+
+        //Another Ammonium Chloride Recipe
+        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Ammonia.getFluid(64000))
+                .fluidInputs(HydrochloricAcid.getFluid(64000))
+                .fluidOutputs(AMMONIUM_CHLORIDE.getFluid(64000))
+                .circuitMeta(9)
+                .circuitMeta(1)
+                .EUt(VA[HV]).duration(60)
+                .buildAndRegister();
+
+        //Potassium Disulfate Recipe
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Potassium, 2)
+                .input(dust, Sulfur, 2)
+                .fluidInputs(Oxygen.getFluid(7000))
+                .output(dust, POTASSIUM_DISULFATE, 11)
+                .EUt(90).duration(42)
+                .buildAndRegister();
+
+        //Sodium Formate Recipe
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, SodiumHydroxide, 3)
+                .fluidInputs(CarbonMonoxide.getFluid(1000))
+                .fluidOutputs(SODIUM_FORMATE.getFluid(1000))
+                .EUt(VA[LV]).duration(15)
+                .buildAndRegister();
+
+        //Formic Acid Recipe
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .circuitMeta(1)
+                .fluidInputs(SODIUM_FORMATE.getFluid(2000))
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .output(dust, SodiumSulfate, 7)
+                .fluidOutputs(FORMIC_ACID.getFluid(2000))
+                .EUt(VA[LV]).duration(15)
                 .buildAndRegister();
 
     }

@@ -24,20 +24,6 @@ import static gregtech.integration.groovy.MaterialPropertyExpansion.addLiquid;
 public class GTNE_windows_material {
     public static void init() {
 
-        //Add Material Flags
-        //Enriched Naquadah
-        NaquadahEnriched.addFlags(GENERATE_DOUBLE_PLATE);
-        //UraniumRhodiumDinaquadide
-        UraniumRhodiumDinaquadide.addFlags(GENERATE_SPRING);
-        //Naquadah Alloy
-        NaquadahAlloy.addFlags(GENERATE_ROUND);
-        //Vanadium Steel
-        VanadiumSteel.addFlags(GENERATE_FINE_WIRE);
-        //Tungsten Carbide
-        TungstenCarbide.addFlags(GENERATE_FINE_WIRE);
-        //Neutronium
-        Neutronium.addFlags(GENERATE_SMALL_GEAR, GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_FINE_WIRE, GENERATE_FOIL, GENERATE_RING, GENERATE_ROTOR);
-
         //24001 ~ 24500
 
         HIGH_PURITY_SILICON = new Material.Builder(24001, gregtechId("high_purity_silicon"))
@@ -46,7 +32,7 @@ public class GTNE_windows_material {
                 .liquid(new FluidBuilder().temperature(2273))
                 .color(0x2a2a2a)
                 .iconSet(MaterialIconSet.METALLIC)
-                .flags(GENERATE_PLATE, GENERATE_ROD)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FOIL)
                 .blast(b -> b
                         .temp(2400, GasTier.LOW)
                 )
@@ -406,6 +392,13 @@ public class GTNE_windows_material {
         TungstenCarbide.addFlags(GENERATE_FINE_WIRE);
         //Neutronium
         Neutronium.addFlags(GENERATE_SMALL_GEAR, GENERATE_SPRING_SMALL, GENERATE_ROUND, GENERATE_FINE_WIRE, GENERATE_FOIL, GENERATE_RING, GENERATE_ROTOR);
+        //Cerium
+        addIngot(Cerium);
+        Cerium.addFlags(GENERATE_FINE_WIRE);
+        //Titanium
+        Titanium.addFlags(GENERATE_FOIL);
+        //Fiber-Reinforced Epoxy Resin
+        ReinforcedEpoxyResin.addFlags(GENERATE_FINE_WIRE);
 
         //Hydrogen
         addLiquid(Hydrogen, new FluidBuilder()
