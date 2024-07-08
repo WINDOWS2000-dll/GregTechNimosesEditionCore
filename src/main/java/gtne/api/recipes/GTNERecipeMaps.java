@@ -2,14 +2,16 @@ package gtne.api.recipes;
 
 import crafttweaker.annotations.ZenRegister;
 import gregtech.api.gui.GuiTextures;
-import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.RecipeMapBuilder;
 import gregtech.api.recipes.builders.*;
-import gregtech.api.util.AssemblyLineManager;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.gui.GTNEGuiTextures;
-import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedDistillationTower;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapHighDimensionalStructureConstructionTesseract;
+import gtne.api.recipes.ui.AdvancedAssemblyLineUI;
+import gtne.api.recipes.ui.AdvancedDistillationTowerUI;
+import gtne.api.recipes.ui.HighDimensionalStructureConstructionTesseractUI;
+import net.minecraft.init.SoundEvents;
 import stanhebben.zenscript.annotations.ZenExpansion;
 import stanhebben.zenscript.annotations.ZenProperty;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapAdvancedPrecisionAssemblyLine;
@@ -33,38 +35,57 @@ public class GTNERecipeMaps {
 
     @ZenProperty
     public static final RecipeMap<AssemblyLineRecipeBuilder> ADVANCED_PRECISION_ASSEMBLY_LINE_RECIPES =
-            new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line",  20,  1,  10, 0, new AssemblyLineRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
-            .setSound(GTSoundEvents.ASSEMBLER)
-            .onRecipeBuild(AssemblyLineManager::createDefaultResearchRecipe);
+            new RecipeMapAdvancedPrecisionAssemblyLine<>("advanced_precision_assembly_line", new AssemblyLineRecipeBuilder(), AdvancedAssemblyLineUI::new);
 
     @ZenProperty
     public static final RecipeMap<ComputationRecipeBuilder> HIGH_DIMENTIONAL_STRUCTURE_CONSTRUCTION_TESSERACT =
-            new RecipeMapHighDimensionalStructureConstructionTesseract<>("high_dimensional_structure_construction_tesseract", 36, 1, 24, 0, new ComputationRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
-                    .setSound(GTSoundEvents.COMPUTATION);
+            new RecipeMapHighDimensionalStructureConstructionTesseract<>("high_dimensional_structure_construction_tesseract", new ComputationRecipeBuilder(), HighDimensionalStructureConstructionTesseractUI::new);
 
 
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> COMPONENTS_ASSEMBLER =
-            new RecipeMap<>("components_assembler", 6,1,3, 0, new SimpleRecipeBuilder(), false)
-            .setProgressBar(GTNEGuiTextures.PREGRESSBAR_CONPONENTS_ASSEMBLER, ProgressWidget.MoveType.HORIZONTAL)
-            .setSound(GTSoundEvents.ASSEMBLER);
+    public static final RecipeMap<SimpleRecipeBuilder> COMPONENTS_ASSEMBLER = new RecipeMapBuilder<>("components_assembler",
+            new SimpleRecipeBuilder())
+            .itemInputs(6)
+            .itemOutputs(1)
+            .fluidInputs(3)
+            .fluidOutputs(0)
+            .progressBar(GTNEGuiTextures.PREGRESSBAR_CONPONENTS_ASSEMBLER)
+            .sound(GTSoundEvents.ASSEMBLER)
+            .build();
+
+    /**
+     * @deprecated GTNH版のEIM実装時に削除の為あんま使うな
+     */
+    @ZenProperty
+    @Deprecated
+    public static final RecipeMap<SimpleRecipeBuilder> HighEnergyElectromagneticImplosionMachine = new RecipeMapBuilder<>("high_energy_electromagnetic_implosion_machine",
+            new SimpleRecipeBuilder())
+            .itemInputs(6)
+            .itemOutputs(3)
+            .fluidInputs(3)
+            .fluidOutputs(3)
+            .progressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE)
+            .sound(SoundEvents.ENTITY_GENERIC_EXPLODE)
+            .build();
 
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> HighEnergyElectromagneticImplosionMachine =
-            new RecipeMap<>("high_energy_electromagnetic_implosion_machine", 6, 3, 3, 3, new SimpleRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
-                    .setSound(GTSoundEvents.COMPRESSOR);
-
+    public static final RecipeMap<UniversalDistillationRecipeBuilder> ADVANCED_DISTILLATION_TOWER = new RecipeMapBuilder<>("advanced_distillation_tower",
+            new UniversalDistillationRecipeBuilder())
+            .itemInputs(0)
+            .itemOutputs(1)
+            .fluidInputs(1)
+            .fluidOutputs(16)
+            .ui(AdvancedDistillationTowerUI::new)
+            .sound(GTSoundEvents.CHEMICAL_REACTOR)
+            .build();
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_DISTILLATION_TOWER =
-            new RecipeMapAdvancedDistillationTower<>("advanced_distillation_tower", 0, 1, 1, 16, new SimpleRecipeBuilder(), false);
-
-    @ZenProperty
-    public static final RecipeMap<BlastRecipeBuilder> SiliconMonocrystallineRefiningFurnace =
-            new RecipeMap<>("silicon_monocrystalline_refining_furnace", 6, 1, 3, 0, new BlastRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
-                    .setSound(GTSoundEvents.FURNACE);
+    public static final RecipeMap<BlastRecipeBuilder> SiliconMonocrystallineRefiningFurnace = new RecipeMapBuilder<>("silicon_monocrystalline_refining_furnace",
+            new BlastRecipeBuilder())
+            .itemInputs(6)
+            .itemOutputs(1)
+            .fluidInputs(3)
+            .fluidOutputs(0)
+            .sound(GTSoundEvents.FURNACE)
+            .build();
 
 }

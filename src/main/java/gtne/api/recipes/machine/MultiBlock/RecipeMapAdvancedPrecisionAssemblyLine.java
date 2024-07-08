@@ -1,91 +1,30 @@
 package gtne.api.recipes.machine.MultiBlock;
 
-import gregtech.api.capability.impl.FluidTankList;
-import gregtech.api.gui.GuiTextures;
-import gregtech.api.gui.ModularUI;
-import gregtech.api.gui.widgets.ProgressWidget;
-import gregtech.api.gui.widgets.SlotWidget;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.machines.IResearchRecipeMap;
 import gregtech.api.recipes.recipeproperties.ResearchProperty;
 import gregtech.api.recipes.recipeproperties.ResearchPropertyData;
+import gregtech.api.recipes.ui.RecipeMapUIFunction;
+import gregtech.core.sound.GTSoundEvents;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import gtne.api.gui.GTNEGuiTextures;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.Map;
 
-
 public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> extends RecipeMap<R> implements IResearchRecipeMap {
 
     private final Map<String, Collection<Recipe>> researchEntries = new Object2ObjectOpenHashMap<>();
 
-    public RecipeMapAdvancedPrecisionAssemblyLine(String unlocalizedName,
-                                                  int maxInputs,  int maxOutputs,
-                                                   int maxFluidInputs, int maxFluidOutputs,
-                                                  R defaultRecipe, boolean isHidden) {
-        super(unlocalizedName,  maxInputs, maxOutputs, maxFluidInputs, maxFluidOutputs, defaultRecipe, isHidden);
-    }
-
-    @Override
-    @Nonnull
-    public ModularUI.Builder createJeiUITemplate(IItemHandlerModifiable importItems, IItemHandlerModifiable exportItems, FluidTankList importFluids, FluidTankList exportFluids, int yOffset) {
-        ModularUI.Builder builder = ModularUI.builder(GuiTextures.BACKGROUND, 176, 200)
-                .widget(new ProgressWidget(200, 90, 3, 72, 90, GTNEGuiTextures.PROGRESSBAR_ADVANDED_PRECISION_ASSEMBLY_LINE, ProgressWidget.MoveType.HORIZONTAL));
-        this.addInventorySlotGroup(builder, importItems, importFluids, false, yOffset);
-        this.addInventorySlotGroup(builder, exportItems, exportFluids, true, yOffset);
-        return builder;
-    }
-
-    @Override
-    protected void addInventorySlotGroup(ModularUI.Builder builder, @Nonnull IItemHandlerModifiable itemHandler, @Nonnull FluidTankList fluidHandler, boolean isOutputs, int yOffset) {
-        int itemInputsCount = itemHandler.getSlots();
-        int fluidInputsCount = fluidHandler.getTanks();
-        boolean invertFluids = false;
-        if (itemInputsCount == 0) {
-            int tmp = itemInputsCount;
-            itemInputsCount = fluidInputsCount;
-            fluidInputsCount = tmp;
-            invertFluids = true;
-        }
-        int[] inputSlotGrid = determineSlotsGrid(itemInputsCount);
-        int itemSlotsToLeft = inputSlotGrid[0];
-        int itemSlotsToDown = inputSlotGrid[1];
-        int startInputsX = 105 - itemSlotsToLeft * 21;
-        int startInputsY = 45 - (int) (itemSlotsToDown / 2.0 * 21);
-
-        if (!isOutputs) {
-            //Data Slot
-            builder.widget(new SlotWidget(itemHandler, 16, startInputsX + 18 * 4, 3 + 18 * 2, true, true)
-                    .setBackgroundTexture(GuiTextures.SLOT, GuiTextures.DATA_ORB_OVERLAY));
-
-            for (int i = 0; i < itemSlotsToDown; i++) {
-                for (int j = 0; j < itemSlotsToLeft; j++) {
-                    int slotIndex = i * itemSlotsToLeft + j;
-                    addSlot(builder, startInputsX + 18 * j, startInputsY + 18 * i, slotIndex, itemHandler, fluidHandler, invertFluids, false);
-                }
-            }
-            if (fluidInputsCount > 0 || invertFluids) {
-                if (itemSlotsToDown <= fluidInputsCount) {
-                    for (int i = 0; i < fluidInputsCount; i++) {
-                        if (i <= 4) {
-                            addSlot(builder, (startInputsX + 21 * 5) + 3, startInputsY + 18 * i, i, itemHandler, fluidHandler, true, false);
-                        }
-                        if (i >= 5) {
-                            addSlot(builder, (startInputsX + 21 * 8) - 42, (startInputsY + 18 * i) - 90, i, itemHandler, fluidHandler, true, false);
-                        }
-                    }
-                }
-            }
-        } else {
-            addSlot(builder, startInputsX + 18 * 4, 3, 0, itemHandler, fluidHandler, invertFluids, true);
-        }
+    public RecipeMapAdvancedPrecisionAssemblyLine(@NotNull String unlocalizedName, @NotNull R defaultRecipeBuilder,
+                                                  @NotNull RecipeMapUIFunction recipeMapUI) {
+        super(unlocalizedName, defaultRecipeBuilder, recipeMapUI, 20, 1, 10, 0);
+        setSound(GTSoundEvents.ASSEMBLER);
     }
 
     @Override
