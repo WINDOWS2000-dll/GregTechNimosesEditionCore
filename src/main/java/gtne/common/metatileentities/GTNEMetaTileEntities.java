@@ -1,12 +1,14 @@
 package gtne.common.metatileentities;
 
 import gregtech.api.GTValues;
+import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnergyHatch;
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.common.ConfigHolder;
 import gtne.common.metatileentities.multi.*;
+import gtne.common.metatileentities.multi.miner.MetaTileEntitySuperDeepMiner;
 import gtne.common.metatileentities.multi.multiblockpart.MetaTileEntityWirelessEnergyHatch;
 import net.minecraft.util.ResourceLocation;
 
@@ -16,10 +18,13 @@ import javax.annotation.Nonnull;
 import static gregtech.api.GTValues.*;
 import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;
 import static gregtech.common.metatileentities.MetaTileEntities.registerSimpleMetaTileEntity;
-import static gtne.common.metatileentities.single.MetaTileEntityComponentsAssembler.*;
+import static gtne.api.recipes.GTNERecipeMaps.*;
 
 
 public class GTNEMetaTileEntities {
+
+    //Single Machine Register
+    public static final SimpleMachineMetaTileEntity[] COMPONENTS_ASSEMBLER = new SimpleMachineMetaTileEntity[GTValues.IV];
 
     //MultiBlock
     public static MetaTileEntityAdvancedPrecisionAssemblyLine AdvancedPrecisionAssemblyLine;
@@ -29,6 +34,7 @@ public class GTNEMetaTileEntities {
     public static MetaTileEntityAdvancedDistilleryTower AdvancedDistillationTower;
     public static MetaTileEntitySiliconMonocrystallineRefiningFurnace SiliconMonocrystallineRefiningFurnace;
     public static MetaTileEntityCosmicLayDetector COSMIC_RAY_DETECTOR;
+    public static MetaTileEntitySuperDeepMiner SUPER_DEEP_MINER;
 
     //Hatches
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH = new MetaTileEntityEnergyHatch[1];
@@ -88,6 +94,7 @@ public class GTNEMetaTileEntities {
         AdvancedDistillationTower = registerMetaTileEntity(12005, new MetaTileEntityAdvancedDistilleryTower(gtneId("advanced_distillation_tower")));
         SiliconMonocrystallineRefiningFurnace = registerMetaTileEntity(12006, new MetaTileEntitySiliconMonocrystallineRefiningFurnace(gtneId("silicon_monocrystalline_refining_furnace")));
         COSMIC_RAY_DETECTOR = registerMetaTileEntity(12007, new MetaTileEntityCosmicLayDetector(gtneId("cosmic_ray_detector")));
+        SUPER_DEEP_MINER = registerMetaTileEntity(12008, new MetaTileEntitySuperDeepMiner(gtneId("super_deep_miner"), SUPER_DEEP_MINER_RECIPES, false));
 
 
         //HighTierEnergyHatch 13000~13031

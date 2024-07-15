@@ -48,6 +48,30 @@ gtne.wireless_energy_hatch.tooltip.2=Can only be changed by replacing.
 gtne.wireless_initialized_private=Initialized (Private)
 gtne.wireless_initialized_public=Initialized (Public)
 
+#SuperDeepMiner
+gtne.machine.super_deep_miner.config.0=Fluid type set to Lava
+gtne.machine.super_deep_miner.config.1=Fluid type set to Pyrotheum
+gtne.machine.super_deep_miner.config.2=Fluid type set to Helium Plasma
+gtne.machine.super_deep_miner.config.3=Fluid type set to Cosmic Neutronium Plasma
+gtne.recipe.temperature=Temperature: %,dK
+gtne.machine.super_deep_miner.tooltip.1=For obtaining resource deep in §6Under Bedrock§r§7. §aRecipes require scanned Data§r§7.
+gtne.machine.super_deep_miner.tooltip.2=Controller must be placed at §eY=10§r§7 or lower.
+gtne.machine.super_deep_miner.tooltip.3=Use a §bScrewdriver§r§7 to change between §bFluid§r§7 inputs.
+gtne.machine.super_deep_miner.tooltip.4=Accepts §cLava§r§7 (0.75), §6Pyrotheum§r§7 (1.00), §eHelium Plasma§r§7 (4.00), or §8Cosmic Neutronium Plasma§r§7 (16.00) with §bBonuses§r§7 increasing from left to right.
+gtne.machine.super_deep_miner.tooltip.5=Maximum §bTemperature§r§7 depends on §bFluid§r§7 input and §bCoil§r§7 tier.
+gtne.machine.super_deep_miner.tooltip.6=Gains §cHeat§r§7 from §bFluid§r§7 input. Hotter §bFluids§r§7 increases the §bTemperature§r§7 faster.
+gtne.machine.super_deep_miner.tooltip.7=Loses §cHeat§r§7 when not running §lOR§r§7 when there is no heating §bFluids§r§7.
+gtne.machine.super_deep_miner.tooltip.8=For every §b1000K§r§7 above recipe temperature, the recipe duration is multiplied by §e%s§r§7. (Additive)
+gtne.machine.super_deep_miner.tooltip.9=tinko
+gtne.machine.super_deep_miner.tooltip.10=manko
+gtne.machine.super_deep_miner.tooltip.11=§cHeating Fluid§r§7 Consumption is based on §eEnergy Tier§7. (§bHeating Fluids§r§7 are consumed at 10% normal rate at maximum §bTemperature§r§7)
+gregtech.multiblock.super_deep_miner.max.temperature=Max Temperature: %sK
+gregtech.multiblock.super_deep_miner.max.fluid consumption=Fluid Consumption: %smB
+gregtech.multiblock.super_deep_miner_error=§cY LEVEL TOO HIGH! RECIPES WILL NOT RUN!
+
+gregtech.multiblock.universal.vom.temperature=Temperature: %sK
+gregtech.multiblock.universal.vom.max_temperature=Max Temperature: %sK
+
 #information text
 
 

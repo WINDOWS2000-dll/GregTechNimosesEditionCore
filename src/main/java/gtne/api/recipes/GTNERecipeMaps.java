@@ -7,6 +7,7 @@ import gregtech.api.recipes.RecipeMapBuilder;
 import gregtech.api.recipes.builders.*;
 import gregtech.core.sound.GTSoundEvents;
 import gtne.api.gui.GTNEGuiTextures;
+import gtne.api.recipes.builders.SuperDeepMinerBuilder;
 import gtne.api.recipes.machine.MultiBlock.RecipeMapHighDimensionalStructureConstructionTesseract;
 import gtne.api.recipes.ui.AdvancedAssemblyLineUI;
 import gtne.api.recipes.ui.AdvancedDistillationTowerUI;
@@ -86,6 +87,16 @@ public class GTNERecipeMaps {
             .fluidInputs(3)
             .fluidOutputs(0)
             .sound(GTSoundEvents.FURNACE)
+            .build();
+
+    @ZenProperty
+    public static final RecipeMap<SuperDeepMinerBuilder> SUPER_DEEP_MINER_RECIPES = new RecipeMapBuilder<>("deep_miner",
+            new SuperDeepMinerBuilder())
+            .itemInputs(6)
+            .itemOutputs(12)
+            .fluidInputs(3)
+            .fluidOutputs(6)
+            .sound(GTSoundEvents.MINER)
             .build();
 
 }
