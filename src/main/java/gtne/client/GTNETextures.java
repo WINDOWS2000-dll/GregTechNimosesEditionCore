@@ -24,6 +24,7 @@ public class GTNETextures {
     public static SimpleOverlayRenderer WIRELESS_ENERGY_HATCH_4A;
     public static SimpleOverlayRenderer WIRELESS_ENERGY_HATCH_16A;
     public static SimpleOverlayRenderer WIRELESS_ENERGY_HATCH_OFF;
+    public static SimpleOverlayRenderer ELEVATOR_CASING;
 
 
     public static void preInit() {
@@ -37,5 +38,7 @@ public class GTNETextures {
         WIRELESS_ENERGY_HATCH_4A = new SimpleOverlayRenderer("overlay/machine/overlay_wireless_energy_4a");
         WIRELESS_ENERGY_HATCH_16A = new SimpleOverlayRenderer("overlay/machine/overlay_wireless_energy_16a");
         WIRELESS_ENERGY_HATCH_OFF = new SimpleOverlayRenderer("overlay/machine/overlay_wireless_energy_off");
+        //SpaceElevator
+        ELEVATOR_CASING = new SimpleOverlayRenderer("casing/multiblockcasings/spaceelevator/elevator_base");
     }
 }

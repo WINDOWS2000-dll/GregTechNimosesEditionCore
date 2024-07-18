@@ -2,6 +2,8 @@ package gtne.common.Block;
 
 import gtne.common.Block.BlockGTNEWireCoil;
 import gtne.common.Block.GTNEBlockMetalCasing;
+import gtne.common.Block.elevator.ElevatorCaingTiered;
+import gtne.common.Block.elevator.ElevatorCasing;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -20,6 +22,8 @@ public class GTNEMetaBlock {
     public static final BlockGTNEWireCoil BLOCK_GTNE_WIRE_COIL = new BlockGTNEWireCoil();
     public static final GTNEGlasses GTNE_GLASSES = new GTNEGlasses();
     public static final DHSCTCasing DHSCT_CASING = new DHSCTCasing();
+    public static final ElevatorCasing ELEVATOR_CASING = new ElevatorCasing();
+    public static final ElevatorCaingTiered ELEVATOR_CAING_TIERED = new ElevatorCaingTiered();
 
 
 
@@ -27,6 +31,8 @@ public class GTNEMetaBlock {
     public static void registerItemModels() {
         registerItemModel(GTNE_BLOCK_METAL_CASING);
         registerItemModel(DHSCT_CASING);
+        registerItemModel(ELEVATOR_CASING);
+        registerItemModel(ELEVATOR_CAING_TIERED);
         BLOCK_GTNE_WIRE_COIL.onModelRegister();
         GTNE_GLASSES.onModelRegister();
     }
