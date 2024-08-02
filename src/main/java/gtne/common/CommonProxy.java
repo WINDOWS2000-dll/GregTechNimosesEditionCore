@@ -1,9 +1,12 @@
 package gtne.common;
 
 import gregtech.api.GTValues;
+import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
+import gregtech.api.metatileentity.registry.MTEManager;
 import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gtne.GTNEValues;
+import gtne.Tags;
 import gtne.api.capabilities.energy.CapabilityLongEnergy;
 import gtne.api.util.VirtualEnergyRegistry;
 import gtne.common.item.GTNEMetaItems;
@@ -82,6 +85,11 @@ public class CommonProxy {
         event.getRegistry().register(createItemBlock(BLOCK_GTNE_WIRE_COIL, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(GTNE_GLASSES, VariantItemBlock::new));
         event.getRegistry().register(createItemBlock(DHSCT_CASING, VariantItemBlock::new));
+    }
+
+    @SubscribeEvent
+    public static void registerMTERegistry(MTEManager.MTERegistryEvent event) {
+        GregTechAPI.mteManager.createRegistry(GTNEValues.MODID);
     }
 
     @SubscribeEvent
