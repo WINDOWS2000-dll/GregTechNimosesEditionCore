@@ -10,6 +10,9 @@ import gtne.common.ConfigHolder;
 import gtne.common.metatileentities.multi.*;
 import gtne.common.metatileentities.multi.miner.MetaTileEntitySuperDeepMiner;
 import gtne.common.metatileentities.multi.multiblockpart.MetaTileEntityWirelessEnergyHatch;
+import gtne.common.metatileentities.multi.spaceelevator.MetaTileEntitySpaceElevator;
+import gtne.common.metatileentities.multi.spaceelevator.modules.MetaTileEntityAssemblerModule;
+import gtne.common.metatileentities.multi.spaceelevator.modules.MetaTileEntityMiningModule;
 import net.minecraft.util.ResourceLocation;
 
 
@@ -57,6 +60,13 @@ public class GTNEMetaTileEntities {
 
     public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_OUTPUT = new MetaTileEntityWirelessEnergyHatch[V.length];
 
+    //////////////////////////////////////////////////////////////
+    public static MetaTileEntitySpaceElevator SPACE_ELEVATOR;
+
+    public static MetaTileEntityMiningModule[] MINING_MODULE = new MetaTileEntityMiningModule[3];
+
+    public static MetaTileEntityAssemblerModule[] ASSEMBLER_MODULE = new MetaTileEntityAssemblerModule[3];
+
     public static int wirelessids = 332;
     public static void init() {
         /*
@@ -95,6 +105,14 @@ public class GTNEMetaTileEntities {
         SiliconMonocrystallineRefiningFurnace = registerMetaTileEntity(206, new MetaTileEntitySiliconMonocrystallineRefiningFurnace(gtneId("silicon_monocrystalline_refining_furnace")));
         COSMIC_RAY_DETECTOR = registerMetaTileEntity(207, new MetaTileEntityCosmicLayDetector(gtneId("cosmic_ray_detector")));
         SUPER_DEEP_MINER = registerMetaTileEntity(208, new MetaTileEntitySuperDeepMiner(gtneId("super_deep_miner"), SUPER_DEEP_MINER_RECIPES, false));
+        //Space Elevator & Modules
+        SPACE_ELEVATOR = registerMetaTileEntity(209, new MetaTileEntitySpaceElevator(gtneId("space_elevator")));
+        MINING_MODULE[0] = registerMetaTileEntity(210, new MetaTileEntityMiningModule(gtneId("mining_module_1"), 9, 1, 1, 2));
+        MINING_MODULE[1] = registerMetaTileEntity(211, new MetaTileEntityMiningModule(gtneId("mining_module_2"), 11, 2, 2, 4));
+        MINING_MODULE[2] = registerMetaTileEntity(212, new MetaTileEntityMiningModule(gtneId("mining_module_3"), 13, 3, 3, 8));
+        ASSEMBLER_MODULE[0] = registerMetaTileEntity(213, new MetaTileEntityAssemblerModule(gtneId("assembler_module_1"), ASSEMBLER_MODULE_RECIPES, 9, 1, 1));
+        ASSEMBLER_MODULE[1] = registerMetaTileEntity(214, new MetaTileEntityAssemblerModule(gtneId("assembler_module_2"), ASSEMBLER_MODULE_RECIPES, 11, 2, 3));
+        ASSEMBLER_MODULE[2] = registerMetaTileEntity(215, new MetaTileEntityAssemblerModule(gtneId("assembler_module_3"), ASSEMBLER_MODULE_RECIPES, 13, 3, 5));
 
 
         //HighTierEnergyHatch 300~331

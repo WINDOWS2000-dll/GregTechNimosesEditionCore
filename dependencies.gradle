@@ -27,7 +27,7 @@ dependencies {
     implementation rfg.deobf("curse.maven:cofh-world-271384:2920434")
     implementation rfg.deobf("curse.maven:cofh-core-69162:2920433")
     //implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5322654") // CEu 2.8.8
-    implementation rfg.deobf(project.files("libs/gregtech-1.12.2-2.9.0-beta-dev.jar"))
+    implementation rfg.deobf(project.files("libs/gregtech-1.12.2-2.8.11-beta-dev.jar"))
     implementation rfg.deobf("curse.maven:astral-sorcery-241721:3044416") //AS_LTS
     implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4904513")
     implementation rfg.deobf("curse.maven:thermal-foundation-222880:2926428")
@@ -45,12 +45,13 @@ dependencies {
     implementation rfg.deobf("curse.maven:groovyscript-687577:4426112")
     implementation rfg.deobf("curse.maven:ae2-extended-life-570458:4673868") // AE2UEL 0.55.20
     implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.698" // CrT 4.1.20.684
-    implementation rfg.deobf("curse.maven:groovyscript-687577:4687204") // GrS 0.6.0
     implementation rfg.deobf("curse.maven:nuclearcraft-mod-226254:3784145")
-    compileOnlyApi ("com.cleanroommc:groovyscript:0.7.1") { transitive = false } // GrS 0.7.1
+    implementation rfg.deobf("curse.maven:groovyscript-687577:5507936") //Groovyscript 1.1.1
     implementation rfg.deobf("curse.maven:ctm-267602:2915363") // CTM 1.0.2.31
     implementation rfg.deobf("curse.maven:draconic-evolution-223565:3431261")
     implementation rfg.deobf("curse.maven:brandons-core-231382:3408276")
     implementation rfg.deobf("curse.maven:draconicadditions-314515:3514704")
     implementation rfg.deobf("curse.maven:avaritia-1-10-261348:3143349")
+    //Soft Depend
+    compileOnlyApi rfg.deobf("curse.maven:galacticraft-legacy-564236:4671122")
 }

@@ -99,4 +99,11 @@ public class GTNERecipeMaps {
             .sound(GTSoundEvents.MINER)
             .build();
 
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> ASSEMBLER_MODULE_RECIPES = new RecipeMapBuilder<>("assembler_module",
+            new SimpleRecipeBuilder())
+            .itemInputs(16)
+            .itemOutputs(1)
+            .build();
+
 }

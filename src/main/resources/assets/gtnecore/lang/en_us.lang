@@ -72,6 +72,46 @@ gregtech.multiblock.super_deep_miner_error=§cY LEVEL TOO HIGH! RECIPES WILL NOT
 gregtech.multiblock.universal.vom.temperature=Temperature: %sK
 gregtech.multiblock.universal.vom.max_temperature=Max Temperature: %sK
 
+#SpaceElevator
+gtne.machine.space_elevator.name=§dSpace Elevator
+gtne.machine.space_elevator.max_modules=Maximum Installed modules : %s
+gtne.machine.space_elevator.total_modules=Modules Installed Total : %s
+gtne.machine.space_elevator.modules.none=No Modules Installed!
+gtne.machine.space_elevator.modules=Modules Installed :
+gtne.machine.space_elevator.motor_tier=Motor Tier: %s
+gtne.gui.multiblock.space_elevator_extended=Extension Toggle
+gtne.gui.multiblock.space_elevator_teleport=Travel
+gtne.gui.multiblock.space_elevator.enable_all_modules=Enable All Modules
+gtne.gui.multiblock.space_elevator.disable_all_modules=Disable All Modules
+
+#Mining Module
+space_mining.name=Space Mining
+gtne.jei.space_miner.total_eu=Total: %s
+gtne.jei.space_miner.eut=Usage: %s EU/t (%s)
+gtne.jei.space_miner.duration=Duration: %s secs
+gtne.jei.space_miner.tier=Needs MK-%s Module
+gtne.jei.space_miner.distance=Distance: %s-%s
+gtne.jei.space_miner.size=Size: %s-%s
+gtne.jei.space_miner.cwut=Min. Computation: %s CWU/t
+gtne.jei.space_miner.weight=Weight: %s
+
+gtne.gui.mining_module.distance=Distance:
+gtne.gui.mining_module.range=Range:
+gtne.gui.mining_module.step=Step:
+gtne.gui.mining_module.cycle=Steps Through Distance per Operation by set Step
+gtne.gui.mining_module.parallel=Parallel:
+gtne.gui.mining_module.blank_name=<Material to Add>
+gtne.gui.mining_module.blank_name_remove=<Material to Remove>
+gtne.gui.mining_module.whitelist=Whitelist:
+gtne.gui.mining_module.blacklist=Blacklist:
+gtne.gui.mining_module.remove=Remove:
+gtne.gui.mining_module.whitelist_empty=Whitelist Empty!
+gtne.gui.mining_module.blacklist_empty=Blacklist Empty!
+gtne.gui.mining_module.whitelist_cleared=Whitelist Cleared!
+gtne.gui.mining_module.blacklist_cleared=Blacklist Cleared!
+gtne.gui.mining_module.print_whitelist_or_clear=Shows Current Whitelist/Blacklist, Shift-Click to Clear the List
+gtne.gui.mining_module.change_whitelist_mode=Changes Between Whitelist/Blacklist Modes
+
 #information text
 
 

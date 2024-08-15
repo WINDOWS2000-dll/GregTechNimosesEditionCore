@@ -58,7 +58,7 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         VANADIUM_STEEL_REINFORCED_WIRE = addItem(32, "vanadium_steel_reinforced_wire");
         TUNGSTEN_CARBIDE_REINFORCED_WIRE = addItem(33, "tungsten_carbide_reinforced_wire");
         NEUTRON_CONCENTRATOR = addItem(34, "neutron_concentrator");
-        //SMDs
+        //SMDs 35 ~ 79
         NANO_SMD_TRANSISTOR = addItem(35, "smd_nano_transistor");
         NANO_SMD_RESISTOR = addItem(36, "smd_nano_resistor");
         NANO_SMD_CAPACITOR = addItem(37, "smd_nano_capacitor");
@@ -79,6 +79,21 @@ public class GTNEMetaItem1 extends StandardMetaItem {
         QUANTUM_SMD_INDUCTOR = addItem(52, "smd_quantum_inductor");
         CRYSTAL_SMD_INDUCTOR = addItem(53, "smd_crystal_inductor");
         WETWARE_SMD_INDUCTOR = addItem(54, "smd_wetware_inductor");
+        //Mining Drone 80 ~ 93
+        MINING_DRONE_1 = addItem(80, "mining_drone.1");
+        MINING_DRONE_2 = addItem(81, "mining_drone.2");
+        MINING_DRONE_3 = addItem(82, "mining_drone.3");
+        MINING_DRONE_4 = addItem(83, "mining_drone.4");
+        MINING_DRONE_5 = addItem(84, "mining_drone.5");
+        MINING_DRONE_6 = addItem(85, "mining_drone.6");
+        MINING_DRONE_7 = addItem(86, "mining_drone.7");
+        MINING_DRONE_8 = addItem(87, "mining_drone.8");
+        MINING_DRONE_9 = addItem(88, "mining_drone.9");
+        MINING_DRONE_10 = addItem(89, "mining_drone.10");
+        MINING_DRONE_11 = addItem(90, "mining_drone.11");
+        MINING_DRONE_12 = addItem(91, "mining_drone.12");
+        MINING_DRONE_13 = addItem(92, "mining_drone.13");
+        MINING_DRONE_14 = addItem(93, "mining_drone.14");
 
 
     }
