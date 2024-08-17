@@ -1,6 +1,5 @@
 package gtne.common.metatileentities.multi.spaceelevator;
 
-import appeng.core.localization.GuiText;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
@@ -33,7 +32,6 @@ import gtne.api.metatileentity.interfaces.ISpaceElevatorProvider;
 import gtne.api.metatileentity.interfaces.ISpaceElevatorReceiver;
 import gtne.client.GTNETextures;
 import gtne.common.Block.GTNEMetaBlock;
-import gtne.common.Block.elevator.ElevatorCasing;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.block.Block;
@@ -50,6 +48,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.jetbrains.annotations.NotNull;
 
+import gtne.common.Block.elevator.ElevatorCasing;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
