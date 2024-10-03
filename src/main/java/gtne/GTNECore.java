@@ -1,9 +1,7 @@
 package gtne;
 
 import gregtech.GTInternalTags;
-import gregtech.api.GTValues;
 import gtne.api.util.GTNELog;
-import gtne.api.util.VirtualEnergyRegistry;
 import gtne.common.Block.BlockGTNEWireCoil;
 import gtne.common.CommonProxy;
 import gtne.common.Block.GTNEMetaBlock;
@@ -57,7 +55,7 @@ public class GTNECore {
 
     @Mod.EventHandler
     public void serverStopped(FMLServerStoppedEvent event) {
-        VirtualEnergyRegistry.clearMap();
+        //VirtualEnergyRegistry.clearMap();
     }
 
     @Mod.EventHandler

@@ -43,10 +43,11 @@ gtne.multiblock.cosmic_ray_detector.tooltip.7=Overclocks increase the production
 gtne.multiblock.cosmic_ray_detector.tooltip.8=Output Hatch Full!
 
 #Wireless Energy Hatch
-gtne.wireless_energy_hatch.tooltip.1=Use a Screwdriver to activate Wireless. Use while Sneaking to make it Private.
-gtne.wireless_energy_hatch.tooltip.2=Can only be changed by replacing.
-gtne.wireless_initialized_private=Initialized (Private)
-gtne.wireless_initialized_public=Initialized (Public)
+gtne.machine.wireless_energy_hatch.tooltip.1=Stores energy within the wireless energy network with a maximum capacity of 2^(2^31) EU.
+gtne.machine.wireless_energy_hatch.tooltip.2=No need for wired connections, this chamber automatically interacts with the network to extract/store energy.
+gtne.machine.wireless_energy_hatch.tooltip.shift=Use a screwdriver while sneaking and right-clicking to bind the chamber to a personal wireless energy network.
+gtne.machine.wireless_energy_hatch.connect=Chamber has been connected to the personal wireless energy network.
+
 
 #SuperDeepMiner
 gtne.machine.super_deep_miner.config.0=Fluid type set to Lava

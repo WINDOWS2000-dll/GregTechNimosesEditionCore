@@ -1,5 +1,6 @@
 package gtne.api.util;
 
+@Deprecated(since = "Wireless Energy ReBuild")
 public interface IWirelessEnergyContainer {
 
     /**

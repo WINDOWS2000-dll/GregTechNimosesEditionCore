@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Deprecated(since = "Wireless Energy ReBuild")
 public class VirtualEnergyRegistry extends WorldSavedData {
 
     private static final String DATA_ID = GTValues.MODID + ".energy_data";

@@ -7,25 +7,11 @@ import gregtech.api.metatileentity.registry.MTEManager;
 import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gtne.GTNEValues;
 import gtne.Tags;
+import gtne.api.capabilities.WirelessEnergyNetWorkWorldSaveData;
 import gtne.api.capabilities.energy.CapabilityLongEnergy;
 import gtne.api.util.VirtualEnergyRegistry;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
-import gtne.loaders.recipes.AboveUV.Material.UHV.UHVMaterialsRecipe;
-import gtne.loaders.recipes.Adjustment.NeutroniumFix;
-import gtne.loaders.recipes.Adjustment.UVSuperConductorCable;
-import gtne.loaders.recipes.Adjustment.VoltageController;
-import gtne.loaders.recipes.ChemicalChains.PlatLines;
-import gtne.loaders.recipes.ChemicalChains.SiliconTech;
-import gtne.loaders.recipes.ChemicalChains.WaterLine;
-import gtne.loaders.recipes.Components.LateGameComponents;
-import gtne.loaders.recipes.LateGameMachines.ComputationRecipes;
-import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
-import gtne.loaders.recipes.MultiBlock.AlloyBlastFurnaceRecipe;
-import gtne.loaders.recipes.MultiBlock.EBFRecipes;
-import gtne.loaders.recipes.MultiBlock.*;
-import gtne.loaders.recipes.Other.GTNEWoodRecipeLoader;
-import gtne.loaders.recipes.Other.VanillaFix;
 import gtne.loaders.recipes.RecipeHandler;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
@@ -94,9 +80,23 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void onWorldLoadEvent(WorldEvent.Load event) {
-        GTNELog.logger.info("Virtual Energy Storage Initialize...");
-        VirtualEnergyRegistry.initializeStorage(event.getWorld());
+        GTNELog.logger.info("Wireless Energy Storage Initialize...");
+        try {
+            if (!event.getWorld().isRemote && event.getWorld().provider.getDimension() == 0) {
+                GTNELog.logger.info("WirelessEnergy Loading...");
+                WirelessEnergyNetWorkWorldSaveData.initializeWirelessEnergy(event.getWorld());
+                GTNELog.logger.info("WirelessEnergy Load Complete!");
+            } else {
+                throw new NullPointerException("Wireless Energy Data Initialize World is NONE!!!");
+            }
+        } catch (Exception exception) {
+            GTNELog.logger.fatal("Failed Initialize WirelessEnergyNetWork!!! PLEASE CONTACT THE AUTHOR IMMEDIATELY!!! DO NOT OPEN WORLD!!!!");
+        }
         GTNELog.logger.info("Initialize Complete");
+
+        //Wireless Energy Rebuild
+        //Atomic Long -> BigInteger
+
     }
 
     private static <T extends Block>  ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
