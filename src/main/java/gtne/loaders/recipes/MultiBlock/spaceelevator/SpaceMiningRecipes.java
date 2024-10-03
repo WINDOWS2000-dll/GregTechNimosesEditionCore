@@ -26,7 +26,8 @@ public class SpaceMiningRecipes {
 
     public static Object2ObjectMap<Integer, List<ItemStack>> HASH_TO_ITEMS = new Object2ObjectOpenHashMap<>();
 
-    public static SpaceMiningRecipePartTwo makeSpaceMiningRecipePart(int EUt, int duration, int minModuleTier, int minDistance, int maxDistance, int minSize, int maxSize, int CWUt, int weight, Object... outputsAndWeights) {
+    public static SpaceMiningRecipePartTwo makeSpaceMiningRecipePart(int EUt, int duration, int minModuleTier, int minDistance, int maxDistance, int minSize, int maxSize,
+                                                                     int CWUt, int weight, Object... outputsAndWeights) {
         return new SpaceMiningRecipePartTwo(generateListOfPairs(outputsAndWeights), EUt, CWUt, weight, minSize, maxSize, duration, minDistance, maxDistance, minModuleTier);
     }
 
@@ -41,7 +42,8 @@ public class SpaceMiningRecipes {
         SPACE_MINING_RECIPES.get(new SpaceMiningRecipePartOne(droneStack, material).hashCode()).add(recipe);
 
         if(HASH_TO_ITEMS.get(new SpaceMiningRecipePartOne(droneStack, material).hashCode()) == null)
-            HASH_TO_ITEMS.put(new SpaceMiningRecipePartOne(droneStack, material).hashCode(), Arrays.asList(droneStack, OreDictUnifier.get(OrePrefix.stick, material, STICK_INPUT_STACK_SIZE), OreDictUnifier.get(OrePrefix.toolHeadDrill, material, DRILL_HEAD_INPUT_STACK_SIZE)));
+            HASH_TO_ITEMS.put(new SpaceMiningRecipePartOne(droneStack, material).hashCode(), Arrays.asList(droneStack, OreDictUnifier.get(OrePrefix.stick, material, STICK_INPUT_STACK_SIZE),
+                    OreDictUnifier.get(OrePrefix.toolHeadDrill, material, DRILL_HEAD_INPUT_STACK_SIZE)));
     }
 
 
@@ -56,7 +58,8 @@ public class SpaceMiningRecipes {
         SPACE_MINING_RECIPES.get(new SpaceMiningRecipePartOne(droneStack, material).hashCode()).addAll(list);
 
         if(HASH_TO_ITEMS.get(new SpaceMiningRecipePartOne(droneStack, material).hashCode()) == null)
-            HASH_TO_ITEMS.put(new SpaceMiningRecipePartOne(droneStack, material).hashCode(), Arrays.asList(droneStack, OreDictUnifier.get(OrePrefix.stick, material, STICK_INPUT_STACK_SIZE), OreDictUnifier.get(OrePrefix.toolHeadDrill, material, DRILL_HEAD_INPUT_STACK_SIZE)));
+            HASH_TO_ITEMS.put(new SpaceMiningRecipePartOne(droneStack, material).hashCode(), Arrays.asList(droneStack, OreDictUnifier.get(OrePrefix.stick, material, STICK_INPUT_STACK_SIZE),
+                    OreDictUnifier.get(OrePrefix.toolHeadDrill, material, DRILL_HEAD_INPUT_STACK_SIZE)));
     }
 
     public static void removeRecipeForDroneAndMaterial(int droneTier, Material material, SpaceMiningRecipePartTwo recipe) {
@@ -179,7 +182,8 @@ public class SpaceMiningRecipes {
         private final int duration;
         private final int minModuleTier;
 
-        private SpaceMiningRecipePartTwo(List<Pair<Material, Integer>> outputs, long EUt, int computation, int weight, int minSize, int maxSize, int duration,  int minDistance, int maxDistance, int minModuleTier) {
+        private SpaceMiningRecipePartTwo(List<Pair<Material, Integer>> outputs, long EUt, int computation, int weight,
+                                         int minSize, int maxSize, int duration,  int minDistance, int maxDistance, int minModuleTier) {
             this.outputs        = outputs;
             this.computation    = computation;
             this.weight         = weight;
