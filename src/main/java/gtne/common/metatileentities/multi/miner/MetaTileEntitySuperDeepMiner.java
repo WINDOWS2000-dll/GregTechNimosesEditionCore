@@ -408,7 +408,7 @@ public class MetaTileEntitySuperDeepMiner extends GTNESuperDeepMinerMultiBlockCo
             return recipe.getProperty(GTNETemperatureProperty.getInstance(), 0) <= superDeepMiner.getCurrentTemperature();
         }
 
-        @Deprecated(since = "GregTech CEu Version Pre-2.9")
+        @Deprecated
         @Override
         protected void modifyOverclockPre(int @NotNull [] values, @NotNull IRecipePropertyStorage storage) {
             super.modifyOverclockPre(values, storage);

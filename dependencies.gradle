@@ -52,6 +52,7 @@ dependencies {
     implementation rfg.deobf("curse.maven:brandons-core-231382:3408276")
     implementation rfg.deobf("curse.maven:draconicadditions-314515:3514704")
     implementation rfg.deobf("curse.maven:avaritia-1-10-261348:3143349")
+    api("com.cleanroommc:modularui:2.4.3") // MUI 2.4.3
     //Soft Depend
     compileOnlyApi rfg.deobf("curse.maven:galacticraft-legacy-564236:4671122")
     compileOnlyApi 'org.eclipse.xtext:org.eclipse.xtext.xbase.lib:2.36.0.M2'
