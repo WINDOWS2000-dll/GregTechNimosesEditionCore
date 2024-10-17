@@ -14,15 +14,13 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
 import static gregtech.api.metatileentity.multiblock.MultiblockControllerBase.air;
 import static gregtech.api.metatileentity.multiblock.MultiblockControllerBase.states;
 
-@Mixin(value = MetaTileEntityPrimitiveBlastFurnace.class, remap = false)
+@Mixin(MetaTileEntityPrimitiveBlastFurnace.class)
 public abstract class MixinMetaTileEntityPrimitiveBlastFurnace extends RecipeMapPrimitiveMultiblockController {
 
     @Final
@@ -30,13 +28,18 @@ public abstract class MixinMetaTileEntityPrimitiveBlastFurnace extends RecipeMap
     private static final TraceabilityPredicate SNOW_PREDICATE = new TraceabilityPredicate(
             bws -> GTUtility.isBlockSnow(bws.getBlockState()));
 
-    public MixinMetaTileEntityPrimitiveBlastFurnace(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, RecipeMaps.PRIMITIVE_BLAST_FURNACE_RECIPES);
+
+    private MixinMetaTileEntityPrimitiveBlastFurnace(ResourceLocation metaTileEntityId, RecipeMap<?> recipeMap) {
+        super(metaTileEntityId, recipeMap);
     }
 
-    @NotNull
-    @Override
-    protected BlockPattern createStructurePattern() {
+
+    /**
+     * @author Windows2000.exe
+     * @reason Delete PBF
+     */
+    @Overwrite
+    protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
                 .aisle("XXX", "XXX", "XXX", "XXX")
                 .aisle("XXX", "X&X", "X#X", "X#X")
