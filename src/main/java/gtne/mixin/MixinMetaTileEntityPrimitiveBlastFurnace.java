@@ -4,23 +4,16 @@ import gregtech.api.metatileentity.multiblock.RecipeMapPrimitiveMultiblockContro
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.util.GTUtility;
-import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.multi.MetaTileEntityPrimitiveBlastFurnace;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
+import gtne.common.Block.GTNEBlockMetalCasing;
+import gtne.common.Block.GTNEMetaBlock;
 import net.minecraft.util.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.*;
-import org.spongepowered.asm.mixin.gen.Accessor;
 
-import static gregtech.api.metatileentity.multiblock.MultiblockControllerBase.air;
-import static gregtech.api.metatileentity.multiblock.MultiblockControllerBase.states;
-
-@Mixin(MetaTileEntityPrimitiveBlastFurnace.class)
+@Mixin(value = MetaTileEntityPrimitiveBlastFurnace.class, remap = false)
 public abstract class MixinMetaTileEntityPrimitiveBlastFurnace extends RecipeMapPrimitiveMultiblockController {
 
     @Final
@@ -28,11 +21,9 @@ public abstract class MixinMetaTileEntityPrimitiveBlastFurnace extends RecipeMap
     private static final TraceabilityPredicate SNOW_PREDICATE = new TraceabilityPredicate(
             bws -> GTUtility.isBlockSnow(bws.getBlockState()));
 
-
-    private MixinMetaTileEntityPrimitiveBlastFurnace(ResourceLocation metaTileEntityId, RecipeMap<?> recipeMap) {
-        super(metaTileEntityId, recipeMap);
+    private MixinMetaTileEntityPrimitiveBlastFurnace(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, RecipeMaps.PRIMITIVE_BLAST_FURNACE_RECIPES);
     }
-
 
     /**
      * @author Windows2000.exe
@@ -44,7 +35,7 @@ public abstract class MixinMetaTileEntityPrimitiveBlastFurnace extends RecipeMap
                 .aisle("XXX", "XXX", "XXX", "XXX")
                 .aisle("XXX", "X&X", "X#X", "X#X")
                 .aisle("XXX", "XYX", "XXX", "XXX")
-                .where('X', states((IBlockState) Blocks.BEDROCK))
+                .where('X', states(GTNEMetaBlock.GTNE_BLOCK_METAL_CASING.getState(GTNEBlockMetalCasing.MetalCasingType.GREG_BLOCK)))
                 .where('#', air())
                 .where('&', air().or(SNOW_PREDICATE)) // this won't stay in the structure, and will be broken while
                 // running

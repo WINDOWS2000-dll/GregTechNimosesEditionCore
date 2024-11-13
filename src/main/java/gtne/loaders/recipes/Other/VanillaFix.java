@@ -18,6 +18,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
 
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -112,7 +113,14 @@ public class VanillaFix {
         ModHandler.removeRecipeByName("extrautils2:shortcut_chest");
         ModHandler.removeRecipeByName("extrautils2:shortcut_hopper");
         ModHandler.removeRecipeByName("tconstruct:gadgets/stone/stone_torch");
+        //鉱石辞書登録で消すやつその1
         ModHandler.removeFurnaceSmelting(new ItemStack(Block.getBlockById(OreDictionary.getOreID("logWood"))));
+        //マテリアル登録番号で消すやつその1
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(log, Wood));
+        //燃え残った木炭レシピに火をつけろ MokutanCore VI
+        if (Loader.isModLoaded("thermalfoundation")) {
+            ModHandler.removeRecipeByName("thermalfoundation:material_62");
+        }
     }
 
     private static void Hard_Vanilla_Recipe() {
