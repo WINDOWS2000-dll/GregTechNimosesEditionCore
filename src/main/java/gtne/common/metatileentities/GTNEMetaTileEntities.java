@@ -4,6 +4,7 @@ import gregtech.api.GTValues;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnergyHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityFluidHatch;
 import gtne.api.recipes.GTNERecipeMaps;
 import gtne.common.ConfigHolder;
 import gtne.common.metatileentities.multi.*;
@@ -30,7 +31,7 @@ public class GTNEMetaTileEntities {
     public static MetaTileEntitySiliconMonocrystallineRefiningFurnace SiliconMonocrystallineRefiningFurnace;
     public static MetaTileEntityCosmicLayDetector COSMIC_RAY_DETECTOR;
 
-    //Hatches
+    //Hatches - Energy
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH = new MetaTileEntityEnergyHatch[1];
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH_4A = new MetaTileEntityEnergyHatch[5]; // EV, IV, LuV, ZPM, UV, UHV
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH_16A = new MetaTileEntityEnergyHatch[5]; // IV, LuV, ZPM, UV, UHV
@@ -39,6 +40,10 @@ public class GTNEMetaTileEntities {
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_OUTPUT_HATCH_16A = new MetaTileEntityEnergyHatch[5];
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_INPUT_HATCH_32A = new MetaTileEntityEnergyHatch[5];
     public static final MetaTileEntityEnergyHatch[] GTNE_ENERGY_OUTPUT_HATCH_32A = new MetaTileEntityEnergyHatch[5];
+
+    //Hatches - Fluid
+    public static final MetaTileEntityFluidHatch[] GTNE_HIGH_TIER_FLUID_INPUT_HATCH = new MetaTileEntityFluidHatch[4];
+    public static final MetaTileEntityFluidHatch[] GTNE_HIGH_TIER_FLUID_OUTPUT_HATCH = new MetaTileEntityFluidHatch[4];
 
     //////////////////////////////////////////////////////
     public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_INPUT = new MetaTileEntityWirelessEnergyHatch[V.length];
@@ -51,7 +56,10 @@ public class GTNEMetaTileEntities {
 
     public static MetaTileEntityWirelessEnergyHatch[] WIRELESS_ENERGY_HATCH_OUTPUT = new MetaTileEntityWirelessEnergyHatch[V.length];
 
+    /////////////////////////////////Static ID Field/////////////////////////////////
     public static int wirelessids = 13032;
+    public static int htfluidhatch = 13094;
+    /////////////////////////////////////////////////////////////////////////////////
     public static void init() {
         /*
          * FOR ADDON DEVELOPERS:
@@ -142,6 +150,14 @@ public class GTNEMetaTileEntities {
             WIRELESS_ENERGY_HATCH_OUTPUT[i] = registerMetaTileEntity(++wirelessids, new MetaTileEntityWirelessEnergyHatch(gtneId("wireless_energy_hatch.output." + voltageName), i, 1, true));
 
         }
+
+        for (int i = 0; i < GTNE_HIGH_TIER_FLUID_INPUT_HATCH.length; i++) {
+            String voltageName = VN[i + 10].toLowerCase();
+            GTNE_HIGH_TIER_FLUID_INPUT_HATCH[i] = registerMetaTileEntity(++htfluidhatch, new MetaTileEntityFluidHatch(gtneId("fluid_hatch.import" + voltageName), i + 10, false));
+            GTNE_HIGH_TIER_FLUID_OUTPUT_HATCH[i] = registerMetaTileEntity(++htfluidhatch, new MetaTileEntityFluidHatch(gtneId("fluid_hatch.export" + voltageName), i + 10, false));
+        }
+
+
 
     }
 
