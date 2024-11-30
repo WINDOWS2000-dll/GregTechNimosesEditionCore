@@ -154,7 +154,7 @@ public class GTNEMetaTileEntities {
         for (int i = 0; i < GTNE_HIGH_TIER_FLUID_INPUT_HATCH.length; i++) {
             String voltageName = VN[i + 10].toLowerCase();
             GTNE_HIGH_TIER_FLUID_INPUT_HATCH[i] = registerMetaTileEntity(++htfluidhatch, new MetaTileEntityFluidHatch(gtneId("fluid_hatch.import" + voltageName), i + 10, false));
-            GTNE_HIGH_TIER_FLUID_OUTPUT_HATCH[i] = registerMetaTileEntity(++htfluidhatch, new MetaTileEntityFluidHatch(gtneId("fluid_hatch.export" + voltageName), i + 10, false));
+            GTNE_HIGH_TIER_FLUID_OUTPUT_HATCH[i] = registerMetaTileEntity(++htfluidhatch, new MetaTileEntityFluidHatch(gtneId("fluid_hatch.export" + voltageName), i + 10, true));
         }
 
 
