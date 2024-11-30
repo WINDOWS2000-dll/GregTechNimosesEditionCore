@@ -21,7 +21,6 @@ public abstract class MixinMetaTileEntityFluidHatch extends MetaTileEntityMultib
      * @author Windows2000.EXE
      * @reason Change at Fluid Hatch Max Size
      */
-    @Shadow
     @Overwrite
     private int getInventorySize() {
         return 8000 * (1 << Math.min(14, this.getTier()));
