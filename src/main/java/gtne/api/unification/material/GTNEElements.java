@@ -1,14 +1,10 @@
 package gtne.api.unification.material;
 
-import com.google.common.base.CaseFormat;
 import gregtech.api.unification.Element;
-import scala.xml.Elem;
 
-import java.util.*;
+import static gregtech.api.unification.Elements.add;
 
 public class GTNEElements {
-
-    private static final Map<String, Element> elements = new HashMap<>();
 
     private GTNEElements() {
     }
@@ -32,22 +28,4 @@ public class GTNEElements {
     public static final Element Vid = add(666, 444, -1, null, "Void", "Vit(Ed)Mtl", false);
     public static final Element SpNt = add(0, 10000, -1, null, "CosmicNeutronium", "SpNt", false);
 
-    public static Element add(long protons, long neutrons, long halfLifeSeconds, String decayTo, String name, String symbol, boolean isIsotope) {
-        Element element = new Element(protons, neutrons, halfLifeSeconds, decayTo, name, symbol, isIsotope);
-        elements.put(name, element);
-        return element;
-    }
-
-
-    public static List<Element> getAllElements() {
-        return Collections.unmodifiableList(new ArrayList<>(elements.values()));
-    }
-
-    public static Element[] getAllElementsCT() {
-        return elements.values().toArray(new Element[0]);
-    }
-
-    public static Element get(String name) {
-        return elements.get(CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, name));
-    }
 }
