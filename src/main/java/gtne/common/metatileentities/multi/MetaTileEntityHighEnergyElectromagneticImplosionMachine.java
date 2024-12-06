@@ -14,11 +14,14 @@ import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockCompressed;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
+import gregtech.core.sound.GTSoundEvents;
 import gtne.common.Block.GTNEBlockMetalCasing;
 import gtne.common.Block.GTNEMetaBlock;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
+import org.jetbrains.annotations.NotNull;
 
 import static gtne.api.recipes.GTNERecipeMaps.*;
 
@@ -29,12 +32,12 @@ public class MetaTileEntityHighEnergyElectromagneticImplosionMachine extends Rec
     }
 
     @Override
-    public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
+    public @NotNull MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
         return new MetaTileEntityHighEnergyElectromagneticImplosionMachine(metaTileEntityId);
     }
 
     @Override
-    protected BlockPattern createStructurePattern() {
+    protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
                 .aisle("EEE", "CCC", "CCC", "BBB", "BBB", "BBB", "CCC", "CCC", "DFG")
                 .aisle("FFF", "CMC", "CMC", "BBB", "BBB", "BBB", "CMC", "CMC", "DLG")
@@ -76,4 +79,8 @@ public class MetaTileEntityHighEnergyElectromagneticImplosionMachine extends Rec
         return true;
     }
 
+    @Override
+    public SoundEvent getBreakdownSound() {
+        return GTSoundEvents.BREAKDOWN_ELECTRICAL;
+    }
 }

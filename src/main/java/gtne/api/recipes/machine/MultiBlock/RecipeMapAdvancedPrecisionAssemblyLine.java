@@ -4,8 +4,8 @@ import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.machines.IResearchRecipeMap;
-import gregtech.api.recipes.recipeproperties.ResearchProperty;
-import gregtech.api.recipes.recipeproperties.ResearchPropertyData;
+import gregtech.api.recipes.properties.impl.ResearchProperty;
+import gregtech.api.recipes.properties.impl.ResearchPropertyData;
 import gregtech.api.recipes.ui.RecipeMapUIFunction;
 import gregtech.core.sound.GTSoundEvents;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
@@ -34,7 +34,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
             ResearchPropertyData data = recipe.getProperty(ResearchProperty.getInstance(), null);
             if (data != null) {
                 for (ResearchPropertyData.ResearchEntry entry : data) {
-                    addDataStickEntry(entry.getResearchId(), recipe);
+                    addDataStickEntry(entry.researchId(), recipe);
                 }
                 return true;
             }
@@ -50,7 +50,7 @@ public class RecipeMapAdvancedPrecisionAssemblyLine<R extends RecipeBuilder<R>> 
             ResearchPropertyData data = recipe.getProperty(ResearchProperty.getInstance(), null);
             if (data != null) {
                 for (ResearchPropertyData.ResearchEntry entry : data) {
-                    return removeDataStickEntry(entry.getResearchId(), recipe);
+                    removeDataStickEntry(entry.researchId(), recipe);
                 }
             }
             return false;

@@ -20,7 +20,8 @@ import gregtech.api.pattern.MultiblockShapeInfo;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.recipeproperties.IRecipePropertyStorage;
+import gregtech.api.recipes.logic.OCParams;
+import gregtech.api.recipes.properties.RecipePropertyStorage;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
@@ -410,15 +411,15 @@ public class MetaTileEntitySuperDeepMiner extends GTNESuperDeepMinerMultiBlockCo
 
         @Deprecated
         @Override
-        protected void modifyOverclockPre(int @NotNull [] values, @NotNull IRecipePropertyStorage storage) {
+        protected void modifyOverclockPre(@NotNull OCParams values, @NotNull RecipePropertyStorage storage) {
             super.modifyOverclockPre(values, storage);
 
-            int recipeTemperature = storage.getRecipePropertyValue(GTNETemperatureProperty.getInstance(), 0);
+            int recipeTemperature = storage.get(GTNETemperatureProperty.getInstance(), 0);
             int temperatureDiff = superDeepMiner.getCurrentTemperature() - recipeTemperature;
             double durationModifier = temperatureDiff / 1000 < 1 ? 1 : TEMPERATURE_DURATION_MULTIPLIER * (temperatureDiff / 1000);
-            int recipeDuration = (int) (values[1] / durationModifier);
+            int recipeDuration = (int) (values.duration() / durationModifier);
 
-            values[1] = recipeDuration;
+            values.setDuration(recipeDuration);
         }
 
     }

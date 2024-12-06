@@ -10,10 +10,12 @@ import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.core.sound.GTSoundEvents;
 import gtne.client.GTNETextures;
 import gtne.common.metatileentities.multi.spaceelevator.MetaTileEntityModuleRecipeBase;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -38,6 +40,11 @@ public class MetaTileEntityAssemblerModule extends MetaTileEntityModuleRecipeBas
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
         return new MetaTileEntityAssemblerModule(this.metaTileEntityId, this.recipeMap, this.tier, this.moduleTier, this.minMotorTier);
+    }
+
+    @Override
+    public SoundEvent getBreakdownSound() {
+        return GTSoundEvents.BREAKDOWN_ELECTRICAL;
     }
 
     @Override

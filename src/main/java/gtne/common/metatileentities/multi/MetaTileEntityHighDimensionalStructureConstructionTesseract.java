@@ -17,7 +17,6 @@ import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMaps;
-import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiFluidHatch;

@@ -4,7 +4,7 @@ import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.metatileentity.registry.MTEManager;
-import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
+import gregtech.api.recipes.properties.impl.FusionEUToStartProperty;
 import gtne.GTNEValues;
 import gtne.Tags;
 import gtne.api.capabilities.WirelessEnergyNetWorkWorldSaveData;

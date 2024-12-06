@@ -26,12 +26,13 @@ public class SuperDeepMinerBuilder extends RecipeBuilder<SuperDeepMinerBuilder> 
         return new SuperDeepMinerBuilder(this);
     }
 
-    public boolean applyProperty(@NotNull String key, Object value) {
-        if (key.equals("temperature")) {
+    @Override
+    public boolean applyPropertyCT(@NotNull String key, @NotNull Object value) {
+        if (key.equals(GTNETemperatureProperty.KEY)) {
             this.temperature(((Number)value).intValue());
             return true;
         } else {
-            return super.applyProperty(key, value);
+            return super.applyPropertyCT(key, value);
         }
     }
 
@@ -46,7 +47,7 @@ public class SuperDeepMinerBuilder extends RecipeBuilder<SuperDeepMinerBuilder> 
     }
 
     public int getTemperature() {
-        return this.recipePropertyStorage == null ? 0 : (Integer)this.recipePropertyStorage.getRecipePropertyValue(GTNETemperatureProperty.getInstance(), 0);
+        return this.recipePropertyStorage.get(GTNETemperatureProperty.getInstance(), 0);
     }
 
     public String toString() {

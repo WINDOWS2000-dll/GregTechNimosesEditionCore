@@ -16,7 +16,8 @@ import org.jetbrains.annotations.NotNull;
 public class AdvancedDistillationTowerUI<R extends RecipeMap<?>> extends RecipeMapUI<R> {
 
     public AdvancedDistillationTowerUI(@NotNull R recipeMap) {
-        super(recipeMap, true, true, true, false);
+        super(recipeMap, true, true, true, false, false);
+        setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL);
     }
 
     /**

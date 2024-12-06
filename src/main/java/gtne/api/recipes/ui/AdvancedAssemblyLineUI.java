@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 public final class AdvancedAssemblyLineUI <R extends RecipeMap<?>> extends RecipeMapUI<R> {
 
     public AdvancedAssemblyLineUI(@NotNull R recipeMap) {
-        super(recipeMap, false, false, false, false);
+        super(recipeMap, false, false, false, false, false);
         setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL);
     }
 
