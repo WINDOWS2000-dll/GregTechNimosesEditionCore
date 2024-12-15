@@ -6,22 +6,19 @@ import gregtech.api.block.VariantItemBlock;
 import gregtech.api.metatileentity.registry.MTEManager;
 import gregtech.api.recipes.properties.impl.FusionEUToStartProperty;
 import gtne.GTNEValues;
-import gtne.Tags;
 import gtne.api.capabilities.WirelessEnergyNetWorkWorldSaveData;
 import gtne.api.capabilities.energy.CapabilityLongEnergy;
-import gtne.api.util.VirtualEnergyRegistry;
 import gtne.common.item.GTNEMetaItems;
 import gtne.common.metatileentities.GTNEMetaTileEntities;
 import gtne.loaders.recipes.RecipeHandler;
-import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.crafting.IRecipe;
 import gtne.api.util.GTNELog;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.WorldEvent;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -43,6 +40,10 @@ public class CommonProxy {
         GTNEMetaTileEntities.init();
 
         CapabilityLongEnergy.register(); 
+    }
+
+    public void preLoad() {
+        MinecraftForge.EVENT_BUS.register(new GTNEEventHandler.PlayerLoginEventHandler());
     }
 
     public void init(FMLInitializationEvent e) {
@@ -90,7 +91,7 @@ public class CommonProxy {
                 throw new NullPointerException("Wireless Energy Data Initialize World is NONE!!!");
             }
         } catch (Exception exception) {
-            GTNELog.logger.fatal("Failed Initialize WirelessEnergyNetWork!!! PLEASE CONTACT THE AUTHOR IMMEDIATELY!!! DO NOT OPEN WORLD!!!!");
+            GTNELog.logger.fatal("Failed Initialize WirelessEnergyNetWork!!! PLEASE CONTACT THE AUTHOR IMMEDIATELY!!! DO NOT PLAY WORLD!!!!");
         }
         GTNELog.logger.info("Initialize Complete");
 

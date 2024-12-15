@@ -71,6 +71,36 @@ public class GTNEMaterials {
     public static Material FORMIC_ACID;
     public static Material SODIUM_FORMATE;
     public static Material SILICON_TETRACHLORIDE;
+    public static Material LIQUID_CRYSTAL_KEVLAR;
+    public static Material PARA_PHENYLENEDIAMINE;
+    public static Material FOUR_NITROANILINE;
+    public static Material ACETIC_ANHYDRIDE;
+    public static Material METHYL_ACETATE;
+    public static Material TEREPHTHALOYL_CHLORIDE;
+    public static Material COBALT_II_NAPHTHENATE;
+    public static Material COBALT_II_HYDROXIDE;
+    public static Material COBALT_II_NITRATE;
+    public static Material DIMETHYL_TEREPHTHALATE;
+    public static Material THIONYL_CHLORIDE;
+    public static Material SULFUR_DICHLORIDE;
+    public static Material TEREPHTHALIC_ACID;
+    public static Material NAPHTHENIC_ACID;
+    public static Material ONE_FOUR_DIMETHYLBENZENE;
+    public static Material N_METHYL_TWO_PYRROLIDONE;
+    public static Material METHYLAMINE;
+    public static Material GAMMA_BUTYROLACTONE;
+    public static Material ONE_FOUR_BUTANEDIOL;
+    public static Material ACETYLENE;
+    public static Material FORMALDEHYDE;
+    public static Material ALUMINA;
+    public static Material TWO_BUTIN_ONE_FOUR_DIOL;
+    public static Material RANEY_NICKEL;
+    public static Material BISMUTH_OXIDE;
+    public static Material NICKEL_ALUMINIDE;
+    public static Material CRYOLITE;
+    public static Material ALUMINIUM_HYDROXIDE;
+    public static Material SODIUM_ALUMINATE;
+
     //Water
     public static Material Purified_Water_Grade_H;
     public static Material Purified_Water_Grade_G;
