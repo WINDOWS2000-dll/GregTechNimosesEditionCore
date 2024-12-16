@@ -30,6 +30,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.crafting.IRecipe;
 import gtne.api.util.GTNELog;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.Loader;
@@ -54,6 +55,10 @@ public class CommonProxy {
         GTNEMetaTileEntities.init();
 
         CapabilityLongEnergy.register(); 
+    }
+
+    public void preLoad() {
+        MinecraftForge.EVENT_BUS.register(new GTNEEventHandler.PlayerLoginEventHandler());
     }
 
     public void init(FMLInitializationEvent e) {

@@ -1,6 +1,8 @@
 package gtne.Utils;
 
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.ResourceLocation;
+import org.jetbrains.annotations.NotNull;
 
 import static net.minecraft.util.EnumFacing.*;
 
@@ -48,6 +50,11 @@ public class GTNEUtil {
         }
 
         return direction;
+    }
+
+    @NotNull
+    public static ResourceLocation gtneID(@NotNull String path) {
+        return new ResourceLocation("gtnecore", path);
     }
 
 }

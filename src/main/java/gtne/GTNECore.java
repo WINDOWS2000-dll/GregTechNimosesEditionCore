@@ -42,6 +42,7 @@ public class GTNECore {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
+        proxy.preLoad();
         proxy.preInit(event);
 
         GTNELog.logger.info("Loading GregTechNimosesEdition-Core Version" + GTNEVersion.DEP_VERSION);
