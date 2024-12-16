@@ -1,5 +1,6 @@
 package gtne.client;
 
+import codechicken.lib.texture.TextureUtils;
 import gregtech.api.gui.resources.TextureArea;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
@@ -102,6 +103,10 @@ public class GTNETextures {
                 COSMIC_8,
                 COSMIC_9
         };
+    }
+
+    public static void preShaderInit() {
+        TextureUtils.addIconRegister(GTNETextures::register);
     }
 
 }
