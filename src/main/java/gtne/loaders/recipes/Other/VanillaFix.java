@@ -9,7 +9,9 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.items.MetaItem1;
 import gtne.api.items.GTNEOreDictNames;
 import gtne.api.unification.material.GTNEMaterials;
 import gtne.common.ConfigHolder;
@@ -68,41 +70,9 @@ public class VanillaFix {
         //Brick Line
             //Brick
             GTRecipeHandler.removeRecipesByInputs(RecipeMaps.ALLOY_SMELTER_RECIPES, new ItemStack(Items.CLAY_BALL, 1), SHAPE_MOLD_INGOT.getStackForm(1));
-            //Compressed Clay
-            ModHandler.removeRecipeByName("gregtech:compressed_clay");
-        //WoodenTools
-            ModHandler.removeRecipeByName("minecraft:wooden_pickaxe");
-            ModHandler.removeRecipeByName("minecraft:wooden_sword");
-            ModHandler.removeRecipeByName("minecraft:wooden_shovel");
-            ModHandler.removeRecipeByName("minecraft:wooden_axe");
-            ModHandler.removeRecipeByName("minecraft:wooden_hoe");
-        //StoneTools
-            ModHandler.removeRecipeByName("minecraft:stone_shovel");
-            ModHandler.removeRecipeByName("minecraft:stone_axe");
-            ModHandler.removeRecipeByName("minecraft:stone_pickaxe");
-            ModHandler.removeRecipeByName("minecraft:stone_hoe");
-            ModHandler.removeRecipeByName("minecraft:stone_sword");
-        //Armor Stand
-            ModHandler.removeRecipeByName("minecraft:armor_stand");
-        //Vanilla Armor
-            ModHandler.removeRecipeByName("minecraft:leather_helmet");
-            ModHandler.removeRecipeByName("minecraft:leather_chestplate");
-            ModHandler.removeRecipeByName("minecraft:leather_leggings");
-            ModHandler.removeRecipeByName("minecraft:leather_boots");
-            ModHandler.removeRecipeByName("gregtech:iron_helmet");
-            ModHandler.removeRecipeByName("gregtech:iron_chestplate");
-            ModHandler.removeRecipeByName("gregtech:iron_leggings");
-            ModHandler.removeRecipeByName("gregtech:iron_boots");
-            ModHandler.removeRecipeByName("gregtech:golden_helmet");
-            ModHandler.removeRecipeByName("gregtech:golden_chestplate");
-            ModHandler.removeRecipeByName("gregtech:golden_leggings");
-            ModHandler.removeRecipeByName("gregtech:golden_boots");
-        //Hopper
-            ModHandler.removeRecipeByName("gregtech:hopper");
-        //Sign
-            ModHandler.removeRecipeByName("minecraft:sign");
-        //Torch
-            ModHandler.removeRecipeByName("minecraft:torch");
+        for (String other_recipes : OtherRecipe) {
+            ModHandler.removeRecipeByName(other_recipes);
+        }
     }
 
     private static void RemoveAddonRecipes() {
@@ -309,14 +279,14 @@ public class VanillaFix {
             );
         //Brick Line
             //Brick Compound
-            ModHandler.addShapedRecipe(true,"brick_compound", BRICK_COMPOUND.getStackForm(4),
+            ModHandler.addShapedRecipe(true,"brick_compound", BRICK_COMPOUND.getStackForm(2),
                     "CCY",
                             "CWG",
                             "YGG",
                     'C', new ItemStack(Blocks.SAND),
                     'W', new ItemStack(Items.WATER_BUCKET),
                     'G', new ItemStack(Blocks.GRAVEL),
-                    'Y', new ItemStack(Blocks.CLAY)
+                    'Y', new ItemStack(Items.CLAY_BALL)
             );
 
             //Brick Compound Mixer Recipe

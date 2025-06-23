@@ -14,6 +14,7 @@ import gtne.loaders.recipes.LateGameMachines.ComputationRecipes;
 import gtne.loaders.recipes.LateGameMachines.LateGameMachines;
 import gtne.loaders.recipes.MultiBlock.*;
 import gtne.loaders.recipes.Other.GTNEWoodRecipeLoader;
+import gtne.loaders.recipes.Other.GregTechFixer;
 import gtne.loaders.recipes.Other.VanillaFix;
 import gtne.loaders.recipes.SingleBlocks.ComponentsAssembler;
 import net.minecraftforge.fml.common.Loader;
@@ -42,6 +43,7 @@ public class RecipeHandler {
         LateGameComponents.init();
         CircuitOverride.init();
         Nano.init();
+        GregTechFixer.init();
 
     }
 

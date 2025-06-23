@@ -40,6 +40,18 @@ public class GTNEUtil {
             , "gregtech:brown_bed", "gregtech:blue_bed", "gregtech:black_bed", "gregtech:white_bed"
     };
 
+    public static final String[] OtherRecipe = new String[] {
+            "gregtech:compressed_clay", "minecraft:wooden_pickaxe", "minecraft:wooden_sword", "minecraft:wooden_shovel",
+            "minecraft:wooden_axe", "minecraft:wooden_hoe", "minecraft:stone_shovel", "minecraft:stone_axe",
+            "minecraft:stone_pickaxe", "minecraft:stone_hoe", "minecraft:stone_sword", "minecraft:armor_stand",
+            "minecraft:leather_helmet", "minecraft:leather_chestplate", "minecraft:leather_leggings", "minecraft:leather_boots",
+            "gregtech:iron_helmet", "gregtech:iron_chestplate", "gregtech:iron_leggings", "gregtech:iron_boots",
+            "gregtech:golden_helmet", "gregtech:golden_chestplate", "gregtech:golden_leggings", "gregtech:golden_boots",
+            "gregtech:hopper", "minecraft:sign", "minecraft:torch"
+
+
+    };
+
     /**
      * @implNote This String Array not including Oak Wood Type
      */
